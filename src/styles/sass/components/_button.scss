@@ -1,0 +1,22 @@
+.btn {
+  border: $border-default;
+  border-radius: $border-radius-default;
+  background: transparent;
+  width: 3.7rem;
+  height: 3.8rem;
+  padding: 1.4rem 1.2rem;
+  @include flex(row, center, center);
+
+  &--link {}
+
+  &--action {
+    border: $border-default;
+    border-radius: $border-radius-default;
+    border: none;
+    background-color: $black-out;
+    color: inherit;
+    @include heading-medium-mobile;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,160 @@
+<div class="header">
+
+  <ng-container class="mobile-menu">
+    <button class="mobile-menu__toggle-btn btn">
+      <img src="assets/icons/list.svg">
+    </button>
+
+    <!-- <a class="mobile-menu__search-icon"> -->
+    <img src="assets/icons/magnifying-glass.svg"
+         class="mobile-menu__search-icon">
+    <!-- </a> -->
+
+    <a [routerLink]=""
+       class="mobile-menu__logo-link">
+      <img src="//cdn.shopify.com/s/files/1/0576/8364/0503/t/4/assets/logo-full.static.svg?v=89107020529489074251658098331"
+           class="logo"
+           alt="The Figma Store" />
+    </a>
+
+    <img src="assets/icons/map-pin.svg"
+         class="mobile-menu__map-icon">
+    <div class="mobile-menu__cart">
+      <span data-cart-count
+            class="mobile-menu__cart--count">0</span>
+    </div>
+  </ng-container>
+  <!-- <ng-container class='desktop-menu-toggle'
+                *ngIf="menuVisible">
+    <ul class="left-menu">
+      <li>
+        <a routerLink='shop'
+           class="link button inverse">Shop</a>
+      </li>
+      <li>
+        <a routerLink="about"
+           class="link button inverse ">About</a>
+      </li>
+      <li class="search-button-wrap">
+        <button class="search"
+                *ngIf="searchVisible">
+          <img src="//cdn.shopify.com/s/files/1/0576/8364/0503/t/4/assets/icon-search.static.svg?v=50573694897280823451658098331"
+               alt="Search" />
+        </button>
+      </li>
+    </ul>
+    <a routerLink="/"
+       class="logo-link">
+      <img src="//cdn.shopify.com/s/files/1/0576/8364/0503/t/4/assets/logo-full.static.svg?v=89107020529489074251658098331"
+           class="logo"
+           alt="The Figma Store" />
+    </a>
+    <div class="right-menu">      <label for="search"><input id='search' type="search" placeholder="search"></label><a routerLink="cart"
+      class="link button inverse cart-link">
+     <span class="cart-label">Cart</span>
+     <span data-cart-count
+           class="cart-item-count">2</span>
+   </a></div>
+  </ng-container>
+  <ng-container class='mobile-menu-toggle'
+                *ngIf="!menuVisible">
+    <div class="right-menu">
+      <div class="snippet--location-selector">
+        <div class="select-wrapper header-select"
+             x-data="{ mobileOpened: false }">
+          <button class="mobile-select-toggle"
+                  aria-label="Select your country"
+                  *ngIf="!mobileOpened">
+            <svg class="svg-map-pin"
+                 width="16"
+                 height="20"
+                 viewBox="0 0 16 20"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 7.57027C15 12.4865 8 18 8 18C8 18 1 12.4865 1 7.57027C1 3.94161 4.13401 1 8 1C11.866 1 15 3.94161 15 7.57027Z"
+                    stroke="black"
+                    stroke-width="2" />
+              <circle cx="8"
+                      cy="8"
+                      r="2.5"
+                      stroke="black"
+                      stroke-width="2" />
+            </svg>
+          </button>
+          <select id="header-country-select"
+                  class="country-select"
+                  :class="{'mobile-opened': mobileOpened}">
+            <option value="store-ca"
+                    :selected="subdomain === 'store-ca'">
+              Canada
+            </option>
+            <option value="store-jp"
+                    :selected="subdomain === 'store-jp'">
+              Japan</option>
+            <option value="store-uk"
+                    :selected="subdomain === 'store-uk'">
+              United Kingdom</option>
+            <option value="store"
+                    :selected="subdomain === 'store' || typeof subdomain == 'undefined'">
+              United States</option>
+            <option value="store">
+              I&#39;m just browsing</option>
+
+          </select>
+        </div>
+      </div>
+      <a routerLink="cart"
+         class="link button inverse cart-link">
+        <span class="cart-label">Cart</span>
+        <span data-cart-count
+              class="cart-item-count">2</span>
+      </a>
+    </div>
+  </ng-container>
+</div>
+</div>
+
+
+<!-- <div class="button-wrap">
+  <button class="link mobile-menu-toggle" :class="{ 'open': menuVisible }" @click="menuVisible = ! menuVisible">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+  <button class="search" @click="searchVisible = ! searchVisible">
+    <img src="//cdn.shopify.com/s/files/1/0576/8364/0503/t/4/assets/icon-search.static.svg?v=50573694897280823451658098331" alt="Search" />
+  </button>
+</div>
+<ul class="left-menu"><li>
+      <a [routerLink]="/#shop" class="link button inverse ">Shop</a>
+    </li><li>
+      <a [routerLink]="/pages/about" class="link button inverse ">About</a>
+    </li><li class="search-button-wrap">
+      <button class="search" @click="searchVisible = ! searchVisible">
+        <img src="//cdn.shopify.com/s/files/1/0576/8364/0503/t/4/assets/icon-search.static.svg?v=50573694897280823451658098331" alt="Search" />
+      </button>
+    </li>
+</ul>
+
+
+
+
+<div class="mobile-menu" x-show="menuVisible" x-collapse>
+<div class="inner">
+  <ul class="primary"><li class="">
+        <a [routerLink]="/#shop" class="mobile-link">Shop</a>
+      </li><li class="">
+        <a [routerLink]="/pages/about" class="mobile-link">About</a>
+      </li></ul>
+  <ul class="secondary"><li class="">
+        <a [routerLink]="https://store.figma.com/pages/privacy-policy" class="mobile-link">Privacy &amp; Terms</a>
+      </li><li class="">
+        <a [routerLink]="/pages/about#contact" class="mobile-link">Contact Us</a>
+      </li></ul>
+</div>
+</div>
+
+ -->

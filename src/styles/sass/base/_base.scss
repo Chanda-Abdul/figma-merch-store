@@ -1,0 +1,33 @@
+// $break-point-extra-large: 75em; //1200px
+// $break-point-large: 68.75em; //1100px
+$break-point-medium: 53.75em; //860px
+// $break-point-small: 37.5em; //600px
+// $break-point-extra-small: 31.25em; //500px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+  min-height: 100vh;
+  font-size: 1.8rem;
+}
+
+html {
+  /* set 1rem to 10px */
+  font-size: 62.5%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}

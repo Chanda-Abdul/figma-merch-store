@@ -1,0 +1,44 @@
+@import "/src/styles/sass/main.scss";
+
+.header {
+  height: 6.3rem;
+  padding: $vertical-padding-default $horizontal-padding-default;
+  @include flex(row, space-between, center);
+  max-width: 100%;
+
+}
+
+.mobile-menu {
+  &__search-icon {}
+
+  &__logo-link img {
+    height: 1.3rem;
+    width: 16rem;
+  }
+
+  &__cart {
+    @include flex(row, center, center);
+    border: $border-default;
+    border-radius: $border-radius-default;
+    width: 5.3rem;
+    height: 3.5rem;
+
+    &--count {}
+  }
+}
+
+// .container{
+//   width: 100vw;
+//
+//   background-color: var(--sunflower);
+//   border-bottom: .25rem solid var(--black-out);
+// }
+
+// .menu-toggle,
+// ul, .right-menu {
+//   width: 100%;
+//   @include flex(row, center, space-between);
+// }
+@media only screen and (max-width: $break-point-medium) {
+  // padding: 2.5rem 0;
+}

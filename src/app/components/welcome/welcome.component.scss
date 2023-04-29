@@ -1,0 +1,54 @@
+@import "/src/styles/sass/main.scss";
+
+:host {
+
+  height: 69.3rem;
+  background-color: $sunflower;
+  width: 100%;
+
+
+}
+
+.welcome {
+  //
+  height: 100%;
+
+  // padding: 9rem $vertical-padding-default;
+
+  &__title {
+    width: 30.7rem;
+    margin-top: 5rem;
+    margin-bottom: 2.7rem;
+    @include heading-extra-large-mobile;
+  }
+
+  &__label {
+    @include heading-large-mobile;
+    width: 22.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__select {
+
+    &--options {
+      margin-right: 1rem;
+    }
+
+    &-btn {
+      color: $sunflower;
+      width: 6.8rem;
+      height: 3.7rem;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  &__content {
+    background-color: $sunflower;
+    @include flex(column, space-between, flex-start);
+    padding: 9rem $horizontal-padding-default;
+
+    &>* {
+      max-width: 30.7rem;
+    }
+  }
+}

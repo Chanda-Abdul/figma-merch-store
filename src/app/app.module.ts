@@ -12,6 +12,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { ProductComponent } from './components/product/product/product.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { ProductsService } from './services/products.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,18 +24,19 @@ import { ProductDetailsComponent } from './components/product/product-details/pr
     ShoppingComponent,
     AboutComponent,
     CartComponent,
-
     FooterComponent,
      WelcomeComponent,
      InventoryComponent,
      ProductComponent,
-     ProductDetailsComponent
+     ProductDetailsComponent,
+     HeroComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

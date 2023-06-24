@@ -1,0 +1,26 @@
+@import "/src/styles/sass/main.scss";
+
+
+.hero {
+  background-color: $sunflower;
+  border-bottom: 4px solid $black-out;
+  padding: 8.2rem 0 2rem;
+  position: relative;
+
+  &__carousel {
+    padding-top: 5.8rem;
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: -6rem;
+    border: 4px solid $black-out;
+    background-color: white;
+    border-radius: 50%;
+    &--icon {}
+
+    &--text {}
+  }
+
+
+}

@@ -4,8 +4,11 @@
   height: 6.3rem;
   padding: $vertical-padding-default $horizontal-padding-default;
   @include flex(row, space-between, center);
-  max-width: 100%;
-
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 2;
 }
 
 .mobile-menu {

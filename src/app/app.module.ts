@@ -9,12 +9,13 @@ import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
-import { InventoryComponent } from './components/inventory/inventory.component';
-import { ProductComponent } from './components/product/product/product.component';
-import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ProductsService } from './services/products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductComponent } from './components/product/product.component';
 
 
 @NgModule({
@@ -25,11 +26,12 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     CartComponent,
     FooterComponent,
-     WelcomeComponent,
-     InventoryComponent,
-     ProductComponent,
-     ProductDetailsComponent,
-     HeroComponent
+    WelcomeComponent,
+    ProductComponent,
+    ProductListComponent,
+    ProductCardComponent,
+    HeroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

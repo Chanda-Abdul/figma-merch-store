@@ -1,7 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { map, shareReplay } from "rxjs/operators";
+import { Observable, of } from "rxjs";
+import { catchError, map, shareReplay, tap } from "rxjs/operators";
+import { Product } from "../model/product.model";
+import { PRODUCTS } from "server/db-data";
 
 
 @Injectable({
@@ -9,15 +11,22 @@ import { map, shareReplay } from "rxjs/operators";
 })
 
 export class ProductsService {
-  // Stateless Observable Service
+  /* Stateless Observable Service */
   constructor(private http: HttpClient) { }
 
+  loadProductById(productId: number): Observable<any> {
+
+    return this.http.get(`/api/product/${productId}`).pipe(
+      map(res => res),
+      shareReplay()
+    );
+  }
+
   loadAllProducts(): Observable<any> {
+    
     return this.http.get<any>("/api/products")
       .pipe(
         map(res => res.payload),
-        // tap(res=> console.log(res)),
-        //to avoid duplicate http requests
         shareReplay()
       );
   }

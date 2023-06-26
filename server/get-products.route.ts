@@ -2,7 +2,8 @@
 
 import { Request, Response } from 'express';
 import { PRODUCTS } from "./db-data";
-import { Product } from 'src/app/model/product.model';
+
+
 
 export function getAllProducts(req: Request, res: Response) {
 
@@ -15,11 +16,11 @@ export function getAllProducts(req: Request, res: Response) {
    * 
    */
 
-  setTimeout(() => {
+  // setTimeout(() => {
 
-    res.status(200).json({ payload: Object.values(PRODUCTS) });
+  res.status(200).json({ payload: Object.values(PRODUCTS) });
 
-  }, 1500);
+  // }, 1500);
 
 }
 
@@ -28,9 +29,9 @@ export function getProductById(req: Request, res: Response) {
 
   const productId = req.params["id"];
 
-  const products: any = Object.values(PRODUCTS);
+  const products: any = PRODUCTS;
 
-  const product: Product = products.find((product: any) => product.id == productId);
+  const product = products.find((product: any) => product.id == productId);
 
   res.status(200).json(product);
 }

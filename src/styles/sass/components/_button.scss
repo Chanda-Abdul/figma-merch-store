@@ -20,3 +20,19 @@
   }
 }
 
+a {
+  @include heading-medium-mobile;
+  border: 2px solid $black-out;
+  color: $black-out;
+  border-radius: 3rem;
+  display: inline-block;
+  line-height: .9;
+  padding: 1rem 2rem .9rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $black-out;
+    color: $polar-bear-in-a-blizzard;
+
+  }
+}

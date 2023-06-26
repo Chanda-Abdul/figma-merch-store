@@ -1,0 +1,53 @@
+<div class="product-container">
+  <ng-container *ngIf="(product$ | async) as product">
+    <div class="product-grid">
+
+      <div class="product-grid__gallery">
+        <figure *ngFor="let image of product.img">
+          <img [src]="image"
+               alt="product.name">
+        </figure>
+        <figure>
+          <img [src]="product.productImg"
+               alt="product.name">
+        </figure>
+      </div>
+
+      <div class="product-grid__feature">
+        <figure>
+          <img [src]="product.img[0]"
+               alt="product.name">
+        </figure>
+
+      </div>
+
+      <div class="product-grid__info">
+        <ul class="product-grid__info--tags-list">
+          <li *ngFor="let tag of product.tags"
+              class="product-grid__info--tag">{{tag}}</li>
+        </ul>
+
+        <h2 class="product-grid__info--title">{{product.name}}</h2>
+
+        <ng-container *ngIf="product.sizes">
+          <div class="product-grid__info--sizes">
+            <button *ngFor="let size of sizes | keyvalue">{{size.key}}</button>
+          </div>
+        </ng-container>
+
+
+        <div class="product-grid__info--actions">
+          <span class="variants"><button>-</button><span class="quantity">1</span><button>+</button></span>
+          <span *ngIf="product.price == 0" class="sold-out">SOLD OUT</span>
+          <span *ngIf="product.price != 0" class="add">add {{product.price | currency}}</span>
+        </div>
+        <p class="product-grid__info--description">
+          {{product.description}}</p>
+        <ul class="product-grid__info--features-list">
+          <li *ngFor="let feature of product.features"
+              class="product-grid__info--feature">{{feature}}</li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+</div>

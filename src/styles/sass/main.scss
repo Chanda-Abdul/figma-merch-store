@@ -1,9 +1,5 @@
 @import 'abstracts/mixins', 'abstracts/variables';
 
-@import "base/animations", "base/base", "base/fonts", "base/typography";
+@import "base/animations", "base/base", "base/fonts", "base/media-queries", "base/reset", "base/typography";
 
 @import "components/button", "components/select";
-
-
-
-

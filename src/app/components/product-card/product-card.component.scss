@@ -1,0 +1,21 @@
+@import "/src/styles/sass/main.scss";
+
+.product {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 1;
+
+  &__new {
+    @include heading-small-mobile;
+    color: $bio-punk;
+  }
+
+  &__photo {
+    @include heading-small-mobile;
+    width: 16.75rem;
+    height: 22.27rem;
+  }
+
+  &__price {}
+}

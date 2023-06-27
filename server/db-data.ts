@@ -1065,16 +1065,6 @@ export const PRODUCTS = [
 ];
 
 
-
-
-//export function findCourseById(courseId: number) {
-// //return COURSES[courseId];
-//}
-
-//export function findLessonsForCourse(courseId: number) {
-//  return Object.values(LESSONS).filter(lesson => lesson.courseId == courseId);
-//}
-
 //export function authenticate(email: string, password: string) {
 
 //  const user: any=Object.values(USERS).find(user => user.email === email);

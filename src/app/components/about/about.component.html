@@ -1,1 +1,74 @@
-<p>about works!</p>
+<div class="about-container">
+
+    <section class="about">
+
+        <figure class="about__img"></figure>
+
+        <div class="about__text">
+
+            <h2>About</h2>
+
+            <p>Welcome to the Figma Store, a collection of Figma apparel (layers) and accessories (components) designed
+                for
+                our community.</p>
+        </div>
+    </section>
+
+    <section class="donations">
+
+        <figure class="donations__badge"></figure>
+
+        <div class="donations__text">
+
+            <h2>100% OF PROCEEDS ARE DONATED</h2>
+
+            <p>Any and all profits we generate from the store will be used to purchase carbon removal credits via
+                reforestation from TIST (The International Small Group and Tree Planting Program). TIST is an innovative
+                time-tested reforestation program that supports subsistence farmers in Kenya, Uganda, and Tanzania to
+                tackle
+                sustainable development and climate change through education and tree planting.</p>
+
+            <a href="https://program.tist.org/">Learn more about TIST ↗</a>
+        </div>
+    </section>
+
+    <section class="faq">
+
+        <h2 class="faq__title">FAQ</h2>
+
+        <ul class="faq__questions-list">
+
+            <li *ngFor="let item of qAndA"
+                class="faq__questions-list--item">
+
+                <img [src]="item.icon"
+                     alt="question-icon">
+
+                <h3 class="faq__questions-list--question">
+                    {{item.question}}</h3>
+
+                <p class="faq__questions-list--anwser">{{item.answer}}</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="customer-care">
+
+        <h2 class="customer-care__title">CUSTOMER CARE</h2>
+
+        <ul class="customer-care__list">
+
+            <li *ngFor="let care of customerCare"
+                class="customer-care__list--item">
+
+                <img [src]="care.icon"
+                     alt="customer-care-icon">
+
+                <h3 class="customer-care__list--topic">
+                    {{care.topic}}</h3>
+
+                <p class="customer-care__list--action">{{care.action}}</p>
+            </li>
+        </ul>
+    </section>
+</div>

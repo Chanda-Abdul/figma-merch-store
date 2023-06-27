@@ -19,12 +19,35 @@ View live demo [here](https://inquisitive-strudel-fa01fb.netlify.app/)
 
 ## Features
 <!-- List the main features of the project, with brief descriptions of each. -->
-- Draggable slider<!-- How to Create a Draggable Slider -->
-- Hover effects - Change image on hover
 
-- Content filtering
-- dropdown search bar when the icon is clicked.
-- Recreate the circle with rotating text and hover animation.
+<!-- TO-DO => NAV COMPONENT -->
+### Dropdown search bar
+- [ ] dropdown search bar when the icon is clicked.
+<!-- TO-DO => HERO/HEADER COMPONENT -->
+### Draggable Slider 
+- [ ] Draggable slider <!-- How to Create a Draggable slider-->
+### Circle with rotating text and hover animation
+- [ ] Recreate the circle with rotating text and hover animation.
+<!-- TO-DO => /HOME COMPONENT -->
+### Change image on hover
+<!-- TO-DO => /product-list -->
+<!-- TO-DO => /product-card -->
+- [ ] Hover effects - Change image on hover
+
+<!-- TO-DO => #SHOP COMPONENT -->
+<!-- TO-DO => /ABOUT COMPONENT -->
+<!-- TO-DO => /SEARCH COMPONENT -->
+### Content filtering
+- [ ] Content filtering
+<!-- TO-DO => /CART COMPONENT -->
+<!-- TO-DO => FOOTER COMPONENT -->
+
+
+
+
+
+
+
 
 
 ## Installation
@@ -36,15 +59,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Usage
-<!-- Provide instructions on how to use the project, including any keyboard shortcuts, mouse gestures, or other user interactions. -->
-
-## Contributing
-<!-- Explain how users can contribute to the project, such as by reporting issues, submitting bug fixes, or adding new features. -->
 
 ## What I learned
 ## Continued development

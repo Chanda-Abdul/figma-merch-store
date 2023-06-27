@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { ShoppingComponent } from './components/shopping/shopping.component';
 import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -22,7 +21,6 @@ import { ProductComponent } from './components/product/product.component';
   declarations: [
     AppComponent,
     NavigationComponent,
-    ShoppingComponent,
     AboutComponent,
     CartComponent,
     FooterComponent,

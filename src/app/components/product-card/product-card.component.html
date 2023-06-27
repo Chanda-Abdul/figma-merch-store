@@ -1,13 +1,20 @@
-<ng-container>
+<ng-container *ngIf="product">
+  <div class="product-list__product">
 
-  <div class="product">
-    <span *ngIf=""  class="product__new">New!</span>
-    <img [src]=""
-         alt=""
-         class="product__photo">
-    <span class="product__price">
-      <!-- {{product.price | currency}} -->
+    <img [src]="product.img[0]"
+         alt="{{product.name}}"
+         class="product-list__product--photo">
+
+    <p class="product-list__product--new"
+       *ngIf='product.new'>New!</p>
+
+    <span>
+
+      <h3 class="product-list__product--desc">{{product.name}}</h3>
+
+      <p class="product-list__product--price">{{product.price | currency}}</p>
     </span>
+
+
   </div>
 </ng-container>
-

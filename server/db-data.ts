@@ -131,7 +131,7 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 7,
+    id: 52,
     new: false,
     featured: false,
     name: 'Meet me in the browser tee',
@@ -154,7 +154,7 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 8,
+    id: 51,
     new: false,
     featured: false,
     name: 'Detach instance pin',
@@ -867,7 +867,7 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 51,
+    id: 8,
     new: true,
     featured: true,
     name: 'Band together socks',
@@ -890,7 +890,7 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 52,
+    id: 7,
     new: true,
     featured: true,
     name: 'Shape up tee',
@@ -1086,6 +1086,11 @@ export const RATINGS =  [
   {
     name: "Emma R.",
     review: "This item is incredibly comfortable and stylish. Highly recommended!",
+    rating: 4
+  },
+  {
+    name: "Emily T.",
+    review: "Weird Smell, ugh.",
     rating: 2
   },
   {
@@ -1129,8 +1134,18 @@ export const RATINGS =  [
     rating: 5
   },
   {
+    name: "Steph C.",
+    review: "It's Phenomenal!!!",
+    rating: 5
+  },
+  {
     name: "William B.",
     review: "The product is top-notch and provides excellent value for money. Highly recommended!",
+    rating: 4
+  },
+  {
+    name: "Karen K.",
+    review: "Money down the drain",
     rating: 1
   },
   {
@@ -1141,6 +1156,11 @@ export const RATINGS =  [
   {
     name: "Benjamin C.",
     review: "This product exceeded my expectations. I'm extremely satisfied with my purchase!",
+    rating: 4
+  },
+  {
+    name: "Leroy J.",
+    review: "Not Impressed",
     rating: 2
   },
   {
@@ -1156,7 +1176,7 @@ export const RATINGS =  [
   {
     name: "Charlotte H.",
     review: "This item is a great value for money. I'm impressed with the overall quality.",
-    rating: 2
+    rating: 4
   },
   {
     name: "Liam W.",
@@ -1202,5 +1222,10 @@ export const RATINGS =  [
     name: "Michael R.",
     review: "I've received numerous compliments on this product. It's a great conversation starter.",
     rating: 5
-  }
+  },
+  {
+    name: "Cathy B.",
+    review: "Arrived Broken",
+    rating: 1
+  },
 ]

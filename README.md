@@ -71,8 +71,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 
 - [phosphor icons](https://phosphoricons.com/)
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 
 
+
+- https://www.w3.org/TR/selectors/#nth-child-pseudo
 ## Author
 
 - Website - [Chanda Abdul](https://www.Chandabdul.dev)

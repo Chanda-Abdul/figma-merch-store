@@ -28,26 +28,11 @@
   </h2>
 
 </div>
-<div class="inventory">
-  <ul class="inventory__list">
 
-    <!-- TO-DO => move to component card -->
-    <li *ngFor="let product of (allProductsFeaturedThenNewFirst$ | async)"
-        class="inventory__list--product" [routerLink]="['/product', product.id]">
+<div class="products">
 
-      <img src="{{product.img[0]}}"
-           alt="{{product.name}}">
+  <app-product-card *ngFor="let product of (allProductsFeaturedThenNewFirst$ | async)"
+                    [product]="product"
+                    [routerLink]="['/product', product.id]"></app-product-card>
 
-      <p class="inventory__list--product-new"
-         *ngIf='product.new'>New!</p>
-
-      <span>
-
-        <h3 class="inventory__list--product-desc">{{product.name}}</h3>
-
-        <p class="inventory__list--product-price">{{product.price | currency}}</p>
-      </span>
-
-    </li>
-  </ul>
 </div>

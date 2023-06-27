@@ -1,21 +1,50 @@
 @import "/src/styles/sass/main.scss";
-
-.product {
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  z-index: 1;
-
-  &__new {
-    @include heading-small-mobile;
-    color: $bio-punk;
-  }
-
-  &__photo {
-    @include heading-small-mobile;
-    width: 16.75rem;
-    height: 22.27rem;
-  }
-
-  &__price {}
+:host{
+  &:nth-child(10n+7), &:nth-child(10n+8) {
+    grid-column: span 2;
+    grid-row: span 2;
 }
+
+}
+.product-list{
+  &__product {
+    display: flex;
+    flex-direction: column;
+
+    @include heading-small-mobile;
+
+    flex: 1 1 40%;
+    
+    img {
+      width: 100%;
+      min-height: 22.27rem;
+      border-radius: 3.5rem;
+    }
+
+    &--new {
+      @include heading-small-mobile;
+      color: $bio-punk;
+      margin: $vertical-padding-default;
+    }
+
+    &--price {
+      display: inline-block;
+      text-align: end;
+      margin: $vertical-padding-default 0 $vertical-padding-default auto;
+
+    }
+  
+}
+}
+// .product {
+//   flex: none;
+//   order: 0;
+//   flex-grow: 0;
+//   z-index: 1;
+
+
+
+
+
+//   &__price {}
+// }

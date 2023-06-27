@@ -1076,3 +1076,131 @@ export const PRODUCTS = [
 //  }
 
 //}
+
+export const RATINGS =  [
+  {
+    name: "John D.",
+    review: "The product is of great quality and looks fantastic. Very satisfied with my purchase!",
+    rating: 4
+  },
+  {
+    name: "Emma R.",
+    review: "This item is incredibly comfortable and stylish. Highly recommended!",
+    rating: 2
+  },
+  {
+    name: "Daniel S.",
+    review: "The design of this accessory is beautiful and adds a nice touch.",
+    rating: 4
+  },
+  {
+    name: "Sophia M.",
+    review: "The variety of options in this pack is impressive. Perfect for personalizing my belongings.",
+    rating: 4
+  },
+  {
+    name: "Oliver H.",
+    review: "This product has become my favorite. It has a sleek design and feels solid.",
+    rating: 5
+  },
+  {
+    name: "Ava T.",
+    review: "Great value for the price. I'm really pleased with this purchase!",
+    rating: 4
+  },
+  {
+    name: "Noah J.",
+    review: "The quality of this item is outstanding. It exceeded my expectations!",
+    rating: 5
+  },
+  {
+    name: "Isabella L.",
+    review: "I love the versatility of this product. It matches well with any outfit.",
+    rating: 4
+  },
+  {
+    name: "James A.",
+    review: "The packaging was impressive, and the product arrived in excellent condition.",
+    rating: 5
+  },
+  {
+    name: "Sophie P.",
+    review: "This item is a great addition to my collection. I've received many compliments on it.",
+    rating: 5
+  },
+  {
+    name: "William B.",
+    review: "The product is top-notch and provides excellent value for money. Highly recommended!",
+    rating: 1
+  },
+  {
+    name: "Olivia K.",
+    review: "I'm really impressed with this item. It's both stylish and functional.",
+    rating: 4
+  },
+  {
+    name: "Benjamin C.",
+    review: "This product exceeded my expectations. I'm extremely satisfied with my purchase!",
+    rating: 2
+  },
+  {
+    name: "Mia S.",
+    review: "The design of this item is unique and eye-catching. I love wearing it!",
+    rating: 4
+  },
+  {
+    name: "Ethan D.",
+    review: "I'm very happy with this purchase. The quality is excellent, and it's worth the price.",
+    rating: 5
+  },
+  {
+    name: "Charlotte H.",
+    review: "This item is a great value for money. I'm impressed with the overall quality.",
+    rating: 2
+  },
+  {
+    name: "Liam W.",
+    review: "The product arrived promptly and in perfect condition. I'm satisfied with my purchase.",
+    rating: 5
+  },
+  {
+    name: "Amelia G.",
+    review: "I'm pleased with the versatility of this item. It goes well with various outfits.",
+    rating: 4
+  },
+  {
+    name: "Henry M.",
+    review: "The attention to detail in this product is impressive. It's a great addition to my collection.",
+    rating: 3
+  },
+  {
+    name: "Harper B.",
+    review: "I'm delighted with this purchase. The quality surpassed my expectations.",
+    rating: 5
+  },
+  {
+    name: "Jackson L.",
+    review: "This item is stylish and comfortable. It's become one of my favorites.",
+    rating: 4
+  },
+  {
+    name: "Emily S.",
+    review: "I'm really satisfied with this item. The quality and design are both exceptional.",
+    rating: 5
+  },
+  {
+    name: "Jacob K.",
+    review: "The product offers great value for money. It's practical and well-made.",
+    rating: 4
+  },
+  {
+    name: "Chloe P.",
+    review: "This item met all my expectations. It's stylish, comfortable, and worth the price.",
+    rating: 5
+  },
+  {
+    name: "Michael R.",
+    review: "I've received numerous compliments on this product. It's a great conversation starter.",
+    rating: 5
+  }
+]

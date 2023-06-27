@@ -2,7 +2,7 @@
 import * as express from 'express';
 import { Application } from "express";
 import { getAllProducts, getProductById } from './get-products.route';
-// import {getAllProducts, getProductById} from "./get-Products.route";
+import { getAllRatings } from './get-ratings.route';
 // import {searchProducts} from "./search-Products.route";
 // import {saveProduct} from './save-Product.route';
 // import {loginUser} from './login.route';
@@ -20,6 +20,8 @@ app.use(cors({ origin: true }));
 app.route('/api/products').get(getAllProducts);
 
 app.route('/api/product/:id').get(getProductById);
+
+app.route('/api/rating/:id').get(getAllRatings);
 
 // app.route('/api/products).get(searchProducts);
 

@@ -21,7 +21,7 @@
 
       </div>
 
-      <div class="product-grid__info">
+      <section class="product-grid__info">
         <ul class="product-grid__info--tags-list">
           <li *ngFor="let tag of product.tags"
               class="product-grid__info--tag">{{tag}}</li>
@@ -47,7 +47,20 @@
           <li *ngFor="let feature of product.features"
               class="product-grid__info--feature">{{feature}}</li>
         </ul>
-      </div>
+        <div class="product-grid__info--reviews">
+          <h3>Customer Reviews</h3>
+          <div><span>Insert Average Star Rating</span><span>({{(ratings$| async)?.length }} Reviews)</span></div>
+        
+          <ul class="product-grid__info--review">
+            <li *ngFor="let review of ratings$| async"
+                class="product-grid__info--tag">
+                <span>{{review.rating}}</span> 
+               
+              <p>{{review.review}}</p>
+                <h4>-{{review.name}}</h4></li>
+          </ul></div>
+      </section>
+
     </div>
   </ng-container>
 </div>

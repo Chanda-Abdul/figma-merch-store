@@ -1,8 +1,10 @@
-import {  Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
+import { Rating } from 'src/app/model/rating.model';
 import { ProductsService } from 'src/app/services/products.service';
+import { RatingsService } from 'src/app/services/ratings.service';
 
 
 @Component({
@@ -12,54 +14,45 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductComponent implements OnInit {
   product$!: Observable<Product>;
+  ratings$!: Observable<Rating[]>;
 
-sizes = { 
-  'S': 'Small', 
-  'M': 'Medium', 
-  'L': 'Large', 
-  'XL': 'Extra Large', 
-  '2XL': 'Extra Extra Large' }
+  sizes = {
+    'S': 'Small',
+    'M': 'Medium',
+    'L': 'Large',
+    'XL': 'Extra Large',
+    '2XL': 'Extra Extra Large'
+  }
 
   constructor(
     private route: ActivatedRoute,
-    private productsService: ProductsService) { }
+    private productsService: ProductsService, 
+    private ratingsService: RatingsService) { }
 
   ngOnInit() {
-  
+
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
-    // console.log(typeof productId, productId);
-    
-    
+  
     this.loadProductById(productId);
     
-//     const product$ = this.productsService
-//     .loadProductById(productId)
-//     .pipe(
-//       map(res => {console.log(res)
-//       return res})
-//     );
-// console.log(product$)
+    this.loadRatingById(productId);
   }
 
   loadProductById(productId: any) {
     const productById$ = this.productsService.loadProductById(productId);
 
-    productById$.subscribe(val => console.log(val));
+    // productById$.subscribe(val => console.log(val));
 
     this.product$ = productById$;
-    // this.newProductsFirst$ = products$
-    //   .pipe(
-    //     map(products => products.sort(sortProductsByNew))
-    //   );
+  
+  }
 
-    // this.featuredProductsFirst$ = products$
-    //   .pipe(
-    //     map(products => products.sort(sortProductsByFeatured))
-    //   );
+  loadRatingById(productId: any) {
+    const ratingById$ = this.ratingsService.loadRatingsById(productId);
 
-    // this.allProductsFeaturedThenNewFirst$ = products$
-    //   .pipe(
-    //     map(products => [...[...products].sort(sortProductsByNew)].sort(sortProductsByFeatured))
-    //   );
+    // ratingById$.subscribe(val => console.log(productId, val));
+
+    this.ratings$ = ratingById$;
+    
   }
 }

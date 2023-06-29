@@ -3,19 +3,19 @@
     <div class="product-grid">
 
       <div class="product-grid__gallery">
-        <figure *ngFor="let image of product.img">
-          <img [src]="image"
+        <figure *ngFor="let photo of product.productPhotos">
+          <img [src]="photo"
                alt="product.name">
         </figure>
-        <figure>
-          <img [src]="product.productImg"
+        <!-- <figure>
+          <img [src]="product.rolloverProductImg"
                alt="product.name">
-        </figure>
+        </figure> -->
       </div>
 
       <div class="product-grid__feature">
         <figure>
-          <img [src]="product.img[0]"
+          <img [src]="product.productPhotos[0]"
                alt="product.name">
         </figure>
 

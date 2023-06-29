@@ -23,6 +23,7 @@ export class RatingsService {
       );
   }
 
+  // TO-DO => change to custom pipe 
   getRandomRatings(productId: number, ratingsList: Rating[]): Rating[] {
     let ratingsToFetchBasedOnProductId = Number(productId
       .toString()

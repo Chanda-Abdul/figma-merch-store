@@ -1,5 +1,29 @@
-@import "/src/styles/sass/main.scss";
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
 
+
+.products {
+  margin-bottom: 11rem;
+  margin-top: 9rem;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 4rem;
+  row-gap: 4rem;
+
+  @include responsive-for(desktop) {
+    grid-template-columns: repeat(4, minMax(0, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 6rem;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    row-gap: 6rem;
+  }
+}
 
 .blurb {
   border-top: 4px solid $black-out;
@@ -7,12 +31,7 @@
   transition: opacity .3s ease-in;
 
 
-  h2 {
-    @include heading-medium-mobile;
-    text-align: center;
-    font-size: 2.7rem;
-    line-height: 1.2;
-  }
+  h2 {}
 
   :hover {
     &:not(a) {
@@ -32,20 +51,8 @@
     color: $black-out;
   }
 
-  img {
-    width: 2.4rem;
-    margin: 0 .7rem;
-  }
-}
-
-
-.products {
-  margin-bottom: 11rem;
-  margin-top: 9rem;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 4rem;
-  row-gap: 4rem;
+  // img {
+  //   width: 2.4rem;
+  //   margin: 0 .7rem;
+  // }
 }

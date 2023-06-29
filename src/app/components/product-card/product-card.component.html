@@ -1,7 +1,7 @@
 <ng-container *ngIf="product">
   <div class="product-list__product">
 
-    <img [src]="product.img[0]"
+    <img [src]="product.productPhotos[0]"
          alt="{{product.name}}"
          class="product-list__product--photo">
 
@@ -14,7 +14,6 @@
 
       <p class="product-list__product--price">{{product.price | currency}}</p>
     </span>
-
 
   </div>
 </ng-container>

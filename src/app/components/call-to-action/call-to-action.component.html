@@ -1,0 +1,24 @@
+<section class="call-to-action">
+
+    <ng-container *ngFor="let word of words"
+                  class="call-to-action__item">
+
+        <a *ngIf="word.linkTo; else noLink"
+           [routerLink]="word.linkTo"
+           class="call-to-action__item--link">
+            {{word.word }}
+        </a>
+        <ng-template #noLink>
+            <p class="call-to-action__item--word"
+               *ngIf="!word.linkTo">{{word.word}}</p>
+        </ng-template>
+
+        <img *ngIf="word.symbol; else lineBreak"
+             [src]=word.symbol
+             aria-hidden="true"
+             class="call-to-action__item--symbol">
+
+        <ng-template #lineBreak>
+            <br class="call-to-action__item--line-break"></ng-template>
+    </ng-container>
+</section>

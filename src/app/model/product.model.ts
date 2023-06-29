@@ -2,11 +2,13 @@ export interface Product {
   id: number;
   new: boolean;
   featured: boolean;
+  featuredCarouselImg?: string;
   name: string;
   price: number;
-  img: string[];
-  backdropImg?: string;
-  productImg?: string;
+  soldOut: boolean;
+  productPhotos: string[];
+  hoverPatternImg?: string;
+  rolloverProductImg?: string;
   link?: string;
   description: string;
   features?: string[];
@@ -18,6 +20,18 @@ export function sortProductsByFeatured(product1: any, product2: any) {
   return product2.featured - product1.featured;
 }
 
+export function filterToFeaturedProducts(products: any) {
+  let product = products.filter((p: any) =>  {return p.featured == true})
+  return product;
+}
+export function sortProductsByDes(product1: any, product2: any) {
+  return product2.id - product1.id;
+}
+
 export function sortProductsByNew(product1: any, product2: any) {
   return product2.new - product1.new;
+}
+
+export function sortProductsByAvailable(product1: any, product2: any) {
+  return product1.soldOut - product2.soldOut;
 }

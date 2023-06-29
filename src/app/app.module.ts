@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductComponent } from './components/product/product.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ProductComponent } from './components/product/product.component';
     ProductListComponent,
     ProductCardComponent,
     HeroComponent,
-    HomeComponent
+    HomeComponent,
+    CallToActionComponent
   ],
   imports: [
     BrowserModule,

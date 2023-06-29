@@ -1,9 +1,17 @@
 <div class="hero">
+  <ng-container>
+  
   <div class="hero__carousel">
-
+<figure *ngFor="let product of featuredProducts$ | async">
+  <img [src]="product.productPhotos">
+</figure>
   </div>
+</ng-container>
   <a class="hero__badge">
-    <span class="hero__badge--icon">👋🏾</span>
+    <span class="hero__badge--icon">
+      👋🏾
+
+    </span>
     <span class="hero__badge--text">100% of profits fund reforestation</span>
   </a>
 </div>

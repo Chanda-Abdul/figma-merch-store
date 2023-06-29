@@ -1,5 +1,10 @@
 @import "/src/styles/sass/main.scss";
 :host{
+  
+  &:not(:nth-child(10n+7)){
+    grid-column: span 1;
+  grid-row: span 1;}
+  
   &:nth-child(10n+7), &:nth-child(10n+8) {
     grid-column: span 2;
     grid-row: span 2;
@@ -7,17 +12,19 @@
 
 }
 .product-list{
+  display: grid;
   &__product {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     @include heading-small-mobile;
 
-    flex: 1 1 40%;
+    // flex: 1 1 40%;
     
     img {
       width: 100%;
-      min-height: 22.27rem;
+      height: auto;
+      // min-height: 22.27rem;
       border-radius: 3.5rem;
     }
 

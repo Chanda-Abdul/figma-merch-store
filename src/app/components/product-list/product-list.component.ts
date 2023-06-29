@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import { Observable, map } from 'rxjs';
-import { Product, sortProductsByFeatured, sortProductsByNew } from 'src/app/model/product.model';
+import { Product, sortProductsByAvailable, sortProductsByDes, sortProductsByFeatured, sortProductsByNew } from 'src/app/model/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -10,9 +10,8 @@ import { Product, sortProductsByFeatured, sortProductsByNew } from 'src/app/mode
 })
 
 export class ProductListComponent implements OnInit {
-
+ 
   allProducts$!: Observable<Product[]>;
-  featuredProductsFirst$!: Observable<Product[]>;
   newProductsFirst$!: Observable<Product[]>;
   allProductsFeaturedThenNewFirst$!: Observable<Product[]>;
 
@@ -28,20 +27,17 @@ export class ProductListComponent implements OnInit {
     products$.subscribe(val => console.log(val));
 
     this.allProducts$ = products$;
+
+    // TO-DO => change to custom pipe
     this.newProductsFirst$ = products$
       .pipe(
-        map(products => products.sort(sortProductsByNew))
-      );
-
-    this.featuredProductsFirst$ = products$
-      .pipe(
-        map(products => products.sort(sortProductsByFeatured))
-      );
-
-    this.allProductsFeaturedThenNewFirst$ = products$
-      .pipe(
-        map(products => [...[...products].sort(sortProductsByNew)]
-          .sort(sortProductsByFeatured))
+        map(products =>
+          [...
+            [...
+              [...products].sort(sortProductsByNew)
+            ].sort(sortProductsByDes)
+          ].sort(sortProductsByAvailable)
+        )
       );
   }
 }

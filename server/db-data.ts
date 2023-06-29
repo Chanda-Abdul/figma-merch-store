@@ -3,38 +3,39 @@ export const PRODUCTS = [
     id: 1,
     new: false,
     featured: false,
-    name: 'Cursor tote bag',
-    price: 0,
-    link: 'https://store.figma.com/products/cursor-tote',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_-_Pattern_600x.png?v=1641321309',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_ToteBag_600x.png?v=1657054965',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/FigmaStore_Tote-25_600x.jpg?v=1657055226',
-      '',
-      '',
-      '',
-      '',
-      '',
+    name: 'Pixel perfect dark mode tee',
+    price: 25,
+    soldOut: false,
+    link: 'pixel-perfect-dark-mode',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/IMG_0036_600x.png?v=1651181016',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/IMG_9207_1000x.png?v=1651177999',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/IMG_9221_1000x.jpg?v=1651178100',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/IMG_9185_1000x.jpg?v=1652132420',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/IMG_0036_1000x.jpg?v=1652132420',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/IMG_0060_1000x.jpg?v=1652132420',
     ],
-    description: 'Totes are just a mobile version of that one really full drawer of random stuff we all have at home. We celebrate that with this canvas of possibilities.',
-    features: ['100% cotton canvas.', 'Printed on an AS Colour tote.'],
+    description: 'This tee is in dark mode, just like your design soul.	Bask in the darkness and blend into your UI—if only for a moment—before the reflective logo picks up the light of a computer screen.',
+    features: ['100% ring spun cotton, unisex sizing.', 'Printed on a Comfort Colors tee.'],
     tags: ['layers'],
   },
   {
     id: 2,
     new: false,
     featured: false,
-    name: 'Pixel perfect dark mode tee',
-    price: 25,
-    link: 'https://store.figma.com/products/pixel-perfect-dark-mode',
-    backdropImg:
-      'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/IMG_0036_600x.png?v=1651181016	',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/IMG_9207_600x.png?v=1651177999',
+    name: 'Figma sticker pack',
+    price: 1,
+    soldOut: false,
+    link: 'free-figma-sticker-pack',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-Store-123-Cut-Out_600x.png?v=1643228318',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1375_600x.jpg?v=1643228355',
       '',
       '',
       '',
@@ -49,15 +50,16 @@ export const PRODUCTS = [
     id: 3,
     new: false,
     featured: false,
-    name: 'Figma sticker pack',
-    price: 1,
-    link: 'https://store.figma.com/products/free-figma-sticker-pack',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-Store-123-Cut-Out_600x.png?v=1643228318',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1375_600x.jpg?v=1643228355',
+    name: 'The Figma Store gift card',
+    price: 25,
+    soldOut: false,
+    link: 'the-figma-store-gift-card',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma_Store_Pattern_1_600x.png?v=1635541659',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/GiftCard-PLPHover_600x.png?v=1641324383	',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/GiftCard-PLP_600x.png?v=1641323873',
       '',
       '',
       '',
@@ -72,21 +74,15 @@ export const PRODUCTS = [
     id: 4,
     new: false,
     featured: false,
-    name: 'The Figma Store gift card',
-    price: 25,
-    link: 'https://store.figma.com/products/the-figma-store-gift-card',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma_Store_Pattern_1_600x.png?v=1635541659',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/GiftCard-PLPHover_600x.png?v=1641324383	',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/GiftCard-PLP_600x.png?v=1641323873',
-      '',
-      '',
-      '',
-      '',
-      '',
-    ],
+    name: 'Plugins mug',
+    price: 32,
+    soldOut: false,
+    link: 'plugins-mug	',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-8_600x.png?v=1636143251',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/plugins-mug_600x.png?v=1636146662',
+    productPhotos: ['https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3751-Edit_600x.jpg?v=1636599807', '', '', '', '', ''],
     description: '',
     features: [],
     tags: ['layers'],
@@ -95,30 +91,15 @@ export const PRODUCTS = [
     id: 5,
     new: false,
     featured: false,
-    name: 'Plugins mug',
-    price: 32,
-    link: 'https://store.figma.com/products/plugins-mug	',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-8_600x.png?v=1636143251',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/plugins-mug_600x.png?v=1636146662',
-    img: ['https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3751-Edit_600x.jpg?v=1636599807', '', '', '', '', ''],
-    description: '',
-    features: [],
-    tags: ['layers'],
-  },
-  {
-    id: 6,
-    new: false,
-    featured: false,
     name: 'Figma wordmark tee',
     price: 18,
-    link: 'https://store.figma.com/products/wordmark-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'wordmark-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-22_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-wordmark-tee_600x.png?v=1636143026',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3814_600x.jpg?v=1636599369',
       '',
       '',
@@ -131,17 +112,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 52,
+    id: 6,
     new: false,
     featured: false,
     name: 'Meet me in the browser tee',
     price: 25,
-    link: 'https://store.figma.com/products/meet-me-in-the-browser-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'meet-me-in-the-browser-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-18_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Meet-me-in-the-browser-tee_25519412-0726-41e8-9c52-b1a267fe1d19_600x.png?v=1636641906',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3600-Edit_600x.jpg?v=1636599551',
       '',
       '',
@@ -154,18 +136,43 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 51,
+    id: 7,
     new: false,
     featured: false,
     name: 'Detach instance pin',
     price: 2,
-    link: 'https://store.figma.com/products/detach-instance-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'detach-instance-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/detach-instance-pin_cad395ad-d8d9-4a3b-8753-2db4838f8ec4_600x.png?v=1636146981',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2953_600x.jpg?v=1636598421',
+      '',
+      '',
+      '',
+      '',
+      '',
+    ],
+    description: '',
+    features: [],
+    tags: ['layers'],
+  },
+  {
+    id: 8,
+    new: false,
+    featured: false,
+    name: 'Light grey comment socks',
+    price: 10,
+    soldOut: false,
+    link: 'light-grey-comment-socks',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Light-grey-comment-icon-socks_600x.png?v=1636144377',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-4136_600x.jpg?v=1636599515',
       '',
       '',
       '',
@@ -180,15 +187,16 @@ export const PRODUCTS = [
     id: 9,
     new: false,
     featured: false,
-    name: 'Light grey comment socks',
-    price: 10,
-    link: 'https://store.figma.com/products/light-grey-comment-socks',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Light-grey-comment-icon-socks_600x.png?v=1636144377',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-4136_600x.jpg?v=1636599515',
+    name: 'Vector network pin',
+    price: 2,
+    soldOut: false,
+    link: 'vector-network-pin',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-16_600x.png?v=1636143251',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/red-burst-pin_20fbc189-9a07-4aa8-a362-1e82c86a6479_600x.png?v=1636146983',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3423_600x.jpg?v=1636599871',
       '',
       '',
       '',
@@ -203,15 +211,16 @@ export const PRODUCTS = [
     id: 10,
     new: false,
     featured: false,
-    name: 'Vector network pin',
-    price: 2,
-    link: 'https://store.figma.com/products/vector-network-pin',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-16_600x.png?v=1636143251',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/red-burst-pin_20fbc189-9a07-4aa8-a362-1e82c86a6479_600x.png?v=1636146983',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3423_600x.jpg?v=1636599871',
+    name: 'Bezier logo tee',
+    price: 25,
+    soldOut: false,
+    link: 'bezier-logo-long-sleeve-tee',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_600x.png?v=1636143050',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Bezier-logo-tee_600x.png?v=1636143029',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-4050-Edit_600x.jpg?v=1636598157	',
       '',
       '',
       '',
@@ -226,15 +235,16 @@ export const PRODUCTS = [
     id: 11,
     new: false,
     featured: false,
-    name: 'Bezier logo tee',
-    price: 25,
-    link: 'https://store.figma.com/products/bezier-logo-long-sleeve-tee',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_600x.png?v=1636143050',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Bezier-logo-tee_600x.png?v=1636143029',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-4050-Edit_600x.jpg?v=1636598157	',
+    name: 'Detach instance tee',
+    price: 20,
+    soldOut: false,
+    link: 'detach-instance-tee',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_600x.png?v=1636142910',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Detach-instance-tee_600x.png?v=1636142947',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3215_600x.jpg?v=1636598458',
       '',
       '',
       '',
@@ -249,15 +259,16 @@ export const PRODUCTS = [
     id: 12,
     new: false,
     featured: false,
-    name: 'Detach instance tee',
-    price: 20,
-    link: 'https://store.figma.com/products/detach-instance-tee',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_600x.png?v=1636142910',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Detach-instance-tee_600x.png?v=1636142947',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3215_600x.jpg?v=1636598458',
+    name: 'Smiley pin',
+    price: 2,
+    soldOut: false,
+    link: 'smiley-pin',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/smiley-pin_a948a00a-6e53-4bbd-b5c6-68da942ffcd8_600x.png?v=1636146983',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3504_600x.jpg?v=1636599916',
       '',
       '',
       '',
@@ -272,15 +283,16 @@ export const PRODUCTS = [
     id: 13,
     new: false,
     featured: false,
-    name: 'Smiley pin',
-    price: 2,
-    link: 'https://store.figma.com/products/smiley-pin',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/smiley-pin_a948a00a-6e53-4bbd-b5c6-68da942ffcd8_600x.png?v=1636146983',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3504_600x.jpg?v=1636599916',
+    name: 'Figma logo tee',
+    price: 18,
+    soldOut: false,
+    link: 'figma-logo-tee',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-6_600x.png?v=1636143252',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-logo-tee_600x.png?v=1636143022',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2894_600x.jpg?v=1636598662',
       '',
       '',
       '',
@@ -295,15 +307,16 @@ export const PRODUCTS = [
     id: 14,
     new: false,
     featured: false,
-    name: 'Figma logo tee',
-    price: 18,
-    link: 'https://store.figma.com/products/figma-logo-tee',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-6_600x.png?v=1636143252',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-logo-tee_600x.png?v=1636143022',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2894_600x.jpg?v=1636598662',
+    name: 'Throw blanket',
+    price: 80,
+    soldOut: false,
+    link: 'throw-blanket',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252	',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Blanket_600x.png?v=1636145515',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2662_600x.jpg?v=1636599962	',
       '',
       '',
       '',
@@ -318,15 +331,16 @@ export const PRODUCTS = [
     id: 15,
     new: false,
     featured: false,
-    name: 'Throw blanket',
-    price: 80,
-    link: 'https://store.figma.com/products/throw-blanket',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252	',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Blanket_600x.png?v=1636145515',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2662_600x.jpg?v=1636599962	',
+    name: 'Blue Figma hat',
+    price: 20,
+    soldOut: false,
+    link: 'blue-figma-hat	',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-4_600x.png?v=1636143252',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/blue-figma-hat_600x.png?v=1636145926	',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2008_600x.jpg?v=1636598330',
       '',
       '',
       '',
@@ -341,37 +355,15 @@ export const PRODUCTS = [
     id: 16,
     new: false,
     featured: false,
-    name: 'Blue Figma hat',
-    price: 20,
-    link: 'https://store.figma.com/products/blue-figma-hat	',
-    backdropImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-4_600x.png?v=1636143252',
-    productImg:
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/blue-figma-hat_600x.png?v=1636145926	',
-    img: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2008_600x.jpg?v=1636598330',
-      '',
-      '',
-      '',
-      '',
-      '',
-    ],
-    description: '',
-    features: [],
-    tags: ['layers'],
-  },
-  {
-    id: 29,
-    new: false,
-    featured: false,
     name: 'Figma hoodie',
     price: 45,
-    link: 'https://store.figma.com/products/figma-hoodie',
-    backdropImg:
+    soldOut: false,
+    link: 'figma-hoodie',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-embroidered-hoodie_600x.png?v=1636143387',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1469_600x.jpg?v=1636598538	',
       '',
       '',
@@ -384,17 +376,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 30,
+    id: 17,
     new: false,
     featured: false,
     name: 'White pen tool socks',
     price: 10,
-    link: 'https://store.figma.com/products/white-pen-tool-socks',
-    backdropImg:
+    soldOut: false,
+    link: 'white-pen-tool-socks',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-5_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/White-pen-tool-icon-socks_600x.png?v=1636144376',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1242_600x.jpg?v=1636600007',
       '',
       '',
@@ -407,17 +400,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 31,
+    id: 18,
     new: false,
     featured: false,
     name: '<code/> cap',
     price: 20,
-    link: 'https://store.figma.com/products/code-cap',
-    backdropImg:
+    soldOut: false,
+    link: 'code-cap',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_2462bce6-2629-4568-a70d-77d06bddd9e1_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/plugins-hat_600x.png?v=1636145926',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1600_600x.jpg?v=1636599757',
       '',
       '',
@@ -430,17 +424,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 32,
+    id: 19,
     new: false,
     featured: false,
     name: 'Figma travel tumbler',
     price: 35,
-    link: 'https://store.figma.com/products/figma-travel-tumbler',
-    backdropImg:
+    soldOut: false,
+    link: 'figma-travel-tumbler',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/kinto-bottle_600x.png?v=1636146662',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3116_efa5ec4c-b900-401d-a7fc-d184d47ec4b9_600x.jpg?v=1636599330',
       '',
       '',
@@ -453,17 +448,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 33,
+    id: 21,
     new: false,
     featured: false,
     name: 'Black arrow socks',
     price: 10,
-    link: 'https://store.figma.com/products/black-arrow-socks',
-    backdropImg:
+    soldOut: false,
+    link: 'black-arrow-socks',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-15_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Black-arrow-icon-socks_600x.png?v=1636144149',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2379_600x.jpg?v=1636598272',
       '',
       '',
@@ -476,17 +472,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 34,
+    id: 22,
     new: false,
     featured: false,
     name: 'Elevated workflows tee',
     price: 25,
-    link: 'https://store.figma.com/products/elevated-workflows-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'elevated-workflows-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Elevated-workflows-tee_600x.png?v=1636143031',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-366_600x.jpg?v=1636598498',
       '',
       '',
@@ -499,17 +496,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 35,
+    id: 23,
     new: false,
     featured: false,
     name: 'Figma logo pin',
     price: 2,
-    link: 'https://store.figma.com/products/figma-logo-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'figma-logo-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-20_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-logo-pin_d9be32db-3162-4e6b-a1b5-6dce15c40cad_600x.png?v=1636146982',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2091_600x.jpg?v=1636598619',
       '',
       '',
@@ -522,17 +520,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 36,
+    id: 24,
     new: false,
     featured: false,
     name: 'Hug contents tee',
     price: 20,
-    link: 'https://store.figma.com/products/hug-contents-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'hug-contents-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-3_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hug-contents-tee_e300a456-bdd8-470f-9c15-3031ff12d110_600x.png?v=1636143026',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1224_600x.jpg?v=1636599461',
       '',
       '',
@@ -545,17 +544,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 37,
+    id: 25,
     new: false,
     featured: false,
     name: 'Bezier water bottle',
     price: 20,
-    link: 'https://store.figma.com/products/bezier-water-bottle',
-    backdropImg:
+    soldOut: false,
+    link: 'bezier-water-bottle',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-9_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/waterbottle_c970529b-0a45-4d21-b0d8-296aeed449c0_600x.png?v=1636146364',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-630_600x.jpg?v=1636598228',
       '',
       '',
@@ -568,17 +568,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 38,
+    id: 26,
     new: false,
     featured: false,
     name: 'Logo dimensions tee',
     price: 25,
-    link: 'https://store.figma.com/products/logo-dimensions-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'logo-dimensions-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-24_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Flocked-logo-dimensions-tee_600x.png?v=1636143033',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2327_600x.jpg?v=1636599425',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2327_1000x.jpg?v=1636599425',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2272_1000x.jpg?v=1636599425',
@@ -595,17 +596,18 @@ export const PRODUCTS = [
     sizes: true,
   },
   {
-    id: 39,
+    id: 27,
     new: false,
     featured: false,
     name: 'Multicursor pin',
     price: 2,
-    link: 'https://store.figma.com/products/multicursor-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'multicursor-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/rainbow-cursor-pin_517323d3-6aff-4e24-ab7c-94107df5a187_600x.png?v=1636146982',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1616_600x.jpg?v=1636599719',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1616_1000x.jpg?v=1636599719',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1660_1000x.jpg?v=1636599719',
@@ -617,17 +619,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 40,
+    id: 28,
     new: false,
     featured: true,
     name: 'Figma logo hat',
     price: 20,
-    link: 'https://store.figma.com/products/figma-logo-hat',
-    backdropImg:
+    soldOut: false,
+    link: 'figma-logo-hat',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-17_1200x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-logo-hat_1200x.png?v=1636145926',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-414-Edit_1200x.jpg?v=1636599254',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-414-Edit_1000x.jpg?v=1636599254',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-517-Edit_1000x.jpg?v=1636598572',
@@ -645,17 +648,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 41,
+    id: 29,
     new: false,
     featured: true,
     name: 'Comments notebook',
     price: 10,
-    link: 'https://store.figma.com/products/comments-notebook	',
-    backdropImg:
+    soldOut: false,
+    link: 'comments-notebook	',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-18_1200x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Notebook_54df7006-77df-4397-a719-c2b49bc9df74_1200x.png?v=1636147218',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3403_1200x.jpg?v=1636598385',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3403_1000x.jpg?v=1636598385',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3325_1000x.jpg?v=1636598385',
@@ -669,17 +673,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 42,
+    id: 30,
     new: true,
     featured: false,
     name: 'Rainbow logo tee',
     price: 20,
-    link: 'https://store.figma.com/products/rainbow-logo-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'rainbow-logo-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Rainbow-logo-tee_600x.png?v=1636143026',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1096_600x.jpg?v=1636599836',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1096_1000x.jpg?v=1636599836',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1039_1000x.jpg?v=1636599836',
@@ -696,17 +701,18 @@ export const PRODUCTS = [
     sizes: true,
   },
   {
-    id: 43,
+    id: 31,
     new: true,
-    featured: false,
+    featured: true,
     name: 'Tidy up tee',
     price: 25,
-    link: 'https://store.figma.com/products/tidy-up-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'tidy-up-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-14_e1362380-a908-44c4-bc76-e5751953a5de_600x.png?v=1651180902',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_tidy-up-tee_rollover_600x.png?v=1670516673',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tidy-up-tee_01_600x.jpg?v=1670516715',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tidy-up-tee_01_1000x.jpg?v=1670516715',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tidy-up-tee_02_1000x.jpg?v=1670516716',
@@ -722,17 +728,18 @@ export const PRODUCTS = [
     sizes: true,
   },
   {
-    id: 45,
+    id: 32,
     new: true,
     featured: false,
     name: 'Power points pin',
     price: 2,
-    link: 'https://store.figma.com/products/power-points-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'power-points-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_2462bce6-2629-4568-a70d-77d06bddd9e1_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_power-points-pin_rollover_600x.png?v=1670520514',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_power-points-pin_01_600x.jpg?v=1670520537',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_power-points-pin_01_1000x.jpg?v=1670520537',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_power-points-pin_02_1000x.jpg?v=1670520538',
@@ -744,17 +751,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 46,
+    id: 33,
     new: true,
     featured: false,
     name: 'Pick of the bunch washi tape',
     price: 1,
-    link: 'https://store.figma.com/products/pick-of-the-bunch-washi-tape',
-    backdropImg:
+    soldOut: false,
+    link: 'pick-of-the-bunch-washi-tape',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-14_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-tan_01_600x.jpg?v=1670520306',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_washi-tape-tan_rollover_02_600x.png?v=1670597321',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-tan_02_1000x.jpg?v=1670520307',
     ],
@@ -763,17 +771,19 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 47,
+    id: 34,
     new: true,
     featured: false,
+    featuredCarouselImg: '',
     name: 'Toolkit mug',
     price: 35,
-    link: 'https://store.figma.com/products/toolkit-mug',
-    backdropImg:
+    soldOut: false,
+    link: 'toolkit-mug',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_tool-kit-mug_rollover_600x.png?v=1670520001',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tool-kit-mug_01_600x.jpg?v=1670520016',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tool-kit-mug_01_1000x.jpg?v=1670520016',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tool-kit-mug_02_1000x.jpg?v=1670520015',
@@ -789,17 +799,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 48,
+    id: 35,
     new: true,
     featured: false,
     name: "Meet n' greet pin",
     price: 2,
-    link: 'https://store.figma.com/products/meet-n-greet-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'meet-n-greet-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_meet-n-greet-pin_rollover_600x.png?v=1670520645',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_meet-n-greet-pin_01_600x.jpg?v=1670520677',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_meet-n-greet-pin_01_1000x.jpg?v=1670520677',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_meet-n-greet-pin_02_1000x.jpg?v=1670520676',
@@ -812,17 +823,19 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 49,
+    id: 36,
     new: true,
-    featured: false,
+    featured: true,
+    featuredCarouselImg: '',
     name: 'Framework tee',
     price: 20,
-    link: 'https://store.figma.com/products/framework-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'framework-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_framework-tee_rollover_600x.png?v=1670515569',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_01_600x.jpg?v=1670515454',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_01_1000x.jpg?v=1670515454',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_02_1000x.jpg?v=1670515454',
@@ -841,17 +854,19 @@ export const PRODUCTS = [
     sizes: true,
   },
   {
-    id: 50,
+    id: 37,
     new: true,
-    featured: false,
+    featured: true,
+    featuredCarouselImg: '',
     name: 'Dress code hat',
     price: 20,
-    link: 'https://store.figma.com/products/dress-code-hat',
-    backdropImg:
+    soldOut: false,
+    link: 'dress-code-hat',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_-_Pattern_600x.png?v=1641321309',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_dress-code-hat_rollover_600x.png?v=1670519799',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_01_600x.png?v=1677707527	',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_01_1000x.png?v=1677707527',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_02_1000x.jpg?v=1677707527',
@@ -867,17 +882,19 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 8,
+    id: 38,
     new: true,
     featured: true,
+    featuredCarouselImg: '',
     name: 'Band together socks',
     price: 10,
-    link: 'https://store.figma.com/products/band-together-socks',
-    backdropImg:
+    soldOut: false,
+    link: 'band-together-socks',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_band-together-socks_rollover_1200x.png?v=1670519884',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_1200x.png?v=1636143050',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_01_1200x.jpg?v=1670519923',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_01_1000x.jpg?v=1670519923',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_02_1000x.jpg?v=1670519923',
@@ -890,17 +907,19 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 7,
+    id: 39,
     new: true,
     featured: true,
+    featuredCarouselImg: '',
     name: 'Shape up tee',
     price: 20,
-    link: 'https://store.figma.com/products/shape-up-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'shape-up-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_1200x.png?v=1636143050',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_shape-up-tee_rollover_1200x.png?v=1670516450',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_02_1000x.jpg?v=1678114580',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_03_1000x.jpg?v=1678114580',
@@ -917,17 +936,18 @@ export const PRODUCTS = [
     sizes: true,
   },
   {
-    id: 53,
+    id: 40,
     new: true,
     featured: false,
     name: 'On brand hat',
     price: 25,
-    link: 'https://store.figma.com/products/on-brand-hat-wool-patch',
-    backdropImg:
+    soldOut: false,
+    link: 'on-brand-hat-wool-patch',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-22_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_on-brand-hat_rollover_600x.png?v=1670519690',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_on-brand-hat_01_600x.jpg?v=1670519718',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_on-brand-hat_01_1000x.jpg?v=1670519718',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_on-brand-hat_02_1000x.jpg?v=1670519719',
@@ -943,17 +963,18 @@ export const PRODUCTS = [
     tags: ['layers'],
   },
   {
-    id: 54,
+    id: 41,
     new: true,
     featured: false,
     name: 'Toolkit pin',
     price: 2,
-    link: 'https://store.figma.com/products/toolkit-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'toolkit-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-15_600x.png?v=1636143251',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_tool-kit-pin_rollover_600x.png?v=1670520872',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tool-kit-pin_01_600x.jpg?v=1670520907',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tool-kit-pin_01_1000x.jpg?v=1670520907',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_tool-kit-pin_02_1000x.jpg?v=1670520908',
@@ -966,17 +987,18 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 55,
+    id: 42,
     new: true,
     featured: false,
     name: 'Best bud pin',
     price: 2,
-    link: 'https://store.figma.com/products/best-bud-pin',
-    backdropImg:
+    soldOut: false,
+    link: 'best-bud-pin',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-24_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_best-bud-pin_rollover_600x.png?v=1670520766',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_best-bud-pin_01_600x.jpg?v=1670520788',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_best-bud-pin_01_1000x.jpg?v=1670520788',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_best-bud-pin_02_1000x.jpg?v=1670520789',
@@ -988,17 +1010,19 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 56,
+    id: 43,
     new: true,
-    featured: false,
+    featured: true,
+    featuredCarouselImg: '',
     name: 'Version history coach jacket',
     price: 45,
-    link: 'https://store.figma.com/products/version-history-coach-jacket',
-    backdropImg:
+    soldOut: false,
+    link: 'version-history-coach-jacket',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_version-history-jacket.png_rollover_600x.png?v=1670519524',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_version-history-jacket_01_600x.jpg?v=1670519561',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_version-history-jacket_01_1000x.jpg?v=1670519561',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_version-history-jacket_02_1000x.jpg?v=1670519560',
@@ -1016,17 +1040,19 @@ export const PRODUCTS = [
     sizes: true,
   },
   {
-    id: 57,
+    id: 44,
     new: true,
-    featured: false,
+    featured: true,
+    featuredCarouselImg: '',
     name: 'Gridlock washi tape',
     price: 1,
-    link: 'https://store.figma.com/products/gridlock-washi-tape',
-    backdropImg:
+    soldOut: false,
+    link: 'gridlock-washi-tape',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_washi-tape-green_rollover_02_600x.png?v=1670597359',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_01_600x.jpg?v=1670520424	',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_01_1000x.jpg?v=1670520424',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_02_1000x.jpg?v=1670520425',
@@ -1036,17 +1062,19 @@ export const PRODUCTS = [
     tags: ['components'],
   },
   {
-    id: 58,
+    id: 45,
     new: true,
-    featured: false,
+    featured: true,
+    featuredCarouselImg: '',
     name: 'Design in bloom tee',
     price: 25,
-    link: 'https://store.figma.com/products/design-in-bloom-tee',
-    backdropImg:
+    soldOut: false,
+    link: 'design-in-bloom-tee',
+    hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-27_600x.png?v=1651180902	',
-    productImg:
+    hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_design-in-bloom-tee_rollover_600x.png?v=1670516565',
-    img: [
+    productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_design-in-bloom-tee_01_600x.jpg?v=1670516592',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_design-in-bloom-tee_01_600x.jpg?v=1670516592',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_design-in-bloom-tee_rollover_600x.png?v=1670516565',
@@ -1061,6 +1089,28 @@ export const PRODUCTS = [
     ],
     tags: ['layers'],
     sizes: true,
+  },
+  {
+    id: 46,
+    new: false,
+    featured: false,
+    name: 'Cursor tote bag',
+    price: 20,
+    soldOut: true,
+    link: 'cursor-tote',
+    hoverPatternImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_-_Pattern_600x.png?v=1641321309',
+    hoverProductImg:
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_ToteBag_600x.png?v=1657054965',
+    productPhotos: [
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/FigmaStore_Tote-25_1000x.jpg?v=1657055226',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/FigmaStore_Tote-6_1000x.jpg?v=1657055226',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/FigmaStore_Tote-27_1000x.jpg?v=1657055226',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/FigmaStore_Tote-00000_1000x.jpg?v=1657055261',
+    ],
+    description: 'Totes are just a mobile version of that one really full drawer of random stuff we all have at home. We celebrate that with this canvas of possibilities.',
+    features: ['100% cotton canvas.', 'Printed on an AS Colour tote.'],
+    tags: ['layers'],
   },
 ];
 
@@ -1077,7 +1127,7 @@ export const PRODUCTS = [
 
 //}
 
-export const RATINGS =  [
+export const RATINGS = [
   {
     name: "John D.",
     review: "The product is of great quality and looks fantastic. Very satisfied with my purchase!",

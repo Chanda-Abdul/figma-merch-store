@@ -1,0 +1,55 @@
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
+
+
+.call-to-action {
+  padding: 15rem 0 5rem;
+  width: 100%;
+
+  @include heading-medium-mobile;
+  text-align: center;
+  font-size: 2.7rem;
+  line-height: 1.2;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &--link {
+      text-decoration: underline;
+      border: none;
+      display: inline-block;
+      line-height: inherit;
+      font-size: inherit;
+      padding: 0;
+      position: relative;
+
+      &:after {
+        background: $black-out;
+        bottom: 2px;
+        content: "";
+        display: block;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    &--word {
+      display: inline-flex;
+     padding: .7rem;
+    }
+
+    &--symbol {
+      margin:  0 .7rem;
+    }
+
+    &--line-break {
+      width: 100%;
+    }
+  }
+}

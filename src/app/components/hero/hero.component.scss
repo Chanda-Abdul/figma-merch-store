@@ -8,16 +8,34 @@
   position: relative;
 
   &__carousel {
+    display: flex;
+    flex-direction: row;
     padding-top: 5.8rem;
+  }
+
+  img {
+    width: 10rem;
+    margin: 2rem;
   }
 
   &__badge {
     position: absolute;
-    bottom: -6rem;
+    right: 2rem;
+    bottom: calc(-17rem / 2);
+    height: 17rem;
+    width: 17rem;
     border: 4px solid $black-out;
     background-color: white;
     border-radius: 50%;
-    &--icon {}
+
+    &--icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8rem;
+      height: 8rem;
+      // padding: auto;
+    }
 
     &--text {}
   }

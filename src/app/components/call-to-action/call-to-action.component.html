@@ -13,12 +13,12 @@
                *ngIf="!word.linkTo">{{word.word}}</p>
         </ng-template>
 
-        <img *ngIf="word.symbol; else lineBreak"
+        <img *ngIf="word.symbol"
              [src]=word.symbol
              aria-hidden="true"
              class="call-to-action__item--symbol">
 
-        <ng-template #lineBreak>
-            <br class="call-to-action__item--line-break"></ng-template>
+        <!--; else lineBreak <ng-template #lineBreak>
+            <br class="call-to-action__item--line-break"></ng-template> -->
     </ng-container>
 </section>

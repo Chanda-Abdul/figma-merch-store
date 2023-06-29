@@ -1,6 +1,7 @@
 @mixin heading-extra-large {
+ font-family: $font-display;
   // font-size: 10rem;
-  font-weight: $font-weight-heading-default;
+  font-weight: $font-weight-display;
   // line-height: 12rem;
   // letter-spacing: -.5rem;
   // text-align: left;
@@ -8,17 +9,14 @@
 
 @mixin heading-extra-large-mobile {
   @include heading-extra-large;
-  font-family: $font-body;
-  font-size: 6.2rem;
-  line-height: 5.7rem;
-  letter-spacing: $letter-spacing-default;
-  text-align: left;
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+  text-transform: uppercase;
 }
 
 @mixin heading-large {
-  font-family: $font-body;
-  font-weight: $font-weight-heading-default;
-
+  font-family: $font-display;
+  font-weight: $font-weight-display;
 }
 
 @mixin heading-large-mobile {
@@ -31,10 +29,8 @@
 }
 
 @mixin heading-medium {
-  font-family: $font-body;
-  font-weight: $font-weight-heading-default;
-  // letter-spacing: $letter-spacing-default;
-  // text-align: center;
+  font-family: $font-display;
+  font-weight: $font-weight-display;
 }
 
 @mixin heading-medium-mobile {
@@ -46,20 +42,9 @@
 }
 
 @mixin heading-small {
-  font-family: $font-body;
-
-
-  // text-align: center;
-  // text-transform: uppercase;
-
+  font-family: $font-display;
+  font-weight: $font-weight-display;
   line-height: 1.4rem;
-
-  // font-size: 1.3rem;
-
-  //
-  // letter-spacing: .5rem;
-  // text-align: left;
-
 }
 
 @mixin heading-small-mobile {
@@ -68,15 +53,13 @@
   font-weight: $font-weight-default;
   font-size: 1.4rem;
   line-height: 1.4rem;
-  // font-size: 1rem;
+
 }
 
 @mixin body-text-primary {
-  font-size: 1.3rem;
-  font-weight: $font-weight-default;
-  letter-spacing: $letter-spacing-default;
-  line-height: $line-height-default;
-  text-align: left;
+  font-family: $font-body;
+  font-size: 1.6rem;
+  font-weight: $font-weight-body;
 }
 
 @mixin body-text-link-primary {

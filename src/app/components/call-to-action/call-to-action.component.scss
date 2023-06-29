@@ -8,10 +8,8 @@
   padding: 15rem 0 5rem;
   width: 100%;
 
-  @include heading-medium-mobile;
+  @include heading-extra-large-mobile;
   text-align: center;
-  font-size: 2.7rem;
-  line-height: 1.2;
 
   &__item {
     display: inline-flex;
@@ -19,11 +17,9 @@
     justify-content: center;
 
     &--link {
-      text-decoration: underline;
+      @include heading-extra-large-mobile;
       border: none;
       display: inline-block;
-      line-height: inherit;
-      font-size: inherit;
       padding: 0;
       position: relative;
 
@@ -41,11 +37,11 @@
 
     &--word {
       display: inline-flex;
-     padding: .7rem;
+      padding: .7rem;
     }
 
     &--symbol {
-      margin:  0 .7rem;
+      margin: 0 .7rem;
     }
 
     &--line-break {

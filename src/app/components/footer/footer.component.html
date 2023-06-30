@@ -1,39 +1,51 @@
-<footer class="footer">
-  <img src="/assets/logo-circle.png"
-       alt="logo circle"
-       class="footer__logo">
-  <div class="footer__nav-to-top">
-    <h3 class="footer__nav--text">OBJECTS THAT INSPIRE.</h3> <a href="#"  class="footer__nav--icon"> <img src="/assets/icons/arrow-circle-up.svg"
-           alt="logo circle"></a>
+<footer class="footer"
+        [ngStyle]="{'background-color': bkgrndColor}">
+  <div class="footer__logo"
+       [ngStyle]="{'background-color': logoColor}">
+    <h3>THE</h3>
+    <h3>FIGMA</h3>
+    <h3>STORE</h3>
   </div>
-<div class="footer__links">
-  <ul class="footer__legal">
-    <li class="footer__legal--link">
-      <a href="#"
-         class="footer__legal--link">Privacy & Terms</a>
-    </li>
-    <li class="footer__legal--link">
-      <a href="#"
-         class="footer__legal--link">Contact Us</a>
-    </li>
-  </ul>
-  <ul class="footer__social">
-    <li class="footer__social--link">
-      <a href="#"
-         class="footer__social--link">FIGMA ↗</a>
-    </li>
-    <li class="footer__social--link">
-      <a href="#"
-         class="footer__social--link">TWITTER</a>
-    </li>
-    <li class="footer__social--link">
-      <a href=""
-         class="footer__social--link">INSTAGRAM</a>
-    </li>
-    <li class="footer__social--link">
-      <a href="#"
-         class="footer__social--link"> YOUTUBE</a>
-    </li>
 
-  </ul></div>
+  <div class="footer__content">
+
+    <h3 class="footer__content--text">Objects That Inspire.</h3>
+
+    <a href="#scrollToTop"
+       class="footer__content--icon">
+
+      <img src="/assets/icons/arrow-circle-up.svg"
+           alt="arrow-up"></a>
+
+    <ul class="footer__legal">
+
+      <li *ngFor="let links of footerLinks.legal"
+          class="footer__legal--link">
+
+        <a routerLink="{{links.link}}"
+           class="footer__legal--link">{{links.text}}</a>
+      </li>
+    </ul>
+
+    <ul class="footer__social">
+
+      <li class="footer__social--link" *ngFor="let links of footerLinks.social">
+        <a href="{{links.link}}"
+        class="footer__legal--link">{{links.text}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer__ticker">
+    <div class="footer__ticker--tape">
+      <span *ngFor=" let item of tickerTapeItems">
+        <span *ngIf="item.word; else showShape">{{item.word}}</span>
+        <ng-template #showShape>
+          <div innerHTML=item.shape></div>
+        </ng-template>
+
+      </span>
+    </div>
+  </div>
+
 </footer>

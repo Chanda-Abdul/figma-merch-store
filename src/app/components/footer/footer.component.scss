@@ -1,67 +1,67 @@
-@import "/src/styles/sass/main.scss";
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/typography";
+
 
 .footer {
+  position: relative;
   width: 100vw;
-  min-height: 71.3rem;
-  background-color: $sunflower;
+  height: fit-content;
   @include flex(column, center, center);
-  position: static;
   bottom: 0;
-  padding: $vertical-padding-default $horizontal-padding-default;
+  left: 0;
+  padding: 6rem $gutter-default-mobile 0;
 
-  &__logo {}
+  &__logo {
+    @include heading-large-mobile;
+    min-width: 10rem;
+    min-height: 17.3rem;
+    padding: 6rem;
+    border-radius: 50%;
+    @include flex(column, space-between, center);
+  }
 
-  &__nav-to-top {
-    @include flex(row, space-between, center);
+  &__content {
+    display: grid;
+    grid-column-gap: 2rem;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    grid-template-columns: 2fr 1fr auto;
+
     width: 100%;
     margin-top: 2.7rem;
     margin-bottom: 4.5rem;
-  }
 
-  &__nav {
     &--text {
-      width: 26.8rem;
       @include heading-large-mobile;
+      grid-column: span 2;
     }
 
     &--icon img {
+      grid-column: span 1;
       height: 4rem;
       width: 4rem;
-
     }
-  }
-
-  &__links {
-    width: 100%;
-    @include flex(row, flex-start, flex-start);
-  }
-
-  &__legal,
-  &__social {
-    @include flex(column, center, flex-start);
   }
 
   &__legal {
-    width: 18rem;
-    margin-right: $vertical-padding-default;
 
-    * {
+    &--link {
       @include body-text-link-secondary;
       padding-bottom: 2.2rem;
-
     }
-
-    &--link {}
   }
 
   &__social {
-    * {
+    grid-column: 2/span 2;
+
+    &--link {
       @include body-text-link-primary;
       padding-bottom: 2.4rem;
-
     }
-
-    &--link {}
   }
 
 }

@@ -1,0 +1,56 @@
+@import "src/styles/sass/abstracts/mixins";
+@import "src/styles/sass/abstracts/variables";
+@import "src/styles/sass/base/fonts";
+@import "src/styles/sass/base/typography";
+
+.content {
+    margin: 17rem $horizontal-padding-default 12rem;
+
+    .title {
+        @include heading-medium-mobile;
+        text-align: center;
+        font-size: 1.7rem;
+        margin-bottom: 12rem;
+    }
+}
+
+.privacy,
+.terms {
+    &__last-update {
+        @include body-text-primary;
+        font-size: 1.8rem;
+    }
+
+    &__list--item:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        @include heading-medium-mobile;
+        text-transform: capitalize
+    }
+
+    &__text {
+        @include body-text-primary;
+        font-size: 1.8rem;
+
+
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+
+        &--list {
+            margin-top: 2rem;
+        }
+
+        &--item {
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        }
+
+        &--important {
+            @include heading-medium-mobile;
+            margin: 2rem 0;
+        }
+    }
+}

@@ -35,8 +35,8 @@
 
 @mixin heading-medium-mobile {
   @include heading-medium;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
+  font-size: 1.8rem;
+  // line-height: 1.4rem;
   text-transform: uppercase;
   text-align: left;
 }
@@ -59,6 +59,7 @@
 @mixin body-text-primary {
   font-family: $font-body;
   font-size: 1.6rem;
+  line-height: 1.4;
   font-weight: $font-weight-body;
 }
 
@@ -77,9 +78,13 @@
 @mixin body-text-link-secondary {
   @include body-text-link-primary;
   font-weight: $font-weight-default;
+  text-decoration-line: none;
   text-transform: capitalize;
-  font-size: 1.475rem;
-  line-height: 1.6rem;
+  font-size: 1.575rem;
+  // line-height: 1.6rem;
+  &:hover{
+    text-decoration-line: underline;
+  }
 }
 
 

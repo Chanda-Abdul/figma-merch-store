@@ -14,12 +14,13 @@
   padding: 6rem $gutter-default-mobile 0;
 
   &__logo {
-    @include heading-large-mobile;
-    min-width: 10rem;
-    min-height: 17.3rem;
-    padding: 6rem;
-    border-radius: 50%;
-    @include flex(column, space-between, center);
+    // @include heading-large-mobile;
+    img{min-width: 10rem;
+    min-height: 17.3rem;}
+    
+    // padding: 6rem;
+    // border-radius: 50%;
+    // @include flex(column, space-between, center);
   }
 
   &__content {

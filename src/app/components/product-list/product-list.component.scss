@@ -10,6 +10,7 @@
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: calc(50vw - 3rem), 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 4rem;
   row-gap: 4rem;
@@ -23,36 +24,4 @@
     column-gap: 3rem;
     row-gap: 6rem;
   }
-}
-
-.blurb {
-  border-top: 4px solid $black-out;
-  padding: 8rem $horizontal-padding-default;
-  transition: opacity .3s ease-in;
-
-
-  h2 {}
-
-  :hover {
-    &:not(a) {
-      opacity: .7;
-
-      //   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      //   transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;
-    }
-
-  }
-
-
-
-
-
-  a {
-    color: $black-out;
-  }
-
-  // img {
-  //   width: 2.4rem;
-  //   margin: 0 .7rem;
-  // }
 }

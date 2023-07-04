@@ -674,7 +674,7 @@ export const PRODUCTS = [
   },
   {
     id: 30,
-    new: true,
+    new: false,
     featured: false,
     name: 'Rainbow logo tee',
     price: 20,
@@ -995,7 +995,7 @@ export const PRODUCTS = [
     soldOut: false,
     link: 'best-bud-pin',
     hoverPatternImg:
-      'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-24_600x.png?v=1636143252',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-24_600x.png?v=1636143252',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_best-bud-pin_rollover_600x.png?v=1670520766',
     productPhotos: [
@@ -1019,7 +1019,7 @@ export const PRODUCTS = [
     soldOut: false,
     link: 'version-history-coach-jacket',
     hoverPatternImg:
-      'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_version-history-jacket.png_rollover_600x.png?v=1670519524',
     productPhotos: [
@@ -1049,11 +1049,11 @@ export const PRODUCTS = [
     soldOut: false,
     link: 'gridlock-washi-tape',
     hoverPatternImg:
-      'https://cdn.shopify.com/s/fi les/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_washi-tape-green_rollover_02_600x.png?v=1670597359',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_01_600x.jpg?v=1670520424	',
+      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_01_600x.jpg?v=1670520424',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_01_1000x.jpg?v=1670520424',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_washi-tape-green_02_1000x.jpg?v=1670520425',
     ],

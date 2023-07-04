@@ -1,48 +1,47 @@
 export const callToAction: {
-    word: string;
-    symbol?: string;
-    linkTo?: string;
-  }[] = [
+  word: string;
+  symbol?: string;
+  filterTo?: string;
+}[] = [
     {
-      word: "FIGMA'S",
-       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-burst.static.svg?v=34745811441670751621678219731',
+      word: "figma's",
+      symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-burst.static.svg?v=34745811441670751621678219731',
     },
     {
-      word: 'COLLECTION',
+      word: 'collection',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-hourglass.static.svg?v=133626873782927219541678219731',
     },
-    { word: 'OF' },
+    { word: 'of ' },
     {
-      word: 'LAYERS',
+      word: 'layers',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-zag.static.svg?v=102718930007740203771678219731',
-      linkTo: '#'
+      filterTo: '#'
     },
     {
-      word: 'AND',
+      word: 'and',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-dots.static.svg?v=39142388321885661271678219731',
     },
     {
-      word: 'COMPONENTS',
+      word: 'components',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-sun.static.svg?v=163357932534391307201678219731',
-      linkTo: '#'
+      filterTo: '#'
     },
     {
-      word: 'FOR',
+      word: 'for ',
     },
     {
-      word: 'YOU',
+      word: 'you',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-comet.static.svg?v=16892712658856357451678219731',
     },
     {
-      word: 'AND',
+      word: 'and',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-snake.static.svg?v=34100567131936571961678219731',
     },
     {
-      word: 'YOUR',
+      word: 'your',
       symbol: 'https://cdn.shopify.com/s/files/1/0576/8364/0503/t/9/assets/word-symbol-tri.static.svg?v=32742515804419710851678219731',
     },
     {
-      word: 'FRIENDS',
+      word: 'friends',
     },
   ];
-  

@@ -1,19 +1,44 @@
 <ng-container *ngIf="product">
   <div class="product-list__product">
+    <figure>
+      <!-- TO-Do => add aria-hidden and lazy loading -->
+      <img [src]="product.hoverPatternImg"
+           alt="{{ product.name }}"
+           class="product-list__product--hover-pattern" />
 
-    <img [src]="product.productPhotos[0]"
-         alt="{{product.name}}"
-         class="product-list__product--photo">
+      <img [src]="product.hoverProductImg"
+           alt="{{ product.name }}"
+           class="product-list__product--hover-image" />
 
-    <p class="product-list__product--new"
-       *ngIf='product.new'>New!</p>
+      <img [src]="product.productPhotos[0]"
+           alt="{{ product.name }}"
+           class="product-list__product--photo" />
+    </figure>
 
-    <span>
+    <div class="product-list__product--info">
+      <ng-container *ngIf="product.new; else oldProduct">
+        <div class="product-list__product--row">
+          <p class="product-list__product--new">New!</p>
 
-      <h3 class="product-list__product--desc">{{product.name}}</h3>
+          <p class="product-list__product--price">
+            {{ product.price | currency : "USD" : true : "1.0-0" }}
+          </p>
+        </div>
 
-      <p class="product-list__product--price">{{product.price | currency}}</p>
-    </span>
+        <div class="product-list__product--row">
+          <h3 class="product-list__product--desc">{{ product.name }}</h3>
+        </div>
+      </ng-container>
 
+      <ng-template #oldProduct
+                   class="product-list__product--row">
+
+        <h3 class="product-list__product--desc">{{ product.name }}</h3>
+
+        <p class="product-list__product--price">
+          {{ product.price | currency : "USD" : true : "1.0-0" }}
+        </p>
+      </ng-template>
+    </div>
   </div>
 </ng-container>

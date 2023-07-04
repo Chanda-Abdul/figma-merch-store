@@ -3,29 +3,46 @@
 @import "/src/styles/sass/base/media-queries";
 @import "/src/styles/sass/base/typography";
 
-
 .call-to-action {
-  padding: 15rem 0 5rem;
+  padding: 8rem 0 0rem;
   width: 100%;
-
-  @include heading-extra-large-mobile;
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s,
+    transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;
   text-align: center;
 
-  &__item {
-    display: inline-flex;
+  &__container {
+    padding: 0 2rem;
     align-items: center;
     justify-content: center;
 
-    &--link {
+    &:hover {
+      .call-to-action__item {
+
+        &--filter:active,
+        &--word {
+          opacity: 0.5;
+          transition: opacity 300ms;
+        }
+      }
+    }
+  }
+
+  &__item {
+
+    &--filter {
       @include heading-extra-large-mobile;
       border: none;
       display: inline-block;
       padding: 0;
+      margin: 0;
       position: relative;
 
       &:after {
         background: $black-out;
-        bottom: 2px;
+        bottom: -4px;
         content: "";
         display: block;
         height: 4px;
@@ -36,16 +53,12 @@
     }
 
     &--word {
-      display: inline-flex;
-      padding: .7rem;
+      @include heading-extra-large-mobile;
     }
 
     &--symbol {
-      margin: 0 .7rem;
-    }
-
-    &--line-break {
-      width: 100%;
+      width: 2.6rem;
+      margin: 0 0.7rem;
     }
   }
 }

@@ -7,10 +7,6 @@
           <img [src]="photo"
                alt="product.name">
         </figure>
-        <!-- <figure>
-          <img [src]="product.rolloverProductImg"
-               alt="product.name">
-        </figure> -->
       </div>
 
       <div class="product-grid__feature">
@@ -18,7 +14,6 @@
           <img [src]="product.productPhotos[0]"
                alt="product.name">
         </figure>
-
       </div>
 
       <section class="product-grid__info">
@@ -39,7 +34,7 @@
         <div class="product-grid__info--actions">
           <span class="variants"><button>-</button><span class="quantity">1</span><button>+</button></span>
           <span *ngIf="product.price == 0" class="sold-out">SOLD OUT</span>
-          <span *ngIf="product.price != 0" class="add">add {{product.price | currency}}</span>
+          <span *ngIf="product.price != 0" class="add">add {{product.price | currency : 'USD' :true:'1.0-0'}}</span>
         </div>
         <p class="product-grid__info--description">
           {{product.description}}</p>

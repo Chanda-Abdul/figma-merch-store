@@ -1,0 +1,14 @@
+<ng-container  *ngIf="review "
+>
+
+<div class="review">
+<h4 class="review__name">{{review.name}}</h4> 
+
+ <div class="review__stars">
+    <span [innerHTML]="filledStars" class="fill" ></span>
+    
+    <span [innerHTML]="emptyStars" class="empty"></span></div> 
+
+<p class="review__text">{{review.review}}</p>
+</div>
+</ng-container>

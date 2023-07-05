@@ -2,8 +2,9 @@
   <ng-container *ngIf="(product$ | async) as product">
     <div class="product-grid">
 
-      <div class="product-grid__gallery">
-        <figure *ngFor="let photo of product.productPhotos">
+      <div class="product-grid__thumbnails">
+        <figure *ngFor="let photo of product.productPhotos; let i = index"
+                (click)="expandImg(i)">
           <img [src]="photo"
                alt="product.name">
         </figure>
@@ -11,7 +12,7 @@
 
       <div class="product-grid__feature">
         <figure>
-          <img [src]="product.productPhotos[0]"
+          <img [src]="product.productPhotos[imgIdx]"
                alt="product.name">
         </figure>
       </div>
@@ -26,15 +27,20 @@
 
         <ng-container *ngIf="product.sizes">
           <div class="product-grid__info--sizes">
-            <button *ngFor="let size of sizes | keyvalue">{{size.key}}</button>
+            <button *ngFor="let size of sizes">
+              <ng-container *ngFor="let sizeName of size |keyvalue">{{sizeName.key }}</ng-container>
+
+            </button>
           </div>
         </ng-container>
 
 
         <div class="product-grid__info--actions">
           <span class="variants"><button>-</button><span class="quantity">1</span><button>+</button></span>
-          <span *ngIf="product.price == 0" class="sold-out">SOLD OUT</span>
-          <span *ngIf="product.price != 0" class="add">add {{product.price | currency : 'USD' :true:'1.0-0'}}</span>
+          <span *ngIf="product.price == 0"
+                class="sold-out">SOLD OUT</span>
+          <span *ngIf="product.price != 0"
+                class="add">add {{product.price | currency : 'USD' :true:'1.0-0'}}</span>
         </div>
         <p class="product-grid__info--description">
           {{product.description}}</p>
@@ -44,16 +50,22 @@
         </ul>
         <div class="product-grid__info--reviews">
           <h3>Customer Reviews</h3>
-          <div><span>Insert Average Star Rating</span><span>({{(ratings$| async)?.length }} Reviews)</span></div>
-        
-          <ul class="product-grid__info--review">
-            <li *ngFor="let review of ratings$| async"
-                class="product-grid__info--tag">
-                <span>{{review.rating}}</span> 
-               
-              <p>{{review.review}}</p>
-                <h4>-{{review.name}}</h4></li>
-          </ul></div>
+
+          <div class="product-grid__info--reviews-data">
+            <div>
+              <p [innerHTML]="averageRating"></p>
+            </div>
+            <div><span [innerHTML]="averageRatingStars"></span>
+              <span> based on ({{(reviews$| async)?.length }} Reviews)</span>
+            </div>
+          </div>
+          <hr>
+          <div class="product-grid__info--review">
+            <app-review *ngFor="let review of (reviews$| async)"
+                        [review]="review"></app-review>
+
+          </div>
+        </div>
       </section>
 
     </div>

@@ -1,7 +1,10 @@
 @import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
 
 .product-container {
-
     width: 100vw;
     padding: 12rem 2rem;
 }
@@ -13,17 +16,18 @@
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 
-    &__gallery {
+    &__thumbnails {
         display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 9rem);
         grid-column-gap: 0px;
-        grid-row-gap: 2rem;
+        grid-row-gap: 1rem;
 
         img {
             border-radius: 2rem;
             height: 9rem;
             width: 9rem;
+            object-fit: cover;
         }
     }
 
@@ -126,8 +130,36 @@
         }
 
         &--feature {
-
             font-style: italic;
+        }
+
+        &--reviews {
+            margin: 5rem 0;
+            padding: $vertical-padding-default 0;
+
+            &-data {
+                @include flex(row, flex-start, center);
+
+                div {
+                    &:first-child {
+                        margin: $vertical-padding-default $horizontal-padding-default $vertical-padding-default 0;
+                        width: fit-content;
+                        @include heading-large-mobile;
+                    }
+
+                    &:nth-child(2) {
+                        @include flex(column, flex-start, center);
+
+                        :first-child {
+                            width: 100%;
+                            color: $random;
+                        }
+
+                        @include flex(column, flex-start, center);
+                    }
+                }
+
+            }
         }
     }
 }

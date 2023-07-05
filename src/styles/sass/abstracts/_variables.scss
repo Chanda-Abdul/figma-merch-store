@@ -1,9 +1,20 @@
 $black-out: hsl(0, 0%, 0%);
 $polar-bear-in-a-blizzard: hsl(0, 0%, 100%);
-$fiery-glow:hsl(14, 89%, 53%);
+$fiery-glow: hsl(14, 89%, 53%);
 $bio-punk: hsl(148, 84%, 36%);
-$sunflower:hsl(47, 100%, 50%) ;
+$sunflower: hsl(47, 100%, 50%);
 $placid-lilac: hsl(252, 100%, 86%);
+
+$bgColors: (
+    $bio-punk,
+    $placid-lilac,
+    $fiery-glow,
+    $sunflower
+);
+$key: random(length($bgColors));
+$nth: nth($bgColors, $key );
+
+$random: $nth !default;
 
 $font-size-default: 1.6rem;
 $font-weight-default: 400;

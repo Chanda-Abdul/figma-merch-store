@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, combineLatest, combineLatestAll, map } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
-import { Rating } from 'src/app/model/rating.model';
+import { Review } from 'src/app/model/review.model';
 import { ProductsService } from 'src/app/services/products.service';
 import { RatingsService } from 'src/app/services/ratings.service';
 
@@ -14,45 +14,66 @@ import { RatingsService } from 'src/app/services/ratings.service';
 })
 export class ProductComponent implements OnInit {
   product$!: Observable<Product>;
-  ratings$!: Observable<Rating[]>;
+  reviews$!: Observable<Review[]>;
+  
+  imgIdx: number = 0;
+  
+  averageRating: number = 0;
+  averageRatingStars: string = Array(5).fill(`<span>&#9734;</span>`).join(``);
+  
 
-  sizes = {
-    'S': 'Small',
-    'M': 'Medium',
-    'L': 'Large',
-    'XL': 'Extra Large',
-    '2XL': 'Extra Extra Large'
-  }
+  sizes = [
+    { 'S': 'Small' },
+    { 'M': 'Medium' },
+    { 'L': 'Large' },
+    { 'XL': 'Extra Large' },
+    { '2XL': 'Extra Extra Large' }]
+
 
   constructor(
     private route: ActivatedRoute,
-    private productsService: ProductsService, 
+    private productsService: ProductsService,
     private ratingsService: RatingsService) { }
 
   ngOnInit() {
 
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
-  
+
     this.loadProductById(productId);
-    
+
     this.loadRatingById(productId);
+  }
+
+  expandImg(idx: number) {
+    this.imgIdx = idx;
   }
 
   loadProductById(productId: any) {
     const productById$ = this.productsService.loadProductById(productId);
 
-    // productById$.subscribe(val => console.log(val));
-
     this.product$ = productById$;
-  
   }
 
   loadRatingById(productId: any) {
-    const ratingById$ = this.ratingsService.loadRatingsById(productId);
+    const reviewById$ = this.ratingsService.loadRatingsById(productId);
 
-    // ratingById$.subscribe(val => console.log(productId, val));
+    reviewById$.pipe(
+      map(ratings => {
+        let average = 0;
 
-    this.ratings$ = ratingById$;
-    
+        ratings.forEach(rating => { average += rating.rating });
+
+        average /= ratings.length;
+
+        this.averageRating = average;
+
+        average = Math.round(average);
+
+        this.averageRatingStars = Array(average).fill(`<span>&#9733;</span>`).concat(Array(5 - average).fill(`<span>&#9734;</span>`)).join(``)
+      })
+    ).subscribe();
+
+    this.reviews$ = reviewById$;
+
   }
 }

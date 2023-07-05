@@ -1,0 +1,42 @@
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
+
+
+:host {
+    &:nth-of-type(odd) .review {
+        background-color: rgba($random, .1);
+        border: 2px solid rgba($random, .5);
+    }
+
+    .fill {
+        color: $random;
+    }
+}
+
+.review {
+    display: grid;
+    margin: $vertical-padding-default 0;
+    padding: $vertical-padding-default $horizontal-padding-default;
+    border-radius: $border-radius-default;
+
+    &__name {
+        padding-top: $vertical-padding-default;
+        @include heading-medium-mobile;
+    }
+
+    &__stars {
+        padding-top: $vertical-padding-default;
+
+        .empty {
+            // color: rgb($black-out, .2);   
+            color: $random;
+        }
+    }
+
+    &__text {
+        padding: $vertical-padding-default 0;
+        @include body-text-primary;
+    }
+}

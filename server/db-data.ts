@@ -5,7 +5,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Pixel perfect dark mode tee',
     price: 25,
-    soldOut: false,
+
     link: 'pixel-perfect-dark-mode',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
@@ -28,7 +28,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma sticker pack',
     price: 1,
-    soldOut: false,
+
     link: 'free-figma-sticker-pack',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -52,7 +52,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'The Figma Store gift card',
     price: 25,
-    soldOut: false,
+
     link: 'the-figma-store-gift-card',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma_Store_Pattern_1_600x.png?v=1635541659',
@@ -76,7 +76,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Plugins mug',
     price: 32,
-    soldOut: false,
+
     link: 'plugins-mug	',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-8_600x.png?v=1636143251',
@@ -93,7 +93,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma wordmark tee',
     price: 18,
-    soldOut: false,
+
     link: 'wordmark-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-22_600x.png?v=1636143252',
@@ -117,7 +117,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Meet me in the browser tee',
     price: 25,
-    soldOut: false,
+
     link: 'meet-me-in-the-browser-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-18_600x.png?v=1636143252',
@@ -141,7 +141,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Detach instance pin',
     price: 2,
-    soldOut: false,
+
     link: 'detach-instance-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -165,7 +165,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Light grey comment socks',
     price: 10,
-    soldOut: false,
+
     link: 'light-grey-comment-socks',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -189,7 +189,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Vector network pin',
     price: 2,
-    soldOut: false,
+
     link: 'vector-network-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-16_600x.png?v=1636143251',
@@ -213,7 +213,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Bezier logo tee',
     price: 25,
-    soldOut: false,
+
     link: 'bezier-logo-long-sleeve-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_600x.png?v=1636143050',
@@ -237,7 +237,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Detach instance tee',
     price: 20,
-    soldOut: false,
+
     link: 'detach-instance-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_600x.png?v=1636142910',
@@ -261,7 +261,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Smiley pin',
     price: 2,
-    soldOut: false,
+
     link: 'smiley-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
@@ -285,7 +285,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma logo tee',
     price: 18,
-    soldOut: false,
+
     link: 'figma-logo-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-6_600x.png?v=1636143252',
@@ -309,7 +309,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Throw blanket',
     price: 80,
-    soldOut: false,
+
     link: 'throw-blanket',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252	',
@@ -333,7 +333,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Blue Figma hat',
     price: 20,
-    soldOut: false,
+
     link: 'blue-figma-hat	',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-4_600x.png?v=1636143252',
@@ -357,7 +357,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma hoodie',
     price: 45,
-    soldOut: false,
+
     link: 'figma-hoodie',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
@@ -381,7 +381,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'White pen tool socks',
     price: 10,
-    soldOut: false,
+
     link: 'white-pen-tool-socks',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-5_600x.png?v=1636143251',
@@ -405,7 +405,7 @@ export const PRODUCTS = [
     featured: false,
     name: '<code/> cap',
     price: 20,
-    soldOut: false,
+
     link: 'code-cap',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_2462bce6-2629-4568-a70d-77d06bddd9e1_600x.png?v=1636143251',
@@ -429,7 +429,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma travel tumbler',
     price: 35,
-    soldOut: false,
+
     link: 'figma-travel-tumbler',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -453,7 +453,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Black arrow socks',
     price: 10,
-    soldOut: false,
+
     link: 'black-arrow-socks',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-15_600x.png?v=1636143251',
@@ -477,7 +477,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Elevated workflows tee',
     price: 25,
-    soldOut: false,
+
     link: 'elevated-workflows-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -501,7 +501,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma logo pin',
     price: 2,
-    soldOut: false,
+
     link: 'figma-logo-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-20_600x.png?v=1636143251',
@@ -525,7 +525,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Hug contents tee',
     price: 20,
-    soldOut: false,
+
     link: 'hug-contents-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-3_600x.png?v=1636143251',
@@ -549,7 +549,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Bezier water bottle',
     price: 20,
-    soldOut: false,
+
     link: 'bezier-water-bottle',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-9_600x.png?v=1636143251',
@@ -573,7 +573,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Logo dimensions tee',
     price: 25,
-    soldOut: false,
+
     link: 'logo-dimensions-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-24_600x.png?v=1636143252',
@@ -601,7 +601,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Multicursor pin',
     price: 2,
-    soldOut: false,
+
     link: 'multicursor-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
@@ -624,7 +624,7 @@ export const PRODUCTS = [
     featured: true,
     name: 'Figma logo hat',
     price: 20,
-    soldOut: false,
+
     link: 'figma-logo-hat',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-17_1200x.png?v=1636143252',
@@ -653,7 +653,7 @@ export const PRODUCTS = [
     featured: true,
     name: 'Comments notebook',
     price: 10,
-    soldOut: false,
+
     link: 'comments-notebook	',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-18_1200x.png?v=1636143252',
@@ -678,7 +678,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Rainbow logo tee',
     price: 20,
-    soldOut: false,
+
     link: 'rainbow-logo-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -706,7 +706,7 @@ export const PRODUCTS = [
     featured: true,
     name: 'Tidy up tee',
     price: 25,
-    soldOut: false,
+
     link: 'tidy-up-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-14_e1362380-a908-44c4-bc76-e5751953a5de_600x.png?v=1651180902',
@@ -733,7 +733,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Power points pin',
     price: 2,
-    soldOut: false,
+
     link: 'power-points-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_2462bce6-2629-4568-a70d-77d06bddd9e1_600x.png?v=1636143251',
@@ -756,7 +756,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Pick of the bunch washi tape',
     price: 1,
-    soldOut: false,
+
     link: 'pick-of-the-bunch-washi-tape',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-14_600x.png?v=1636143252',
@@ -774,10 +774,10 @@ export const PRODUCTS = [
     id: 34,
     new: true,
     featured: false,
-    featuredCarouselImg: '',
+
     name: 'Toolkit mug',
     price: 35,
-    soldOut: false,
+
     link: 'toolkit-mug',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
@@ -804,7 +804,7 @@ export const PRODUCTS = [
     featured: false,
     name: "Meet n' greet pin",
     price: 2,
-    soldOut: false,
+
     link: 'meet-n-greet-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
@@ -826,10 +826,10 @@ export const PRODUCTS = [
     id: 36,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
+
     name: 'Framework tee',
     price: 20,
-    soldOut: false,
+
     link: 'framework-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -857,10 +857,10 @@ export const PRODUCTS = [
     id: 37,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
+
     name: 'Dress code hat',
     price: 20,
-    soldOut: false,
+
     link: 'dress-code-hat',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_-_Pattern_600x.png?v=1641321309',
@@ -885,10 +885,8 @@ export const PRODUCTS = [
     id: 38,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
     name: 'Band together socks',
     price: 10,
-    soldOut: false,
     link: 'band-together-socks',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_band-together-socks_rollover_1200x.png?v=1670519884',
@@ -910,21 +908,19 @@ export const PRODUCTS = [
     id: 39,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
     name: 'Shape up tee',
     price: 20,
-    soldOut: false,
     link: 'shape-up-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_1200x.png?v=1636143050',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_shape-up-tee_rollover_1200x.png?v=1670516450',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_02_1000x.jpg?v=1678114580',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_03_1000x.jpg?v=1678114580',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_04_1000x.jpg?v=1678114580',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_shape-up-tee_05_1000x.jpg?v=1678114580',
+      'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580',
+      'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_02_1000x.jpg?v=1678114580',
+      'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_03_1000x.jpg?v=1678114580',
+      'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_04_1000x.jpg?v=1678114580',
+      'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_05_1000x.jpg?v=1678114580',
     ],
     description:
       'Round out your wardrobe with a tee that looks good on all shapes and sizes.',
@@ -941,7 +937,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'On brand hat',
     price: 25,
-    soldOut: false,
+
     link: 'on-brand-hat-wool-patch',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-22_600x.png?v=1636143252',
@@ -968,7 +964,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Toolkit pin',
     price: 2,
-    soldOut: false,
+
     link: 'toolkit-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-15_600x.png?v=1636143251',
@@ -992,7 +988,7 @@ export const PRODUCTS = [
     featured: false,
     name: 'Best bud pin',
     price: 2,
-    soldOut: false,
+
     link: 'best-bud-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-24_600x.png?v=1636143252',
@@ -1013,10 +1009,10 @@ export const PRODUCTS = [
     id: 43,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
+
     name: 'Version history coach jacket',
     price: 45,
-    soldOut: false,
+
     link: 'version-history-coach-jacket',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
@@ -1043,10 +1039,10 @@ export const PRODUCTS = [
     id: 44,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
+
     name: 'Gridlock washi tape',
     price: 1,
-    soldOut: false,
+
     link: 'gridlock-washi-tape',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -1065,10 +1061,10 @@ export const PRODUCTS = [
     id: 45,
     new: true,
     featured: true,
-    featuredCarouselImg: '',
+
     name: 'Design in bloom tee',
     price: 25,
-    soldOut: false,
+
     link: 'design-in-bloom-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-27_600x.png?v=1651180902	',

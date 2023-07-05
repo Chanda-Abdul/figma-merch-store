@@ -12,11 +12,12 @@
 .product-grid {
     display: grid;
     grid-template-columns: 9rem repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, auto);
     grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+    grid-row-gap: 0rem;
 
     &__thumbnails {
+        grid-row: 1 /2;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 9rem);
@@ -31,17 +32,26 @@
         }
     }
 
-    &__feature img {
-        border-radius: 12rem;
-        height: auto;
-        width: 100%;
+    &__feature {
+        display: flex;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            border-radius: 12rem;
+            max-width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__info {
         &--tag {
-            background-color: $bio-punk;
-            border-radius: 2rem;
-            padding: 1.2rem 2rem 1rem;
+            @include flex(row, center, center);
+            border-radius: $border-radius-default;
+            text-align: center;
+            padding: 1rem 2rem .5rem 2rem ;
+            margin-bottom: 3rem;
+            @include heading-small-mobile;
             text-transform: uppercase;
             width: -webkit-fit-content;
             width: -moz-fit-content;
@@ -49,7 +59,7 @@
         }
 
         &--title {
-            margin-top: 1.5rem;
+            margin: $gutter-default-mobile 0;
         }
 
         &--sizes {
@@ -118,7 +128,6 @@
                 background-color: $black-out;
                 color: $polar-bear-in-a-blizzard;
             }
-
         }
 
         &--description {
@@ -132,34 +141,10 @@
         &--feature {
             font-style: italic;
         }
+    }
 
-        &--reviews {
-            margin: 5rem 0;
-            padding: $vertical-padding-default 0;
-
-            &-data {
-                @include flex(row, flex-start, center);
-
-                div {
-                    &:first-child {
-                        margin: $vertical-padding-default $horizontal-padding-default $vertical-padding-default 0;
-                        width: fit-content;
-                        @include heading-large-mobile;
-                    }
-
-                    &:nth-child(2) {
-                        @include flex(column, flex-start, center);
-
-                        :first-child {
-                            width: 100%;
-                            color: $random;
-                        }
-
-                        @include flex(column, flex-start, center);
-                    }
-                }
-
-            }
-        }
+    &__reviews {
+        grid-column: 2 / span 2;
+        grid-row-start: 2;
     }
 }

@@ -5,7 +5,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Pixel perfect dark mode tee',
     price: 25,
-
     link: 'pixel-perfect-dark-mode',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
@@ -117,7 +116,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Meet me in the browser tee',
     price: 25,
-
     link: 'meet-me-in-the-browser-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-18_600x.png?v=1636143252',
@@ -141,7 +139,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Detach instance pin',
     price: 2,
-
     link: 'detach-instance-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -165,7 +162,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Light grey comment socks',
     price: 10,
-
     link: 'light-grey-comment-socks',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -189,7 +185,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Vector network pin',
     price: 2,
-
     link: 'vector-network-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-16_600x.png?v=1636143251',
@@ -237,7 +232,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Detach instance tee',
     price: 20,
-
     link: 'detach-instance-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_600x.png?v=1636142910',
@@ -261,7 +255,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Smiley pin',
     price: 2,
-
     link: 'smiley-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
@@ -285,23 +278,22 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma logo tee',
     price: 18,
-
     link: 'figma-logo-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-6_600x.png?v=1636143252',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-logo-tee_600x.png?v=1636143022',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2894_600x.jpg?v=1636598662',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2894_1000x.jpg?v=1636598662',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2801_1000x.jpg?v=1636598662',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2858_1000x.jpg?v=1636598662',
+      'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4370_1000x.jpg?v=1636323405',
+      'https://store.figma.com/cdn/shop/products/SizeGuide_LAApparelSSShirts_1_21fbda5e-8173-4ef9-ac3f-fc4201019aae_1000x.png?v=1637789347',
     ],
-    description: '',
-    features: [],
+    description: 'If Dieter Rams has taught us anything, it’s that less is more. In this case, a plain tee with a small but mighty logo on the chest.',
+    features: ['100% cotton, unisex sizing.', 'Printed on a Los Angeles Apparel tee.'],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 14,
@@ -653,7 +645,6 @@ export const PRODUCTS = [
     featured: true,
     name: 'Comments notebook',
     price: 10,
-
     link: 'comments-notebook	',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-18_1200x.png?v=1636143252',
@@ -706,7 +697,6 @@ export const PRODUCTS = [
     featured: true,
     name: 'Tidy up tee',
     price: 25,
-
     link: 'tidy-up-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-14_e1362380-a908-44c4-bc76-e5751953a5de_600x.png?v=1651180902',
@@ -860,19 +850,17 @@ export const PRODUCTS = [
 
     name: 'Dress code hat',
     price: 20,
-
     link: 'dress-code-hat',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Hover_-_Pattern_600x.png?v=1641321309',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_dress-code-hat_rollover_600x.png?v=1670519799',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_01_600x.png?v=1677707527	',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_01_1000x.png?v=1677707527',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_02_1000x.jpg?v=1677707527',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_03_1000x.jpg?v=1677707527',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_03_1000x.jpg?v=1677707527',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_dress-code-hat_05_1000x.jpg?v=1677707527',
+      'https://store.figma.com/cdn/shop/products/figma-store_dress-code-hat_01_1000x.png?v=1677707527',
+      'https://store.figma.com/cdn/shop/products/figma-store_dress-code-hat_02_1000x.jpg?v=1677707527',
+      'https://store.figma.com/cdn/shop/products/figma-store_dress-code-hat_03_1000x.jpg?v=1677707527',
+      'https://store.figma.com/cdn/shop/products/figma-store_dress-code-hat_04_1000x.jpg?v=1677707527',
+      'https://store.figma.com/cdn/shop/products/figma-store_dress-code-hat_05_1000x.jpg?v=1677707527'
     ],
     description: 'Are you casting a spell or is that just hex code? Yes.',
     features: [
@@ -893,7 +881,6 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_1200x.png?v=1636143050',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_01_1200x.jpg?v=1670519923',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_01_1000x.jpg?v=1670519923',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_02_1000x.jpg?v=1670519923',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_band-together-socks_03_1000x.jpg?v=1670519923',

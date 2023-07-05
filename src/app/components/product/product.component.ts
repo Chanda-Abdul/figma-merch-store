@@ -15,12 +15,12 @@ import { RatingsService } from 'src/app/services/ratings.service';
 export class ProductComponent implements OnInit {
   product$!: Observable<Product>;
   reviews$!: Observable<Review[]>;
-  
+
   imgIdx: number = 0;
-  
+
   averageRating: number = 0;
   averageRatingStars: string = Array(5).fill(`<span>&#9734;</span>`).join(``);
-  
+
 
   sizes = [
     { 'S': 'Small' },

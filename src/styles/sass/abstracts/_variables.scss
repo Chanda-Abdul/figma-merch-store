@@ -16,10 +16,21 @@ $nth: nth($bgColors, $key );
 
 $random: $nth !default;
 
+
+
+.bioBkgnd {
+    background-color: $bio-punk;
+}
+
+.sunBkgnd {
+    background-color: $sunflower;
+}
+
+
 $font-size-default: 1.6rem;
 $font-weight-default: 400;
 $font-weight-heading-default: 700;
-$letter-spacing-default: 0;
+// $letter-spacing-default: 0;
 $line-height-default: 1.6rem;
 
 $border-default: 2px solid $black-out;

@@ -1,14 +1,34 @@
-<ng-container  *ngIf="review "
->
+<div class="reviews">
 
-<div class="review">
-<h4 class="review__name">{{review.name}}</h4> 
+    <h3 class="reviews__title">Customer Reviews</h3>
 
- <div class="review__stars">
-    <span [innerHTML]="filledStars" class="fill" ></span>
-    
-    <span [innerHTML]="emptyStars" class="empty"></span></div> 
+    <div class="reviews__average">
 
-<p class="review__text">{{review.review}}</p>
+        <p class="reviews__average--rating">{{averageRating | number : '1.1-1'}}</p>
+
+        <div class="reviews__average--info">
+
+            <span [innerHTML]="averageRatingStars"
+                  class="reviews__average--stars"></span>
+
+            <span class="reviews__average--amount">Based on {{(reviews| async)?.length }} Review<span>s</span></span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="reviews__list">
+
+        <div class="review"
+             *ngFor="let review of (reviews|async)">
+
+            <h4 class="review__name">{{review.name}}</h4>
+
+            <div class="review__stars">
+                <span [innerHTML]="getStars(review.rating)"></span>
+            </div>
+
+            <p class="review__text">{{review.review}}</p>
+        </div>
+    </div>
 </div>
-</ng-container>

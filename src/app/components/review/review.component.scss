@@ -1,0 +1,78 @@
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
+
+.reviews {
+    margin: 3rem 0;
+    padding: $vertical-padding-default $horizontal-padding-default;
+    @include flex(column, center, flex-start);
+
+    &__title {
+        @include heading-large-mobile;
+    }
+
+    &__average {
+        @include flex(row, flex-start, center);
+
+        &--rating {
+            margin: $vertical-padding-default $horizontal-padding-default $vertical-padding-default 0;
+            width: fit-content;
+            @include heading-large-mobile;
+        }
+
+        &--info {
+            @include flex(column, flex-start, space-between);
+        }
+
+        &--stars {
+            width: 100%;
+            color: $random;
+            // margin-bottom: .5rem;
+        }
+
+        &--amount {
+            color: rgba($black-out, .5);
+        }
+    }
+
+    hr {
+        background-color: $random;
+        height: 2px;
+        border: none;
+        width: 100%;
+    }
+
+    &__list {
+        width: 100%;
+    }
+
+}
+
+.review {
+    display: grid;
+    margin: $vertical-padding-default 0;
+    padding: $vertical-padding-default $horizontal-padding-default;
+    border-radius: $border-radius-default;
+    width: 100%;
+
+    &:nth-of-type(even) {
+        background-color: rgba($random, .1);
+        border: 2px solid rgba($random, .25);
+    }
+
+    &__name {
+        padding-top: $vertical-padding-default;
+        @include heading-medium-mobile;
+    }
+
+    &__stars {
+        color: $random;
+    }
+
+    &__text {
+        padding: $vertical-padding-default 0;
+        @include body-text-primary;
+    }
+}

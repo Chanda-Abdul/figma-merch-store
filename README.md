@@ -1,10 +1,11 @@
-# Figma Merch Store
+# Figma Merch Store challenge | Frontend Practice
 
 <!-- A brief description of the project. -->
 ![Design preview for the Figma Merch Store  coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 
-# Frontend Practice | Figma Merch Store challenge
 This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/).  
+# Challenge
+
 
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/) site created by [ ](#)
 ## Demo
@@ -16,6 +17,8 @@ View live demo [here](https://inquisitive-strudel-fa01fb.netlify.app/)
 ## Technologies Used
 <!-- List the programming languages, frameworks, libraries, and any other tools or technologies used in the project. -->
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="30" /><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="30" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="30" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="30" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="30" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="30" /><img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="30" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="30" />
+- BEM
+- RxJs 
 
 ## Features
 <!-- List the main features of the project, with brief descriptions of each. -->
@@ -41,9 +44,8 @@ uses custom fonts  <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"W
 <!-- TO-DO => organize SVGs -->
 
 ### Change image on hover
-<!-- TO-DO => /product-list -->
-<!-- TO-DO => TO-DO => Display products: Use Angular's data binding to display the products on the /product-card pages.  -->
-- [x] Hover effects - Change image on hover
+
+Hover effects - Change image on hover
 
 <!-- TO-DO => #SHOP COMPONENT -->
 <!-- TO-DO => /ABOUT COMPONENT -->
@@ -89,6 +91,8 @@ Connect to a backend: Connect to a backend that provides data about your product
 -->
 
 <!-- Display products: Use Angular's data binding to display the products on the /product-list page. -->
+<!-- TO-DO => /product-list -->
+<!-- TO-DO => Display products: Use Angular's data binding to display the products on the /product-card pages.  -->
 <!-- Stateless Observable Service  -->
 ## Continued development
 ## Useful resources

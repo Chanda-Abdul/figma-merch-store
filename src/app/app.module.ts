@@ -17,6 +17,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductComponent } from './components/product/product.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { ReviewComponent } from './components/review/review.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     HeroComponent,
     HomeComponent,
     CallToActionComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

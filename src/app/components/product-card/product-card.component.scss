@@ -1,7 +1,10 @@
-@import "/src/styles/sass/main.scss";
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
 
 :host {
-
   &:not(:nth-child(10n+7)) {
     grid-column: span 1;
     grid-row: span 1;

@@ -12,6 +12,9 @@ export class ReviewComponent implements OnInit {
   @Input() averageRating!: number;
   @Input() averageRatingStars!: string;
 
+  mobileView: boolean = true;
+     // TO-DO => add screen size listener, set mobile init to false?
+  showReviews: boolean = true;
 
   ngOnInit(): void {
 
@@ -21,5 +24,9 @@ export class ReviewComponent implements OnInit {
     return Array(starRating).fill(`<span>&#9733;</span>`)
       .concat(Array(5 - starRating).fill(`<span>&#9734;</span>`))
       .join(``);
+  }
+  toggleReviews() {
+    this.showReviews = !this.showReviews;
+    // console.log(this.showReviews)
   }
 }

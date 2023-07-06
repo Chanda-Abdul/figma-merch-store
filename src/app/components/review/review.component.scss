@@ -15,6 +15,7 @@
 
     &__average {
         @include flex(row, flex-start, center);
+        width: 100%;
 
         &--rating {
             margin: $vertical-padding-default $horizontal-padding-default $vertical-padding-default 0;
@@ -29,7 +30,7 @@
         &--stars {
             width: 100%;
             color: $random;
-            // margin-bottom: .5rem;
+            margin-bottom: .25rem;
         }
 
         &--amount {
@@ -38,6 +39,10 @@
     }
 
     hr {
+        @include responsive-for(mobile) {
+            // display: none;
+        }
+
         background-color: $random;
         height: 2px;
         border: none;
@@ -57,9 +62,18 @@
     border-radius: $border-radius-default;
     width: 100%;
 
-    &:nth-of-type(even) {
-        background-color: rgba($random, .1);
-        border: 2px solid rgba($random, .25);
+    @include responsive-for(desktop) {
+        &.is-even {
+            background-color: rgba($random, .1);
+            border: 2px solid rgba($random, .25);
+        }
+    }
+
+    @include responsive-for(mobile) {
+        &:not(.is-even) {
+            background-color: rgba($random, .1);
+            border: 2px solid rgba($random, .25);
+        }
     }
 
     &__name {
@@ -74,5 +88,27 @@
     &__text {
         padding: $vertical-padding-default 0;
         @include body-text-primary;
+    }
+}
+
+.btn-toggle {
+    display: block;
+  border-radius: $border-radius-default;
+    background: transparent;
+    border: none;
+    margin-bottom: 3rem;
+
+    &.open {
+        @include heading-small-mobile;
+        color: $random;
+    }
+
+    &.close {
+        @include heading-small-mobile;
+        color: rgba($black-out, .75);
+    }
+
+    @include responsive-for(desktop) {
+        display: none;
     }
 }

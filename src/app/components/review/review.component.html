@@ -15,12 +15,23 @@
         </div>
     </div>
 
-    <hr>
+    <button class="btn-toggle " *ngIf="mobileView"
+     [ngClass]="{'close':showReviews == true,'open' : showReviews == false }"
 
-    <div class="reviews__list">
+            (click)="toggleReviews()">
+        <span *ngIf="!showReviews;else close" class="open">See Reviews</span>
+  <ng-template #close
+                 class="close">Close </ng-template>   </button>
+
+    <hr *ngIf="showReviews">
+
+    <div class="reviews__list"
+         *ngIf="showReviews">
 
         <div class="review"
-             *ngFor="let review of (reviews|async)">
+             *ngFor="let review of (reviews|async);
+             even as isEven"
+             [class.is-even]="isEven">
 
             <h4 class="review__name">{{review.name}}</h4>
 

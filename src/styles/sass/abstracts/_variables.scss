@@ -5,6 +5,8 @@ $bio-punk: hsl(148, 84%, 36%);
 $sunflower: hsl(47, 100%, 50%);
 $placid-lilac: hsl(252, 100%, 86%);
 
+
+/* generate random color variable for stars and review styling */
 $bgColors: (
     $bio-punk,
     $placid-lilac,
@@ -15,8 +17,6 @@ $key: random(length($bgColors));
 $nth: nth($bgColors, $key );
 
 $random: $nth !default;
-
-
 
 .bioBkgnd {
     background-color: $bio-punk;

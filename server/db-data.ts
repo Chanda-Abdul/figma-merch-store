@@ -847,7 +847,6 @@ export const PRODUCTS = [
     id: 37,
     new: true,
     featured: true,
-
     name: 'Dress code hat',
     price: 20,
     link: 'dress-code-hat',

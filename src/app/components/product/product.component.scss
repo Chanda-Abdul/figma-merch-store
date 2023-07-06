@@ -10,38 +10,75 @@
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: 9rem repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-column-gap: 2rem;
-    grid-row-gap: 0rem;
-
-    &__thumbnails {
-        grid-row: 1 /2;
+    @include responsive-for(desktop) {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 9rem);
-        grid-column-gap: 0px;
-        grid-row-gap: 1rem;
+        grid-template-columns: 9rem repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 2rem;
+        grid-row-gap: 0rem;
+    }
+
+    display: grid;
+    grid-template-columns: 100%;
+
+    &__gallery {
+        @include flex(row, flex-start, center);
+        overflow-y: scroll;
+        // TO-DO => fix gallery overflow scroll
+        flex: 0 0 70%;
 
         img {
-            border-radius: 2rem;
-            height: 9rem;
-            width: 9rem;
+            display: inline;
+            aspect-ratio: .86;
+            border-radius: 4rem;
+            height: auto;
+            max-width: 70%;
+            padding-right: 2rem;
             object-fit: cover;
+       
+        }
+
+        @include responsive-for(desktop) {
+            display: none;
+        }
+    }
+
+    &__thumbnails {
+        display: none;
+
+        @include responsive-for(desktop) {
+            grid-row: 1 /2;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 9rem);
+            grid-column-gap: 0px;
+            grid-row-gap: 1rem;
+
+            img {
+                border-radius: 2rem;
+                height: 9rem;
+                width: 9rem;
+                object-fit: cover;
+            }
         }
     }
 
     &__feature {
-        display: flex;
-        overflow: hidden;
+        display: none;
 
-        img {
-            height: 100%;
-            border-radius: 12rem;
-            max-width: 100%;
-            object-fit: cover;
+        @include responsive-for(desktop) {
+            display: flex;
+
+            img {
+                height: 100%;
+                border-radius: 12rem;
+                width: 100%;
+                object-fit: contain;
+            }
         }
+
+
+
     }
 
     &__info {
@@ -49,7 +86,7 @@
             @include flex(row, center, center);
             border-radius: $border-radius-default;
             text-align: center;
-            padding: 1rem 2rem .5rem 2rem ;
+            padding: 1rem 2rem .5rem 2rem;
             margin-bottom: 3rem;
             @include heading-small-mobile;
             text-transform: uppercase;
@@ -144,7 +181,9 @@
     }
 
     &__reviews {
-        grid-column: 2 / span 2;
-        grid-row-start: 2;
+        @include responsive-for(desktop) {
+            grid-column: 2 / span 2;
+            grid-row-start: 2;
+        }
     }
 }

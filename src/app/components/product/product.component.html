@@ -2,14 +2,7 @@
   <ng-container *ngIf="(product$ | async) as product">
     <div class="product-grid">
 
-      <div class="product-grid__thumbnails">
-      
-        <figure *ngFor="let photo of product.productPhotos; let i = index"
-                (click)="expandImg(i)">
-          <img [src]="photo"
-               alt="product.name">
-        </figure>
-      </div>
+
 
       <div class="product-grid__feature">
 
@@ -22,12 +15,26 @@
       <section class="product-grid__info">
 
         <ul class="product-grid__info--tags-list">
-          <li *ngFor="let tag of product.tags" [ngClass]="{'bioBkgnd': tag === 'components', 'sunBkgnd' : tag === 'layers' }"
+          <li *ngFor="let tag of product.tags"
+              [ngClass]="{'bioBkgnd': tag === 'components', 'sunBkgnd' : tag === 'layers' }"
               class="product-grid__info--tag">{{tag}}</li>
         </ul>
 
         <h2 class="product-grid__info--title">{{product.name}}</h2>
 
+        <p class="product-grid__info--description">
+          {{product.description}}</p>
+
+        <ul class="product-grid__info--features-list">
+
+          <li *ngFor="let feature of product.features"
+              class="product-grid__info--feature">{{feature}}</li>
+        </ul>
+        <figure class="product-grid__gallery">
+          <img *ngFor="let photo of product.productPhotos;"
+               [src]="photo"
+               alt="product.name">
+        </figure>
         <ng-container *ngIf="product.sizes">
           <div class="product-grid__info--sizes">
             <button *ngFor="let size of sizes">
@@ -38,9 +45,9 @@
         </ng-container>
 
         <div class="product-grid__info--actions">
-          
+
           <span class="variants"><button>-</button><span class="quantity">1</span><button>+</button></span>
-          
+
           <span *ngIf="product.price == 0"
                 class="sold-out">SOLD OUT</span>
 
@@ -48,20 +55,21 @@
                 class="add">add {{product.price | currency : 'USD' :true:'1.1-0'}}</span>
         </div>
 
-        <p class="product-grid__info--description">
-          {{product.description}}</p>
-
-        <ul class="product-grid__info--features-list">
-
-          <li *ngFor="let feature of product.features"
-              class="product-grid__info--feature">{{feature}}</li>
-        </ul>
       </section>
+      <div class="product-grid__thumbnails">
 
+        <figure *ngFor="let photo of product.productPhotos; let i = index"
+                (click)="expandImg(i)">
+          <img [src]="photo"
+               alt="product.name">
+        </figure>
+      </div>
       <section class="product-grid__reviews">
 
         <app-review *ngIf="(reviews$ | async) as reviews"
-                    [reviews]="reviews$" [averageRating]="averageRating" [averageRatingStars]="averageRatingStars"></app-review>
+                    [reviews]="reviews$"
+                    [averageRating]="averageRating"
+                    [averageRatingStars]="averageRatingStars"></app-review>
       </section>
 
     </div>

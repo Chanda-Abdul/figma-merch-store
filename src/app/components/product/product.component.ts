@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, combineLatest, combineLatestAll, map } from 'rxjs';
+import { SIZES } from 'server/db-data';
 import { Product } from 'src/app/model/product.model';
 import { Review } from 'src/app/model/review.model';
+import { Size } from 'src/app/model/sizeGuide.model';
 import { ProductsService } from 'src/app/services/products.service';
 import { RatingsService } from 'src/app/services/ratings.service';
 
@@ -21,14 +23,8 @@ export class ProductComponent implements OnInit {
   averageRating: number = 0;
   averageRatingStars: string = Array(5).fill(`<span>&#9734;</span>`).join(``);
 
-
-  sizes = [
-    { 'S': 'Small' },
-    { 'M': 'Medium' },
-    { 'L': 'Large' },
-    { 'XL': 'Extra Large' },
-    { '2XL': 'Extra Extra Large' }]
-
+  sizes: Size[] = SIZES;
+  showChart = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,7 +32,7 @@ export class ProductComponent implements OnInit {
     private ratingsService: RatingsService) { }
 
   ngOnInit() {
-
+console.log(this.sizes)
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
 
     this.loadProductById(productId);

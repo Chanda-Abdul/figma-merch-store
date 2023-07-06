@@ -29,7 +29,7 @@
          *ngIf="showReviews">
 
         <div class="review"
-             *ngFor="let review of (reviews|async);
+             *ngFor="let review of (reviews|async); 
              even as isEven"
              [class.is-even]="isEven">
 

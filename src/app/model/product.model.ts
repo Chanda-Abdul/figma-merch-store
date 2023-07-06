@@ -5,10 +5,10 @@ export interface Product {
   featuredCarouselImg?: string;
   name: string;
   price: number;
-  soldOut: boolean;
+  soldOut?: boolean;
   productPhotos: string[];
   hoverPatternImg?: string;
-  rolloverProductImg?: string;
+  hoverProductImg?: string;
   link?: string;
   description: string;
   features?: string[];

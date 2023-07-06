@@ -1,16 +1,17 @@
 <section class="call-to-action">
-
-    <ng-container *ngFor="let word of words"
+<h2 class="call-to-action__container">
+    <span *ngFor="let word of words"
                   class="call-to-action__item">
 
-        <a *ngIf="word.linkTo; else noLink"
-           [routerLink]="word.linkTo"
-           class="call-to-action__item--link">
+        <a *ngIf="word.filterTo; else noFilter"
+           [routerLink]="word.filterTo"
+           class="call-to-action__item--filter">
             {{word.word }}
+            <!-- TO-DO => add product filter for layers and compoonents -->
         </a>
-        <ng-template #noLink>
-            <p class="call-to-action__item--word"
-               *ngIf="!word.linkTo">{{word.word}}</p>
+        <ng-template #noFilter>
+            <span class="call-to-action__item--word"
+               *ngIf="!word.filterTo">{{word.word}}</span>
         </ng-template>
 
         <img *ngIf="word.symbol"
@@ -18,7 +19,5 @@
              aria-hidden="true"
              class="call-to-action__item--symbol">
 
-        <!--; else lineBreak <ng-template #lineBreak>
-            <br class="call-to-action__item--line-break"></ng-template> -->
-    </ng-container>
+    </span></h2>
 </section>

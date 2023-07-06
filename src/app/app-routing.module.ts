@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductComponent } from './components/product/product.component';
 import { HomeComponent } from './components/home/home.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
 
 const routes: Routes = [
   {
@@ -14,11 +15,6 @@ const routes: Routes = [
     path: 'product/:productId',
     component: ProductComponent
   },
-
-  // {
-  //   path:"search-products",
-  //   component: SearchProductsComponent
-  // },
   {
     path: 'about',
     component: AboutComponent
@@ -27,14 +23,22 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent
   },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent
-  // },
+  {
+    path: 'privacy-policy',
+    component: PrivacyComponent
+  },
   {
     path: '**',
     redirectTo: '/'
   }
+  // {
+  //   path:"search-products",
+  //   component: SearchProductsComponent
+  // },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  // },
 ];
 
 @NgModule({

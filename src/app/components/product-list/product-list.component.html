@@ -4,5 +4,5 @@
   <app-product-card *ngFor="let product of (newProductsFirst$ | async)"
                     [product]="product"
                     [routerLink]="['/product', product.id]"></app-product-card>
-
+  <!-- TO-DO => switch to /product/product.name -->
 </div>

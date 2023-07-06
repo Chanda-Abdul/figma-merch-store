@@ -1,57 +1,109 @@
-@import "/src/styles/sass/main.scss";
-:host{
-  
-  &:not(:nth-child(10n+7)){
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
+
+:host {
+  &:not(:nth-child(10n+7)) {
     grid-column: span 1;
-  grid-row: span 1;}
-  
-  &:nth-child(10n+7), &:nth-child(10n+8) {
+    grid-row: span 1;
+  }
+
+  &:nth-child(10n+7),
+  &:nth-child(10n+8) {
     grid-column: span 2;
     grid-row: span 2;
+  }
 }
 
-}
-.product-list{
-  display: grid;
+.product-list {
+
   &__product {
-    // display: flex;
-    // flex-direction: column;
-
+    position: relative;
     @include heading-small-mobile;
 
-    // flex: 1 1 40%;
-    
-    img {
+    &:hover {
+      .product-list__product {
+        &--hover-pattern {
+          opacity: 1;
+          width: 100%;
+          height: 100%;
+        }
+
+        &--hover-image {
+          opacity: 1;
+          max-width: 100%;
+          max-height: 100%;
+          z-index: 2;
+        }
+
+        &--photo {
+          opacity: 0;
+        }
+      }
+    }
+
+    figure {
+      position: relative;
       width: 100%;
-      height: auto;
-      // min-height: 22.27rem;
-      border-radius: 3.5rem;
+      padding-bottom: 133%;
+      overflow: hidden;
+      height: 0;
+      border-radius: $border-radius-default;
+      border: none;
+
+      img {
+        border-radius: $border-radius-default;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: border-color 500ms, opacity 500ms;
+        object-fit: cover;
+      }
+    }
+
+    &--hover-pattern,
+    &--hover-image {
+      position: absolute;
+      border: 2px solid $black-out;
+      opacity: 0;
+    }
+
+    &--photo {
+      position: absolute;
+      opacity: 1;
+    }
+
+    &--info {
+      margin-top: $gutter-default-mobile;
+      @include flex(row, space-between, flex-start);
+      flex-wrap: wrap;
+    }
+
+    &--row {
+      width: 100%;
+      @include flex(row, space-between, center);
     }
 
     &--new {
-      @include heading-small-mobile;
+      @include body-text-primary;
+      margin: 0 8px 4px 0;
       color: $bio-punk;
-      margin: $vertical-padding-default;
+    }
+
+    &--desc {
+      display: inline-block;
+      max-width: 60%;
     }
 
     &--price {
+      @include body-text-primary;
       display: inline-block;
-      text-align: end;
-      margin: $vertical-padding-default 0 $vertical-padding-default auto;
-
+      margin-left: 1rem;
     }
-  
+  }
 }
-}
-// .product {
-//   flex: none;
-//   order: 0;
-//   flex-grow: 0;
-//   z-index: 1;
-
-
-
-
-
-//   &__price {}
-// }

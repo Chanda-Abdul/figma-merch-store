@@ -31,8 +31,9 @@
         <ng-container *ngIf="product.sizes">
           <div class="product-grid__info--sizes">
             <button *ngFor="let size of sizes">
-              <ng-container *ngFor="let sizeName of size |keyvalue">{{sizeName.key }}</ng-container>
-              <!-- TO-Do => add size chart -->
+              <ng-container>{{size.abbrv}}</ng-container>
+             <!-- *ngFor="let sizeName of size |keyvalue" -->
+               <!-- TO-Do => add size chart -->
             </button>
           </div>
         </ng-container>
@@ -45,7 +46,7 @@
                 class="sold-out">SOLD OUT</span>
 
           <span *ngIf="product.price != 0"
-                class="add">add {{product.price | currency : 'USD' :true:'1.1-0'}}</span>
+                class="add">add {{product.price | currency : 'USD': 'symbol' : '1.0-0' }}</span>
         </div>
 
         <p class="product-grid__info--description">
@@ -56,6 +57,50 @@
           <li *ngFor="let feature of product.features"
               class="product-grid__info--feature">{{feature}}</li>
         </ul>
+        <div class="product-grid__info--size-chart">
+          <span class="product-grid__info--size-chart-heading">  <h3> Size Chart </h3> 
+          <button class="btn-toggle btn-size" (click)="showChart = !showChart">
+            <img src="assets/icons/plus.svg" alt="" *ngIf="!showChart">
+            <img src="assets/icons/minus.svg" alt="" *ngIf="showChart"></button>
+           </span>
+        <ng-container *ngIf="showChart"> 
+           <table class="size-chart">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Body Length</th>
+                <th>Chest</th>
+                <th>Sleeve Length</th>
+              </tr>
+            </thead>
+              
+              <tbody>
+                <ng-container *ngFor="let size of sizes">   
+                  <tr >
+                  <td><em>{{size.abbrv}}</em></td>
+                  <td><p>{{size.bodyLength}}</p></td>
+                  <td><p>{{size.chestWidth}}</p></td>
+                  <td><p>{{size.sleeveLength}}</p></td>
+
+                </tr></ng-container>
+             
+             
+             
+               
+              </tbody>   
+            </table>
+          <div>
+            <h4>Body Length</h4>
+            <p>Shoulder seam at collar to bottom hem</p>
+            <h4>Chest Width</h4>
+            <p>Side to side 1 inch below the sleves</p>
+          </div></ng-container>
+        
+            
+            
+        
+            
+        </div>
       </section>
 
       <section class="product-grid__reviews">

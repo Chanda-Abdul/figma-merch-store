@@ -1,4 +1,4 @@
-.btn {
+.btn{
   border: $border-default;
   border-radius: $border-radius-default;
   background: transparent;
@@ -35,4 +35,10 @@ a {
     // color: $polar-bear-in-a-blizzard;
 
   }
+}
+
+.btn-toggle {
+  border: none;
+  color: rgba($random, .5);
+  background: transparent;
 }

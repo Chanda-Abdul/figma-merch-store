@@ -9,29 +9,31 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/) site created by [ ](#)
 ## Demo
-View live demo [here](https://inquisitive-strudel-fa01fb.netlify.app/)
+View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 
 ## Screenshots
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 ## Technologies Used
 <!-- List the programming languages, frameworks, libraries, and any other tools or technologies used in the project. -->
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="30" /><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="30" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="30" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="30" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="30" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="30" /><img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="30" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="30" />
-- BEM
-- RxJs 
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="30" /><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="30" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="30" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="30" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="30" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="30" /><img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="30" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="30" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)
 
 ## Features
 <!-- List the main features of the project, with brief descriptions of each. -->
-### Custom fonts
-uses custom fonts  <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
+<details><summary><b>Custom fonts</b></summary> 
+uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
+
 #### Whyte for bodytext
 ![](src/assets/screens/font-body.png)
+
 #### Whyte Inktrap Bold for the display text
 ![](src/assets/screens/font-display.png)
+</details>
+
 <!-- TO-DO => NAV COMPONENT -->
 <!-- TO-DO => /HOME  dropdown mobile menu -->
-### Dropdown search bar
-- [ ] dropdown search bar when the icon is clicked.
+<details><summary><b>Dropdown search bar</b></summary> 
+- [ ] dropdown search bar when the icon is clicked.</details>
 <!-- TO-DO => HERO/HEADER COMPONENT -->
 ### Draggable Slider 
 - [ ] Draggable slider <!-- How to Create a Draggable slider-->
@@ -60,7 +62,6 @@ Add a shopping cart: Implement a shopping cart feature that allows users to add 
 <!-- TO-DO => Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 <!-- TO-DO => footer ticker tape -->
 ### User Reviews/Ratings (Bonus)
-<!-- TO-DO => create /REVIEW component -->
 UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) ![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png)
 
 ### Angular in-memory-web-api
@@ -78,22 +79,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great forntend project to practice with.
 
-<!-- Process  
+<!-- Process   -->
+### Angular routing
+Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
+### Display products
+Used Angular's data binding  and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
+### Stateless Observable Service 
+created a stateless observable service `product.service.ts` to store as little state as possible on the client and instead fetch the data from the server when needed
+### JSON server to store and retrieve data
+<!-- Connect to a backend using JSON serverthat provides data about your products. This can be done using HTTP requests or a service. -->
 
-Set up your Angular environment: Install the Angular CLI, create a new project, and set up any necessary dependencies.
-
-Create components: Create components for your homepage, product listing, and product detail pages. You may also want to create a header and footer component.
-
-Set up routing: Set up routing so that users can navigate between pages.
-
-Connect to a backend: Connect to a backend that provides data about your products. This can be done using HTTP requests or a service.
-
--->
-
-<!-- Display products: Use Angular's data binding to display the products on the /product-list page. -->
-<!-- TO-DO => /product-list -->
-<!-- TO-DO => Display products: Use Angular's data binding to display the products on the /product-card pages.  -->
-<!-- Stateless Observable Service  -->
 ## Continued development
 ## Useful resources
 <!-- List any external resources or libraries used in the project, as well as any contributors or collaborators. -->

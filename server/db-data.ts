@@ -20,6 +20,7 @@ export const PRODUCTS = [
     description: 'This tee is in dark mode, just like your design soul.	Bask in the darkness and blend into your UI—if only for a moment—before the reflective logo picks up the light of a computer screen.',
     features: ['100% ring spun cotton, unisex sizing.', 'Printed on a Comfort Colors tee.'],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 2,
@@ -27,7 +28,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma sticker pack',
     price: 1,
-
     link: 'free-figma-sticker-pack',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -92,23 +92,22 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma wordmark tee',
     price: 18,
-
     link: 'wordmark-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-22_600x.png?v=1636143252',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-wordmark-tee_600x.png?v=1636143026',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3814_600x.jpg?v=1636599369',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3814_1000x.jpg?v=1636599369',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3804_1000x.jpg?v=1636599369',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3917_1000x.jpg?v=1636599369',
+      'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4366_1000x.jpg?v=1636323424',
     ],
-    description: '',
-    features: [],
+    description: 'We’ve heard that a plain tee says something by saying nothing. We like to think that this one says… Figma.',
+    features: ['100% cotton, unisex sizing.',
+      'Printed on a Los Angeles Apparel tee.'],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 6,
@@ -122,16 +121,16 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Meet-me-in-the-browser-tee_25519412-0726-41e8-9c52-b1a267fe1d19_600x.png?v=1636641906',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3600-Edit_600x.jpg?v=1636599551',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3600-Edit_1000x.jpg?v=1636599551',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3634-Edit_1000x.jpg?v=1636599552',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3675-Edit_1000x.jpg?v=1636599552',
+      'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4353_1000x.jpg?v=1636641445',
+
     ],
-    description: '',
-    features: [],
+    description: 'Lounge around the house or hit the streets with this soft reminder that your friends are just a tab away.',
+    features: ['100% pre-shrunk combed ringspun cotton jersey, unisex sizing.', 'Printed on a BELLA+CANVAS tee.'],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 7,
@@ -208,7 +207,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Bezier logo tee',
     price: 25,
-
     link: 'bezier-logo-long-sleeve-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-2_600x.png?v=1636143050',
@@ -225,6 +223,7 @@ export const PRODUCTS = [
     description: '',
     features: [],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 11,
@@ -248,6 +247,7 @@ export const PRODUCTS = [
     description: '',
     features: [],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 12,
@@ -469,7 +469,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Elevated workflows tee',
     price: 25,
-
     link: 'elevated-workflows-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -486,6 +485,7 @@ export const PRODUCTS = [
     description: '',
     features: [],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 23,
@@ -493,7 +493,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma logo pin',
     price: 2,
-
     link: 'figma-logo-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-20_600x.png?v=1636143251',
@@ -517,7 +516,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Hug contents tee',
     price: 20,
-
     link: 'hug-contents-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-3_600x.png?v=1636143251',
@@ -534,6 +532,7 @@ export const PRODUCTS = [
     description: '',
     features: [],
     tags: ['layers'],
+    sizes: true,
   },
   {
     id: 25,
@@ -616,7 +615,6 @@ export const PRODUCTS = [
     featured: true,
     name: 'Figma logo hat',
     price: 20,
-
     link: 'figma-logo-hat',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-17_1200x.png?v=1636143252',
@@ -847,7 +845,6 @@ export const PRODUCTS = [
     id: 37,
     new: true,
     featured: true,
-
     name: 'Dress code hat',
     price: 20,
     link: 'dress-code-hat',
@@ -1097,7 +1094,13 @@ export const PRODUCTS = [
   },
 ];
 
-
+export const SIZES = [
+  { size: 'Extra Small', abbrv: 'XS', bodyLength: '26½ in.', chestWidth: '17 in.', sleeveLength: '7⅞ in.', },
+  { size: 'Small', abbrv: 'S', bodyLength: '27½ in.', chestWidth: '19 in.', sleeveLength: '8⅛ in.', },
+  { size: 'Medium', abbrv: 'M', bodyLength: '28½ in.', chestWidth: '21 in.', sleeveLength: '8⅜ in.', },
+  { size: 'Large', abbrv: 'L', bodyLength: '29½ in.', chestWidth: '23 in.', sleeveLength: '8⅝ in.', },
+  { size: 'Extra Large', abbrv: 'XL', bodyLength: '30½ in.', chestWidth: '25 in.', sleeveLength: '8⅞ in.', },
+  { size: 'Extra Extra Large', abbrv: '2XL', bodyLength: '31½ in.', chestWidth: '27 in.', sleeveLength: '9 ⅛in.', }]
 //export function authenticate(email: string, password: string) {
 
 //  const user: any=Object.values(USERS).find(user => user.email === email);

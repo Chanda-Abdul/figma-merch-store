@@ -20,7 +20,9 @@
     <div class="reviews__list">
 
         <div class="review"
-             *ngFor="let review of (reviews|async)">
+             *ngFor="let review of (reviews|async); 
+             even as isEven"
+             [class.is-even]="isEven">
 
             <h4 class="review__name">{{review.name}}</h4>
 

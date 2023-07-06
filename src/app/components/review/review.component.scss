@@ -57,9 +57,18 @@
     border-radius: $border-radius-default;
     width: 100%;
 
-    &:nth-of-type(even) {
-        background-color: rgba($random, .1);
-        border: 2px solid rgba($random, .25);
+    @include responsive-for(desktop) {
+        &.is-even {
+            background-color: rgba($random, .1);
+            border: 2px solid rgba($random, .25);
+        }
+    }
+
+    @include responsive-for(mobile) {
+        &:not(.is-even) {
+            background-color: rgba($random, .1);
+            border: 2px solid rgba($random, .25);
+        }
     }
 
     &__name {

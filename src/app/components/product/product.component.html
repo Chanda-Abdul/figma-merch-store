@@ -135,8 +135,12 @@
       </div>
       <section class="product-grid__reviews">
 
-  <app-review *ngIf="(reviews$ | async) as reviews"
-              [reviews]="reviews$"
-              [averageRating]="averageRating"
-              [averageRatingStars]="averageRatingStars"></app-review>
-</section>
+        <app-review *ngIf="(reviews$ | async) as reviews"
+                    [reviews]="reviews$"
+                    [averageRating]="averageRating"
+                    [averageRatingStars]="averageRatingStars"></app-review>
+      </section>
+
+    </div>
+  </ng-container>
+</div>

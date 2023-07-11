@@ -197,61 +197,8 @@
       z-index: 3;
     }
 
-    /* menu icons  */
-    &--icons {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      span {
-        position: relative;
-        margin-top: 50%;
-
-        &,
-        &::before,
-        &::after {
-          display: inline-block;
-          width: 1.6rem;
-          height: 2px;
-          background-color: $black-out;
-        }
-
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          transition: all .2s;
-        }
-
-        &::before {
-          top: -.5rem;
-        }
-
-        &::after {
-          top: .5rem;
-        }
-      }
-
-      &:hover {
-        span::before {
-          top: -.75rem;
-        }
-
-        span::after {
-          top: .75rem;
-        }
-      }
-    }
-  }
-
-  &__search,
-  &__link--menu,
-  &__location {
-
-    img {
-      height: auto;
-      width: 1.6rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
     }
   }
 

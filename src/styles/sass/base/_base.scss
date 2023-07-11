@@ -14,7 +14,8 @@
 
 body {
   min-height: 100vh;
-  font-size: 1.8rem;
+  @include body-text-primary;
+  color: $black-out;
 }
 
 html {

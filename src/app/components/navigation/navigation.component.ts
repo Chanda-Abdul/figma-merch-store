@@ -9,7 +9,10 @@ export class NavigationComponent implements OnInit {
   searchVisible = true;
   menuVisible = true;
   isMobile = false;
-
+  legalLinks = [
+    { text: 'Privacy & Terms', link: 'privacy-policy' },
+    { text: 'Contact Us', link: 'about#contact' }
+  ]
   ngOnInit(): void {
     this.setMenuLinks();
   }

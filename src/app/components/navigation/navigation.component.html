@@ -1,18 +1,49 @@
 <div class="header">
 
-  <nav class="nav" id="scrollToTop">
+  <nav class="nav"
+       id="scrollToTop">
+
     <div class="nav__left">
-      <a class="nav__link--menu"
+
+      <div class="nav__toggle">
+
+        <input type="checkbox"
+               id="nav-toggle">
+
+        <label for="nav-toggle"
+               class="nav__toggle--icons">
+          <span></span>
+        </label>
+        <div class="nav__toggle--background"></div>
+
+        <div class="nav__links">
+          <menu class="nav__links--menu">
+            <a href='#shop'
+               class="nav__link--item">Shop</a>
+
+            <a routerLink='about'
+               class="nav__link--item">About</a>
+       
+          <ul class="nav__links--legal">
+
+            <li *ngFor="let links of legalLinks"
+                class="footer__legal--link">
+      
+              <a routerLink="{{links.link}}"
+                 class="footer__legal--link">{{links.text}}</a>
+            </li>
+          </ul>   </menu>
+
+      
+        </div>
+      </div>
+
+
+      <!-- <a class="nav__link--menu"
          *ngIf="isMobile">
         <img src="assets/icons/list.svg">
-      </a>
-      <a href='#shop'
-         class="nav__link"
-         *ngIf="!isMobile">Shop</a>
+      </a> -->
 
-      <a routerLink='about'
-         class="nav__link"
-         *ngIf="!isMobile">About</a>
 
       <a class="nav__search">
         <img src="assets/icons/magnifying-glass.svg"
@@ -29,12 +60,14 @@
 
     <div class="nav__right">
 
-      <a class="nav__locate" *ngIf="isMobile">
+      <a class="nav__locate"
+         *ngIf="isMobile">
         <img src="assets/icons/map-pin.svg"
-         class=""></a>
+             class=""></a>
 
       <select id="header-country-select"
-              class="country-select" *ngIf="!isMobile">
+              class="country-select"
+              *ngIf="!isMobile">
 
         <option value="store-ca">Canada</option>
         <option value="store-jp">Japan</option>
@@ -44,7 +77,10 @@
 
       </select>
 
-      <a routerLink="cart"><span data-cart-count
-              class="">0</span></a>
+      <a class="nav__cart"
+         routerLink="cart">
+        <span data-cart-count
+              class="nav__cart--count">0</span>
+      </a>
     </div>
   </nav>

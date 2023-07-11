@@ -55,6 +55,10 @@
   font-size: 1.6rem;
   line-height: $line-height-default;
 }
+@mixin body-text-secondary {
+  @include body-text-primary;
+  font-size: 1.4rem;
+}
 
 @mixin body-text-link-primary {
   font-weight: $font-weight-default;
@@ -82,8 +86,3 @@
 }
 
 
-body {
-  @include body-text-primary;
-  font-family: $font-body;
-  color: $black-out;
-}

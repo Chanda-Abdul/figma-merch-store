@@ -817,7 +817,6 @@ export const PRODUCTS = [
 
     name: 'Framework tee',
     price: 20,
-
     link: 'framework-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-10_600x.png?v=1636143251',
@@ -825,7 +824,6 @@ export const PRODUCTS = [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/figma-store_framework-tee_rollover_600x.png?v=1670515569',
     productPhotos: [
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_01_600x.jpg?v=1670515454',
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_01_1000x.jpg?v=1670515454',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_02_1000x.jpg?v=1670515454',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_03_1000x.jpg?v=1670597451',
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/figma-store_framework-tee_04_1000x.jpg?v=1670597451',

@@ -22,6 +22,7 @@ export class ProductListComponent implements OnInit {
   }
 
   loadProducts() {
+    // TO-DO (funtionality) => add loader
     const products$ = this.productsService.loadAllProducts();
 
     products$.subscribe(val => console.log(val));

@@ -2,6 +2,10 @@
   <ng-container class="product-container"
                 *ngIf="(product$ | async) as product">
     <ng-container class="product-grid">
+<section class="product-grid__info">
+  <ng-container class="product-container"
+                *ngIf="(product$ | async) as product">
+    <ng-container class="product-grid">
 
       <div class="product-grid__thumbnails">
 
@@ -123,24 +127,16 @@
 
 
 
-        </div>
-      </section>
-      <div class="product-grid__thumbnails">
-
-        <figure *ngFor="let photo of product.productPhotos; let i = index"
-                (click)="expandImg(i)">
-          <img [src]="photo"
-               alt="product.name">
-        </figure>
       </div>
-      <section class="product-grid__reviews">
 
-        <app-review *ngIf="(reviews$ | async) as reviews"
-                    [reviews]="reviews$"
-                    [averageRating]="averageRating"
-                    [averageRatingStars]="averageRatingStars"></app-review>
-      </section>
-
-    </div>
+    </ng-container>
   </ng-container>
-</div>
+</section>
+
+<section class="product-grid__reviews">
+
+  <app-review *ngIf="(reviews$ | async) as reviews"
+              [reviews]="reviews$"
+              [averageRating]="averageRating"
+              [averageRatingStars]="averageRatingStars"></app-review>
+</section>

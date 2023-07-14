@@ -6,9 +6,10 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  searchVisible = true;
-  menuVisible = true;
-  isMobile = false;
+  searchBarVisible = false;
+
+  isMobile = true;
+
   legalLinks = [
     { text: 'Privacy & Terms', link: 'privacy-policy' },
     { text: 'Contact Us', link: 'about#contact' }
@@ -23,6 +24,8 @@ export class NavigationComponent implements OnInit {
   }
 
   private setMenuLinks() {
-    this.isMobile = window.innerWidth < 600 ? true : false;
+    this.isMobile = window.innerWidth < 900 ? true : false;
   }
+
+  showlocationSelector(){}
 }

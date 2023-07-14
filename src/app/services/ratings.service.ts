@@ -24,7 +24,7 @@ export class RatingsService {
       );
   }
 
-  // TO-DO => change to custom pipe 
+  // TO-DO => (functionality) change to custom pipe 
   getRandomRatings(productId: number, reviewsList: Review[]): Review[] {
     let ratingsToFetchBasedOnProductId = Number(productId
       .toString()

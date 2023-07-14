@@ -6,7 +6,7 @@
 
 .reviews {
     margin: 3rem 0;
-    padding: $vertical-padding-default $horizontal-padding-default;
+    padding: $default-gutter-vertical $default-gutter-horizontal;
     @include flex(column, center, flex-start);
 
     &__title {
@@ -18,7 +18,7 @@
         width: 100%;
 
         &--rating {
-            margin: $vertical-padding-default $horizontal-padding-default $vertical-padding-default 0;
+            margin: $default-gutter-vertical $default-gutter-horizontal $default-gutter-vertical 0;
             width: fit-content;
             @include heading-large-mobile;
         }
@@ -57,8 +57,8 @@
 
 .review {
     display: grid;
-    margin: $vertical-padding-default 0;
-    padding: $vertical-padding-default $horizontal-padding-default;
+    margin: $default-gutter-vertical 0;
+    padding: $default-gutter-vertical $default-gutter-horizontal;
     border-radius: $border-radius-default;
     width: 100%;
 
@@ -77,7 +77,7 @@
     }
 
     &__name {
-        padding-top: $vertical-padding-default;
+        padding-top: $default-gutter-vertical;
         @include heading-medium-mobile;
     }
 
@@ -86,7 +86,7 @@
     }
 
     &__text {
-        padding: $vertical-padding-default 0;
+        padding: $default-gutter-vertical 0;
         @include body-text-primary;
     }
 }

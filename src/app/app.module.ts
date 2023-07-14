@@ -18,6 +18,8 @@ import { ProductComponent } from './components/product/product.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ReviewComponent } from './components/review/review.component';
+import { SeachProductsComponent } from './components/seach-products/seach-products.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { ReviewComponent } from './components/review/review.component';
     HomeComponent,
     CallToActionComponent,
     PrivacyComponent,
-    ReviewComponent
+    ReviewComponent,
+    SeachProductsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

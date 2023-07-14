@@ -1,0 +1,17 @@
+@import "src/styles/sass/abstracts/mixins";
+@import "src/styles/sass/abstracts/variables";
+
+
+.header {
+    min-height: 6.3rem;
+    padding: $default-gutter-vertical $default-gutter-horizontal;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: transparent;
+    z-index: 2;
+    // @include flex(row, center, center);
+    transition: all .2s;
+  }
+  

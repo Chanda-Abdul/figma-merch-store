@@ -34,8 +34,11 @@ $font-weight-heading-default: 700;
 $line-height-default: 1.6rem;
 
 $border-default: 2px solid $black-out;
+$border-thick: 4px solid $black-out;
 $border-radius-default: 3.5rem;
 
-$gutter-default-mobile: 1.5rem;
-$vertical-padding-default: 1.25rem;
-$horizontal-padding-default: 2rem;
+$default-gutter-mobile: 1.5rem;
+$default-gutter-vertical: 1rem;
+$default-gutter-horizontal: 2rem;
+$container-gutter-vertical: 1rem;
+$container-gutter-horizontal: 2rem;

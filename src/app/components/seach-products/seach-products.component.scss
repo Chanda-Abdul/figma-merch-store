@@ -1,0 +1,10 @@
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
+
+.searchbar {
+    border-bottom: $border-default;
+    background-color: $polar-bear-in-a-blizzard;
+}
+

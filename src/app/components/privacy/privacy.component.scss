@@ -4,7 +4,7 @@
 @import "src/styles/sass/base/typography";
 
 .content {
-    margin: 17rem $horizontal-padding-default 12rem;
+    margin: 17rem $default-gutter-horizontal 12rem;
 
     .title {
         @include heading-medium-mobile;

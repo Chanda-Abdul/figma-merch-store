@@ -13,7 +13,7 @@
   //
   height: 100%;
 
-  // padding: 9rem $vertical-padding-default;
+  // padding: 9rem $default-gutter-vertical;
 
   &__title {
     width: 30.7rem;
@@ -45,7 +45,7 @@
   &__content {
     background-color: $sunflower;
     @include flex(column, space-between, flex-start);
-    padding: 9rem $horizontal-padding-default;
+    padding: 9rem $default-gutter-horizontal;
 
     &>* {
       max-width: 30.7rem;

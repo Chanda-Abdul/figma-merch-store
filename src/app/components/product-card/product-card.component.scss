@@ -79,7 +79,7 @@
     }
 
     &--info {
-      margin-top: $gutter-default-mobile;
+      margin-top: $default-gutter-mobile;
       @include flex(row, space-between, flex-start);
       flex-wrap: wrap;
     }

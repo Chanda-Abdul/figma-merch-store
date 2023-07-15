@@ -1,0 +1,28 @@
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/media-queries";
+@import "/src/styles/sass/base/typography";
+
+
+.products {
+    min-height: 60vh;
+  margin-bottom: 11rem;
+  margin-top: 9rem;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: calc(50vw - 3rem), 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 4rem;
+  row-gap: 4rem;
+
+  @include responsive-for(desktop) {
+    grid-template-columns: repeat(4, minMax(0, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 6rem;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    row-gap: 6rem;
+  }
+}

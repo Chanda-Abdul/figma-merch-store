@@ -32,7 +32,8 @@ export class ProductComponent implements OnInit {
     private ratingsService: RatingsService) { }
 
   ngOnInit() {
-    console.log(this.sizes)
+ 
+    
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
 
     this.loadProductById(productId);

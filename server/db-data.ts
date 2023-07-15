@@ -762,10 +762,8 @@ export const PRODUCTS = [
     id: 34,
     new: true,
     featured: false,
-
     name: 'Toolkit mug',
     price: 35,
-
     link: 'toolkit-mug',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
@@ -946,7 +944,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Toolkit pin',
     price: 2,
-
     link: 'toolkit-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-15_600x.png?v=1636143251',

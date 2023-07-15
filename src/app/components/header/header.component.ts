@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isSearchBarVisible = false;
+
+  toggleSearchBar(toggleSearchVisibility: boolean){
+    this.isSearchBarVisible = toggleSearchVisibility;
+  }
 
 }

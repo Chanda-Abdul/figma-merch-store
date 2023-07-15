@@ -1,5 +1,5 @@
 <header>
 
-<app-seach-products></app-seach-products>
-<app-navigation></app-navigation>
+<app-seach-bar *ngIf="isSearchBarVisible"></app-seach-bar>
+<app-navigation (toggleSearchEvent)="toggleSearchBar($event)"></app-navigation>
 </header>

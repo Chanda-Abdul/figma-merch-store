@@ -24,6 +24,10 @@ export function filterToFeaturedProducts(products: any) {
   let product = products.filter((p: any) =>  {return p.featured == true})
   return product;
 }
+export function filterByProductTag(products: any, tag: string) {
+  let product = products.filter((p: any) =>  {return p.tags[0] == tag})
+  return product;
+}
 export function sortProductsByDes(product1: any, product2: any) {
   return product2.id - product1.id;
 }

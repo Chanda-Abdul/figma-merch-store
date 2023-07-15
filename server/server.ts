@@ -3,9 +3,8 @@ import * as express from 'express';
 import { Application } from "express";
 import { getAllProducts, getProductById } from './get-products.route';
 import { getAllRatings } from './get-ratings.route';
-// import {searchProducts} from "./search-Products.route";
-// import {saveProduct} from './save-Product.route';
-// import {loginUser} from './login.route';
+import { searchProducts } from "./search-products.route";
+
 
 const bodyParser = require('body-parser');
 
@@ -23,9 +22,7 @@ app.route('/api/product/:id').get(getProductById);
 
 app.route('/api/rating/:id').get(getAllRatings);
 
-// app.route('/api/products).get(searchProducts);
-
-// app.route('/api/login').post(loginUser);
+app.route('/api/products/:searchTerm').get(searchProducts);
 
 const httpServer = app.listen(9000, () => {
     console.log("HTTP REST API Server running at http://localhost:" + httpServer.address()["port"]);

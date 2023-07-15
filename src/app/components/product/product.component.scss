@@ -4,12 +4,9 @@
 @import "/src/styles/sass/base/media-queries";
 @import "/src/styles/sass/base/typography";
 
-.product-container {
-    width: 100vw;
-    padding: 12rem 2rem;
-}
 
-.product-grid {
+
+.product-grid {     width: 100vw;padding: 12rem 2rem;
     @include body-text-primary;
     display: grid;
     grid-template-columns: 9rem repeat(2, 1fr);
@@ -43,12 +40,11 @@
         @include responsive-for(desktop) {
             display: flex;
 
-            img {
-                height: 100%;
-                border-radius: 12rem;
-                width: 100%;
-                object-fit: contain;
-            }
+        img {
+            height: auto;
+            border-radius: 12rem;
+            max-width: 100%;
+            object-fit: cover;
         }
 
 
@@ -70,7 +66,7 @@
         }
 
         &--title {
-            margin: $gutter-default-mobile 0;
+            margin: $default-gutter-mobile 0;
             @include heading-medium-mobile;
         }
 
@@ -235,8 +231,8 @@
         // }
 
         // // 
-        // padding: $gutter-default-mobile 0;
-        // margin: $gutter-default-mobile 0;
+        // padding: $default-gutter-mobile 0;
+        // margin: $default-gutter-mobile 0;
         // }
 
         // btn-toggle 
@@ -313,9 +309,7 @@
     }
 
     &__reviews {
-        @include responsive-for(desktop) {
-            grid-column: 2 / span 2;
-            grid-row-start: 2;
-        }
+        grid-column: 2 / span 2;
+        // grid-row-start: 3;
     }
 }

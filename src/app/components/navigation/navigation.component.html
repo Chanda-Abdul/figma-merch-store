@@ -4,8 +4,7 @@
        id="scrollToTop">
 
   <div class="nav__container">
-    <div class="nav__container--left">
-
+    <section class="nav__container--left">
 
       <div *ngIf="!isMobile; else mobileMenuToggle">
         <!-- default menu links for desktop -->
@@ -30,20 +29,21 @@
           <div class="nav__toggle--background">
 
             <div class="nav__links">
-        
-                <ng-container *ngTemplateOutlet="navDefaultLinks"></ng-container>
-        
-                <ng-container *ngTemplateOutlet="navLegalLinks"></ng-container>
-              </div>
+
+              <ng-container *ngTemplateOutlet="navDefaultLinks"></ng-container>
+
+              <ng-container *ngTemplateOutlet="navLegalLinks"></ng-container>
+            </div>
           </div>
         </div>
       </ng-template>
 
       <!-- search button -->
-      <div class="nav__search">
+      <div class="nav__search"
+           (click)="toggleSearchBar(!searchBarVisible)">
         <ng-container *ngTemplateOutlet="searchIcon"></ng-container>
       </div>
-    </div>
+    </section>
 
 
     <!-- logo -->
@@ -54,23 +54,25 @@
            alt="The Figma Store" />
     </a>
 
-    <div class="nav__container--right">
+    <section class="nav__container--right">
 
       <!-- location select -->
       <div class="nav__location">
-        <ng-container *ngIf="isMobile">
+        <span *ngIf="isMobile">
           <ng-container *ngTemplateOutlet="locationIcon"></ng-container>
-        </ng-container>
+        </span>
 
-        <!-- TO-DO => add hidden class funtionality for mobile -->
+
         <select id="location-select"
-                class="nav__location--select">
+                class="nav__location--select"
+                (change)="updateLocation($event.target)"
+                *ngIf="!isMobile || locationSelectVisible">
 
-          <option value="store-ca">Canada</option>
-          <option value="store-jp">Japan</option>
-          <option value="store-uk">United Kingdom</option>
-          <option value="store">United States</option>
-          <option value="store">I&#39;m just browsing</option>
+          <option *ngFor="let option of locationOptions"
+                  [value]="option.optionValue"
+                  selected="">{{option.country}}</option>
+          <!-- TO-DO (functionality )=> selected for default and updated options -->
+
         </select>
       </div>
 
@@ -83,28 +85,29 @@
         </a>
       </div>
 
-    </div>
+    </section>
 
   </div>
 
 
   <ng-template #navDefaultLinks>
     <menu class="nav__links--default">
-      <a href='#shop'
-         class="nav__link--item">Shop</a>
+      <li *ngFor="let links of menuLinks.default"
+          class="nav__links--default-list">
 
-      <a routerLink='about'
-         class="nav__link--item">About</a>
+        <a routerLink="{{links.link}}"
+           class="nav__link--default">{{links.text}}</a>
+      </li>
     </menu>
   </ng-template>
 
   <ng-template #navLegalLinks>
     <menu class="nav__links--legal">
-      <li *ngFor="let links of legalLinks"
-          class="nav__legal--link">
+      <li *ngFor="let links of menuLinks.legal"
+          class="nav__links--legal-list">
 
         <a routerLink="{{links.link}}"
-           class="nav__legal--link">{{links.text}}</a>
+           class="nav__link--legal">{{links.text}}</a>
       </li>
     </menu>
   </ng-template>
@@ -118,7 +121,7 @@
 
   <ng-template #locationIcon>
     <button class="nav__location--icon"
-            (click)="showlocationSelector()">
+            (click)=" togglelocationSelector()">
       <img src="assets/icons/map-pin.svg"
            class="pin-icon">
     </button>

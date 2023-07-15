@@ -1,0 +1,6 @@
+<div class="products">
+
+    <app-product-card *ngFor="let product of (searchResults$ | async)"
+                      [product]="product"
+                      [routerLink]="['/product', product.id]"></app-product-card>
+  </div>

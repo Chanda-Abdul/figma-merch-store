@@ -18,8 +18,9 @@ import { ProductComponent } from './components/product/product.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ReviewComponent } from './components/review/review.component';
-import { SeachProductsComponent } from './components/seach-products/seach-products.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SeachBarComponent } from './components/seach-bar/seach-bar.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 
 @NgModule({
@@ -38,8 +39,9 @@ import { HeaderComponent } from './components/header/header.component';
     CallToActionComponent,
     PrivacyComponent,
     ReviewComponent,
-    SeachProductsComponent,
-    HeaderComponent
+    SeachBarComponent,
+    HeaderComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

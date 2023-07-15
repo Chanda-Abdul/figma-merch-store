@@ -1,8 +1,5 @@
-
-
-  <nav class="nav"
-       id="scrollToTop">
-
+<nav class="nav"
+     id="scrollToTop">
   <div class="nav__container">
     <section class="nav__container--left">
 
@@ -18,7 +15,7 @@
         <div class="nav__toggle">
 
           <input type="checkbox"
-                 id="nav-toggle">
+                 id="nav-toggle" [checked]="false">
 
           <label for="nav-toggle"
                  class="nav__toggle--icons">
@@ -61,11 +58,10 @@
         <span *ngIf="isMobile">
           <ng-container *ngTemplateOutlet="locationIcon"></ng-container>
         </span>
-
-
         <select id="location-select"
                 class="nav__location--select"
-                (change)="updateLocation($event.target)"
+             
+                (change)="updateLocation($event)"
                 *ngIf="!isMobile || locationSelectVisible">
 
           <option *ngFor="let option of locationOptions"
@@ -95,7 +91,8 @@
       <li *ngFor="let links of menuLinks.default"
           class="nav__links--default-list">
 
-        <a routerLink="{{links.link}}"
+        <a 
+       href="{{links.link}}" 
            class="nav__link--default">{{links.text}}</a>
       </li>
     </menu>
@@ -106,7 +103,7 @@
       <li *ngFor="let links of menuLinks.legal"
           class="nav__links--legal-list">
 
-        <a routerLink="{{links.link}}"
+        <a href="{{links.link}}"
            class="nav__link--legal">{{links.text}}</a>
       </li>
     </menu>

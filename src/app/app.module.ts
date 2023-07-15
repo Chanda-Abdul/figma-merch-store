@@ -19,8 +19,9 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ReviewComponent } from './components/review/review.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SeachBarComponent } from './components/seach-bar/seach-bar.component';
+import { searchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { CurrencyConversionPipe } from './currency-conversion.pipe';
 
 
 @NgModule({
@@ -39,10 +40,10 @@ import { SearchResultsComponent } from './components/search-results/search-resul
     CallToActionComponent,
     PrivacyComponent,
     ReviewComponent,
-    SeachBarComponent,
+    searchBarComponent,
     HeaderComponent,
-    SearchResultsComponent
-  ],
+    SearchResultsComponent,
+    CurrencyConversionPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

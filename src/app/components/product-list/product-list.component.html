@@ -1,7 +1,7 @@
-<app-call-to-action></app-call-to-action>
-<div class="products">
 
-  <app-product-card *ngFor="let product of (newProductsFirst$ | async)"
+  <app-call-to-action></app-call-to-action>
+ <div class="products" id="shop">
+   <app-product-card *ngFor="let product of (newProductsFirst$ | async)"
                     [product]="product"
                     [routerLink]="['/product', product.id]"></app-product-card>
   <!-- TO-DO => (functionality) switch to /product/product.name -->

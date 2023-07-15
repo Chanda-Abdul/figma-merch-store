@@ -20,6 +20,8 @@ app.route('/api/products').get(getAllProducts);
 
 app.route('/api/product/:id').get(getProductById);
 
+// app.route('/api/product/:name').get(getProductByName);
+
 app.route('/api/rating/:id').get(getAllRatings);
 
 app.route('/api/products/:searchTerm').get(searchProducts);

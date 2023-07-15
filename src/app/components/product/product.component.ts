@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, combineLatest, combineLatestAll, map } from 'rxjs';
 import { SIZES } from 'server/db-data';
@@ -15,11 +15,11 @@ import { RatingsService } from 'src/app/services/ratings.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
+
   product$!: Observable<Product>;
+
   reviews$!: Observable<Review[]>;
-
   imgIdx: number = 0;
-
   averageRating: number = 0;
   averageRatingStars: string = Array(5).fill(`<span>&#9734;</span>`).join(``);
 
@@ -29,11 +29,14 @@ export class ProductComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductsService,
-    private ratingsService: RatingsService) { }
+    private ratingsService: RatingsService,
+    private renderer: Renderer2) { }
+    
+   
 
   ngOnInit() {
- 
-    
+    this.scrollToTop();
+  
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
 
     this.loadProductById(productId);
@@ -41,6 +44,14 @@ export class ProductComponent implements OnInit {
     this.loadRatingById(productId);
   }
 
+
+  scrollToTop() {
+    const target = document.documentElement ;
+  
+    this.renderer.setProperty(target, 'scrollTop', 0);
+  }
+
+  
   expandImg(idx: number) {
     this.imgIdx = idx;
   }

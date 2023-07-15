@@ -8,4 +8,6 @@ import { Product } from 'src/app/model/product.model';
 })
 export class ProductCardComponent {
 @Input() product!: Product;
+
+selectedCountry: string = 'store-jp'
 }

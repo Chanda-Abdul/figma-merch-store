@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -6,26 +7,23 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
-  @Output() toggleSearchEvent = new EventEmitter<boolean>();
-
-  searchBarVisible = false;
-
-  locationSelectVisible = false;
-
   isMobile = true;
 
   menuLinks = {
     default: [
-      { text: 'Shop', link: '#shop' },
+      { text: 'Shop', link: '/#shop' },
       { text: 'About', link: 'about' }
     ],
     legal: [
       { text: 'Privacy & Terms', link: 'privacy-policy' },
-      { text: 'Contact Us', link: 'about#contact' }
+      { text: 'Contact Us', link: '/about#contact' }
     ]
   }
 
+  @Output() toggleSearchEvent = new EventEmitter<boolean>();
+  searchBarVisible = false;
+
+  locationSelectVisible = false;
   locationOptions = [
     { optionValue: "store-ca", country: "Canada", selected: false },
     { optionValue: "store-jp", country: "Japan", selected: false },
@@ -34,7 +32,9 @@ export class NavigationComponent implements OnInit {
     { optionValue: "store", country: "I'm just browsing", selected: false }
   ]
 
-  currentLocation = this.locationOptions[3].country;
+  selectedCountry: string = "United States";
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.setMenuLinks();
@@ -61,7 +61,7 @@ export class NavigationComponent implements OnInit {
     this.locationSelectVisible = !this.locationSelectVisible
   }
 
-  updateLocation(value:any) {
+  updateLocation(value: any) {
     console.log(value)
-   }
+  }
 }

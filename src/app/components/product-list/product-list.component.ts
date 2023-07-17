@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import { Observable, map } from 'rxjs';
-import { Product, sortProductsByAvailable, sortProductsByDes, sortProductsByFeatured, sortProductsByNew } from 'src/app/model/product.model';
+import { Product, sortProductsByAvailable, sortProductsByDes, sortProductsByNew } from 'src/app/model/product.model';
 
 @Component({
   selector: 'app-product-list',

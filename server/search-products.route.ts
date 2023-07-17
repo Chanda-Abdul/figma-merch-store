@@ -7,6 +7,7 @@ export function searchProducts(req: Request, res: Response) {
     const queryParams = req.query as any;
 
     const productId = queryParams.productId,
+        search = queryParams.filter || '',
         filter = queryParams.filter || '',
         sortOrder = queryParams.sortOrder || 'asc',
         pageNumber = parseInt(queryParams.pageNumber) || 0,
@@ -22,12 +23,16 @@ export function searchProducts(req: Request, res: Response) {
         Products = Object.values(PRODUCTS);
     }
 
-    if (filter) {
+    if (search) {
         Products = Object.values(PRODUCTS)
             .filter(product => product
                 .description.trim()
                 // TO-DO => only searches within description?
-                .toLowerCase().search(filter.toLowerCase()) >= 0);
+                .toLowerCase().search(search.toLowerCase()) >= 0);
+    }
+    if (filter) {
+        Products = Object.values(PRODUCTS)
+            .filter(product => product.tags[0] == filter);
     }
 
 

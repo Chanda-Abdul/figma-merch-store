@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, combineLatest, combineLatestAll, map } from 'rxjs';
+import { Observable,  map } from 'rxjs';
 import { SIZES } from 'server/db-data';
 import { Product } from 'src/app/model/product.model';
 import { Review } from 'src/app/model/review.model';

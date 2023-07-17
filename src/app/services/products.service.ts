@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { map, shareReplay } from "rxjs/operators";
+import { map, shareReplay, tap } from "rxjs/operators";
 import { Product } from "../model/product.model";
 
 
@@ -34,14 +34,28 @@ export class ProductsService {
   searchProducts(searchTerm: string): Observable<Product[]> {
     return this.http.get<any>(`api/products/${searchTerm}`, {
       params: {
-        filter: searchTerm,
+        search: searchTerm,
         pageSize: 25
       }
     })
     .pipe(
-      map(res => res.payload), 
+      // map(res => res.payload), 
       shareReplay()
     )
     // .subscribe(val => console.log(val));
+  }
+  filterProducts(filterTerm: string): Observable<Product[]> {
+    return this.http.get<any>(`api/products/${filterTerm}`, {
+      params: {
+        filter: filterTerm,
+        pageSize: 50
+      }
+    })
+    .pipe(
+      map(res => res.payload), 
+      tap(val => console.log(val)),
+      shareReplay()
+    )
+
   }
 }

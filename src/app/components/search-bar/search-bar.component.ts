@@ -11,6 +11,6 @@ export class searchBarComponent {
   constructor(private router: Router){}
   searchFor(searchInput:string){
     console.log(searchInput);
-    this.router.navigate(['/search', searchInput])
+    this.router.navigate(['/find', searchInput])
   }
 }

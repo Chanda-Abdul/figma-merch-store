@@ -66,8 +66,8 @@ Circle with rotating text and hover animation</b>
 
 Hover effects - Change image on hover
 
-<!-- TO-DO => (functionality) #SHOP COMPONENT -->
-<!-- TO-DO => (functionality) /ABOUT COMPONENT -->
+<!-- TO-DO => (styles) #SHOP COMPONENT -->
+<!-- TO-DO => (styles) /ABOUT COMPONENT -->
 
 </details>
 <details><summary><b>Content filtering

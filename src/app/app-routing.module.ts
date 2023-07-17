@@ -17,7 +17,7 @@ const routes: Routes = [
     component: ProductComponent
   },
   {
-    path: "search/:searchTerm",
+    path: "find/:searchTerm",
     component: SearchResultsComponent
   },
   {

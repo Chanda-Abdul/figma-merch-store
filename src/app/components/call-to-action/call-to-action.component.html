@@ -4,10 +4,10 @@
                   class="call-to-action__item">
 
         <a *ngIf="word.filterTo; else noFilter"
-           [routerLink]="word.filterTo"
+           [routerLink]="['/find', word.word]"
            class="call-to-action__item--filter">
-            {{word.word }}
-            <!-- TO-DO => (functionality) add product filter for layers and components -->
+            {{word.word}} 
+            <!-- TO-DO =>  router params -->
         </a>
         <ng-template #noFilter>
             <span class="call-to-action__item--word"

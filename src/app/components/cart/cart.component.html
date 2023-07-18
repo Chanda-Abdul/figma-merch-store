@@ -1,5 +1,60 @@
-<div class="cart-container">
-    <p>0 items in Cart</p>
-    <h2>EMPTY CART, AAACKKK</h2>
-    <a routerLink="/">SEE ALL PRODUCTS</a>
-</div>
+<section class="cart">
+    <h3 class="cart__count"><span>{{cartCount}}</span> items in Cart</h3>
+    <div class="cart__items">
+        <ng-container *ngIf="cartCount == 0; else displayCartItems">
+            <h2> EMPTY CART, AAACKKK</h2>
+            <a class="cart__close"
+               routerLink="/">See All Products</a>
+        </ng-container>
+
+    </div>
+    <ng-template #displayCartItems>
+        <div class="cart__contents">
+            <h3 class="cart__contents--labels">Item</h3>
+            <ul class="cart__contents--list">
+                <li *ngFor="let item of items"
+                    class="cart__contents--list-item">
+                    <img [src]="item.img"
+                         class="cart__contents--list-item-photo">
+                    <p class="cart__contents--list-item-name">{{item.name}}</p>
+                    <button class="remove-btn">
+                        <!-- <img src="/src/assets/icons/minus.svg"> -->
+                        X</button>
+                    <span class="cart__contents--list-item-quantity">
+                        <button class="decrease-btn"><img src="/assets/icons/minus.svg"></button>
+                        <span class="cart__contents--list-item-quantity-count">{{item.quantity}}</span>
+                        <button class="increase-btn"><img src="assets/icons/plus.svg"></button></span>
+                    <span class="cart__contents--list-item-price">{{item.price |
+                        currency}}</span>
+                    <span class="cart__contents--list-item-total">{{item.price * item.quantity|
+                        currency}}</span>
+
+
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="cart__summary">
+            <h4>Shipping
+            </h4>
+
+
+            <span class="cart__total">Total* {{cartTotal | currency}}</span>
+            <button>UPDATE CART</button>
+            <a class="cart__checkout"
+               routerLink="#">checkout</a>
+            <p>*Taxes and shipping collected at checkout</p>
+        </div>
+
+
+
+
+
+
+
+
+    </ng-template>
+
+
+</section>

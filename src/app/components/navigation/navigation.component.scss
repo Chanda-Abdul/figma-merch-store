@@ -10,7 +10,7 @@
   width: 100vw;
   padding: $default-gutter-vertical $default-gutter-horizontal;
   @include flex(row, space-between, center);
-  background-color: $sunflower;
+  background-color: transparent;
 
   &__container {
     width: 100%;
@@ -231,11 +231,17 @@
     @include flex(row, center, center);
     border: $border-default;
     border-radius: $border-radius-default;
-    width: 5.3rem;
     height: 3.5rem;
+    background-color: $black-out;
 
-    span {
-      @include body-text-secondary;
+    padding: 1rem 2rem .9rem;
+    text-transform: uppercase;
+    span {color: $polar-bear-in-a-blizzard;
+      @include body-text-primary;
+   
+    }
+    &--link{
+      height: auto;
     }
   }
 }

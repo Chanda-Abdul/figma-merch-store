@@ -1,0 +1,136 @@
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/typography";
+
+.cart {
+    margin: 14rem $default-gutter-horizontal 12rem $default-gutter-horizontal;
+    padding: 0 2rem;
+
+    &__count {
+        border-bottom: 3px solid $black-out;
+        padding-bottom: 2rem;
+        @include heading-small-mobile;
+    }
+
+    &__items {
+
+        @include flex(column, space-between, center);
+        text-align: center;
+
+        h2 {
+            margin: 9rem 0;
+            @include heading-large-mobile;
+            margin-bottom: 8rem;
+        }
+
+
+    }
+
+    &__close,
+    &__checkout {
+        background-color: $black-out;
+        border: 2px solid $black-out;
+        border-radius: $border-radius-default;
+        width: fit-content;
+        display: inline-block;
+        @include body-text-primary;
+        color: $polar-bear-in-a-blizzard;
+        padding: 1.3rem 4rem 1.1rem 4rem;
+        text-transform: uppercase;
+        -webkit-transition: background-color .3s linear, color .3s linear;
+        -o-transition: background-color .3s linear, color .3s linear;
+        transition: background-color .3s linear, color .3s linear;
+
+        &:hover {
+            background-color: $polar-bear-in-a-blizzard ;
+            color: $black-out ;
+        }
+    }
+
+    &__contents {
+        display: grid;
+        width: 100%;
+        grid-column-gap: 8rem;
+        row-gap: 1rem;
+        margin: 25px 0 2rem;
+
+        &--labels {
+            grid-column: span 2;
+            text-align: left;
+            display: block;
+            margin: 15px 0 10px;
+            border-bottom: 1px solid $black-out;
+        }
+
+        &--list {
+            grid-column: span 2;
+
+            &-item {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                border-bottom: 1px solid $black-out;
+                width: 100%;
+                grid-column-gap: 1rem;
+                grid-row-gap: 3rem;
+                padding: $default-gutter-vertical 0;
+
+                &-photo {
+                    grid-row: 1/span 1;
+                    height: 8rem;
+                    width: 8rem;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                }
+
+                &-name {
+                    @include heading-small-mobile;
+                }
+
+                &-quantity {
+                    @include flex(row, center, center);
+
+                    &-count {
+                        margin: 0 5px;
+                        min-width: 3rem;
+                    }
+                }
+
+                &-price {
+                    @include heading-small-mobile;
+                    font-weight: 400;
+                    color: rgba($black-out, .5);
+                }
+
+                &-total {
+                    @include heading-small-mobile;
+                }
+
+            }
+        }
+
+        button {
+            border: 2px solid $black-out;
+            border-radius: 50%;
+            @include flex(row, center, center);
+            width: 3.6rem;
+            height: 3.6rem;
+
+            img {
+                width: 2.2rem;
+                height: 2.2rem;
+            }
+        }
+    }
+
+    &__summary {
+        @include flex(column, center, flex-end);
+
+        * {
+            padding-bottom: 2rem;
+        }
+
+        width: 100%;
+    }
+
+}

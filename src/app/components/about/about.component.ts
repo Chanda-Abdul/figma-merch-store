@@ -14,5 +14,4 @@ export class AboutComponent {
   qAndA: questionAnswer[] = qAndA;
 
   customerCare: custCare[] = customerCare;
-
 }

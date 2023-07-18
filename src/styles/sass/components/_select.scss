@@ -1,9 +1,10 @@
 select {
   border: $border-default;
   border-radius: $border-radius-default;
-  padding: .5rem 2.2rem;
-  // margin-bottom: 5rem;
-  @include heading-medium-mobile;
-  line-height: 1.5rem;
+  @include body-text-secondary;
+  @include flex(row, space-between, center);
+  text-transform: uppercase;
+  padding: .75rem 2.2rem;
+  // line-height: 1.5;
   background-color: transparent;
-}
+

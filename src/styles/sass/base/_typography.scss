@@ -18,9 +18,10 @@
 
 @mixin heading-large-mobile {
   @include heading-large;
+
   font-size: 3.2rem;
   line-height: 4.4rem;
-  // text-align: left;
+
   text-transform: uppercase;
 }
 

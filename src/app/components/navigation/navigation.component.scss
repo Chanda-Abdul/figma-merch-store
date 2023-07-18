@@ -5,6 +5,16 @@
 @import "src/styles/sass/base/media-queries";
 
 
+
+.nav {
+  height: 6.3rem;
+  width: 100vw;
+  padding: $default-gutter-vertical $default-gutter-horizontal;
+  @include flex(row, space-between, center);
+  background-color: transparent;
+
+
+
 .nav {
   height: 6.3rem;
   width: 100vw;
@@ -12,11 +22,13 @@
   @include flex(row, space-between, center);
   background-color: $sunflower;
 
+
   &__container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+
 
     &--left,
     &--right {
@@ -36,6 +48,202 @@
     }
   }
 
+
+  &__links {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // z-index: 3;
+    // opacity: 0;
+    // width: 100%;
+    // height: 100vh;
+
+    &--desktop, &--default {
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      @include responsive-for(desktop) {
+        @include flex(row, space-between, center);
+        position: relative;
+      }
+    }
+
+    &--menu {
+      @include flex(column, center, flex-start);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      width: 100vw;
+      height: 100vh;
+
+
+      @include responsive-for(desktop) {
+        @include flex(row, space-between, center);
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+
+  &__link {
+    &--item {
+      transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      @include heading-large-mobile;
+      position: relative;
+      display: block;
+      text-align: left;
+      color: $black-out;
+      text-decoration: none;
+
+      @include responsive-for(desktop) {
+
+        border: $border-default;
+        border-radius: $border-radius-default;
+        @include body-text-secondary;
+        text-transform: uppercase;
+        padding: .75rem 2.2rem;
+        // line-height: 1.5;
+        background-color: transparent;
+        margin-right: $default-gutter-horizontal;
+      }
+    }
+  }
+
+
+  /* menu functionality  */
+  label {
+    position: relative;
+    z-index: 5;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:not(:checked)~.nav__toggle--background {
+    opacity: 0;
+    height: 100vh;
+    width: 0;
+    transform: scale(0);
+    // z-index: 1;
+    background-color: $polar-bear-in-a-blizzard;
+
+  }
+
+  input:checked~.nav__toggle--background {
+    opacity: 1;
+    transform: scale(2);
+
+    z-index: 5;
+    background-color: $polar-bear-in-a-blizzard;
+
+  }
+
+  input:checked~&__links {
+    width: 100%;
+    opacity: 1;
+  }
+
+  input:checked {
+    +label {
+      span {
+        background-color: transparent;
+
+      }
+
+      span::before {
+        top: 0;
+        transform: rotate(135deg);
+
+      }
+
+      span::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__toggle {
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    display: block;
+    background-color: transparent;
+    height: 3.8rem;
+    width: 3.6rem;
+    position: relative;
+    z-index: 16;
+    cursor: pointer;
+    border-radius: 50%;
+    border: $border-default;
+    box-shadow: 0 1rem 3rem rgba($black-out, .1);
+    text-align: center;
+
+    @include responsive-for(desktop) {
+      display: none;
+    }
+
+    &--background {
+      @include responsive-for(desktop) {
+        display: none;
+      }
+
+      height: 3vh;
+      width: 3vw;
+      max-width: 100vw;
+      max-height: 100vh;
+      border-radius: 50%;
+      position: fixed;
+      top: 0rem;
+      left: 0rem;
+      transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+      z-index: 3;
+
+    &--left,
+    &--right {
+      height: 100%;
+      display: grid;
+      grid-column-gap: .8rem;
+    }
+
+    &--left {
+      @include flex(row, flex-start, center);
+      position: relative;
+      width: 100%;
+
+    }
+
+    &--right {
+      @include flex(row, flex-end, center);
+    }
+  }
+
+
+  &__logo img {
+    display: block;
+    height: auto;
+    width: 16rem;
+  }
+
+  &__location {
+    &--icon {
+      background-color: transparent;
+      border: none;
+    }
+
+    &--select {
+      position: absolute;
+      background-color: $polar-bear-in-a-blizzard;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      top: 25vh;
+      width: fit-content;
+      z-index: 10;
+
+=======
 
   &__links {
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -284,11 +492,25 @@
     @include flex(row, center, center);
     border: $border-default;
     border-radius: $border-radius-default;
+
+    height: 3.5rem;
+    background-color: $black-out;
+
+    padding: 1rem 2rem .9rem;
+    text-transform: uppercase;
+    span {color: $polar-bear-in-a-blizzard;
+      @include body-text-primary;
+   
+    }
+    &--link{
+      height: auto;
+
     width: 5.3rem;
     height: 3.5rem;
 
     span {
       @include body-text-secondary;
+
     }
   }
 }

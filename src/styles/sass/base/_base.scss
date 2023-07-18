@@ -27,4 +27,9 @@ ul,
 ol,
 menu {
   list-style: none;
+
+}
+button, a {
+  &:hover{cursor: pointer;}
+
 }

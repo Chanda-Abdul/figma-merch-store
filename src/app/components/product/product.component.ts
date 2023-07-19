@@ -15,7 +15,6 @@ import { RatingsService } from 'src/app/services/ratings.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
   product$!: Observable<Product>;
 
   reviews$!: Observable<Review[]>;
@@ -29,14 +28,11 @@ export class ProductComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductsService,
-    private ratingsService: RatingsService,
-    private renderer: Renderer2) { }
-    
-   
+    private ratingsService: RatingsService) { }
 
   ngOnInit() {
-    this.scrollToTop();
-  
+ 
+    
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
 
     this.loadProductById(productId);
@@ -44,14 +40,6 @@ export class ProductComponent implements OnInit {
     this.loadRatingById(productId);
   }
 
-
-  scrollToTop() {
-    const target = document.documentElement ;
-  
-    this.renderer.setProperty(target, 'scrollTop', 0);
-  }
-
-  
   expandImg(idx: number) {
     this.imgIdx = idx;
   }

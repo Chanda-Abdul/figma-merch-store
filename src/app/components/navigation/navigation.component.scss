@@ -10,6 +10,8 @@
   padding: $default-gutter-vertical $default-gutter-horizontal;
   @include flex(row, space-between, center);
   background-color: transparent;
+  position: fixed;
+  top: 0;
 
   &__container {
     width: 100%;

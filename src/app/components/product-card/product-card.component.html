@@ -36,6 +36,7 @@
         <h3 class="product-list__product--desc">{{ product.name }}</h3>
 
         <p class="product-list__product--price">
+        <!-- TO-DO =>  (functionality) change to custom currency pipe -->
           {{product.price | currencyConversion}}
           <!-- {{(product.price | currencyConversion: selectedCountry )| currency : "GBP" : true : "1.0-0"}} -->
           <!-- {{ product.price  }} -->

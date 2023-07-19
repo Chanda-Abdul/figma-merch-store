@@ -1,8 +1,8 @@
-<section class="product-grid">
+<section class="product-container">
 
-  <ng-container class="product-grid"
+  <ng-container
                 *ngIf="(product$ | async) as product">
-
+<div class="product-grid">
     <div class="product-grid__thumbnails">
 
       <figure *ngFor="let photo of product.productPhotos; let i = index"
@@ -110,21 +110,12 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
     <div class="product-grid__reviews">
 
       <app-review *ngIf="(reviews$ | async) as reviews"
                   [reviews]="reviews$"
                   [averageRating]="averageRating"
                   [averageRatingStars]="averageRatingStars"></app-review>
-    </div>
+    </div></div>
   </ng-container>
 </section>

@@ -1,20 +1,19 @@
+
 <div class="hero">
-  <ng-container>
+  <div class="container"
+       #container>
+    <div *ngFor="let product of featuredProducts$ | async"
+         class="draggable-images">
 
-    <div class="hero__carousel"
-         #container>
-      <div class="hero__carousel--inner"
-           #draggableContent>
-
-        <figure *ngFor="let product of featuredProducts$ | async; let i = index">
-
-          <img [src]="product.productPhotos">
-        </figure>
-
-      </div>
+      <figure> <img [src]="product.productPhotos[0]"> </figure>
     </div>
-  </ng-container>
-  <svg class="svg-cutout"
+  </div>
+</div>
+
+
+
+
+<!-- <svg class="svg-cutout"
        width="1124"
        height="612"
        viewBox="0 0 1124 612"
@@ -44,6 +43,4 @@
 
     </span>
     <span class="hero__badge--text">100% of profits fund reforestation</span>
-  </a>
-</div>
-
+  </a> -->

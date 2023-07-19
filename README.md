@@ -9,7 +9,7 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/) site created by [ ](#)
 ## Demo
-View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
+View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s></s>
 
 ## Screenshots
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
@@ -67,14 +67,14 @@ Circle with rotating text and hover animation</b>
 Hover effects - Change image on hover
 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
-<!-- TO-DO => (styles) /ABOUT COMPONENT -->
+
 
 </details>
 <details><summary><b>Content filtering
 </b></summary> 
-<!-- TO-DO => (functionality) /SEARCH COMPONENT -->
-- [ ] Content filtering
-- [ ] Search bar
+
+- [x] Content filtering
+- [x] Search bar
 </details>
 
 <details><summary><b>Shopping Cart:

@@ -15,7 +15,8 @@
         <div class="nav__toggle">
 
           <input type="checkbox"
-                 id="nav-toggle" [checked]="false">
+                 id="nav-toggle"
+                 [checked]="false">
 
           <label for="nav-toggle"
                  class="nav__toggle--icons">
@@ -60,7 +61,6 @@
         </span>
         <select id="location-select"
                 class="nav__location--select"
-             
                 (change)="updateLocation($event)"
                 *ngIf="!isMobile || locationSelectVisible">
 
@@ -91,8 +91,7 @@
       <li *ngFor="let links of menuLinks.default"
           class="nav__links--default-list">
 
-        <a 
-       href="{{links.link}}" 
+        <a href="{{links.link}}"
            class="nav__link--default">{{links.text}}</a>
       </li>
     </menu>

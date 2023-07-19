@@ -1,5 +1,5 @@
 export interface questionAnswer {
     icon: string,
     question: string,
-    answer: string
+    answer: string | string[]
 }

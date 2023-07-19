@@ -1,4 +1,121 @@
-.about-container{
+@import "/src/styles/sass/abstracts/variables";
+@import "/src/styles/sass/abstracts/mixins";
+@import "/src/styles/sass/base/fonts";
+@import "/src/styles/sass/base/typography";
+
+.customer-care,
+.about {
+    @include flex(column, flex-start, center);
+    //  display: grid;
     margin: 12rem 2rem;
-    min-height: fit-content;
+    padding: 0 0 0 2rem;
+    // grid-column-gap: 80px;
+    // grid-row-gap: 40px;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // align-items: center;
+    // -webkit-column-gap: 80px;
+    // -moz-column-gap: 80px;
+    // column-gap: 80px;
+
+    // grid-template-columns: 1fr;
+
+    // row-gap: 40px;
+
+    // 
+    // width: 100%;
+
+//   TO-DO => add desktop styles
+    &__img svg {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        stroke: black;
+        stroke-width: 4px;
+
+    }
+
+    section {
+        margin-top: 5.5rem;
+        padding-bottom: 4rem;
+        width: 100%;
+
+        &:not(:first-of-type) {
+            padding-top: 4rem
+        }
+
+        [class$="__title"] {
+            @include heading-large-mobile;
+            text-transform: uppercase;
+            padding-bottom: 4rem;
+        }
+
+        [class$="__sub-title"] {
+            @include heading-large-mobile;
+            text-transform: capitalize;
+        }
+
+        [class$="__text"],
+        [class$="__list"] {
+            &:first-of-type {
+                padding-top: $default-gutter-mobile;
+            }
+
+            @include body-text-large;
+            min-height: fit-content;
+            padding-bottom: 6rem;
+        }
+
+        a {
+            @include body-text-large;
+            height: 100%;
+            font-weight: $font-weight-display;
+        }
+
+        [class$="--item"] {
+            &:not(:first-of-type) {
+                margin-top: 7rem;
+            }
+
+        }
+
+        [class$="__list"],
+        [class$="--list"] {
+            &:not(:first-of-type) {
+                margin: 4rem 0;
+            }
+        }
+
+        [class$="--question"],
+        [class$="--title"] {
+            margin: 1rem 0 2rem 0;
+            @include flex(row, flex-start, center);
+        }
+
+        [class$="-icon"],
+        [class$="__icon"] {
+            height: 3rem;
+            -o-object-fit: contain;
+            object-fit: contain;
+            width: 3rem;
+        }
+
+        [class$="-text"],
+        [class$="__topic"] {
+            margin: 0 0 0 2rem;
+            @include heading-small-mobile;
+            font-size: 1.7rem;
+        }
+
+        [class$="--anwser"],
+        [class$="__action"] {
+            @include body-text-large;
+            font-size: 2rem;
+
+            &:not(:first-of-type) {
+                margin-top: 2rem;
+            }
+        }
+
+    }
 }

@@ -35,9 +35,12 @@ uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Wh
 <!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
 
 - [x] dropdown search bar when the icon is clicked.</details>
-<!-- TO-DO =>  (animations) HERO/HEADER COMPONENT -->
+<!-- TO-DO =>  (animations)  Draggable slider HERO/HEADER COMPONENT -->
 
-<details><summary><b>Draggable Slider using GSAP</b></summary> 
+<details>
+<summary>
+<b>Draggable Slider using GSAP</b>
+</summary> 
 
 created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
@@ -103,6 +106,8 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
  <!-- TO-DO => (styles) -->
  </summary>
 </details>
+ <!-- TO-DO => (styles) accessibility -->
+
 
 ## Installation
 <!-- Provide step-by-step instructions on how to download, install, and run the project on a local machine. -->

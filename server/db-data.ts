@@ -34,16 +34,14 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-Store-123-Cut-Out_600x.png?v=1643228318',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1375_600x.jpg?v=1643228355',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1375_1000x.jpg?v=1643228355',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1403_1000x.jpg?v=1643228355',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1388_1000x.jpg?v=1643228355',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-123_1000x.jpg?v=1643228355',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-122_1000x.jpg?v=1643228355',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: "Because who doesn't love stickers?",
+    tags: ['components'],
   },
   {
     id: 3,
@@ -51,23 +49,24 @@ export const PRODUCTS = [
     featured: false,
     name: 'The Figma Store gift card',
     price: 25,
-
     link: 'the-figma-store-gift-card',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma_Store_Pattern_1_600x.png?v=1635541659',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/GiftCard-PLPHover_600x.png?v=1641324383	',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/GiftCard-PLP_600x.png?v=1641323873',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/GiftCard-PLP_1000x.png?v=1641323873',
+      'https://store.figma.com/cdn/shop/products/25_1000x.png?v=1641323873',
+      'https://store.figma.com/cdn/shop/products/50_1000x.png?v=1641323873',
+      'https://store.figma.com/cdn/shop/products/100_1000x.png?v=1641323873',
+      'https://store.figma.com/cdn/shop/products/USD-main-img_1000x.png?v=1647889562',
+      'https://store.figma.com/cdn/shop/products/USD-main-img_1_1000x.png?v=1647889566',
+
     ],
-    description: '',
+    description: 'Surprise your friend or colleague with a gift card to buy some Figma merch.',
     features: [],
     tags: ['layers'],
+    customVariations: [{ name: '25', price: 25 }, { name: '50', price: 50 }, { name: '100', price: 100 }, { name: '150', price: 150 }, { name: '200', price: 200 }]
   },
   {
     id: 4,
@@ -75,16 +74,21 @@ export const PRODUCTS = [
     featured: false,
     name: 'Plugins mug',
     price: 32,
-
-    link: 'plugins-mug	',
+    link: 'plugins-mug',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-8_600x.png?v=1636143251',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/plugins-mug_600x.png?v=1636146662',
-    productPhotos: ['https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3751-Edit_600x.jpg?v=1636599807', '', '', '', '', ''],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    productPhotos: [
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3751-Edit_1000x.jpg?v=1636599807',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3724-Edit_1000x.jpg?v=1636599806',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3743-Edit_1000x.jpg?v=1636599806',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-182-Edit_1000x.jpg?v=1636601368',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-175_1000x.png?v=1636323515',
+     ],
+    description: "We combined the two things we can’t live without, coffee and plugins, into one.",
+    features: [ "Double wall ceramic body with a graphite bottom.", '11oz.'],
+    tags: ['components'],
   },
   {
     id: 5,

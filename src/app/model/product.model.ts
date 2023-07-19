@@ -14,6 +14,7 @@ export interface Product {
   features?: string[];
   tags?: string[];
   sizes?: boolean;
+  customVariations?: string[]
 }
 
 export function sortProductsByFeatured(product1: any, product2: any) {

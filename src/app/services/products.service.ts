@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { map, shareReplay, take, tap } from "rxjs/operators";
+import { map, shareReplay, tap} from "rxjs/operators";
 import { Product } from "../model/product.model";
 
 

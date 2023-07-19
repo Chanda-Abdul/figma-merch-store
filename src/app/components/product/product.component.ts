@@ -28,16 +28,25 @@ export class ProductComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductsService,
-    private ratingsService: RatingsService) { }
+    private ratingsService: RatingsService,
+    private renderer: Renderer2
+    ) { }
 
   ngOnInit() {
- 
+    this.scrollToTop();
     
     const productId: number = Number(this.route.snapshot.paramMap.get('productId'));
 
     this.loadProductById(productId);
 
     this.loadRatingById(productId);
+  }
+
+  
+  scrollToTop() {
+    const target = document.documentElement ;
+  
+    this.renderer.setProperty(target, 'scrollTop', 0);
   }
 
   expandImg(idx: number) {

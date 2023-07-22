@@ -42,5 +42,5 @@ testem.log
 Thumbs.db
 
 
-/src/app/components/*
-/src/styles/sass/*
+/src/app/components/
+/src/styles/sass/

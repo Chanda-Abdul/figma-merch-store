@@ -79,9 +79,11 @@ Hover effects - Change image on hover
 - [x] Search bar
 </details>
 
-<details><summary><b>Shopping Cart:
-</b></summary> 
-<!-- TO-DO => (functionality) (styles) /CART COMPONENT Add a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.-->
+<details>
+<summary>
+<b>Shopping Cart:</b>
+</summary> 
+Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
 </details>
 
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
@@ -115,7 +117,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
 
 
 ## What I learned

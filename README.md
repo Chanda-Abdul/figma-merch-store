@@ -138,6 +138,10 @@ JSON Proxy server to store and retrieve data
 ## Continued development
 ## Useful resources
 <!-- List any external resources or libraries used in the project, as well as any contributors or collaborators. -->
+- []()
+- []()
+- [Scrolling Ticker Tape Web Design Tutorial](https://youtu.be/UKHXjhyumF0)
+
 - [The right way to componentize SVGs for your Angular app](https://cloudengineering.studio/articles/the-right-way-to-componentize-svgs-for-your-angular-app)
 - [Angular Currency Pipe & Format Currency In Angular with examples](https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/) - Angular Currency Pipe is one of the bulit in pipe in Angular used to format currency value according to given country code,currency,decimal,locale information.
 - [Angular CurrencyPipe](https://angular.io/api/common/CurrencyPipe)

@@ -1,19 +1,18 @@
 <footer class="footer"
         [ngStyle]="{'background-color':  bkgrndColor}">
+
+
+  <div class="footer__content">
   <a href="#shop"
-     class="footer__content--icon footer-logo">
+     class="footer__content--logo footer-logo">
     <svg xmlns="http://www.w3.org/2000/svg">
       <use [attr.xlink:href]=logo></use>
     </svg>
   </a>
-
-  <div class="footer__content">
-
     <h3 class="footer__content--text">Objects That Inspire.</h3>
 
-    <button (click)="scrollToTop()" 
-       class="footer__content--icon">
-      <svg xmlns="http://www.w3.org/2000/svg">
+    <button (click)="scrollToTop()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="action">
         <use xlink:href="assets/icons.svg#arrow-circle-up"></use>
       </svg>
     </button>
@@ -37,18 +36,25 @@
     </ul>
   </div>
 
-  <div class="footer__ticker">
-    <div class="footer__ticker--tape">
-      <span *ngFor=" let item of tickerTapeItems">
-        <span *ngIf="item.word; else showShape">{{item.word}}</span>
+  <marquee class="footer__marquee">
+
+    <ul class="footer__marquee--ticker-tape">
+
+      <li *ngFor="let item of tickerTapeItems">
+
+        <ng-container *ngIf="item.word; else showShape">
+
+          <h3 class="footer__marquee--word">{{item.word}}</h3>
+        </ng-container>
+
         <ng-template #showShape>
           <svg xmlns="http://www.w3.org/2000/svg"
-               class="xs">
+               class="footer__marquee--shape footer-icon">
             <use [attr.xlink:href]="item.shape"></use>
           </svg>
-        </ng-template>
-      </span>
-    </div>
-  </div>
 
+        </ng-template>
+      </li>
+    </ul>
+  </marquee>
 </footer>

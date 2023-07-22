@@ -77,14 +77,14 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.setColors();
   }
- 
-  constructor(private renderer: Renderer2){ }
- 
-   scrollToTop() {
-      const target = document.documentElement ;
-    
-      this.renderer.setProperty(target, 'scrollTop', 0);
-    }
+
+  constructor(private renderer: Renderer2) { }
+
+  scrollToTop() {
+    const target = document.documentElement;
+
+    this.renderer.setProperty(target, 'scrollTop', 0);
+  }
 
   setColors() {
     let random = Math.floor(

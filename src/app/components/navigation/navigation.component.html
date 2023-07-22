@@ -75,9 +75,11 @@
       <div class="nav__cart">
         <a class="nav__cart--link"
            routerLink="cart">
+
           <p *ngIf="!isMobile">Cart</p>
+
           <span data-cart-count
-                class="nav__cart--count">0</span>
+                class="nav__cart--count">{{cartCount$ }}</span>
         </a>
       </div>
 
@@ -110,16 +112,20 @@
 
   <ng-template #searchIcon>
     <a class="nav__search">
-      <img src="assets/icons/magnifying-glass.svg"
-           class="">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="xs">
+        <use xlink:href="/assets/icons.svg#magnifying-glass"></use>
+      </svg>
     </a>
   </ng-template>
 
   <ng-template #locationIcon>
     <button class="nav__location--icon"
             (click)=" togglelocationSelector()">
-      <img src="assets/icons/map-pin.svg"
-           class="pin-icon">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="xs">
+        <use xlink:href="/assets/icons.svg#map-pin"></use>
+      </svg>
     </button>
   </ng-template>
 </nav>

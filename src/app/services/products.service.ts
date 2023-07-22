@@ -55,7 +55,7 @@ export class ProductsService {
     // .subscribe(val => console.log(val));
   }
   filterProducts(filterTerm: string): Observable<Product[]> {
-    return this.http.get<any>(`api/products/${filterTerm}`, {
+    return this.http.get<any>(`api/products`, {
       params: {
         filter: filterTerm,
         pageSize: 50

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   bkgrndColor!: string;
-  logoColor!: string;
+  logo!: string;
 
   footerLinks: any = {
     legal: [
@@ -15,47 +15,84 @@ export class FooterComponent implements OnInit {
       { text: 'Contact Us', link: 'about#contact' }
     ],
     social: [
-      { text: 'Figma ↗', link: 'https://figma.com/' }, 
-      { text: 'Twitter', link: 'https://twitter.com/figma' }, 
-      { text: 'Instagram', link: 'https://www.instagram.com/figma' }, 
+      { text: 'Figma ↗', link: 'https://figma.com/' },
+      { text: 'Twitter', link: 'https://twitter.com/figma' },
+      { text: 'Instagram', link: 'https://www.instagram.com/figma' },
       { text: 'Youtube', link: 'https://www.youtube.com/c/Figmadesign' }]
   }
 
+  logoOptions = {
+    bio: ['logo-tower-bio',
+      'logo-figure-bio',],
+    glow: ['logo-rect-glow',
+      'logo-layer-glow',
+      'logo-circle-glow',],
+    lilac: ['logo-rect-lilac',
+      'logo-l-lilac',
+      'logo-cross-lilac'],
+    sunflower: ['logo-arch-sunflower',
+      'logo-tetris-sunflower']
+  }
+
+
+  backgroundColorOptions = [
+    {
+      color: 'bio', colorCode: 'hsl(148, 84%, 36%)',
+      logos: [
+        ...this.logoOptions.glow, ...this.logoOptions.lilac, ...this.logoOptions.sunflower]
+    },
+    {
+      color: 'glow', colorCode: 'hsl(14, 89%, 53%)',
+      logos: [
+        ...this.logoOptions.bio, ...this.logoOptions.lilac, ...this.logoOptions.sunflower]
+    }
+    , {
+      color: 'lilac', colorCode: 'hsl(252, 100%, 86%)', logos: [
+        ...this.logoOptions.bio, ...this.logoOptions.bio, ...this.logoOptions.sunflower]
+    },
+    {
+      color: 'sunflower', colorCode: 'hsl(47, 100%, 50%) ',
+      logos: [
+        ...this.logoOptions.bio, ...this.logoOptions.lilac, ...this.logoOptions.bio]
+    }]
+
+
   tickerTapeItems: any
     // : Array<{ word?: string } | { shape?: string }>
-    
+
     = [
-      { word: "FIGMA'S" },
-      { shape: `<svg class='snippet--ticker-shape' width='23' height='18' viewBox='0 0 23 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z' fill='white'></path></svg>` },
-      { word: 'MARVELOUSLY' }, { shape: '' },
-      { word: 'CONSIDERED' }, { shape: '' },
-      { word: 'COLLECTION' }, { shape: '' },
-      { word: 'OF' }, { shape: '' },
-      { word: 'OBJECTS' }, { shape: '' },
-      { word: 'FOR' }, { shape: '' },
-      { word: 'OUR' }, { shape: '' },
-      { word: 'TIME' }, { shape: '' },
-      { word: 'ON' }, { shape: '' },
+      { word: "FIGMA'S" }, { shape: '/assets/symbols.svg#squiggle' },
+      { word: 'MARVELOUSLY' }, { shape: '/assets/symbols.svg#dough' },
+      { word: 'CONSIDERED' }, { shape: '/assets/symbols.svg#square' },
+      { word: 'COLLECTION' }, { shape: '/assets/symbols.svg#drop' },
+      { word: 'OF' }, { shape: '/assets/symbols.svg#drop-up' },
+      { word: 'OBJECTS' }, { shape: '/assets/symbols.svg#dough' },
+      { word: 'FOR' }, { shape: '/assets/symbols.svg#diamond' },
+      { word: 'OUR' }, { shape: '/assets/symbols.svg#hourglasswhite' },
+      { word: 'TIME' }, { shape: '/assets/symbols.svg#dash' },
+      { word: 'ON' }, { shape: '/assets/symbols.svg#cylinder' },
 
     ]
 
   ngOnInit(): void {
-    this.setColor();
+    this.setColors();
   }
-
-  setColor() {
-    function getrandomColor() {
-      const colors = [
-        'hsl(14, 89%, 53%)',
-        'hsl(148, 84%, 36%)',
-        'hsl(47, 100%, 50%) ',
-        'hsl(252, 100%, 86%)'];
-
-      return colors[(Math.floor(
-        Math.random() * colors.length))];
+ 
+  constructor(private renderer: Renderer2){ }
+ 
+   scrollToTop() {
+      const target = document.documentElement ;
+    
+      this.renderer.setProperty(target, 'scrollTop', 0);
     }
-    this.bkgrndColor = getrandomColor();
-    this.logoColor = getrandomColor();
-  }
 
+  setColors() {
+    let random = Math.floor(
+      Math.random() * this.backgroundColorOptions.length)
+
+    this.bkgrndColor = this.backgroundColorOptions[random].colorCode
+    this.logo = `${'/assets/logos.svg#'}` + this.backgroundColorOptions[random].logos[Math.floor(
+      Math.random() * this.backgroundColorOptions[random].logos.length)]
+
+  }
 }

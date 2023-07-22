@@ -1,23 +1,22 @@
 <section class="call-to-action">
-<h2 class="call-to-action__container">
-    <span *ngFor="let word of words"
-                  class="call-to-action__item">
+    <h2 class="call-to-action__container">
+        <span *ngFor="let word of words"
+              class="call-to-action__item">
 
-        <a *ngIf="word.filterTo; else noFilter"
-           [routerLink]="['/find', word.word]"
-           class="call-to-action__item--filter">
-            {{word.word}} 
-            <!-- TO-DO =>  change to /product-list -->
-        </a>
-        <ng-template #noFilter>
-            <span class="call-to-action__item--word"
-               *ngIf="!word.filterTo">{{word.word}}</span>
-        </ng-template>
-
-        <img *ngIf="word.symbol"
-             [src]=word.symbol
-             aria-hidden="true"
-             class="call-to-action__item--symbol">
-
-    </span></h2>
+            <a *ngIf="word.filterTo; else noFilter"
+            (click)="filterProducts(word.filterTo)"
+               class="call-to-action__item--filter">
+                {{word.word}}
+                <!-- TO-DO =>  change to /product-list              [routerLink]="['/find', word.word]"-->
+            </a>
+            <ng-template #noFilter>
+                <span class="call-to-action__item--word"
+                      *ngIf="!word.filterTo">{{word.word}}</span>
+            </ng-template>
+            <svg *ngIf="word.symbol" xmlns="http://www.w3.org/2000/svg"
+            class="call-to-action__item--symbol symbol"aria-hidden="true">
+           <use [attr.xlink:href]=word.symbol></use>
+       </svg>
+          </span>
+    </h2>
 </section>

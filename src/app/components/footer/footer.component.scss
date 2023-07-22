@@ -12,17 +12,7 @@
   bottom: 0;
   left: 0;
   padding: 6rem $default-gutter-mobile 0;
-  background-color: $random;
 
-  &__logo {
-    // @include heading-large-mobile;
-    img{min-width: 10rem;
-    min-height: 17.3rem;}
-    
-    // padding: 6rem;
-    // border-radius: 50%;
-    // @include flex(column, space-between, center);
-  }
 
   &__content {
     display: grid;

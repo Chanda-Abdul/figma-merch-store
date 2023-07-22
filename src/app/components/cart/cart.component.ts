@@ -1,15 +1,65 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent {
+export class CartComponent implements OnInit, OnDestroy {
 
+  productList!: any;
   cartCount = 0;
-  items = [
-    { name: 'Shape up tee', price: 20, quantity: 4, img: 'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580' },
-    { name: 'Gridlock washi tape', price: 1, quantity: 4, img: 'https://store.figma.com/cdn/shop/products/figma-store_washi-tape-green_01_1000x.jpg?v=1670520424' }]
   cartTotal = 0;
+
+  constructor(private cartService: CartService) { }
+ 
+  ngOnInit(): void {
+    this.loadCart();
+    //TO-DO => ngOnChanges
+  }
+
+  ngOnDestroy(): void {
+    // this.updateAndSaveCart()
+  }
+
+  loadCart() {
+    // TO-DO (funtionality) => add loader
+    this.productList = this.cartService.loadCart();
+
+    this.updateTotalAndQuanity();
+  }
+
+  updateQuantity(increaseOrDecrease: string, id: number) {
+
+    if (increaseOrDecrease === 'increase') {
+      //should be in cart
+      // this.cartService.checkCartForProduct(id);
+      this.cartService.updateCartItem('increase', id)
+ 
+    }
+    if (increaseOrDecrease === 'decrease' ) {
+      // this.cartService.checkCartForProduct(id);
+      this.cartService.updateCartItem('decrease', id)
+    }
+  }
+
+  updateTotalAndQuanity() {
+    this.cartCount = this.cartService.loadCartCount();
+
+    this.cartTotal = this.cartService.loadCartTotal();
+  }
+
+
+  removeItem(id: number) {
+    this.cartService.removeCartItem(id)
+  }
+
+  updateAndSaveCart() {
+    this.cartService.saveCart();
+  }
+
+  emptyCart() {
+    this.cartService.emptyCart();
+  }
 }

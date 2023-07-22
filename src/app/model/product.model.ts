@@ -13,8 +13,8 @@ export interface Product {
   description: string;
   features?: string[];
   tags?: string[];
-  sizes?: boolean;
-  customVariations?: string[]
+  variants?: any;
+  sizeChart?: any
 }
 
 export function sortProductsByFeatured(product1: any, product2: any) {

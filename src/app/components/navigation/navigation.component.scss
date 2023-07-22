@@ -5,13 +5,13 @@
 @import "src/styles/sass/base/media-queries";
 
 .nav {
-  height: 6.3rem;
+  min-height: 6.3rem;
   width: 100vw;
   padding: $default-gutter-vertical $default-gutter-horizontal;
   @include flex(row, space-between, center);
   background-color: transparent;
-  position: fixed;
-  top: 0;
+  position: relative;
+  // top: 0;
 
   &__container {
     width: 100%;
@@ -241,16 +241,6 @@
           top: .75rem;
         }
       }
-    }
-  }
-
-  &__search,
-  &__link--menu,
-  &__location {
-
-    img {
-      height: auto;
-      width: 1.6rem;
     }
   }
 

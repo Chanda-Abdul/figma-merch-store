@@ -42,7 +42,7 @@
 
       &:after {
         background: $black-out;
-        bottom: -4px;
+        bottom: -1px;
         content: "";
         display: block;
         height: 4px;
@@ -52,13 +52,13 @@
       }
     }
 
-    &--word {
+    &--word,
+    &--symbol {
+      align-items: center;
+      justify-content: center;
       @include heading-extra-large-mobile;
+      margin-right: 0.7rem;
     }
 
-    &--symbol {
-      width: 2.6rem;
-      margin: 0 0.7rem;
-    }
   }
 }

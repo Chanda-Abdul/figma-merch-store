@@ -3,5 +3,5 @@ export interface Size {
     abbrv: string, 
     bodyLength: string, 
     chestWidth: string, 
-    sleeveLength: string,
+    sleeveLength?: string,
 }

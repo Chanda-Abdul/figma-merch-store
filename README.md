@@ -59,7 +59,6 @@ Circle with rotating text and hover animation</b>
 </details>
 <!-- TO-DO => (functionality) create custom currency pipe to change product price according to selected region  -->
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
-<!-- TO-DO => (styles) organize SVGs -->
 
 <details>
 <summary>
@@ -107,7 +106,7 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
  </summary>
 </details>
  <!-- TO-DO => (styles) accessibility -->
-
+ <!-- TO-DO => unsubscribe() from everything -->
 
 ## Installation
 <!-- Provide step-by-step instructions on how to download, install, and run the project on a local machine. -->
@@ -133,16 +132,17 @@ created a stateless observable service `product.service.ts` to store as little s
 - MVC/MVVM architecture
 ### JSON server to store and retrieve data
 <!-- Connect to a backend using JSON serverthat provides data about your products. This can be done using HTTP requests or a service. -->
+JSON Proxy server to store and retrieve data
 
 ## Continued development
 ## Useful resources
 <!-- List any external resources or libraries used in the project, as well as any contributors or collaborators. -->
+- [The right way to componentize SVGs for your Angular app](https://cloudengineering.studio/articles/the-right-way-to-componentize-svgs-for-your-angular-app)
 - [Angular Currency Pipe & Format Currency In Angular with examples](https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/) - Angular Currency Pipe is one of the bulit in pipe in Angular used to format currency value according to given country code,currency,decimal,locale information.
 - [Angular CurrencyPipe](https://angular.io/api/common/CurrencyPipe)
-- [Angular in-memory-web-api](https://angular.io/tutorial/tour-of-heroes/toh-pt6)
--  [angular.io](https://angular.io/tutorial/tour-of-heroes/toh-pt2)
+- [Proxy Server](#) - JSON server to store and retrieve data
+- [Angular in-memory-web-api](#)
 - [phosphor icons](https://phosphoricons.com/)
-- [Auto-placement in grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [:nth-child() pseudo-class](https://www.w3.org/TR/selectors/#nth-child-pseudo)
 - [CSS Grid Generator](https://cssgrid-generator.netlify.app/)
 - [Udemy: Reactive Angular Course (with RxJs, Angular 16) by Angular University](https://www.udemy.com/course/rxjs-reactive-angular-course) - Build Angular 16 Applications in Reactive style with plain RxJs - Patterns, Anti-Patterns, Lightweight State Management

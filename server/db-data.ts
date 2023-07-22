@@ -1,3 +1,30 @@
+export const SIZES = {
+  'comfortColors': [
+    { size: 'Extra Small', abbrv: 'XS', bodyLength: '26½ in.', chestWidth: '17 in.', sleeveLength: '7⅞ in.', },
+    { size: 'Small', abbrv: 'S', bodyLength: '27½ in.', chestWidth: '19 in.', sleeveLength: '8⅛ in.', },
+    { size: 'Medium', abbrv: 'M', bodyLength: '28½ in.', chestWidth: '21 in.', sleeveLength: '8⅜ in.', },
+    { size: 'Large', abbrv: 'L', bodyLength: '29½ in.', chestWidth: '23 in.', sleeveLength: '8⅝ in.', },
+    { size: 'Extra Large', abbrv: 'XL', bodyLength: '30½ in.', chestWidth: '25 in.', sleeveLength: '8⅞ in.', },
+    { size: 'Extra Extra Large', abbrv: '2XL', bodyLength: '31½ in.', chestWidth: '27 in.', sleeveLength: '9 ⅛in.', }]
+  ,
+  'LaApparel': [
+    { size: 'Extra Small', abbrv: 'XS', bodyLength: '26½ in.', chestWidth: '17 in.', sleeveLength: '7⅞ in.', },
+    { size: 'Small', abbrv: 'S', bodyLength: '27½ in.', chestWidth: '19 in.', sleeveLength: '8⅛ in.', },
+    { size: 'Medium', abbrv: 'M', bodyLength: '28½ in.', chestWidth: '21 in.', sleeveLength: '8⅜ in.', },
+    { size: 'Large', abbrv: 'L', bodyLength: '29½ in.', chestWidth: '23 in.', sleeveLength: '8⅝ in.', },
+    { size: 'Extra Large', abbrv: 'XL', bodyLength: '30½ in.', chestWidth: '25 in.', sleeveLength: '8⅞ in.', },
+    { size: 'Extra Extra Large', abbrv: '2XL', bodyLength: '31½ in.', chestWidth: '27 in.', sleeveLength: '9 ⅛in.', }]
+  ,
+  'BellaAndCanvas': [
+    { size: 'Extra Small', abbrv: 'XS', bodyLength: '25⅝ in.', chestWidth: '21⅝ in.' },
+    { size: 'Small', abbrv: 'S', bodyLength: '26⅛ in.', chestWidth: '23⅝ in.' },
+    { size: 'Medium', abbrv: 'M', bodyLength: '26¾ in.', chestWidth: '25 in.' },
+    { size: 'Large', abbrv: 'L', bodyLength: '28¾ in.', chestWidth: '27¾ in.' },
+    { size: 'Extra Large', abbrv: 'XL', bodyLength: '29¾ in.', chestWidth: '29¾ in.' },
+    { size: 'Extra Extra Large', abbrv: '2XL', bodyLength: '30¾ in.', chestWidth: '31¾ in.' }]
+
+}
+
 export const PRODUCTS = [
   // TO-DO =>  fill in data
   {
@@ -21,7 +48,8 @@ export const PRODUCTS = [
     description: 'This tee is in dark mode, just like your design soul.	Bask in the darkness and blend into your UI—if only for a moment—before the reflective logo picks up the light of a computer screen.',
     features: ['100% ring spun cotton, unisex sizing.', 'Printed on a Comfort Colors tee.'],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.comfortColors
   },
   {
     id: 2,
@@ -62,12 +90,10 @@ export const PRODUCTS = [
       'https://store.figma.com/cdn/shop/products/100_1000x.png?v=1641323873',
       'https://store.figma.com/cdn/shop/products/USD-main-img_1000x.png?v=1647889562',
       'https://store.figma.com/cdn/shop/products/USD-main-img_1_1000x.png?v=1647889566',
-
     ],
     description: 'Surprise your friend or colleague with a gift card to buy some Figma merch.',
-    features: [],
     tags: ['layers'],
-    customVariations: [{ name: '25', price: 25 }, { name: '50', price: 50 }, { name: '100', price: 100 }, { name: '150', price: 150 }, { name: '200', price: 200 }]
+    variants: [{ variant: '25', price: 25 }, { variant: '50', price: 50 }, { variant: '100', price: 100 }, { variant: '150', price: 150 }, { variant: '200', price: 200 }]
   },
   {
     id: 4,
@@ -86,9 +112,9 @@ export const PRODUCTS = [
       'https://store.figma.com/cdn/shop/products/Figma-Store-3743-Edit_1000x.jpg?v=1636599806',
       'https://store.figma.com/cdn/shop/products/Figma-Store-182-Edit_1000x.jpg?v=1636601368',
       'https://store.figma.com/cdn/shop/products/Figma-Store-175_1000x.png?v=1636323515',
-     ],
+    ],
     description: "We combined the two things we can’t live without, coffee and plugins, into one.",
-    features: [ "Double wall ceramic body with a graphite bottom.", '11oz.'],
+    features: ["Double wall ceramic body with a graphite bottom.", '11oz.'],
     tags: ['components'],
   },
   {
@@ -112,7 +138,8 @@ export const PRODUCTS = [
     features: ['100% cotton, unisex sizing.',
       'Printed on a Los Angeles Apparel tee.'],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 6,
@@ -130,12 +157,12 @@ export const PRODUCTS = [
       'https://store.figma.com/cdn/shop/products/Figma-Store-3634-Edit_1000x.jpg?v=1636599552',
       'https://store.figma.com/cdn/shop/products/Figma-Store-3675-Edit_1000x.jpg?v=1636599552',
       'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4353_1000x.jpg?v=1636641445',
-
     ],
     description: 'Lounge around the house or hit the streets with this soft reminder that your friends are just a tab away.',
     features: ['100% pre-shrunk combed ringspun cotton jersey, unisex sizing.', 'Printed on a BELLA+CANVAS tee.'],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.BellaAndCanvas
   },
   {
     id: 7,
@@ -149,16 +176,14 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/detach-instance-pin_cad395ad-d8d9-4a3b-8753-2db4838f8ec4_600x.png?v=1636146981',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2953_600x.jpg?v=1636598421',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2953_1000x.jpg?v=1636598421',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3000_1000x.jpg?v=1636598421',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2967_1000x.jpg?v=1636598421',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-107_1000x.png?v=1636324543',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: 'A nifty little pin for the detachers out there. \n“Don’t attach” pin coming soon. ',
+    features: ['2 inch enamel pin.'],
+    tags: ['components'],
   },
   {
     id: 8,
@@ -172,16 +197,15 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Light-grey-comment-icon-socks_600x.png?v=1636144377',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-4136_600x.jpg?v=1636599515',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-4136_1000x.jpg?v=1636599515',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-4161_1000x.jpg?v=1636599515',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-4233_1000x.jpg?v=1636599515',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-087_1000x.png?v=1636325096',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-090-3_1000x.jpg?v=1636605140',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: "Let’s be honest… three washes from now, you will have lost one of these socks, so you might as well get all three pair	s	, one in every color.  Besides, how would one even choose?",
+    features: ['75% Cotton, 21% Nylon, 4% Lycra'],
+    tags: ['components'],
   },
   {
     id: 9,
@@ -195,16 +219,14 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/red-burst-pin_20fbc189-9a07-4aa8-a362-1e82c86a6479_600x.png?v=1636146983',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3423_600x.jpg?v=1636599871',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3423_1000x.jpg?v=1636599871',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3444_1000x.jpg?v=1636599871',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3469_1000x.jpg?v=1636599871',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-109_1000x.png?v=1636324515',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: "We're bursting with love for vector networks. See what we did there?",
+    features: ['2 inch enamel pin.'],
+    tags: ['components'],
   },
   {
     id: 10,
@@ -218,17 +240,16 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Bezier-logo-tee_600x.png?v=1636143029',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-4050-Edit_600x.jpg?v=1636598157	',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-4050-Edit_1000x.jpg?v=1636598157',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-4081_1000x.jpg?v=1636598157',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-4103_1000x.jpg?v=1636598157',
+      'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4369_1000x.jpg?v=1636323268',
     ],
-    description: '',
-    features: [],
+    description: '“Make the logo bigger,” you say? Okay.',
+    features: ['100% cotton, unisex sizing.', 'Printed on a Los Angeles Apparel tee.'],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 11,
@@ -242,17 +263,16 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Detach-instance-tee_600x.png?v=1636142947',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3215_600x.jpg?v=1636598458',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3215_1000x.jpg?v=1636598458',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3207_1000x.jpg?v=1636598458',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3258-Edit_1000x.jpg?v=1636598459',
+      'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4372_1000x.jpg?v=1636323336',
     ],
-    description: '',
-    features: [],
+    description: `A tee with a hot take. We like it. \n Detach, don’t detach—do whatever your heart desires, all while wearing this oh-so-comfy number.`,
+    features: ['100% cotton, unisex sizing.', 'Printed on a Los Angeles Apparel tee.'],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 12,
@@ -266,16 +286,14 @@ export const PRODUCTS = [
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/smiley-pin_a948a00a-6e53-4bbd-b5c6-68da942ffcd8_600x.png?v=1636146983',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-3504_600x.jpg?v=1636599916',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3504_1000x.jpg?v=1636599916',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3550_1000x.jpg?v=1636599916',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-3579_1000x.jpg?v=1636599916',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-103_1000x.png?v=1636325051',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: 'What we imagine you look like every time you open a Figma file.	',
+    features: ['1 inch enamel pin.'],
+    tags: ['components'],
   },
   {
     id: 13,
@@ -293,12 +311,12 @@ export const PRODUCTS = [
       'https://store.figma.com/cdn/shop/products/Figma-Store-2801_1000x.jpg?v=1636598662',
       'https://store.figma.com/cdn/shop/products/Figma-Store-2858_1000x.jpg?v=1636598662',
       'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4370_1000x.jpg?v=1636323405',
-      'https://store.figma.com/cdn/shop/products/SizeGuide_LAApparelSSShirts_1_21fbda5e-8173-4ef9-ac3f-fc4201019aae_1000x.png?v=1637789347',
     ],
     description: 'If Dieter Rams has taught us anything, it’s that less is more. In this case, a plain tee with a small but mighty logo on the chest.',
     features: ['100% cotton, unisex sizing.', 'Printed on a Los Angeles Apparel tee.'],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 14,
@@ -306,23 +324,22 @@ export const PRODUCTS = [
     featured: false,
     name: 'Throw blanket',
     price: 80,
-
     link: 'throw-blanket',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252	',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Blanket_600x.png?v=1636145515',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2662_600x.jpg?v=1636599962	',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2662_1000x.jpg?v=1636599962',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2512_1000x.jpg?v=1636599962',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2529_1000x.jpg?v=1636599962',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2507_1000x.jpg?v=1636599962',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-048_1000x.jpg?v=1636380916',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-038_1000x.png?v=1636325182',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: 'Throw blanket	Wrap yourself up in all the things you truly love:	rectangles, pen	tools, and cursors. Soft, warm,	and comfy	—	as all blankets should be. Not like that itchy stuff.',
+    features: ['50” x 60” woven blanket.'],
+    tags: ['components'],
   },
   {
     id: 15,
@@ -330,23 +347,21 @@ export const PRODUCTS = [
     featured: false,
     name: 'Blue Figma hat',
     price: 20,
-
     link: 'blue-figma-hat	',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-4_600x.png?v=1636143252',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/blue-figma-hat_600x.png?v=1636145926	',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-2008_600x.jpg?v=1636598330',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2008_1000x.jpg?v=1636598330',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1982-Edit_1000x.jpg?v=1636598330',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-2052_1000x.jpg?v=1637094618',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-153-Edit_1000x.jpg?v=1636326552',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-134_1000x.png?v=1636324500	',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: 'Blue Figma hat	One of our finest selections. A pop of color, and a little bit of fun. Well, this hat is just that and more.	',
+    features: ['Adjustable fit, fabric strap with a brass metal clasp.', 'Dad hat style.', 'One size fits	most.'],
+    tags: ['components'],
   },
   {
     id: 16,
@@ -354,23 +369,22 @@ export const PRODUCTS = [
     featured: false,
     name: 'Figma hoodie',
     price: 45,
-
     link: 'figma-hoodie',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-11_600x.png?v=1636143251',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/Figma-embroidered-hoodie_600x.png?v=1636143387',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1469_600x.jpg?v=1636598538	',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1469_1000x.jpg?v=1636598538',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1506_1000x.jpg?v=1636598538',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1537_1000x.jpg?v=1636598539',
+      'https://store.figma.com/cdn/shop/products/Figma-Store---Product-4386_1000x.jpg?v=1636323304',
     ],
-    description: '',
-    features: [],
+    description: 'Long sleeve	s	to protect you from all the elements, soft to make you feel warm and fuzzy, and topped with a perfectly sized wordmark to remind you of home. Figma is home, right?',
+    features: ['52/48 Airlume combed and ringspun cotton/polyester fleece', 'embroidered wordmark', 'unisex sizing', 'Printed on a BELLA+CANVAS hoodie.'],
     tags: ['layers'],
+    variants: 'sizes',
+    sizeChart: SIZES.BellaAndCanvas
   },
   {
     id: 17,
@@ -378,23 +392,21 @@ export const PRODUCTS = [
     featured: false,
     name: 'White pen tool socks',
     price: 10,
-
     link: 'white-pen-tool-socks',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-5_600x.png?v=1636143251',
     hoverProductImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/White-pen-tool-icon-socks_600x.png?v=1636144376',
     productPhotos: [
-      'https://cdn.shopify.com/s/files/1/0576/8364/0503/products/Figma-Store-1242_600x.jpg?v=1636600007',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1242_1000x.jpg?v=1636600007',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1273_1000x.jpg?v=1636600008',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-1340_1000x.jpg?v=1636600007',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-083_1000x.png?v=1636325154',
+      'https://store.figma.com/cdn/shop/products/Figma-Store-090-1_1000x.jpg?v=1636605103',
     ],
-    description: '',
-    features: [],
-    tags: ['layers'],
+    description: 'Let’s be honest… three washes from now, you will have lost one of these socks, so you might as well get all three pair	s	, one in every color. Besides, how would one even choose?	',
+    features: ['75% Cotton, 21% Nylon, 4% Lycra'],
+    tags: ['components'],
   },
   {
     id: 18,
@@ -402,7 +414,6 @@ export const PRODUCTS = [
     featured: false,
     name: '<code/> cap',
     price: 20,
-
     link: 'code-cap',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_2462bce6-2629-4568-a70d-77d06bddd9e1_600x.png?v=1636143251',
@@ -417,7 +428,7 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['layers'],
   },
   {
@@ -441,7 +452,7 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['layers'],
   },
   {
@@ -465,7 +476,7 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['layers'],
   },
   {
@@ -488,9 +499,10 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 23,
@@ -512,7 +524,7 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['components'],
   },
   {
@@ -535,9 +547,10 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 25,
@@ -560,7 +573,7 @@ export const PRODUCTS = [
       '',
     ],
     description: '',
-    features: [],
+    features: [''],
     tags: ['components'],
   },
   {
@@ -589,7 +602,8 @@ export const PRODUCTS = [
       'Printed on a Los Angeles Apparel tee.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 27,
@@ -692,7 +706,8 @@ export const PRODUCTS = [
       'Printed on a Los Angeles Apparel tee.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 31,
@@ -718,7 +733,8 @@ export const PRODUCTS = [
       'Printed on a Comfort Colors tee.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.comfortColors
   },
   {
     id: 32,
@@ -749,7 +765,6 @@ export const PRODUCTS = [
     featured: false,
     name: 'Pick of the bunch washi tape',
     price: 1,
-
     link: 'pick-of-the-bunch-washi-tape',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-14_600x.png?v=1636143252',
@@ -795,7 +810,6 @@ export const PRODUCTS = [
     featured: false,
     name: "Meet n' greet pin",
     price: 2,
-
     link: 'meet-n-greet-pin',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-12_600x.png?v=1636143252',
@@ -817,7 +831,6 @@ export const PRODUCTS = [
     id: 36,
     new: true,
     featured: true,
-
     name: 'Framework tee',
     price: 20,
     link: 'framework-tee',
@@ -840,7 +853,8 @@ export const PRODUCTS = [
       'Printed on a Comfort Colors tee.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.comfortColors
   },
   {
     id: 37,
@@ -914,7 +928,8 @@ export const PRODUCTS = [
       'Printed on a Comfort Colors tee.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.comfortColors
   },
   {
     id: 40,
@@ -993,10 +1008,8 @@ export const PRODUCTS = [
     id: 43,
     new: true,
     featured: true,
-
     name: 'Version history coach jacket',
     price: 45,
-
     link: 'version-history-coach-jacket',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-1_1e67f092-49de-4857-8ce1-b3185e8566da_600x.png?v=1651180902',
@@ -1017,16 +1030,15 @@ export const PRODUCTS = [
       'Printed on a New Era jacket.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.LaApparel
   },
   {
     id: 44,
     new: true,
     featured: true,
-
     name: 'Gridlock washi tape',
     price: 1,
-
     link: 'gridlock-washi-tape',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-25_600x.png?v=1636143252',
@@ -1045,10 +1057,8 @@ export const PRODUCTS = [
     id: 45,
     new: true,
     featured: true,
-
     name: 'Design in bloom tee',
     price: 25,
-
     link: 'design-in-bloom-tee',
     hoverPatternImg:
       'https://cdn.shopify.com/s/files/1/0576/8364/0503/files/pattern-27_600x.png?v=1651180902	',
@@ -1068,7 +1078,8 @@ export const PRODUCTS = [
       'Printed with puff ink on a Comfort Colors tee.',
     ],
     tags: ['layers'],
-    sizes: true,
+    variants: 'sizes',
+    sizeChart: SIZES.comfortColors
   },
   {
     id: 46,
@@ -1094,13 +1105,11 @@ export const PRODUCTS = [
   },
 ];
 
-export const SIZES = [
-  { size: 'Extra Small', abbrv: 'XS', bodyLength: '26½ in.', chestWidth: '17 in.', sleeveLength: '7⅞ in.', },
-  { size: 'Small', abbrv: 'S', bodyLength: '27½ in.', chestWidth: '19 in.', sleeveLength: '8⅛ in.', },
-  { size: 'Medium', abbrv: 'M', bodyLength: '28½ in.', chestWidth: '21 in.', sleeveLength: '8⅜ in.', },
-  { size: 'Large', abbrv: 'L', bodyLength: '29½ in.', chestWidth: '23 in.', sleeveLength: '8⅝ in.', },
-  { size: 'Extra Large', abbrv: 'XL', bodyLength: '30½ in.', chestWidth: '25 in.', sleeveLength: '8⅞ in.', },
-  { size: 'Extra Extra Large', abbrv: '2XL', bodyLength: '31½ in.', chestWidth: '27 in.', sleeveLength: '9 ⅛in.', }]
+
+
+
+
+
 //export function authenticate(email: string, password: string) {
 
 //  const user: any=Object.values(USERS).find(user => user.email === email);

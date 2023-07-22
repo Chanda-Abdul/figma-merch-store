@@ -14,7 +14,7 @@ textarea {
   // box-sizing: border-box;
   @include heading-medium-mobile;
   //TO-DO (styles) => custom font does not work with form elements
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
   color: $black-out !important;
   cursor: pointer;
 }
@@ -49,7 +49,7 @@ select {
   border-radius: $border-radius-default;
   padding: .5rem 2.2rem;
   margin-bottom: 5rem;
-  background: url("/assets/icons/caret-down.svg") no-repeat center right 0.75rem;
+  background: url("/assets/icons/icons.svg#caret-down") no-repeat center right 0.75rem;
   line-height: 1.5rem;
   background-color: transparent;
 }

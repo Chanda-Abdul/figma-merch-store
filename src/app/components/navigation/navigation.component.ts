@@ -1,11 +1,14 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
+
 export class NavigationComponent implements OnInit {
   isMobile = true;
 
@@ -21,9 +24,11 @@ export class NavigationComponent implements OnInit {
   }
 
   @Output() toggleSearchEvent = new EventEmitter<boolean>();
+
   searchBarVisible = false;
 
   locationSelectVisible = false;
+
   locationOptions = [
     { optionValue: "store-ca", country: "Canada", selected: false },
     { optionValue: "store-jp", country: "Japan", selected: false },
@@ -34,11 +39,13 @@ export class NavigationComponent implements OnInit {
 
   selectedCountry: string = "United States";
 
-  constructor(private router: Router) { }
+  cartCount$!: Observable<number>;
+
+  constructor(private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.setMenuLinks();
-
+this.setCartCount(); 
   }
 
   @HostListener('window:resize', ['$event'])
@@ -63,5 +70,11 @@ export class NavigationComponent implements OnInit {
 
   updateLocation(value: any) {
     console.log(value)
+  }
+
+  setCartCount() {
+    this.cartCount$ = this.cartService.loadCartCount();
+    // TO-DO => update on changes
+    console.log(this.cartCount$)
   }
 }

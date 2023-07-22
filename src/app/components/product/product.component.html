@@ -1,128 +1,161 @@
 <section class="product-container">
 
-  <ng-container
-                *ngIf="(product$ | async) as product">
-<div class="product-grid">
-    <div class="product-grid__thumbnails">
+  <ng-container *ngIf="(product$ | async) as product">
+    <div class="product-grid">
 
-      <figure *ngFor="let photo of product.productPhotos; let i = index"
-              (click)="expandImg(i)">
-        <img [src]="photo"
-             alt="product.name">
-      </figure>
-    </div>
+      <!-- thumbnails -->
+      <div class="product-grid__thumbnails">
 
-    <div class="product-grid__feature">
-
-      <figure>
-        <img [src]="product.productPhotos[imgIdx]"
-             alt="product.name">
-      </figure>
-    </div>
-
-    <div class="product-grid__info">
-      <ul class="product-grid__info--tags-list">
-        <li *ngFor="let tag of product.tags"
-            [ngClass]="{'bioBkgnd': tag === 'components', 'sunBkgnd' : tag === 'layers' }"
-            class="product-grid__info--tag">{{tag}}</li>
-      </ul>
-      <h2 class="product-grid__info--title">{{product.name}}</h2>
-      <ng-container *ngIf="product.sizes">
-        <div class="product-grid__info--sizes">
-          <button *ngFor="let size of sizes">
-            <span>{{size.abbrv}}</span>
-          </button>
-        </div>
-      </ng-container>
-      <div class="product-grid__info--actions">
-
-        <span class="variants">
-          <button>-</button>
-          <span class="quantity">1</span>
-          <button>+</button>
-        </span>
-
-        <ng-container *ngIf="product.price == 0"
-                      class="sold-out">SOLD OUT</ng-container>
-
-        <ng-container *ngIf="product.price != 0"
-                      class="add">add {{product.price | currency : 'USD': 'symbol' : '1.0-0' }}</ng-container>
+        <figure *ngFor="let photo of product.productPhotos; let i = index"
+                (click)="expandImg(i)">
+          <img [src]="photo"
+               alt="product.name">
+        </figure>
       </div>
 
-      <!-- product description -->
-      <p class="product-grid__info--description">
-        {{product.description}}</p>
+      <!-- featured image -->
+      <div class="product-grid__feature">
 
+        <figure>
+          <img [src]="product.productPhotos[imgIdx]"
+               alt="product.name">
+        </figure>
+      </div>
 
-           <!-- product features-->
-      <ng-container *ngIf="product.features">
-        <ul class="product-grid__info--features-list">
+      <!-- product info -->
+      <div class="product-grid__info">
 
-          <li *ngFor="let feature of product.features"
-              class="product-grid__info--feature">{{feature}}</li>
+        <ul class="product-grid__info--tags-list">
+          <li *ngFor="let tag of product.tags"
+              [ngClass]="{'bioBkgnd': tag === 'components', 'sunBkgnd' : tag === 'layers' }"
+              class="product-grid__info--tag">{{tag}}</li>
         </ul>
-      </ng-container>
 
+        <h2 class="product-grid__info--title">{{product.name}}</h2>
 
-
-      <ng-container *ngIf="product.sizes">
-        <div class="product-grid__info--size-chart">
-          <div class="product-grid__info--size-chart-heading">
-            <h3> Size Chart </h3>
-            <button class="btn-toggle btn-size"
-                    (click)="showChart = !showChart">
-              <img src="assets/icons/plus.svg"
-                   alt=""
-                   *ngIf="!showChart">
-              <img src="assets/icons/minus.svg"
-                   alt=""
-                   *ngIf="showChart"></button>
+        <!-- size options -->
+        <ng-container *ngIf="product.variants == 'sizes'; else customVariants">
+          <div class="product-grid__info--variants">
+            <button *ngFor="let size of product.sizeChart" (click)="updateVariation(size.abbrv)">
+              <span>{{size.abbrv}}</span>
+            </button>
           </div>
-          <ng-container *ngIf="showChart">
-            <table class="product-grid__info--size-chart-content">
-              <thead>
-                <tr>
-                  <th>Size</th>
-                  <th>Body Length</th>
-                  <th>Chest</th>
-                  <th>Sleeve Length</th>
-                </tr>
-              </thead>
+        </ng-container>
 
-              <tbody>
-                <ng-container *ngFor="let size of sizes">
-                  <tr>
-                    <td>{{size.abbrv}}</td>
-                    <td>{{size.bodyLength}}</td>
-                    <td>{{size.chestWidth}}</td>
-                    <td>{{size.sleeveLength}}</td>
+        <!-- custom options -->
+        <ng-template #customVariants>
+          <div class="product-grid__info--variants">
+            <button *ngFor="let variation of (product.variants)" (click)="updateVariation(variation.variant)">
+              <span>{{variation.variant |currency : 'USD': 'symbol' : '1.0-0'}}</span>
+            </button>
+          </div>
+        </ng-template>
 
-                  </tr>
-                </ng-container>
+        <div class="product-grid__info--actions">
+          <!-- quantity -->
+          <span class="quantity">
+            <button (click)="updateQuantity('decrease')">-</button>
+            <span class="quantity">{{quantity}}</span>
+            <button (click)="updateQuantity('increase')">+</button>
+          </span>
 
-              </tbody>
-            </table>
 
-            <div class="product-grid__info--size-chart-note">
-              <h4>Body Length</h4>
-              <p>Shoulder seam at collar to bottom hem</p>
-              <h4>Chest Width</h4>
-              <p>Side to side 1 inch below the sleeves</p>
-            </div>
-          </ng-container>
+          <span class="add"
+                (click)="addItemToCart(product)">
+            <ng-container *ngIf="product.price != 0; else soldOut">
+              <button class="btn btn-addToCart">add {{product.price * quantity | currency
+                : 'USD': 'symbol' : '1.0-0' }}</button>
+            </ng-container>
+            <ng-template #soldOut>
+              <button *ngIf="product.price == 0"
+                      class="btn btn-soldOut">SOLD OUT</button>
+                    </ng-template>
+
+          </span>
         </div>
 
+        <!-- product description -->
+        <p class="product-grid__info--description">
+          {{product.description}}</p>
 
-      </ng-container>
+        <!-- product features-->
+        <ng-container *ngIf="product.features">
+          <ul class="product-grid__info--features-list">
+
+            <li *ngFor="let feature of product.features"
+                class="product-grid__info--feature">{{feature}}</li>
+          </ul>
+        </ng-container>
+
+        <!-- size chart -->
+        <ng-container *ngIf="product.variants == 'sizes'">
+          <div class="product-grid__info--size-chart">
+            <div class="product-grid__info--size-chart-heading">
+              <h3> Size Chart </h3>
+              <button class="btn-toggle btn-size"
+                      (click)="showChart = !showChart">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="xs"
+                     *ngIf="!showChart">
+                  <use xlink:href="/assets/icons.svg#plus"></use>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="xs"
+                     *ngIf="showChart">
+                  <use xlink:href="/assets/icons.svg#minus"></use>
+                </svg>
+              </button>
+            </div>
+            <ng-container *ngIf="showChart">
+              <table class="product-grid__info--size-chart-content">
+                <thead>
+                  <tr>
+                    <th>Size</th>
+                    <th>Body Length</th>
+                    <th>Chest</th>
+                    <ng-container *ngIf="product.sizeChart[0].sleeveLength">
+                      <th>Sleeve Length</th>
+                    </ng-container>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <ng-container *ngFor="let size of product.sizeChart">
+                    <tr>
+                      <td>{{size.abbrv}}</td>
+                      <td>{{size.bodyLength}}</td>
+                      <td>{{size.chestWidth}}</td>
+                      <ng-container *ngIf="size.sleeveLength">
+                        <td>{{size.sleeveLength}}</td>
+                      </ng-container>
+
+
+
+                    </tr>
+                  </ng-container>
+
+                </tbody>
+              </table>
+
+              <div class="product-grid__info--size-chart-note">
+                <h4>Body Length</h4>
+                <p>Shoulder seam at collar to bottom hem</p>
+                <h4>Chest Width</h4>
+                <p>Side to side 1 inch below the sleeves</p>
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+
+
+      <div class="product-grid__reviews">
+
+        <app-review *ngIf="(reviews$ | async) as reviews"
+                    [reviews]="reviews$"
+                    [averageRating]="averageRating"
+                    [averageRatingStars]="averageRatingStars"></app-review>
+      </div>
     </div>
-
-
-    <div class="product-grid__reviews">
-
-      <app-review *ngIf="(reviews$ | async) as reviews"
-                  [reviews]="reviews$"
-                  [averageRating]="averageRating"
-                  [averageRatingStars]="averageRatingStars"></app-review>
-    </div></div>
   </ng-container>
 </section>

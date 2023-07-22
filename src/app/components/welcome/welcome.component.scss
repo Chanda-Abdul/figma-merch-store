@@ -32,6 +32,16 @@
 
     &--options {
       margin-right: 1rem;
+      position: relative;
+      &::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3.2rem;
+        height: 3.2rem;
+        background: url('/assets/icons.svg#arrow-circle-up');
+    
+      }
     }
 
     &-btn {

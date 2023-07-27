@@ -44,3 +44,4 @@ Thumbs.db
 
 /src/app/component/*
 /src/styles/*
+/server/data/*

@@ -20,8 +20,13 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 
 ## Features
 <!-- List the main features of the project, with brief descriptions of each. -->
-<details><summary><b>Custom fonts</b></summary> 
-uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
+<details>
+<summary>
+<b>Custom fonts</b>
+</summary> 
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
+
+- uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
 
 #### Whyte for bodytext
 ![](src/assets/screens/font-body.png)
@@ -30,22 +35,26 @@ uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Wh
 ![](src/assets/screens/font-display.png)
 </details>
 
-<details><summary><b>Dropdown search bar</b></summary> 
-
+<details>
+<summary>
+<b>Dropdown search bar</b>
+</summary> 
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 <!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
 
-- [x] dropdown search bar when the icon is clicked.</details>
-<!-- TO-DO =>  (animations)  Draggable slider HERO/HEADER COMPONENT -->
+- dropdown search bar when the `magnifying-glass` icon is clicked.</details>
+
 
 <details>
 <summary>
 <b>Draggable Slider using GSAP</b>
 </summary> 
+<!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
 
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
-- [ ] Draggable slider 
-<!-- How to Create a Draggable slider-->
+
 </details>
 
 <details>
@@ -57,7 +66,6 @@ Circle with rotating text and hover animation</b>
 - [ ] Recreate the circle with rotating text and hover animation.
 
 </details>
-<!-- TO-DO => (functionality) create custom currency pipe to change product price according to selected region  -->
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
 <details>
@@ -72,8 +80,11 @@ Hover effects - Change image on hover
 
 
 </details>
-<details><summary><b>Content filtering
-</b></summary> 
+<details>
+<summary>
+<b>Content filtering
+</b>
+</summary> 
 
 - [x] Content filtering
 - [x] Search bar
@@ -89,34 +100,52 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 
 
-<details><summary><b>
+<details>
+<summary>
+<b>
  Angular in-memory-web-api (Bonus)</b>
  </summary>
 </details>
-<!-- TO-DO => (animations) (functionality)footer ticker tape -->
+
+
 <details>
 <summary>
 <b>User Reviews/Ratings (Bonus)</b>
 </summary> 
+
 <!-- TO-DO => (styles) -->
 UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) ![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png)
 </details>
+
 <details>
 <summary>
 <b>Size Chart (Bonus)</b>
  <!-- TO-DO => (styles) -->
  </summary>
 </details>
+
+<details>
+<summary>
+<b>Custom currency pipe </b>
+ <!--  -->
+ </summary>
+</details>
+
+<details>
+<summary>
+<b>Random color generation </b>
+
+ </summary>
+</details>
+
+<details>
+<summary>
+<b>Marquee Animation</b>
+
+ </summary>
+</details>
  <!-- TO-DO => (styles) accessibility -->
  <!-- TO-DO => unsubscribe() from everything -->
-
-## Installation
-<!-- Provide step-by-step instructions on how to download, install, and run the project on a local machine. -->
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
-
-### Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 
 ## What I learned
@@ -139,7 +168,7 @@ JSON Proxy server to store and retrieve data
 ## Useful resources
 <!-- List any external resources or libraries used in the project, as well as any contributors or collaborators. -->
 - []()
-- []()
+- [Create a Shopping Cart Using Angular and Local Storage with PayPal Checkout](https://youtu.be/cWRG2gaZYQw)
 - [Scrolling Ticker Tape Web Design Tutorial](https://youtu.be/UKHXjhyumF0)
 
 - [The right way to componentize SVGs for your Angular app](https://cloudengineering.studio/articles/the-right-way-to-componentize-svgs-for-your-angular-app)
@@ -153,9 +182,19 @@ JSON Proxy server to store and retrieve data
 - [Udemy: Reactive Angular Course (with RxJs, Angular 16) by Angular University](https://www.udemy.com/course/rxjs-reactive-angular-course) - Build Angular 16 Applications in Reactive style with plain RxJs - Patterns, Anti-Patterns, Lightweight State Management
 ## Author
 
-- Website - [Chanda Abdul](https://www.Chandabdul.dev)
+<!-- - Website - [Chanda Abdul](https://www.Chandabdul.dev) -->
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
 
 
 
+
+
+
+## Installation
+<!-- Provide step-by-step instructions on how to download, install, and run the project on a local machine. -->
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+
+### Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 

@@ -1,8 +1,5 @@
-
-
 import { Request, Response } from 'express';
-import { PRODUCTS } from "./db-data";
-
+import { PRODUCTS } from './data/products-db-data';
 
 
 export function getAllProducts(req: Request, res: Response) {

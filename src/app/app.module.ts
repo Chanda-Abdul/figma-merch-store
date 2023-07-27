@@ -21,7 +21,8 @@ import { ReviewComponent } from './component/review/review.component';
 import { HeaderComponent } from './component/header/header.component';
 import { searchBarComponent } from './component/search-bar/search-bar.component';
 import { SearchResultsComponent } from './component/search-results/search-results.component';
-import { CurrencyConversionPipe } from './currency-conversion.pipe';
+import { CurrencyConversionPipe } from './pipes/currency-conversion.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -46,6 +47,8 @@ import { CurrencyConversionPipe } from './currency-conversion.pipe';
     CurrencyConversionPipe],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

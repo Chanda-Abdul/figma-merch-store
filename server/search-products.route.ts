@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import { PRODUCTS } from "./db-data";
+
 import { setTimeout } from "timers";
+import { PRODUCTS } from './data/products-db-data';
 
 export function searchProducts(req: Request, res: Response) {
 

@@ -1,16 +1,53 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CartItem } from '../model/cart.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  //TO-DO => move should be stateless observable
+  //TO-DO => move? should be stateless observable
   public cartContentsList: any = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  loadCartCount() {
+    this.loadCart();
+    return this.cartContentsList.reduce((acc: any, item: any) => {
+      return acc += item.quantity;
+    }, 0);
+  }
+
+
+  loadCartTotal() {
+    return this.cartContentsList.reduce((acc: any, item: any) => {
+      return acc += (item.price * item.quantity);
+    }, 0);
+  }
+
+  loadCart(): Observable<CartItem[]> | any {
+    this.cartContentsList = JSON.parse(localStorage.getItem('cart_contents')!) as CartItem[] || [];
+    return this.cartContentsList;
+
+    // return this.http.get<any>("/api/cart").pipe(
+    //     map(res => res.payload),
+    //     tap(val => console.log(val)),
+    //     shareReplay()
+    //   );
+
+
+    // if (JSON.parse(localStorage['cart_contents']).length === 0) {
+    // // TO-Do => delete later  - for testing
+    //   // localStorage.setItem('cart_contents', JSON.stringify([
+    //   //   { id: 39, productName: 'Shape up tee', price: 20, quantity: 4, productImg: 'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580' },
+    //   //   { id: 44, productName: 'Gridlock washi tape', price: 1, quantity: 4, productImg: 'https://store.figma.com/cdn/shop/products/figma-store_washi-tape-green_01_1000x.jpg?v=1670520424' }]
+
+    //   // ))
+    // }
+
+  }
 
   addItemToCart(addedProduct: any) {
 
@@ -67,33 +104,7 @@ export class CartService {
   }
 
 
-  loadCart(): Observable<CartItem[]> | any {
-    // TO-Do => delete later  - for testing
-    if (JSON.parse(localStorage['cart_contents']).length === 0) {
-      localStorage.setItem('cart_contents', JSON.stringify([
-        { id: 39, productName: 'Shape up tee', price: 20, quantity: 4, productImg: 'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580' },
-        { id: 44, productName: 'Gridlock washi tape', price: 1, quantity: 4, productImg: 'https://store.figma.com/cdn/shop/products/figma-store_washi-tape-green_01_1000x.jpg?v=1670520424' }]
 
-      ))
-    }
-    this.cartContentsList = JSON.parse(localStorage.getItem('cart_contents')!) as CartItem[] || [];
-    return this.cartContentsList;
-
-  }
-
-  loadCartCount() {
-    this.loadCart();
-    return this.cartContentsList.reduce((acc: any, item: any) => {
-      return acc += item.quantity;
-    }, 0);
-  }
-
-
-  loadCartTotal() {
-    return this.cartContentsList.reduce((acc: any, item: any) => {
-      return acc += (item.price * item.quantity);
-    }, 0);
-  }
 
   saveCart() {
     localStorage.setItem('cart_contents', JSON.stringify(this.cartContentsList))

@@ -24,6 +24,7 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <summary>
 <b>Custom fonts</b>
 </summary> 
+#
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
 - uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
@@ -38,7 +39,7 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <details>
 <summary>
 <b>Dropdown search bar</b>
-</summary> 
+#
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 <!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
 
@@ -49,10 +50,12 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <summary>
 <b>Draggable Slider using GSAP</b>
 </summary> 
+#
 <!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
 
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
+
+- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
 
 </details>
@@ -62,6 +65,7 @@ created a draggable slider for the featured images shown in the hero component u
 <b>
 Circle with rotating text and hover animation</b>
 </summary> 
+#
 <!-- TO-DO =>  (animations)  /HOME COMPONENT -->
 
 - [ ] Recreate the circle with rotating text and hover animation.
@@ -73,7 +77,8 @@ Circle with rotating text and hover animation</b>
 <summary>
 <b>
  Change image on hover</b>
- </summary> 
+ </summary>
+ #
 
 Hover effects - Change image on hover
 
@@ -86,6 +91,7 @@ Hover effects - Change image on hover
 <b>Content filtering
 </b>
 </summary> 
+#
 
 - [x] Content filtering
 - [x] Search bar
@@ -95,6 +101,7 @@ Hover effects - Change image on hover
 <summary>
 <b>Shopping Cart:</b>
 </summary> 
+# 
 Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
 </details>
 
@@ -113,8 +120,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <summary>
 <b>User Reviews/Ratings (Bonus)</b>
 </summary> 
-
-UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) ![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png) and [Quince]() ![]()
+#
+UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png) and [Quince]() 
+![quince-mobile-1](/src/assets/screens/quince-mobile-1.png)
+![quince-mobile-2](/src/assets/screens/quince-mobile-2.png)
 </details>
 
 <details>
@@ -207,16 +217,22 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 <b>Random color generation </b>
 
  </summary>
+#
+
+ ![brand-colors](/src/assets/screens/paletteZen.png)
 </details>
 
 <details>
 <summary>
 <b>Marquee Animation</b>
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
-
-Custom marquee animation in `footer.component.ts` created with [GreenSock Animations](https://greensock.com/)
  </summary>
+ #
+ <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+
+- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
+
+- Custom marquee animation in `footer.component.ts` created with [GreenSock Animations](https://greensock.com/)
+
 </details>
  <!-- TO-DO => (styles) accessibility -->
  <!-- TO-DO => unsubscribe() from everything -->

@@ -65,6 +65,7 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <b>
 Circle with rotating text and hover animation</b>
 </summary> 
+
 #
 <!-- TO-DO =>  (animations)  /HOME COMPONENT -->
 
@@ -78,6 +79,7 @@ Circle with rotating text and hover animation</b>
 <b>
  Change image on hover</b>
  </summary>
+
  #
 
 Hover effects - Change image on hover
@@ -91,6 +93,7 @@ Hover effects - Change image on hover
 <b>Content filtering
 </b>
 </summary> 
+
 #
 
 - [x] Content filtering
@@ -101,7 +104,9 @@ Hover effects - Change image on hover
 <summary>
 <b>Shopping Cart:</b>
 </summary> 
+
 # 
+
 Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
 </details>
 
@@ -121,6 +126,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <b>User Reviews/Ratings (Bonus)</b>
 </summary> 
 #
+
 UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
 ![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png) and [Quince]() 
 ![quince-mobile-1](/src/assets/screens/quince-mobile-1.png)
@@ -138,6 +144,8 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 <summary>
 <b>Custom currency pipe </b>
  </summary>
+
+#
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 - Developed a custom Angular pipe  for currency conversion, to update prices based on the selected country. 
@@ -217,6 +225,7 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 <b>Random color generation </b>
 
  </summary>
+
 #
 
  ![brand-colors](/src/assets/screens/paletteZen.png)
@@ -226,7 +235,9 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 <summary>
 <b>Marquee Animation</b>
  </summary>
+
  #
+
  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
 - created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)

@@ -23,13 +23,14 @@ export class CurrencyConversionPipe implements PipeTransform {
 
 
   transform(amount: number, country: string, rates: any): any {
+
     switch (country) {
       // Canada
       case 'store-ca':
         return formatCurrency(amount * rates['CAD'].exchangeRate, 'en-CA', '$', 'Canadian Dollar', '1.0-0');
       // European Union
       case 'store-eu':
-        return formatCurrency(amount * rates['EUR'].exchangeRate, 'en-EU', '€', 'EUR', '1.0-0');
+        return formatCurrency(amount * rates['EUR'].exchangeRate, 'en-EU', '€', 'Euro', '1.0-0');
       // United Kingdom
       case 'store-uk':
         return formatCurrency(amount * rates['GBP'].exchangeRate, 'en-us', '£', 'GBP', '1.0-0');

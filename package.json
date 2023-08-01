@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config ./proxy.json",
+    "config": "ts-node ./src/assets/scripts/setEnv.ts",
+    "start": "ng serve --proxy-config ./proxy.json ",
     "server": "ts-node -P ./server/server.tsconfig.json ./server/server.ts",
-    "build": "ng build",
+    "build": "npm run config --environment=prod && ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -32,12 +33,14 @@
     "@angular/cli": "^15.2.9",
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.3.0",
+    "dotenv": "^16.3.1",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "yargs": "^17.7.2"
   }
 }

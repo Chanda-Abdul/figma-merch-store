@@ -12,8 +12,7 @@ export function saveRates(req: Request, res: Response) {
    * return;
    * 
    */
-  // res.status(200).json({ payload: Object.values(RATES) });
-  
+  // res.status(200).json({ payload: Object.values(RATES) })
   
     // const rates: any = rateS;
   

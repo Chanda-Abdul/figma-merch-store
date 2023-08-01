@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 import { map, shareReplay, tap } from "rxjs/operators";
 import { Product } from "../model/product.model";
 
@@ -10,10 +10,22 @@ import { Product } from "../model/product.model";
 
 export class ProductsService {
   /* Stateless Observable Service */
+  private selectedCountry = new BehaviorSubject('store')
+  currentCountry = this.selectedCountry.asObservable();
 
-  
+  private exchangeRates = new BehaviorSubject('');
+  currentExchangeRates = this.exchangeRates.asObservable();
+
+  // converterBaseUrl = process.env['CONVERTER_BASE_URL'];
+  // converterAPIKey = process.env['CONVERTER_API_KEY'];
+
+  private converterAPIKey = 'DtncbdHw0oqTMqEsmr39biNnYbI3q9Zt';
+
   constructor(private http: HttpClient) { }
 
+  updateSelectedCountry(newCountry: string) {
+    this.selectedCountry.next(newCountry);
+  }
 
   loadExchangeRates(): Observable<any> {
     let exchangeRates;
@@ -31,7 +43,7 @@ export class ProductsService {
             'GBP': { country: 'United Kingdom', selectOption: 'store-uk', exchangeRate: rates.rates['GBP'] },
           }
           return exchangeRates;
-        }), 
+        }),
         shareReplay(),
       )
   }

@@ -23,6 +23,10 @@ import { searchBarComponent } from './component/search-bar/search-bar.component'
 import { SearchResultsComponent } from './component/search-results/search-results.component';
 import { CurrencyConversionPipe } from './pipes/currency-conversion.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BadgeComponent } from './component/badge/badge.component';
+import { DraggableSliderDirective } from './directives/draggable-slider.directive';
+import { HoverImgSwapDirective } from './directives/hover-img-swap.directive';
+import { MarqueeDirective } from './directives/marquee.directive';
 
 
 @NgModule({
@@ -44,7 +48,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     searchBarComponent,
     HeaderComponent,
     SearchResultsComponent,
-    CurrencyConversionPipe],
+    CurrencyConversionPipe,
+    BadgeComponent,
+    DraggableSliderDirective,
+    HoverImgSwapDirective,
+    MarqueeDirective],
   imports: [
     BrowserModule,
     FormsModule,

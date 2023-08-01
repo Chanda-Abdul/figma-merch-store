@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { CartItem } from '../model/cart.model';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Cart, CartItem } from '../model/cart.model';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,110 +8,142 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartService {
 
-  //TO-DO => move? should be stateless observable
-  public cartContentsList: any = [];
+  public cartDetails: any;
+
+  private cartProducts = new BehaviorSubject([]);
+  currenCartProducts = this.cartProducts.asObservable();
+
+  private cartTotal = new BehaviorSubject(0);
+  currentCartTotal = this.cartTotal.asObservable();
+
+  private cartItemCount = new BehaviorSubject(0);
+  currentCartItemCount = this.cartItemCount.asObservable();
 
   constructor(private http: HttpClient) { }
 
+  loadCart(): Observable<CartItem[]> | any {
+    if (localStorage['cart_contents'] === undefined) {
+      this.cartDetails = {
+        cartItems: [],
+        cartTotal: 0,
+        cartItemCount: 0,
+      };
+      this.cartDetails.cartTotal = this.loadCartTotal();
+      this.cartDetails.cartItemCount = this.loadCartCount();
+
+      localStorage.setItem('cart_contents', JSON.stringify(this.cartDetails))
+    }
+
+    else {
+      this.cartDetails = JSON.parse(localStorage.getItem('cart_contents')!) as Cart || {};
+
+      this.loadCartCount();
+      this.loadCartTotal()
+    }
+    this.cartProducts.next(this.cartDetails.cartItems);
+
+  }
+
+
+
   loadCartCount() {
-    this.loadCart();
-    return this.cartContentsList.reduce((acc: any, item: any) => {
-      return acc += item.quantity;
-    }, 0);
+
+    let itemCount = this.cartDetails
+      .cartItems
+      .reduce((acc: any, item: any) => {
+        return acc += item.quantity;
+      }, 0);
+
+    this.cartDetails.cartItemCount = itemCount;
+
+    this.cartItemCount.next(itemCount);
+    return itemCount;
   }
 
 
   loadCartTotal() {
-    return this.cartContentsList.reduce((acc: any, item: any) => {
-      return acc += (item.price * item.quantity);
-    }, 0);
+
+    let cartTotal = this.cartDetails
+      .cartItems
+      .reduce((acc: any, item: any) => {
+        return acc += (item.price * item.quantity);
+      }, 0)
+
+    this.cartDetails.cartTotal = cartTotal;
+
+    this.cartTotal.next(cartTotal);
+    return cartTotal;
   }
 
-  loadCart(): Observable<CartItem[]> | any {
-    this.cartContentsList = JSON.parse(localStorage.getItem('cart_contents')!) as CartItem[] || [];
-    return this.cartContentsList;
-
-    // return this.http.get<any>("/api/cart").pipe(
-    //     map(res => res.payload),
-    //     tap(val => console.log(val)),
-    //     shareReplay()
-    //   );
-
-
-    // if (JSON.parse(localStorage['cart_contents']).length === 0) {
-    // // TO-Do => delete later  - for testing
-    //   // localStorage.setItem('cart_contents', JSON.stringify([
-    //   //   { id: 39, productName: 'Shape up tee', price: 20, quantity: 4, productImg: 'https://store.figma.com/cdn/shop/products/figma-store_shape-up-tee_013_1000x.png?v=1678114580' },
-    //   //   { id: 44, productName: 'Gridlock washi tape', price: 1, quantity: 4, productImg: 'https://store.figma.com/cdn/shop/products/figma-store_washi-tape-green_01_1000x.jpg?v=1670520424' }]
-
-    //   // ))
-    // }
-
-  }
 
   addItemToCart(addedProduct: any) {
+    const itemInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id) > -1;
+    const idxCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id);
 
-    if (!this.checkCartForProduct(addedProduct.id)) {
-      this.cartContentsList.push(addedProduct);
+    const itemsAndSizesFilter = this.cartDetails.cartItems
+      .filter((item: any) => item.id === addedProduct.id)
+      .filter((item: any) => item.variant === addedProduct.variant);
+
+    const itemAndSizeInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id && x.variant === addedProduct.variant);
+
+    if (!itemInCartCheck) {
+      /* add item to cart if not already there */
+      this.cartDetails.cartItems.push(addedProduct);
+
     }
-    else {
-      const idx = this.cartContentsList.findIndex((x: any) => x.id === addedProduct.id);
-
-      let productToUpdate = this.cartContentsList[idx];
-
-      productToUpdate.quantity += addedProduct.quantity;
-      this.cartContentsList[idx] = productToUpdate;
-
+    else if (itemInCartCheck && !addedProduct.hasOwnProperty('variant')) {
+      /* item is in cart, no variant, overide with new quanity */
+      this.cartDetails.cartItems[idxCheck].quantity = addedProduct.quantity;
     }
+    else if (!itemsAndSizesFilter.length) {
+      /* item is in cart but not size, add new item with size and quantity  */
+      this.cartDetails.cartItems.push(addedProduct);
+    }
+    else if (itemAndSizeInCartCheck) {
+      /* item with variant in cart, overide with new quanity */
+      this.cartDetails.cartItems[itemAndSizeInCartCheck].quantity = addedProduct.quantity;
+    }
+
     this.saveCart();
 
   }
 
-  updateCartItem(increaseOrDecrease: string, id: number): any {
-    const idx = this.cartContentsList.findIndex((x: any) => x.id === id);
+  updateCartItem(increaseOrDecrease: string, product: any): any {
+    const idx = this.cartDetails.cartItems.findIndex((x: any) => x.id === product.id && x.variant === product.variant);
 
-    let productToUpdate = this.cartContentsList[idx]
+    const productQuantity = this.cartDetails.cartItems[idx].quantity;
 
     if (increaseOrDecrease === 'increase') {
-      productToUpdate.quantity++;
-      this.cartContentsList[idx] = productToUpdate;
+      this.cartDetails.cartItems[idx].quantity = productQuantity + 1;
+
     }
-    if (increaseOrDecrease === 'decrease' && productToUpdate.quantity > 1) {
-      productToUpdate.quantity--;
-      this.cartContentsList[idx] = productToUpdate;
+    if (increaseOrDecrease === 'decrease' && productQuantity > 1) {
+      this.cartDetails.cartItems[idx].quantity = productQuantity - 1;
+
     }
     else {
       return null
       // TO-DO => add error message 
     }
-    //and update UI
-
   }
 
-  checkCartForProduct(id: number) {
-    const itemInCart = this.cartContentsList.findIndex((x: any) => x.id === id) > -1;
 
-    return itemInCart
-  }
 
-  removeCartItem(productId: any) {
-    const indx = this.cartContentsList.findIndex((x: any) => x.id === productId);
+  removeCartItem(product: any) {
+    const idx = this.cartDetails.cartItems.findIndex((x: any) => x.id === product.id && x.variant === product.variant)
 
-    if (indx > -1) {
-      this.cartContentsList.splice(indx, 1);
+    if (idx > -1) {
+      this.cartDetails.cartItems.splice(idx, 1);
       this.saveCart();
     }
   }
 
 
-
-
   saveCart() {
-    localStorage.setItem('cart_contents', JSON.stringify(this.cartContentsList))
-
+    localStorage.setItem('cart_contents', JSON.stringify(this.cartDetails));
   }
 
   emptyCart() {
-    localStorage.clear()
+    localStorage.clear();
   }
 }

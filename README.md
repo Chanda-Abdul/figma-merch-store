@@ -347,21 +347,21 @@ and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=wo
 
 I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great forntend project to practice with.
 
-### Angular routing
+## Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
-### Custom Pipes
-### Angular `@Directive`
+## Custom Pipes
+## Angular `@Directive`
 - Implemented custom structural directives to enable reusable and scalable animations in the application. 
 - These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and draggable image slider components. 
 - By encapsulating animation logic within directives, we achieved modularity and reduced code duplication. 
-### Angular in-memory-web-api 
+## Angular in-memory-web-api 
 
-### Display products
+## Display products with data binding
 Used Angular's data binding and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
-### Stateless Observable Service using RxJs and Angular Services
+## Stateless Observable Service using RxJs and Angular Services
 
-[`product.service.ts`](/src/app/services/products.service.ts), [`cart.service.ts`](/src/app/services/cart.service.ts), [`ratings.service.ts`](/src/app/services/ratings.service.ts) - created stateless observable services to store as little state as possible on the client and instead fetch the data from the server when needed in accordance with MVC/MVVM architecture
-### JSON Proxy server to store and retrieve data
+ - created stateless observable services to store as little state as possible on the client and instead fetch the data from the server when needed in accordance with MVC/MVVM architecture. In **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**
+## JSON Proxy server to store and retrieve data
 
 JSON Proxy server to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
 
@@ -386,7 +386,7 @@ JSON Proxy server to store and retrieve data, which can be substituted with an e
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)
 ## Author
 
-<!-- - Website - [Chanda Abdul](https://www.Chandabdul.dev) -->
+- Portfolio - [Chanda Abdul](https://www.Chandabdul.dev)
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
 
 

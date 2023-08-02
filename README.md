@@ -3,22 +3,59 @@
 ![Design preview for the Figma Merch Store  coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 
 This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/).  
-# Challenge
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Demo](#demo)
+  - [Screenshots](#screenshots)
+- [Features](#features)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### The challenge
 
 
-Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/) site created by [ ](#)
+Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/).
+
+Users should be able to:
+
+<!-- - [x] Complete each step of the sequence
+- [x] See a summary of their selections on the final step and confirm their order
+- [x] View the optimal layout for the interface depending on their device's screen size
+- [x] See hover and focus states for all interactive elements on the page -->
 ## Demo
-View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s></s>
-
+View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
+<!-- <b>Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 ## Screenshots
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
-## Technologies Used
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+# Features
+- Animations
+  - [Draggable Image Slider](#draggable-slider-using-gsap)
+  - [Swap image on hover](#swap-image-on-hover)
+  - [Marquee](#marquee-animation)
+  - [Circle SVG with rotating text and hover animation](#)
+- Styling
+  - [Custom Fonts](#)
+  - [Dropdown Search](#)
+  - [Random color generation](#)
+- Angular/JavaScript
+  - [Custom Currency Pipe](#)
+  - [Content filtering](#)
+  - [Shopping Cart](#)
+  - [User Reviews/Ratings (Bonus)](#)
+  - [Size Chart (Bonus)](#)
 
-## Features
-
-### Swap image on hover
+## Swap image on hover
 <!-- <details>
 <summary>
 <b>
@@ -176,7 +213,7 @@ export class HoverImgSwapDirective {
 <b>Custom fonts</b>
 </summary> 
 
-#
+
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
 - uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
@@ -377,12 +414,9 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 
  ![brand-colors](/src/assets/screens/paletteZen.png)
 </details>
-
-
-
-
-
-
+# My Process
+## Built with
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
 
  <!-- TO-DO => (styles) accessibility -->
@@ -400,20 +434,20 @@ Set up routing: Set up routing so that users can navigate between pages. used `/
 - Implemented custom structural directives to enable reusable and scalable animations in the application. 
 - These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and draggable image slider components. 
 - By encapsulating animation logic within directives, we achieved modularity and reduced code duplication. 
-
+### Angular in-memory-web-api 
 
 ### Display products
 Used Angular's data binding and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
 ### Stateless Observable Service using RxJs and Angular Services
 
 [`product.service.ts`](/src/app/services/products.service.ts), [`cart.service.ts`](/src/app/services/cart.service.ts), [`ratings.service.ts`](/src/app/services/ratings.service.ts) - created stateless observable services to store as little state as possible on the client and instead fetch the data from the server when needed in accordance with MVC/MVVM architecture
-### JSON server to store and retrieve data
+### JSON Proxy server to store and retrieve data
 
 JSON Proxy server to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
 
 ## Useful resources
 
-- []()
+<!-- - []() -->
 - [Angular Data Sharing Reference](https://github.com/H3AR7B3A7/EarlyAngularProjects/tree/master/data-sharing)
 - [How to Secure Angular Environment Variables for Use in GitHub Actions](https://betterprogramming.pub/how-to-secure-angular-environment-variables-for-use-in-github-actions-39c07587d590)
 - [Create a Shopping Cart Using Angular and Local Storage with PayPal Checkout](https://youtu.be/cWRG2gaZYQw)
@@ -428,7 +462,7 @@ JSON Proxy server to store and retrieve data, which can be substituted with an e
 - [CSS Grid Generator](https://cssgrid-generator.netlify.app/)
 - [Udemy: Reactive Angular Course (with RxJs, Angular 16) by Angular University](https://www.udemy.com/course/rxjs-reactive-angular-course) - Build Angular 16 Applications in Reactive style with plain RxJs - Patterns, Anti-Patterns, Lightweight State Management
 
-## Design Resources & Inspiration
+### Design Resources & Inspiration
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)
 ## Author
 
@@ -436,15 +470,4 @@ JSON Proxy server to store and retrieve data, which can be substituted with an e
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
 
 
-
-
-
-
-## Installation
-<!-- Provide step-by-step instructions on how to download, install, and run the project on a local machine. -->
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
-
-### Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 

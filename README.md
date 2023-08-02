@@ -21,7 +21,7 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 
 ## Overview
 
-### The challenge
+## The challenge
 
 
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/).
@@ -38,23 +38,23 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 ## Screenshots
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
-# Features
-## Animations
+## Features
+### Animations
   - [Draggable Image Slider](#draggable-slider-using-gsap)
   - [Swap image on hover](#swap-image-on-hover)
   - [Marquee](#marquee-animation)
   - [Circle SVG with rotating text and hover animation](#)
-## Styling
+### Styling
   - [Custom Fonts](#)
   - [Dropdown Search](#)
   - [Random color generation](#)
-## Angular/JavaScript
+### Angular/JavaScript
   - [Custom Currency Pipe](#)
   - [Content filtering](#)
   - [Shopping Cart](#)
   - [User Reviews/Ratings (Bonus)](#)
   - [Size Chart (Bonus)](#)
-
+#
 ### Draggable Slider using GSAP
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 

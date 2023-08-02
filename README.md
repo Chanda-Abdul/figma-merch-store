@@ -1,6 +1,5 @@
 # Figma Merch Store challenge | Frontend Practice
 
-<!-- A brief description of the project. -->
 ![Design preview for the Figma Merch Store  coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 
 This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/).  
@@ -15,15 +14,168 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 ## Technologies Used
-<!-- List the programming languages, frameworks, libraries, and any other tools or technologies used in the project. -->
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
 ## Features
-<!-- List the main features of the project, with brief descriptions of each. -->
+
+### Swap image on hover
+<!-- <details>
+<summary>
+<b>
+ Swap image on hover</b>
+ </summary> -->
+
+ <!-- # -->
+ <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
+
+In `/product-list`, Utilized a custom `@Directive` to swap `/product-card`  from default cover image to a pattern/image on `:hover`, using CSS animations, opacity and positioning.
+
+- in `hover-img-swap.directive.ts`
+```ts
+@Directive({
+  selector: '[hoverImgSwap]',
+})
+
+export class HoverImgSwapDirective {
+
+  @HostBinding('class.hoverImgSwap')
+  get cssClasses() {
+    return true;
+  }
+}
+```
+- in `product-card.component.html`
+```html
+<div class="product-list__product" hoverImgSwap>
+
+    <figure>
+
+      <img [src]="product.hoverPatternImg"/>
+
+      <img [src]="product.hoverProductImg"/>
+
+      <img [src]="product.productPhotos[0]"/>
+
+    </figure>
+
+    ...
+
+  </div>
+```
+- in `_animations.scss`
+
+```scss
+
+.hoverImgSwap {
+
+  figure {
+    position: relative;
+    border-radius: $border-radius-default;
+    border: none;
+
+    img {
+      transition: border-color 750ms, opacity 750ms;
+      border-radius: $border-radius-default;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+    }
+
+    :first-child,
+    :nth-child(2) {
+      position: absolute;
+      border: $border-default;
+      opacity: 0;
+    }
+
+    :nth-child(3) {
+      position: absolute;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    figure {
+      :first-child {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    :nth-child(2) {
+      opacity: 1;
+      max-width: 100%;
+      max-height: 100%;
+      z-index: 2;
+    }
+
+    :nth-child(3) {
+      opacity: 0;
+    }
+  }
+}
+```
+<!-- </details> -->
+
+<!-- <details>
+<summary>
+<b> -->
+
+### Marquee Animation
+
+<!-- </b>
+ </summary> -->
+
+
+ <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+
+- In the `/footer` component, Utilized a custom Angular Structural `@Directive` to create a scrolling `<marquee>` animation of text and `.svg`'s.  [GreenSock](https://greensock.com/) was used to create the animation.
+
+- `marquee.directive.ts`
+  ```ts
+    @Directive({
+    selector: '[marqueeDirective]'
+  })
+
+  export class MarqueeDirective implements OnInit {
+
+    constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+
+    ngOnInit(): void {
+      this.initializeMarquee();
+    }
+
+    initializeMarquee(): void {
+      let content = this.elRef.nativeElement.childNodes;
+
+      gsap.from(content, {
+        x: -this.elRef.nativeElement.offsetWidth,
+        repeat: -1,
+        duration: 15,
+        ease: 'linear'
+      })
+
+      gsap.to(content, {
+        x: this.elRef.nativeElement.offsetWidth,
+
+      })
+        .totalProgress(-.7)
+    }
+  }
+  ```
+** If anyone knows how to make this marquee an infinite loop please let me know **
+</details>
+
 <details>
 <summary>
 <b>Custom fonts</b>
 </summary> 
+
 #
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
@@ -39,18 +191,25 @@ View live demo <s><s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <details>
 <summary>
 <b>Dropdown search bar</b>
+</summary> 
+
 #
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 <!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
 
-- dropdown search bar when the `magnifying-glass` icon is clicked.</details>
+- dropdown search bar when the `magnifying-glass` icon is clicked.
+</details>
 
 
 <details>
 <summary>
-<b>Draggable Slider using GSAP</b>
+
+### Draggable Slider using GSAP
+
 </summary> 
-#
+
+
+- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 <!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
 
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
@@ -74,20 +233,7 @@ Circle with rotating text and hover animation</b>
 </details>
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
-<details>
-<summary>
-<b>
- Change image on hover</b>
- </summary>
-
- #
-
-Hover effects - Change image on hover
-
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
-
-
-</details>
 <details>
 <summary>
 <b>Content filtering
@@ -125,6 +271,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <summary>
 <b>User Reviews/Ratings (Bonus)</b>
 </summary> 
+
 #
 
 UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
@@ -231,20 +378,13 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
  ![brand-colors](/src/assets/screens/paletteZen.png)
 </details>
 
-<details>
-<summary>
-<b>Marquee Animation</b>
- </summary>
 
- #
 
- <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
-- Custom marquee animation in `footer.component.ts` created with [GreenSock Animations](https://greensock.com/)
 
-</details>
+
+
  <!-- TO-DO => (styles) accessibility -->
  <!-- TO-DO => unsubscribe() from everything -->
 
@@ -255,6 +395,13 @@ I enjoyed working on this project it was a nice balance of styling requirements 
 
 ### Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
+### Custom Pipes
+### Angular `@Directive`
+- Implemented custom structural directives to enable reusable and scalable animations in the application. 
+- These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and draggable image slider components. 
+- By encapsulating animation logic within directives, we achieved modularity and reduced code duplication. 
+
+
 ### Display products
 Used Angular's data binding and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
 ### Stateless Observable Service using RxJs and Angular Services

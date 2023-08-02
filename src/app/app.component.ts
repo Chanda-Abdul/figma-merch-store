@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +7,11 @@ import { Router, RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 
 })
-export class AppComponent implements OnInit  {
+export class AppComponent implements OnInit {
   title = 'Figma Merch Store';
- 
-  constructor(private router: Router) {}
-  ngOnInit() {
-    }
 
+  constructor(private router: Router) { }
+  ngOnInit() {
+  }
 
 }

@@ -8,6 +8,7 @@ import { PrivacyComponent } from './component/privacy/privacy.component';
 import { SearchResultsComponent } from './component/search-results/search-results.component';
 
 const routes: Routes = [
+  // TO-Do (functionality) add aria-hidden and lazy loading -->
   {
     path: '',
     component: HomeComponent

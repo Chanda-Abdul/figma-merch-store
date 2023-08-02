@@ -10,7 +10,6 @@ import { FooterComponent } from './component/footer/footer.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
 import { ProductListComponent } from './component/product-list/product-list.component';
 import { HeroComponent } from './component/hero/hero.component';
-import { ProductsService } from './services/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './component/home/home.component';
 import { ProductCardComponent } from './component/product-card/product-card.component';
@@ -27,6 +26,7 @@ import { BadgeComponent } from './component/badge/badge.component';
 import { DraggableSliderDirective } from './directives/draggable-slider.directive';
 import { HoverImgSwapDirective } from './directives/hover-img-swap.directive';
 import { MarqueeDirective } from './directives/marquee.directive';
+import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 
 
 @NgModule({
@@ -52,7 +52,8 @@ import { MarqueeDirective } from './directives/marquee.directive';
     BadgeComponent,
     DraggableSliderDirective,
     HoverImgSwapDirective,
-    MarqueeDirective],
+    MarqueeDirective,
+    AppearOnScrollDirective],
   imports: [
     BrowserModule,
     FormsModule,
@@ -60,7 +61,7 @@ import { MarqueeDirective } from './directives/marquee.directive';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

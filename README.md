@@ -39,141 +39,133 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 # Features
-- Animations
+## Animations
   - [Draggable Image Slider](#draggable-slider-using-gsap)
   - [Swap image on hover](#swap-image-on-hover)
   - [Marquee](#marquee-animation)
   - [Circle SVG with rotating text and hover animation](#)
-- Styling
+## Styling
   - [Custom Fonts](#)
   - [Dropdown Search](#)
   - [Random color generation](#)
-- Angular/JavaScript
+## Angular/JavaScript
   - [Custom Currency Pipe](#)
   - [Content filtering](#)
   - [Shopping Cart](#)
   - [User Reviews/Ratings (Bonus)](#)
   - [Size Chart (Bonus)](#)
 
-## Swap image on hover
-<!-- <details>
-<summary>
-<b>
- Swap image on hover</b>
- </summary> -->
+### Draggable Slider using GSAP
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
- <!-- # -->
+<!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
+
+- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
+
+
+### Swap image on hover
+
  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-In `/product-list`, Utilized a custom `@Directive` to swap `/product-card`  from default cover image to a pattern/image on `:hover`, using CSS animations, opacity and positioning.
+In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-card`**'s default cover image to a pattern/image on **`:hover`**, using <i>CSS animations</i>, opacity and positioning.
 
-- in `hover-img-swap.directive.ts`
-```ts
-@Directive({
-  selector: '[hoverImgSwap]',
-})
+- in **`hover-img-swap.directive.ts`**
+  ```ts
+    @Directive({
+      selector: '[hoverImgSwap]',
+    })
 
-export class HoverImgSwapDirective {
+    export class HoverImgSwapDirective {
 
-  @HostBinding('class.hoverImgSwap')
-  get cssClasses() {
-    return true;
-  }
-}
-```
-- in `product-card.component.html`
-```html
-<div class="product-list__product" hoverImgSwap>
-
-    <figure>
-
-      <img [src]="product.hoverPatternImg"/>
-
-      <img [src]="product.hoverProductImg"/>
-
-      <img [src]="product.productPhotos[0]"/>
-
-    </figure>
-
-    ...
-
-  </div>
-```
-- in `_animations.scss`
-
-```scss
-
-.hoverImgSwap {
-
-  figure {
-    position: relative;
-    border-radius: $border-radius-default;
-    border: none;
-
-    img {
-      transition: border-color 750ms, opacity 750ms;
-      border-radius: $border-radius-default;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      object-fit: cover;
-    }
-
-    :first-child,
-    :nth-child(2) {
-      position: absolute;
-      border: $border-default;
-      opacity: 0;
-    }
-
-    :nth-child(3) {
-      position: absolute;
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    figure {
-      :first-child {
-        opacity: 1;
-        width: 100%;
-        height: 100%;
+      @HostBinding('class.hoverImgSwap')
+      get cssClasses() {
+        return true;
       }
     }
+  ```
+- in **`product-card.component.html`**
+  ```html
+    <div class="product-list__product" hoverImgSwap>
 
-    :nth-child(2) {
-      opacity: 1;
-      max-width: 100%;
-      max-height: 100%;
-      z-index: 2;
+        <figure>
+
+          <img [src]="product.hoverPatternImg"/>
+
+          <img [src]="product.hoverProductImg"/>
+
+          <img [src]="product.productPhotos[0]"/>
+
+        </figure>
+
+        ...
+
+      </div>
+  ```
+- in **`_animations.scss`**
+
+  ```scss
+    .hoverImgSwap {
+
+      figure {
+        position: relative;
+        border-radius: $border-radius-default;
+        border: none;
+
+        img {
+          transition: border-color 750ms, opacity 750ms;
+          border-radius: $border-radius-default;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+        }
+
+        :first-child,
+        :nth-child(2) {
+          position: absolute;
+          border: $border-default;
+          opacity: 0;
+        }
+
+        :nth-child(3) {
+          position: absolute;
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        figure {
+          :first-child {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        :nth-child(2) {
+          opacity: 1;
+          max-width: 100%;
+          max-height: 100%;
+          z-index: 2;
+        }
+
+        :nth-child(3) {
+          opacity: 0;
+        }
+      }
     }
-
-    :nth-child(3) {
-      opacity: 0;
-    }
-  }
-}
-```
-<!-- </details> -->
-
-<!-- <details>
-<summary>
-<b> -->
-
-### Marquee Animation
-
-<!-- </b>
- </summary> -->
-
+  ```
+  
+  ### Marquee Animation
 
  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-- In the `/footer` component, Utilized a custom Angular Structural `@Directive` to create a scrolling `<marquee>` animation of text and `.svg`'s.  [GreenSock](https://greensock.com/) was used to create the animation.
+- In the **`/footer`** component, Utilized a custom <i>Angular </i>Structural **`@Directive`** to create a scrolling **`<marquee>`** animation of text and **`<svg>`**'s.  **[GreenSock](https://greensock.com/)** was used to create the animation.
 
-- `marquee.directive.ts`
+- **`marquee.directive.ts`**
   ```ts
     @Directive({
     selector: '[marqueeDirective]'
@@ -205,13 +197,13 @@ export class HoverImgSwapDirective {
     }
   }
   ```
-** If anyone knows how to make this marquee an infinite loop please let me know **
-</details>
+<i>* If anyone knows how to make this marquee an infinite loop please let me know * </i>
 
-<details>
-<summary>
+
+
+### 
 <b>Custom fonts</b>
-</summary> 
+Hover
 
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
@@ -223,91 +215,74 @@ export class HoverImgSwapDirective {
 
 #### Whyte Inktrap Bold for the display text
 ![](src/assets/screens/font-display.png)
-</details>
 
-<details>
-<summary>
-<b>Dropdown search bar</b>
-</summary> 
 
-#
+
+### Dropdown search bar
+
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 <!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
 
 - dropdown search bar when the `magnifying-glass` icon is clicked.
-</details>
 
 
-<details>
-<summary>
-
-### Draggable Slider using GSAP
-
-</summary> 
 
 
-- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
-<!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
-
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-
-- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
 
-</details>
 
-<details>
-<summary>
+
+### 
 <b>
 Circle with rotating text and hover animation</b>
-</summary> 
+Hover
 
 #
 <!-- TO-DO =>  (animations)  /HOME COMPONENT -->
 
 - [ ] Recreate the circle with rotating text and hover animation.
 
-</details>
+
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
-<details>
-<summary>
+
+### 
 <b>Content filtering
 </b>
-</summary> 
+Hover
 
 #
 
 - [x] Content filtering
 - [x] Search bar
-</details>
 
-<details>
-<summary>
+
+
+### 
 <b>Shopping Cart:</b>
-</summary> 
+Hover
 
 # 
 
 Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
-</details>
+
 
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 
 
-<details>
-<summary>
+
+### 
 <b>
  Angular in-memory-web-api (Bonus)</b>
  </summary>
-</details>
 
 
-<details>
-<summary>
+
+
+### 
 <b>User Reviews/Ratings (Bonus)</b>
-</summary> 
+Hover
 
 #
 
@@ -315,21 +290,17 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 ![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png) and [Quince]() 
 ![quince-mobile-1](/src/assets/screens/quince-mobile-1.png)
 ![quince-mobile-2](/src/assets/screens/quince-mobile-2.png)
-</details>
 
-<details>
-<summary>
+
+
+### 
 <b>Size Chart (Bonus)</b>
  <!-- TO-DO => (styles) -->
  </summary>
-</details>
 
-<details>
-<summary>
-<b>Custom currency pipe </b>
- </summary>
 
-#
+
+### Custom currency pipe 
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 - Developed a custom Angular pipe  for currency conversion, to update prices based on the selected country. 
@@ -338,82 +309,75 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 - Country can be selected by using the dropdown on the navigation menu. 
 - The pipe converts currency amounts into GBP (British Pound), JPY (Japanese Yen), EUR (Euro), or CAD (Canadian Dollar), providing users with accurate and up-to-date pricing information in their preferred currency.
 
-- [`currency-conversion.pipe.ts`](/src/app/pipes/currency-conversion.pipe.ts)
+- **[`currency-conversion.pipe.ts`](/src/app/pipes/currency-conversion.pipe.ts)**
 
     ```ts
-    ...
+      ...
 
-    export class CurrencyConversionPipe implements PipeTransform {
-    ...
-    transform(amount: number, country: string, rates: any): any {
-        switch (country) {
-        ...
-        // United Kingdom
-        case 'store-uk':
-            return formatCurrency(amount * rates['GBP'].exchangeRate, 'en-us', '£', 'GBP', '1.0-0');
-        // Japan
-        case 'store-jp':
-            return formatCurrency(amount * rates['JPY'].exchangeRate, 'en-JP', '¥', 'JPY', '1.0-0');
-        // USA or Just browsing
-        default:
-            return formatCurrency(amount, 'en-US', '$', 'USD', '1.0-0');
-        }
-    }
-    }
+      export class CurrencyConversionPipe implements PipeTransform {
+      ...
+      transform(amount: number, country: string, rates: any): any {
+          switch (country) {
+          ...
+          // United Kingdom
+          case 'store-uk':
+              return formatCurrency(amount * rates['GBP'].exchangeRate, 'en-us', '£', 'GBP', '1.0-0');
+          // Japan
+          case 'store-jp':
+              return formatCurrency(amount * rates['JPY'].exchangeRate, 'en-JP', '¥', 'JPY', '1.0-0');
+          // USA or Just browsing
+          default:
+              return formatCurrency(amount, 'en-US', '$', 'USD', '1.0-0');
+          }
+      }
+      }
     ```
 
-- [`products.service.ts`](/src/app/services/products.service.ts)
+- **[`products.service.ts`](/src/app/services/products.service.ts)**
 
     ```ts
-    ...
+      ...
 
-    loadExchangeRates(): Observable<any> {
+      loadExchangeRates(): Observable<any> {
 
-        let exchangeRates;
+          let exchangeRates;
 
-        return this.http
-        .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${this.converterAPIKey}`)
-        .pipe(
-            map((res: any) => {
-            const rates = res;
+          return this.http
+          .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${this.converterAPIKey}`)
+          .pipe(
+              map((res: any) => {
+              const rates = res;
 
-            exchangeRates = {
-                'USD': { country: 'United States', selectOption: 'store', exchangeRate: 1 },
-                'CAD': { country: 'Canada', selectOption: 'store-ca', exchangeRate: rates.rates['CAD'] },
+              exchangeRates = {
+                  'USD': { country: 'United States', selectOption: 'store', exchangeRate: 1 },
+                  'CAD': { country: 'Canada', selectOption: 'store-ca', exchangeRate: rates.rates['CAD'] },
 
-                ...
-            }
-            return exchangeRates;
-            }), 
-            shareReplay(),
-        )
-    }
+                  ...
+              }
+              return exchangeRates;
+              }), 
+              shareReplay(),
+          )
+      }
 
-    ...
+      ...
 
     ```
 
-- `pipe` in the component template
+- **`pipe`** in the component template
     ```html
-    ...
-        <p class="product-list__product--price">
-            {{ product.price |  currencyConversion: selectedCountry : (exchangeRates$ | async) }}
-        </p>
-    ...
+        ...
+            <p class="product-list__product--price">
+                {{ product.price |  currencyConversion: selectedCountry : (exchangeRates$ | async) }}
+            </p>
+        ...
 
     ```
-</details>
+### Random color generation 
 
-<details>
-<summary>
-<b>Random color generation </b>
-
- </summary>
-
-#
 
  ![brand-colors](/src/assets/screens/paletteZen.png)
-</details>
+
 # My Process
 ## Built with
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)

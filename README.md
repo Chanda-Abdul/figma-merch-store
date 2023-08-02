@@ -21,7 +21,7 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 
 ## Overview
 
-## The challenge
+### The challenge
 
 
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/).
@@ -32,10 +32,10 @@ Users should be able to:
 - [x] See a summary of their selections on the final step and confirm their order
 - [x] View the optimal layout for the interface depending on their device's screen size
 - [x] See hover and focus states for all interactive elements on the page -->
-## Demo
+### Demo
 View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 <!-- <b>Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
-## Screenshots
+### Screenshots
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 ## Features
@@ -54,8 +54,8 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
   - [Shopping Cart](#)
   - [User Reviews/Ratings (Bonus)](#)
   - [Size Chart (Bonus)](#)
-#
-### Draggable Slider using GSAP
+
+## Draggable Slider using GSAP
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
 <!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
@@ -63,7 +63,7 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 - created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
 
-### Swap image on hover
+## Swap image on hover
 
  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
@@ -159,7 +159,7 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
     }
   ```
   
-  ### Marquee Animation
+ ## Marquee Animation
 
  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
@@ -197,28 +197,25 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
     }
   }
   ```
-<i>* If anyone knows how to make this marquee an infinite loop please let me know * </i>
+* <i>**If anyone knows how to make this marquee an infinite loop please let me know**</i> *
 
+##  Circle `<svg>` with rotating text and hover animation
+<!-- TO-DO =>  (animations)  /HOME COMPONENT -->
 
-
-### 
-<b>Custom fonts</b>
-Hover
-
+<!-- - [ ] Recreate the circle with rotating text and hover animation. -->
+## Custom fonts
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
-- uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>"Whyte Inktrap"</i> which features deep ink traps in the joints of letters.  
+- uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>["Whyte Inktrap"](#)</i> which features deep ink traps in the joints of letters.  
 
-#### Whyte for bodytext
+### Whyte for bodytext
 ![](src/assets/screens/font-body.png)
 
-#### Whyte Inktrap Bold for the display text
+### Whyte Inktrap Bold for the display text
 ![](src/assets/screens/font-display.png)
 
-
-
-### Dropdown search bar
+## Dropdown search bar
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 <!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
@@ -228,79 +225,24 @@ Hover
 
 
 
-
-
-
-
-### 
-<b>
-Circle with rotating text and hover animation</b>
-Hover
-
-#
-<!-- TO-DO =>  (animations)  /HOME COMPONENT -->
-
-- [ ] Recreate the circle with rotating text and hover animation.
-
-
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
 
-### 
-<b>Content filtering
-</b>
-Hover
-
-#
+## Content filtering
 
 - [x] Content filtering
 - [x] Search bar
 
+## Shopping Cart
 
-
-### 
-<b>Shopping Cart:</b>
-Hover
-
-# 
 
 Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
 
 
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 
-
-
-### 
-<b>
- Angular in-memory-web-api (Bonus)</b>
- </summary>
-
-
-
-
-### 
-<b>User Reviews/Ratings (Bonus)</b>
-Hover
-
-#
-
-UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
-![https://dribbble.com/shots/21512658-Reviews-and-ratings](/src/assets/screens/dribble-ratings-inspo.png) and [Quince]() 
-![quince-mobile-1](/src/assets/screens/quince-mobile-1.png)
-![quince-mobile-2](/src/assets/screens/quince-mobile-2.png)
-
-
-
-### 
-<b>Size Chart (Bonus)</b>
- <!-- TO-DO => (styles) -->
- </summary>
-
-
-
-### Custom currency pipe 
+## Custom currency pipe 
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 - Developed a custom Angular pipe  for currency conversion, to update prices based on the selected country. 
@@ -374,9 +316,23 @@ UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings)
 
     ```
 ### Random color generation 
-
-
  ![brand-colors](/src/assets/screens/paletteZen.png)
+
+##  User Reviews/Ratings Component
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
+
+UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+<img src="/src/assets/screens/dribble-ratings-inspo.png" alt="https://dribbble.com/shots/21512658-Reviews-and-ratings" width="375"/>
+
+and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5) 
+<img src="/src/assets/screens/quince-mobile-1.png" alt="quince-mobile-1" width="375"/>
+<img src="/src/assets/screens/quince-mobile-2.png" alt="quince-mobile-2" width="375"/>
+
+
+
+
+## Size Chart Dynamic Component
+ <!-- TO-DO => (styles) -->
 
 # My Process
 ## Built with

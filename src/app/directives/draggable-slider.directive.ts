@@ -1,47 +1,37 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
+import { gsap } from 'gsap';
+import { Draggable } from "gsap/Draggable";
 
 @Directive({
-  selector: '[appDraggableSlider]'
+  selector: '[dragSliderDir]'
 })
+
 export class DraggableSliderDirective {
+  draggable!: Draggable;
 
-// @Input('hoverImgSwap')
-// isHovered = false;
+  constructor(private imagesRef: ElementRef) { }
 
-// @Output()
-// toggleHover = new EventEmitter();
+  ngAfterViewInit() {
+    this.initializeDragabbleSlider();
+    gsap.registerPlugin(Draggable);
+  }
 
-// @HostBinding('class.hoverImgSwap')
-// get cssClasses() {
-//   // return this.isHovered;
-//   return true;
-// }
+  initializeDragabbleSlider() {
+    let content = this.imagesRef.nativeElement;
+    let slider = content.parentNode;
 
-
-constructor() { }
-// @HostListener('mouseover', ['$event'])
-// onMouseOver($event:any) {
-//   console.log($event);
-//   this.isHovered = true;
-//   // console.log('mouse in');
-
-//   // this.isHovered = true;
-//   // this.toggleHover.emit(this.isHovered);
-// }
-
-//   @HostListener('mouseleave', ['$event'])
-//   onMouseLeave($event:any) {
-  
-// console.log($event);
-//     this.isHovered = false;
-//     // console.log('mouse out');
-//     // this.isHovered = false;
-//     // this.toggleHover.emit(this.isHovered);
-//   }
-
-// toggle() {
-//   this.isHovered = !this.isHovered;
-//   this.toggleHover.emit(this.isHovered);
-// }
+    this.draggable = new Draggable(content, {
+      type: 'x',
+      repeat: -1,
+      edgeResistance: 2,
+      dragResistance: .1,
+      bounds: slider,
+      paused: true,
+      center: false,
+      throwProps: true,
+      snap: { x: [0, 100] }
+    })
+    //TO-DO => add Infinite loop
+  }
 
 }

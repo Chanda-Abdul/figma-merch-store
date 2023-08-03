@@ -26,7 +26,7 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/).
 
-Users should be able to:
+#### Users should be able to:
 
 <!-- - [x] Complete each step of the sequence
 - [x] See a summary of their selections on the final step and confirm their order
@@ -58,10 +58,78 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 ## Draggable Slider using GSAP
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-<!--  (animations)  Draggable slider HERO/HEADER COMPONENT -->
-
 - created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
 
+- In the **`/hero`** component and **`/product`** component(mobile view), Utilized a custom <i>Angular </i>Structural **`@Directive`** to create a Draggable Image Slider animation.  **[GreenSock](https://greensock.com/)** `Draggable` was used to create the animation.
+
+- **`draggable-slider.directive.ts`**
+  ```ts
+    @Directive({
+      selector: '[dragSliderDir]'
+    })
+
+    export class DraggableSliderDirective {
+      draggable!: Draggable;
+
+      constructor(private imagesRef: ElementRef) { }
+
+      ngAfterViewInit() {
+         gsap.registerPlugin(Draggable);
+         this.initializeDragabbleSlider();
+      }
+
+      initializeDragabbleSlider() {
+        let content = this.imagesRef.nativeElement;
+        let slider = content.parentNode;
+
+        this.draggable = new Draggable(content, {
+          type: 'x',
+          repeat: -1,
+          edgeResistance: 2,
+          dragResistance: .1,
+          bounds: slider,
+          paused: true,
+          center: false,
+          throwProps: true,
+          snap: { x: [0, 100] }
+        })
+      }
+    }
+
+  ```
+- in **`hero.component.html`**
+  ```html
+    <div class="hero">
+      <div class="container">
+        <div class="draggable-images"
+              dragSliderDir >
+          <svg></svg>
+          <svg></svg>
+          <svg></svg>
+          
+          ...
+
+  ```
+- in **`product.component.html`**
+
+```html
+  ...
+
+   <div class="product-grid__thumbnails">
+      <div class="product-grid__thumbnails--mobile-drag"
+                 dragSliderDir>
+        <figure *ngFor="let photo of product.productPhotos; 
+        let i = index">
+            <img [src]="photo"
+                (click)="expandImg(i)"
+                     alt="product.name">
+          </figure>
+        </div>
+
+        ...
+```
+
+* <i>**If anyone knows how to make this draggable slider an infinite loop please let me know**</i> *
 
 ## Swap image on hover
 
@@ -322,9 +390,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
 UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+
 <img src="/src/assets/screens/dribble-ratings-inspo.png" alt="https://dribbble.com/shots/21512658-Reviews-and-ratings" width="375"/>
 
 and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5) 
+
 <img src="/src/assets/screens/quince-mobile-1.png" alt="quince-mobile-1" width="375"/>
 <img src="/src/assets/screens/quince-mobile-2.png" alt="quince-mobile-2" width="375"/>
 

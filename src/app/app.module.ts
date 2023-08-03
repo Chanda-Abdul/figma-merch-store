@@ -27,6 +27,7 @@ import { DraggableSliderDirective } from './directives/draggable-slider.directiv
 import { HoverImgSwapDirective } from './directives/hover-img-swap.directive';
 import { MarqueeDirective } from './directives/marquee.directive';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
+import { SizeChartComponent } from './component/size-chart/size-chart.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive
     DraggableSliderDirective,
     HoverImgSwapDirective,
     MarqueeDirective,
-    AppearOnScrollDirective],
+    AppearOnScrollDirective,
+    SizeChartComponent],
   imports: [
     BrowserModule,
     FormsModule,

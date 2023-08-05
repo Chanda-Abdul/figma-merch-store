@@ -28,6 +28,7 @@ import { HoverImgSwapDirective } from './directives/hover-img-swap.directive';
 import { MarqueeDirective } from './directives/marquee.directive';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 import { SizeChartComponent } from './component/size-chart/size-chart.component';
+import { IdleScreenSnowfallDirective } from './directives/idle-screen-snowfall.directive';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { SizeChartComponent } from './component/size-chart/size-chart.component'
     HoverImgSwapDirective,
     MarqueeDirective,
     AppearOnScrollDirective,
-    SizeChartComponent],
+    SizeChartComponent,
+    IdleScreenSnowfallDirective],
   imports: [
     BrowserModule,
     FormsModule,

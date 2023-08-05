@@ -97,7 +97,7 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
     }
 
   ```
-- in **`hero.component.html`**
+- **`hero.component.html`**
   ```html
     <div class="hero">
       <div class="container">
@@ -110,26 +110,26 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
           ...
 
   ```
-- in **`product.component.html`**
+- **`product.component.html`**
 
-```html
-  ...
+  ```html
+    ...
 
-   <div class="product-grid__thumbnails">
-      <div class="product-grid__thumbnails--mobile-drag"
-                 dragSliderDir>
-        <figure *ngFor="let photo of product.productPhotos; 
-        let i = index">
-            <img [src]="photo"
-                (click)="expandImg(i)"
-                     alt="product.name">
-          </figure>
-        </div>
+    <div class="product-grid__thumbnails">
+        <div class="product-grid__thumbnails--mobile-drag"
+                  dragSliderDir>
+          <figure *ngFor="let photo of product.productPhotos; 
+          let i = index">
+              <img [src]="photo"
+                  (click)="expandImg(i)"
+                      alt="product.name">
+            </figure>
+          </div>
 
-        ...
-```
+          ...
+  ```
 
-* <i>**If anyone knows how to make this draggable slider an infinite loop please let me know**</i> *
+<i>**If anyone knows how to make this draggable slider an infinite loop please let me know**</i>
 
 ## Swap image on hover
 
@@ -137,21 +137,21 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
 
 In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-card`**'s default cover image to a pattern/image on **`:hover`**, using <i>CSS animations</i>, opacity and positioning.
 
-- in **`hover-img-swap.directive.ts`**
+- **`hover-img-swap.directive.ts`**
   ```ts
-    @Directive({
-      selector: '[hoverImgSwap]',
-    })
+      @Directive({
+        selector: '[hoverImgSwap]',
+      })
 
-    export class HoverImgSwapDirective {
+      export class HoverImgSwapDirective {
 
-      @HostBinding('class.hoverImgSwap')
-      get cssClasses() {
-        return true;
+        @HostBinding('class.hoverImgSwap')
+        get cssClasses() {
+          return true;
+        }
       }
-    }
   ```
-- in **`product-card.component.html`**
+- **`product-card.component.html`**
   ```html
     <div class="product-list__product" hoverImgSwap>
 
@@ -235,37 +235,36 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
 - **`marquee.directive.ts`**
   ```ts
-    @Directive({
-    selector: '[marqueeDirective]'
-  })
+      @Directive({
+      selector: '[marqueeDirective]'
+    })
 
-  export class MarqueeDirective implements OnInit {
+      export class MarqueeDirective implements OnInit {
 
-    constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+        constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
-    ngOnInit(): void {
-      this.initializeMarquee();
-    }
+        ngOnInit(): void {
+          this.initializeMarquee();
+        }
 
-    initializeMarquee(): void {
-      let content = this.elRef.nativeElement.childNodes;
+        initializeMarquee(): void {
+          let content = this.elRef.nativeElement.childNodes;
 
-      gsap.from(content, {
-        x: -this.elRef.nativeElement.offsetWidth,
-        repeat: -1,
-        duration: 15,
-        ease: 'linear'
-      })
+          gsap.from(content, {
+            x: -this.elRef.nativeElement.offsetWidth,
+            repeat: -1,
+            duration: 15,
+            ease: 'linear'
+          })
 
-      gsap.to(content, {
-        x: this.elRef.nativeElement.offsetWidth,
-
-      })
-        .totalProgress(-.7)
-    }
-  }
+          gsap.to(content, {
+            x: this.elRef.nativeElement.offsetWidth,
+          })
+            .totalProgress(-.7)
+        }
+      }
   ```
-* <i>**If anyone knows how to make this marquee an infinite loop please let me know**</i> *
+<i>**If anyone knows how to make this marquee an infinite loop please let me know**</i> 
 
 ##  Circle `<svg>` with rotating text and hover animation
 <!-- TO-DO =>  (animations)  /HOME COMPONENT -->
@@ -275,13 +274,15 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
-- uses custom fonts <i>["Whyte"]('https://www.typewolf.com/whyte')</i>, and <i>["Whyte Inktrap"](#)</i> which features deep ink traps in the joints of letters.  
+Custom fonts <i>["Whyte"]('https://abcdinamo.com/typefaces/whyte')</i>, and <i>["Whyte Inktrap"](#)</i>. Whyte has smooth and sharp transitions, while Inktrap has curt yet also curvy ink traps at its joints.  
 
-### Whyte for bodytext
-![](src/assets/screens/font-body.png)
+### Whyte for body text
+![](src/assets/screens/body-font-small-11.png)
+![](src/assets/screens/body-font-xl-4.png)
 
-### Whyte Inktrap Bold for the display text
-![](src/assets/screens/font-display.png)
+### Whyte Inktrap for the display text
+![](src/assets/screens/display-font-small-1.png)
+![](src/assets/screens/display-font-small-2.png)
 
 ## Dropdown search bar
 
@@ -313,7 +314,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 ## Custom currency pipe 
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
-- Developed a custom Angular pipe  for currency conversion, to update prices based on the selected country. 
+- Developed a custom Angular pipe for currency conversion, to update prices based on the selected country. 
 - Utilized the [currencybeacon API](https://currencybeacon.com/api-documentation) for most current exchange rates. 
 - The default currency is USD
 - Country can be selected by using the dropdown on the navigation menu. 
@@ -419,18 +420,19 @@ I enjoyed working on this project it was a nice balance of styling requirements 
 
 ## Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
-## Custom Pipes
+## Custom `@Pipe`
+
+- Developed a custom Angular [pipe for currency conversion](#custom-currency-pipe), to update prices based on the selected country. 
 ## Angular `@Directive`
 - Implemented custom structural directives to enable reusable and scalable animations in the application. 
-- These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and draggable image slider components. 
-- By encapsulating animation logic within directives, we achieved modularity and reduced code duplication. 
+- These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and [draggable image slider](#draggable-slider-using-gsap) components. 
+- By encapsulating animation logic within directives, I was able to achieve modularity while reducing code duplication. 
 ## Angular in-memory-web-api 
 
 ## Display products with data binding
 Used Angular's data binding and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
 ## Stateless Observable Service using RxJs and Angular Services
-
- - created stateless observable services to store as little state as possible on the client and instead fetch the data from the server when needed in accordance with MVC/MVVM architecture. In **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**
+Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
 ## JSON Proxy server to store and retrieve data
 
 JSON Proxy server to store and retrieve data, which can be substituted with an express/node server and a database at a later date.

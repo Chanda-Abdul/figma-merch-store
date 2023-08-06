@@ -3,23 +3,18 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import { map, shareReplay, tap } from "rxjs/operators";
 import { Product } from "../model/product.model";
+import { environment } from "src/environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ProductsService {
-  /* Stateless Observable Service */
   private selectedCountry = new BehaviorSubject('store')
   currentCountry = this.selectedCountry.asObservable();
 
   private exchangeRates = new BehaviorSubject('');
   currentExchangeRates = this.exchangeRates.asObservable();
-
-  // converterBaseUrl = process.env['CONVERTER_BASE_URL'];
-  // converterAPIKey = process.env['CONVERTER_API_KEY'];
-
-  private converterAPIKey = 'DtncbdHw0oqTMqEsmr39biNnYbI3q9Zt';
 
   constructor(private http: HttpClient) { }
 
@@ -31,7 +26,7 @@ export class ProductsService {
     let exchangeRates;
 
     return this.http
-      .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${this.converterAPIKey}`)
+      .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${environment.CONVERTER_API_KEY}`)
       .pipe(
         map((res: any) => {
           const rates = res;

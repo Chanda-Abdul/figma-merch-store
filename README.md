@@ -108,6 +108,10 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
           <svg></svg>
           
           ...
+          
+        </div>
+      </div>
+      </div>
 
   ```
 - **`product.component.html`**
@@ -123,10 +127,13 @@ View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
               <img [src]="photo"
                   (click)="expandImg(i)"
                       alt="product.name">
-            </figure>
-          </div>
+          </figure>
 
-          ...
+        ...
+
+      </div>
+    </div>
+    
   ```
 
 <i>**If anyone knows how to make this draggable slider an infinite loop please let me know**</i>
@@ -167,7 +174,7 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
         ...
 
-      </div>
+    </div>
   ```
 - in **`_animations.scss`**
 
@@ -235,34 +242,34 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
 - **`marquee.directive.ts`**
   ```ts
-      @Directive({
-      selector: '[marqueeDirective]'
+    @Directive({
+    selector: '[marqueeDirective]'
     })
 
-      export class MarqueeDirective implements OnInit {
+    export class MarqueeDirective implements OnInit {
 
-        constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+      constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
-        ngOnInit(): void {
-          this.initializeMarquee();
-        }
-
-        initializeMarquee(): void {
-          let content = this.elRef.nativeElement.childNodes;
-
-          gsap.from(content, {
-            x: -this.elRef.nativeElement.offsetWidth,
-            repeat: -1,
-            duration: 15,
-            ease: 'linear'
-          })
-
-          gsap.to(content, {
-            x: this.elRef.nativeElement.offsetWidth,
-          })
-            .totalProgress(-.7)
-        }
+      ngOnInit(): void {
+        this.initializeMarquee();
       }
+
+      initializeMarquee(): void {
+        let content = this.elRef.nativeElement.childNodes;
+
+        gsap.from(content, {
+          x: -this.elRef.nativeElement.offsetWidth,
+          repeat: -1,
+          duration: 15,
+          ease: 'linear'
+        })
+
+        gsap.to(content, {
+          x: this.elRef.nativeElement.offsetWidth,
+        })
+          .totalProgress(-.7)
+      }
+    }
   ```
 <i>**If anyone knows how to make this marquee an infinite loop please let me know**</i> 
 
@@ -287,7 +294,6 @@ Custom fonts <i>["Whyte"]('https://abcdinamo.com/typefaces/whyte')</i>, and <i>[
 ## Dropdown search bar
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
-<!-- TO-DO => (style) /HOME  dropdown mobile menu  -->
 
 - dropdown search bar when the `magnifying-glass` icon is clicked.
 
@@ -323,13 +329,18 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 - **[`currency-conversion.pipe.ts`](/src/app/pipes/currency-conversion.pipe.ts)**
 
     ```ts
+
       ...
 
       export class CurrencyConversionPipe implements PipeTransform {
+      
       ...
+      
       transform(amount: number, country: string, rates: any): any {
           switch (country) {
+         
           ...
+         
           // United Kingdom
           case 'store-uk':
               return formatCurrency(amount * rates['GBP'].exchangeRate, 'en-us', '£', 'GBP', '1.0-0');
@@ -340,7 +351,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
           default:
               return formatCurrency(amount, 'en-US', '$', 'USD', '1.0-0');
           }
-      }
+        }
       }
     ```
 
@@ -349,27 +360,27 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
     ```ts
       ...
 
-      loadExchangeRates(): Observable<any> {
+        loadExchangeRates(): Observable<any> {
 
-          let exchangeRates;
+            let exchangeRates;
 
-          return this.http
-          .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${this.converterAPIKey}`)
-          .pipe(
-              map((res: any) => {
-              const rates = res;
+            return this.http
+            .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${this.converterAPIKey}`)
+            .pipe(
+                map((res: any) => {
+                const rates = res;
 
-              exchangeRates = {
-                  'USD': { country: 'United States', selectOption: 'store', exchangeRate: 1 },
-                  'CAD': { country: 'Canada', selectOption: 'store-ca', exchangeRate: rates.rates['CAD'] },
+                exchangeRates = {
+                    'USD': { country: 'United States', selectOption: 'store', exchangeRate: 1 },
+                    'CAD': { country: 'Canada', selectOption: 'store-ca', exchangeRate: rates.rates['CAD'] },
 
-                  ...
-              }
-              return exchangeRates;
-              }), 
-              shareReplay(),
-          )
-      }
+                    ...
+                }
+                return exchangeRates;
+                }), 
+                shareReplay(),
+            )
+        }
 
       ...
 
@@ -379,7 +390,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
     ```html
         ...
             <p class="product-list__product--price">
-                {{ product.price |  currencyConversion: selectedCountry : (exchangeRates$ | async) }}
+                {{ product.price |  
+                    currencyConversion : 
+                    selectedCountry : 
+                    (exchangeRates$ | async) 
+                  }}
             </p>
         ...
 
@@ -390,11 +405,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 ##  User Reviews/Ratings Component
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+- UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
 
 <img src="/src/assets/screens/dribble-ratings-inspo.png" alt="https://dribbble.com/shots/21512658-Reviews-and-ratings" width="375"/>
 
-and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5) 
+- and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5) 
 
 <img src="/src/assets/screens/quince-mobile-1.png" alt="quince-mobile-1" width="375"/>
 <img src="/src/assets/screens/quince-mobile-2.png" alt="quince-mobile-2" width="375"/>

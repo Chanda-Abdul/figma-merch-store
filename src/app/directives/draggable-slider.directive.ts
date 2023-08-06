@@ -29,9 +29,12 @@ export class DraggableSliderDirective {
       paused: true,
       center: false,
       throwProps: true,
-      snap: { x: [0, 100] }
+      snap: { x: [20, 80] }
     })
-    //TO-DO => add Infinite loop
+
   }
 
+  //TO-DO => add Infinite loop
+
 }
+

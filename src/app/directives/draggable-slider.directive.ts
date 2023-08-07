@@ -12,9 +12,9 @@ export class DraggableSliderDirective {
   constructor(private imagesRef: ElementRef) { }
 
   ngAfterViewInit() {
-    this.initializeDragabbleSlider();
-    gsap.registerPlugin(Draggable);
-  }
+     gsap.registerPlugin(Draggable);
+ this.initializeDragabbleSlider();
+    }
 
   initializeDragabbleSlider() {
     let content = this.imagesRef.nativeElement;
@@ -25,11 +25,12 @@ export class DraggableSliderDirective {
       repeat: -1,
       edgeResistance: 2,
       dragResistance: .1,
+      snap: (val) => Math.round(val / 100) * 100,
       bounds: slider,
       paused: true,
       center: false,
       throwProps: true,
-      snap: { x: [20, 80] }
+      // snap: { x: [20, 80] }
     })
 
   }

@@ -13,7 +13,7 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 - [Features](#features)
 - [My process](#my-process)
   - [Built with](#built-with)
-  
+  - [Continued development](#continued-development)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
@@ -32,8 +32,10 @@ Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.
 - [x] See a summary of their selections on the final step and confirm their order
 - [x] View the optimal layout for the interface depending on their device's screen size
 - [x] See hover and focus states for all interactive elements on the page -->
+ <!-- TO-DO => (styles) accessibility -->
+ <!-- TO-DO => unsubscribe() from everything -->
 ### Demo
-View live demo <s>[here](https://inquisitive-strudel-fa01fb.netlify.app/)</s>
+View live demo <s>[here](#)</s>
 <!-- <b>Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 ### Screenshots
 <!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
@@ -424,11 +426,9 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 ## Built with
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-
- <!-- TO-DO => (styles) accessibility -->
- <!-- TO-DO => unsubscribe() from everything -->
-
-
+## Continued development
+- dynamic svgs in hero
+- inifite loop dragabble sliders
 ## What I learned
 
 I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great forntend project to practice with.

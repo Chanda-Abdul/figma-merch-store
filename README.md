@@ -445,11 +445,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <!-- ## Size Chart Dynamic Component (Bonus) -->
 # My Process
 ## Built with
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" />![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)![Node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)<img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=flat-square" alt="Axios Badge" height="28" >![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## Continued development
 - dynamic svgs in hero
-- inifite loop dragabble sliders
+- ininfite loop dragabble sliders and marquee
 ## What I learned
 
 I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great forntend project to practice with.
@@ -471,7 +471,16 @@ Used Angular's data binding and router params to display the `/product-list` of 
 Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
 ## JSON Proxy server to store and retrieve data
 
-JSON Proxy server to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
+- During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
+- For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, And Accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
+### API Endpoints
+- <b>`/products`</b> - returns a list of `PRODUCTS`
+- <b>`/products/:filter`</b> - returns list of `PRODUCTS` filtered by `tag`
+- <b>`/products/search/:searchTerm`</b> - returns list of `PRODUCTS` filtered by `searchTerm`
+- <b>`/products/featured`</b> - returns list of featured `PRODUCTS`
+- <b>`/product/:productId`</b> - returns a `product` from the `PRODUCT` list by `:productId`
+- <b>`/reviews/:tag`</b> - returns up to 8 random `reviews` and ratings based on `product:tag`/category
+-  <b>`/rates`</b> - returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
 
 ## Useful resources
 
@@ -489,6 +498,7 @@ JSON Proxy server to store and retrieve data, which can be substituted with an e
 - [:nth-child() pseudo-class](https://www.w3.org/TR/selectors/#nth-child-pseudo)
 - [CSS Grid Generator](https://cssgrid-generator.netlify.app/)
 - [Udemy: Reactive Angular Course (with RxJs, Angular 16) by Angular University](https://www.udemy.com/course/rxjs-reactive-angular-course) - Build Angular 16 Applications in Reactive style with plain RxJs - Patterns, Anti-Patterns, Lightweight State Management
+- [Build your own API](https://youtu.be/GK4Pl-GmPHk) - Youtube video that quickly shows you how to make a profitable API and sell it on the RapidAPI Hub.
 
 ### Design Resources & Inspiration
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)

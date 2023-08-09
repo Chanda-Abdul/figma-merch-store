@@ -1,8 +1,21 @@
-# Figma Merch Store challenge | Frontend Practice
+# Figma Merch Store 
+<!-- challenge | Frontend Practice -->
+<!-- <p style="text-align: center;"> -->
+
+This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/). 
+
+<!-- </p> -->
+
+<h4 style="text-align: center;">
+
+View live demo <s>[here](#)</s> of my Solution | Link to [store.figma.com](https://store.figma.com/)
+
+</h4>
+#
 
 ![Design preview for the Figma Merch Store  coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 
-This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/).  
+ 
 
 ## Table of contents
 
@@ -27,11 +40,21 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/).
 
 #### Users should be able to:
+- [ ] Toggle the dropdown search bar by clicking the search icon, allowing them to conveniently search for products.
+- [ ] Content filtering
+- [ ] See hover states for all interactive elements on the page, 
+  <!-- - [x] Product photo swap images on hover, 
+  - [ ] Recreate the circle with rotating text and hover animation. -->
+- [x] Utilize a draggable slider to effortlessly explore featured products within the hero section and also to view product thumbnails while using the mobile viewport
+- [x] Add, remove, and update products to their shopping cart, ensuring a convenient shopping experience and enabling them to review their selections before finalizing a purchase
+- [ ] Navigate through a smooth and streamlined checkout process, ensuring efficient completion of their purchase.
+- [x] Select a country and have the currency automatically update, ensuring accurate pricing information aligned with their chosen location.
+- [ ] View and interact with all animated elements on the page
+  <!-- - [ ] page elements apear on Scroll, etc -->
+- [ ] View the optimal layout for each page depending on their device's screen size
+  - [ ] Mobile: `< 900px`
+  - [ ] Desktop: `> 900px`
 
-<!-- - [x] Complete each step of the sequence
-- [x] See a summary of their selections on the final step and confirm their order
-- [x] View the optimal layout for the interface depending on their device's screen size
-- [x] See hover and focus states for all interactive elements on the page -->
  <!-- TO-DO => (styles) accessibility -->
  <!-- TO-DO => unsubscribe() from everything -->
 ### Demo
@@ -283,7 +306,7 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
-Custom fonts <i>["Whyte"]('https://abcdinamo.com/typefaces/whyte')</i>, and <i>["Whyte Inktrap"](#)</i>. Whyte has smooth and sharp transitions, while Inktrap has curt yet also curvy ink traps at its joints.  
+Custom fonts <i>["Whyte" and "Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</i>. <b>Whyte</b> has smooth and sharp transitions, while <b>Inktrap</b> has curt yet also curvy ink traps at its joints.  
 
 ### Whyte for body text
 ![](src/assets/screens/body-font-small-11.png)
@@ -419,9 +442,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
 
 
-## Size Chart Dynamic Component
- <!-- TO-DO => (styles) -->
-
+<!-- ## Size Chart Dynamic Component (Bonus) -->
 # My Process
 ## Built with
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)

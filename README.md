@@ -8,7 +8,7 @@ This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/p
 
 <h4 style="text-align: center;">
 
-View live demo <s>[here](#)</s> of my Solution | Link to [store.figma.com](https://store.figma.com/)
+View live demo <s>[here](https://soft-mermaid-23f7cd.netlify.app/)</s> of my Solution | Link to [store.figma.com](https://store.figma.com/)
 
 </h4>
 #
@@ -384,29 +384,19 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
     ```ts
       ...
-
         loadExchangeRates(): Observable<any> {
 
-            let exchangeRates;
-
-            return this.http
-            .get<any>(`https://api.currencybeacon.com/v1/latest?api_key=${this.converterAPIKey}`)
-            .pipe(
-                map((res: any) => {
-                const rates = res;
-
-                exchangeRates = {
-                    'USD': { country: 'United States', selectOption: 'store', exchangeRate: 1 },
-                    'CAD': { country: 'Canada', selectOption: 'store-ca', exchangeRate: rates.rates['CAD'] },
-
-                    ...
-                }
-                return exchangeRates;
-                }), 
+            return this.http.get<any>(`${environment.API_BASE_URL}/rates`, this.httpOptions)
+              .pipe(
+                map(res =>
+                  res
+                ),
                 shareReplay(),
-            )
-        }
-
+                catchError((err) => {
+                  throw err + 'Request failed:';
+                })
+              )
+          }
       ...
 
     ```
@@ -468,18 +458,19 @@ Set up routing: Set up routing so that users can navigate between pages. used `/
 ## Display products with data binding
 Used Angular's data binding and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
 ## Stateless Observable Service using RxJs and Angular Services
-Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
+- Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. 
+- Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
 ## JSON Proxy server to store and retrieve data
 
 - During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
-- For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, And Accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
+- For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
 ### API Endpoints
 - <b>`/products`</b> - returns a list of `PRODUCTS`
 - <b>`/products/:filter`</b> - returns list of `PRODUCTS` filtered by `tag`
 - <b>`/products/search/:searchTerm`</b> - returns list of `PRODUCTS` filtered by `searchTerm`
 - <b>`/products/featured`</b> - returns list of featured `PRODUCTS`
 - <b>`/product/:productId`</b> - returns a `product` from the `PRODUCT` list by `:productId`
-- <b>`/reviews/:tag`</b> - returns up to 8 random `reviews` and ratings based on `product:tag`/category
+- <b>`/reviews/:tag`</b> - returns up to 8 random `reviews` and ratings based on `product:tag`
 -  <b>`/rates`</b> - returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
 
 ## Useful resources
@@ -492,7 +483,7 @@ Developed stateless observable services following the principles of MVC/MVVM arc
 - [The right way to componentize SVGs for your Angular app](https://cloudengineering.studio/articles/the-right-way-to-componentize-svgs-for-your-angular-app)
 - [Angular Currency Pipe & Format Currency In Angular with examples](https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/) - Angular Currency Pipe is one of the bulit in pipe in Angular used to format currency value according to given country code,currency,decimal,locale information.
 - [Angular CurrencyPipe](https://angular.io/api/common/CurrencyPipe)
-- [Proxy Server](#) - JSON server to store and retrieve data
+- [Proxy Server](#) - JSON server to store and retrieve data during development
 - [Angular in-memory-web-api](#)
 - [phosphor icons](https://phosphoricons.com/)
 - [:nth-child() pseudo-class](https://www.w3.org/TR/selectors/#nth-child-pseudo)

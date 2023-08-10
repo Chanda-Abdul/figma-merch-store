@@ -1,21 +1,19 @@
 # Figma Merch Store 
-<!-- challenge | Frontend Practice -->
-<!-- <p style="text-align: center;"> -->
+
 
 This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/). 
 
-<!-- </p> -->
 
-<h4 style="text-align: center;">
 
-View live demo <s>[here](https://soft-mermaid-23f7cd.netlify.app/)</s> of my Solution | Link to [store.figma.com](https://store.figma.com/)
 
-</h4>
-#
+## 
+View live demo of my solution <s>[here](https://soft-mermaid-23f7cd.netlify.app/)</s> 
+
+View [store.figma.com](https://store.figma.com/)
+
+##
 
 ![Design preview for the Figma Merch Store  coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
-
- 
 
 ## Table of contents
 
@@ -36,8 +34,7 @@ View live demo <s>[here](https://soft-mermaid-23f7cd.netlify.app/)</s> of my Sol
 
 ### The challenge
 
-
-Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.com/).
+Code a replication of the [Figma Merch Store](https://store.figma.com/), from this [project](https://www.frontendpractice.com/projects/figma) on [Frontend Practice](https://www.frontendpractice.com/)
 
 #### Users should be able to:
 - [ ] Toggle the dropdown search bar by clicking the search icon, allowing them to conveniently search for products.
@@ -55,13 +52,11 @@ Code a pixel perfect replication of the [Figma Merch Store](https://store.figma.
   - [ ] Mobile: `< 900px`
   - [ ] Desktop: `> 900px`
 
- <!-- TO-DO => (styles) accessibility -->
- <!-- TO-DO => unsubscribe() from everything -->
 ### Demo
 View live demo <s>[here](#)</s>
 <!-- <b>Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 ### Screenshots
-<!-- Insert a few screenshots of the project, showcasing its functionality and design. -->
+
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 ## Features
 ### Animations
@@ -304,7 +299,7 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 <!-- - [ ] Recreate the circle with rotating text and hover animation. -->
 ## Custom fonts
 
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
 Custom fonts <i>["Whyte" and "Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</i>. <b>Whyte</b> has smooth and sharp transitions, while <b>Inktrap</b> has curt yet also curvy ink traps at its joints.  
 
@@ -322,17 +317,14 @@ Custom fonts <i>["Whyte" and "Whyte Inktrap"](https://abcdinamo.com/typefaces/wh
 
 - dropdown search bar when the `magnifying-glass` icon is clicked.
 
-
-
-
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
 
 ## Content filtering
 
-- [x] Content filtering
-- [x] Search bar
+<!-- - [x] Content filtering
+- [x] Search bar -->
 
 ## Shopping Cart
 
@@ -438,11 +430,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" />![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)![Node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)<img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=flat-square" alt="Axios Badge" height="28" >![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## Continued development
-- dynamic svgs in hero
+- dynamic `<svg>`'s in hero
 - ininfite loop dragabble sliders and marquee
 ## What I learned
 
-I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great forntend project to practice with.
+I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great project to practice with.
 
 ## Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
@@ -465,9 +457,9 @@ Used Angular's data binding and router params to display the `/product-list` of 
 - During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
 - For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
 ### API Endpoints
-- <b>`/products`</b> - returns a list of `PRODUCTS`
-- <b>`/products/:filter`</b> - returns list of `PRODUCTS` filtered by `tag`
-- <b>`/products/search/:searchTerm`</b> - returns list of `PRODUCTS` filtered by `searchTerm`
+#### <b>`/products`</b> - returns a list of `PRODUCTS`
+#### <b>`/products/:filter`</b> - returns list of `PRODUCTS` filtered by `tag`
+#### <b>`/products/search/:searchTerm`</b> - returns list of `PRODUCTS` filtered by `searchTerm`
 - <b>`/products/featured`</b> - returns list of featured `PRODUCTS`
 - <b>`/product/:productId`</b> - returns a `product` from the `PRODUCT` list by `:productId`
 - <b>`/reviews/:tag`</b> - returns up to 8 random `reviews` and ratings based on `product:tag`

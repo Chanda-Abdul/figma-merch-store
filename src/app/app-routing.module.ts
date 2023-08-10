@@ -18,7 +18,7 @@ const routes: Routes = [
     component: ProductComponent
   },
   {
-    path: "find/:searchTerm",
+    path: "products/:searchTerm",
     component: SearchResultsComponent
   },
   {
@@ -37,10 +37,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: '/'
   },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent
-  // },
+
 ];
 
 @NgModule({

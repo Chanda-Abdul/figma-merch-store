@@ -30,4 +30,5 @@ export class MarqueeDirective implements OnInit {
     })
       .totalProgress(-.7)
   }
+    //TO-DO => add Infinite loop
 }

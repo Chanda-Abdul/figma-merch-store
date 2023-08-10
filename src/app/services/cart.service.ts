@@ -44,10 +44,8 @@ export class CartService {
 
   }
 
-
-
   loadCartCount() {
-
+    this.loadCart();
     let itemCount = this.cartDetails
       .cartItems
       .reduce((acc: any, item: any) => {
@@ -62,7 +60,7 @@ export class CartService {
 
 
   loadCartTotal() {
-
+    this.loadCart();
     let cartTotal = this.cartDetails
       .cartItems
       .reduce((acc: any, item: any) => {
@@ -77,13 +75,10 @@ export class CartService {
 
 
   addItemToCart(addedProduct: any) {
+    this.loadCart();
+
     const itemInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id) > -1;
     const idxCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id);
-
-    const itemsAndSizesFilter = this.cartDetails.cartItems
-      .filter((item: any) => item.id === addedProduct.id)
-      .filter((item: any) => item.variant === addedProduct.variant);
-
     const itemAndSizeInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id && x.variant === addedProduct.variant);
 
     if (!itemInCartCheck) {
@@ -95,17 +90,16 @@ export class CartService {
       /* item is in cart, no variant, overide with new quanity */
       this.cartDetails.cartItems[idxCheck].quantity = addedProduct.quantity;
     }
-    else if (!itemsAndSizesFilter.length) {
-      /* item is in cart but not size, add new item with size and quantity  */
-      this.cartDetails.cartItems.push(addedProduct);
-    }
-    else if (itemAndSizeInCartCheck) {
+    else if (itemAndSizeInCartCheck > -1) {
+      console.log(addedProduct, addedProduct.quantity, itemAndSizeInCartCheck)
       /* item with variant in cart, overide with new quanity */
       this.cartDetails.cartItems[itemAndSizeInCartCheck].quantity = addedProduct.quantity;
     }
-
+    else {
+      /* item is in cart but not size, add new item with size and quantity  */
+      this.cartDetails.cartItems.push(addedProduct);
+    }
     this.saveCart();
-
   }
 
   updateCartItem(increaseOrDecrease: string, product: any): any {

@@ -12,9 +12,9 @@ export class DraggableSliderDirective {
   constructor(private imagesRef: ElementRef) { }
 
   ngAfterViewInit() {
-     gsap.registerPlugin(Draggable);
- this.initializeDragabbleSlider();
-    }
+    gsap.registerPlugin(Draggable);
+    this.initializeDragabbleSlider();
+  }
 
   initializeDragabbleSlider() {
     let content = this.imagesRef.nativeElement;

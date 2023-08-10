@@ -54,7 +54,7 @@ Code a replication of the [Figma Merch Store](https://store.figma.com/), from th
 
 ### Demo
 View live demo <s>[here](#)</s>
-<!-- <b>Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
+<!--Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 ### Screenshots
 
 ![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
@@ -457,15 +457,20 @@ Used Angular's data binding and router params to display the `/product-list` of 
 - During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
 - For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
 ### API Endpoints
-    - <b>`/products`</b>
-    returns a list of `PRODUCTS`
-#### `/products/:filter`
-returns list of `PRODUCTS` filtered by `tag`
-#### <b>`/products/search/:searchTerm`</b> - returns list of `PRODUCTS` filtered by `searchTerm`
-- <b>`/products/featured`</b> - returns list of featured `PRODUCTS`
-- <b>`/product/:productId`</b> - returns a `product` from the `PRODUCT` list by `:productId`
-- <b>`/reviews/:tag`</b> - returns up to 8 random `reviews` and ratings based on `product:tag`
--  <b>`/rates`</b> - returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
+  #### `/products`
+  returns a list of `PRODUCTS`
+  #### `/products/:filter`
+  returns list of `PRODUCTS` filtered by `tag`
+  #### `/products/search/:searchTerm` 
+  returns list of `PRODUCTS` filtered by `searchTerm`
+  #### `/products/featured`
+  returns list of featured `PRODUCTS`
+  #### `/product/:productId`
+  returns a `product` from the `PRODUCT` list by `:productId`
+  #### `/reviews/:tag`
+  returns up to 8 random `reviews` and ratings based on `product:tag`
+  #### `/rates`
+returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
 
 ## Useful resources
 

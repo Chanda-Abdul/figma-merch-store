@@ -457,8 +457,10 @@ Used Angular's data binding and router params to display the `/product-list` of 
 - During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
 - For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
 ### API Endpoints
-#### <b>`/products`</b> - returns a list of `PRODUCTS`
-#### <b>`/products/:filter`</b> - returns list of `PRODUCTS` filtered by `tag`
+#### `/products`
+returns a list of `PRODUCTS`
+#### `/products/:filter`
+returns list of `PRODUCTS` filtered by `tag`
 #### <b>`/products/search/:searchTerm`</b> - returns list of `PRODUCTS` filtered by `searchTerm`
 - <b>`/products/featured`</b> - returns list of featured `PRODUCTS`
 - <b>`/product/:productId`</b> - returns a `product` from the `PRODUCT` list by `:productId`

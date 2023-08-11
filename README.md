@@ -311,9 +311,17 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
  <tr>
     <td> 
     <img src="src/assets/screens/body-font-small-11.png" width="375"  />
- <img src="src/assets/screens/body-font-xl-4.png" width="375"  />
+
  </td>
     <td><img src="src/assets/screens/display-font-small-1.png" width="375"  />
+</td>
+ </tr>
+ <tr>
+    <td> 
+   
+ <img src="src/assets/screens/body-font-xl-4.png" width="375"  />
+ </td>
+    <td>
 <img src="src/assets/screens/display-font-small-2.png" width="375"  /></td>
  </tr>
 </table>

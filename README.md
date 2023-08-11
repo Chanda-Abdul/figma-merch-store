@@ -304,12 +304,10 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 Custom fonts <i>["Whyte" and "Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</i>. <b>Whyte</b> has smooth and sharp transitions, while <b>Inktrap</b> has curt yet also curvy ink traps at its joints.  
 
 ### Whyte for body text
-![](src/assets/screens/body-font-small-11.png)
-![](src/assets/screens/body-font-xl-4.png)
+ <img src="src/assets/screens/body-font-small-11.png" width="375"  /><img src="src/assets/screens/body-font-xl-4.png" width="375"  />
 
 ### Whyte Inktrap for the display text
-![](src/assets/screens/display-font-small-1.png)
-![](src/assets/screens/display-font-small-2.png)
+<img src="src/assets/screens/display-font-small-1.png" width="375"  /><img src="src/assets/screens/display-font-small-2.png" width="375"  />
 
 ## Dropdown search bar
 
@@ -407,11 +405,11 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
     ```
 ### Random color generation 
- ![brand-colors](/src/assets/screens/paletteZen.png)
-
+ <img src="/src/assets/screens/paletteZen.png" width="100%"  alt="brand-colors"/>
+ 
 Upon rendering, one of the brand's colors is randomly chosen as the `background-color` for the `/footer` component. A logo is also selected at random, ensuring that it differs in color from the background. Each time a re-render occurs, a fresh combination is generated.
 
- <img src="/src/assets/screens/footer.gif" width="768"  />
+ <img src="/src/assets/screens/footer.gif" width="100%"  />
  <!-- reviews -->
  <!-- size-chart -->
 

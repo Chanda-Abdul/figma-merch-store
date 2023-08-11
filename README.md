@@ -409,6 +409,12 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 ### Random color generation 
  ![brand-colors](/src/assets/screens/paletteZen.png)
 
+Upon rendering, one of the brand's colors is randomly chosen as the `background-color` for the `/footer` component. A logo is also selected at random, ensuring that it differs in color from the background. Each time a re-render occurs, a fresh combination is generated.
+
+ <img src="/src/assets/screens/footer.gif" width="768"  />
+ <!-- reviews -->
+ <!-- size-chart -->
+
 ##  User Reviews/Ratings Component
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 

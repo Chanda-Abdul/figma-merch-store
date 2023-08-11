@@ -12,7 +12,7 @@ export interface Product {
   link?: string;
   description: string;
   features?: string[];
-  tags?: string[];
+  tags: string[];
   variants?: any;
   sizeChart?: any
 }

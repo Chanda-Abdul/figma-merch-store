@@ -36,7 +36,7 @@ View [store.figma.com](https://store.figma.com/)
 
 Code a replication of the [Figma Merch Store](https://store.figma.com/), from this [project](https://www.frontendpractice.com/projects/figma) on [Frontend Practice](https://www.frontendpractice.com/)
 
-#### Users should be able to:
+### Users should be able to:
 - [ ] Toggle the dropdown search bar by clicking the search icon, allowing them to conveniently search for products.
 - [ ] Content filtering
 - [ ] See hover states for all interactive elements on the page, 

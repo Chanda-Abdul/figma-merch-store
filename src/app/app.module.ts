@@ -29,6 +29,7 @@ import { MarqueeDirective } from './directives/marquee.directive';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 import { SizeChartComponent } from './component/size-chart/size-chart.component';
 import { IdleScreenSnowfallDirective } from './directives/idle-screen-snowfall.directive';
+import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { IdleScreenSnowfallDirective } from './directives/idle-screen-snowfall.d
     MarqueeDirective,
     AppearOnScrollDirective,
     SizeChartComponent,
-    IdleScreenSnowfallDirective],
+    IdleScreenSnowfallDirective,
+    FilterByCategoryPipe],
   imports: [
     BrowserModule,
     FormsModule,

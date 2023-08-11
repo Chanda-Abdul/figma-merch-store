@@ -17,18 +17,17 @@ export class MarqueeDirective implements OnInit {
     let content = this.elRef.nativeElement.childNodes;
 
     gsap.from(content, {
-      x: -this.elRef.nativeElement.offsetWidth,
+      x: this.elRef.nativeElement.offsetWidth / 100,
       //To-Do => add infinite repeat
       repeat: -1,
-      duration: 15,
-      ease: 'linear'
+      duration: 9,
+      ease: 'linear',
     })
 
     gsap.to(content, {
-      x: this.elRef.nativeElement.offsetWidth,
+      x: -this.elRef.nativeElement.offsetWidth * 4,
 
     })
       .totalProgress(-.7)
   }
-    //TO-DO => add Infinite loop
 }

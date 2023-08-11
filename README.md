@@ -301,15 +301,23 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
 <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
-Custom fonts <i>["Whyte" and "Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</i>. <b>Whyte</b> has smooth and sharp transitions, while <b>Inktrap</b> has curt yet also curvy ink traps at its joints.  
-
-### Whyte for body text
- <img src="src/assets/screens/body-font-small-11.png" width="375"  />
+Custom fonts <i>["Whyte"](https://abcdinamo.com/typefaces/whyte)</i> and  <i>["Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</i>. <b>Whyte</b> has smooth and sharp transitions, while <b>Whyte Inktrap</b> has curt yet also curvy ink traps at its joints.  
+<table style="'border:none:'">
+ <tr>
+    <td><b >Whyte </b><br> body font</td>
+    <td><b >Whyte Inktrap </b><br>display font</td>
+ </tr>
+ <tr>
+    <td> 
+    <img src="src/assets/screens/body-font-small-11.png" width="375"  />
  <img src="src/assets/screens/body-font-xl-4.png" width="375"  />
+ </td>
+    <td><img src="src/assets/screens/display-font-small-1.png" width="375"  />
+<img src="src/assets/screens/display-font-small-2.png" width="375"  /></td>
+ </tr>
+</table>
 
-### Whyte Inktrap for the display text
-<img src="src/assets/screens/display-font-small-1.png" width="375"  />
-<img src="src/assets/screens/display-font-small-2.png" width="375"  />
+
 
 ## Dropdown search bar
 

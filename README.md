@@ -304,10 +304,12 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 Custom fonts <i>["Whyte" and "Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</i>. <b>Whyte</b> has smooth and sharp transitions, while <b>Inktrap</b> has curt yet also curvy ink traps at its joints.  
 
 ### Whyte for body text
- <img src="src/assets/screens/body-font-small-11.png" width="375"  /><img src="src/assets/screens/body-font-xl-4.png" width="375"  />
+ <img src="src/assets/screens/body-font-small-11.png" width="375"  />
+ <img src="src/assets/screens/body-font-xl-4.png" width="375"  />
 
 ### Whyte Inktrap for the display text
-<img src="src/assets/screens/display-font-small-1.png" width="375"  /><img src="src/assets/screens/display-font-small-2.png" width="375"  />
+<img src="src/assets/screens/display-font-small-1.png" width="375"  />
+<img src="src/assets/screens/display-font-small-2.png" width="375"  />
 
 ## Dropdown search bar
 

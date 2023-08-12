@@ -34,7 +34,7 @@ View [store.figma.com](https://store.figma.com/)
 
 ### The challenge
 
-Code a replication of the [Figma Merch Store](https://store.figma.com/), from this [project](https://www.frontendpractice.com/projects/figma) on [Frontend Practice](https://www.frontendpractice.com/)
+Code a replication of the [Figma Merch Store](https://store.figma.com/) site, from this [frontend-practice](https://www.frontendpractice.com/) [project](https://www.frontendpractice.com/projects/figma).
 
 ### Users should be able to:
 - [ ] Toggle the dropdown search bar by clicking the search icon, allowing them to conveniently search for products.
@@ -46,7 +46,7 @@ Code a replication of the [Figma Merch Store](https://store.figma.com/), from th
 - [x] Add, remove, and update products to their shopping cart, ensuring a convenient shopping experience and enabling them to review their selections before finalizing a purchase
 - [ ] Navigate through a smooth and streamlined checkout process, ensuring efficient completion of their purchase.
 - [x] Select a country and have the currency automatically update, ensuring accurate pricing information aligned with their chosen location.
-- [ ] View and interact with all animated elements on the page
+- [x] View and interact with all animated elements on the page
   <!-- - [ ] page elements apear on Scroll, etc -->
 - [ ] View the optimal layout for each page depending on their device's screen size
   - [ ] Mobile: `< 900px`
@@ -78,9 +78,13 @@ View live demo <s>[here](#)</s>
 ## Draggable Slider using GSAP
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-- created a draggable slider for the featured images shown in the hero component using [GreenSock Animations](https://greensock.com/)
+- Created a custom <i>Angular </i>Structural **`@Directive`** to craft an interactive image slider with draggable functionality. The animation was created using **[GreenSock](https://greensock.com/)**'s `Draggable` feature.
 
-- In the **`/hero`** component and **`/product`** component(mobile view), Utilized a custom <i>Angular </i>Structural **`@Directive`** to create a Draggable Image Slider animation.  **[GreenSock](https://greensock.com/)** `Draggable` was used to create the animation.
+
+- In the **`/hero`** component 
+<!-- insert img -->
+- In the **`/product`** component (mobile view)
+<!-- insert img -->
 
 - **`draggable-slider.directive.ts`**
   ```ts
@@ -162,8 +166,8 @@ View live demo <s>[here](#)</s>
 
  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-card`**'s default cover image to a pattern/image on **`:hover`**, using <i>CSS animations</i>, opacity and positioning.
-
+- In the **`/product-list`** component, a custom **`@Directive`** was created to swap **`/product-card`**'s default cover image to a pattern/image on **`:hover`**, using <i>CSS animations</i>, opacity and positioning.
+<!-- insert img -->
 - **`hover-img-swap.directive.ts`**
   ```ts
       @Directive({
@@ -258,7 +262,7 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 
  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-- In the **`/footer`** component, Utilized a custom <i>Angular </i>Structural **`@Directive`** to create a scrolling **`<marquee>`** animation of text and **`<svg>`**'s, with **[GreenSock](https://greensock.com/)** to create the animation.
+- In the **`/footer`**  component, I created a custom re-useable, <i>Angular </i>Structural **`@Directive`**, to craft a scrolling **`<marquee>`**  animation featuring both text and **`<svg>`** elements. This animation was achieved using **[GreenSock](https://greensock.com/)** for seamless and dynamic motion.
 
 <img src="/src/assets/screens/marquee-bio.gif" width="100%" alt="marquee"/>
 <img src="/src/assets/screens/marquee-lilac.gif" width="100%" alt="marquee"/>
@@ -341,7 +345,8 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
 - dropdown search bar when the `magnifying-glass` icon is clicked.
-
+<!-- - [x] Search bar --> 
+<!-- insert img -->
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
@@ -349,8 +354,8 @@ In **`/product-list`**, Utilized a custom **`@Directive`** to swap **`/product-c
 ## Content filtering
 
 <!-- - [x] Content filtering
-- [x] Search bar -->
 
+<!-- insert img -->
 ## Shopping Cart
 
 
@@ -359,14 +364,14 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 
-## Custom currency pipe 
+## Custom currency `@Pipe`
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
-- Developed a custom Angular pipe for currency conversion, to update prices based on the selected country. 
+- Developed a custom Angular **`@Pipe`** for currency conversion, to update product prices based on the selected country. 
 - Utilized the [currencybeacon API](https://currencybeacon.com/api-documentation) for most current exchange rates. 
-- The default currency is USD
+- The default currency is <i>**USD**</i>
 - Country can be selected by using the dropdown on the navigation menu. 
-- The pipe converts currency amounts into GBP (British Pound), JPY (Japanese Yen), EUR (Euro), or CAD (Canadian Dollar), providing users with accurate and up-to-date pricing information in their preferred currency.
+- The **`@Pipe`** converts currency amounts into <i>GBP (British Pound)</i>, <i>JPY (Japanese Yen</i>), <i>EUR (Euro)</i>, or <i>CAD (Canadian Dollar)</i>, providing users with accurate and up-to-date pricing information in their preferred currency.
 
 - **[`currency-conversion.pipe.ts`](/src/app/pipes/currency-conversion.pipe.ts)**
 
@@ -418,7 +423,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
     ```
 
-- **`pipe`** in the component template
+- **`@Pipe`** in the component template
     ```html
         ...
             <p class="product-list__product--price">
@@ -432,7 +437,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
     ```
 ### Random color generation 
- <img src="/src/assets/screens/paletteZen.png" width="100%"  alt="brand-colors"/>
+ <img src="/src/assets/screens/brandColors.png" width="100%"  alt="brand-colors"/>
  
 Upon rendering, one of the brand's colors is randomly chosen as the `background-color` for the `/footer` component. A logo is also selected at random, ensuring that it differs in color from the background. Each time a re-render occurs, a fresh combination is generated.
 
@@ -469,9 +474,10 @@ I enjoyed working on this project it was a nice balance of styling requirements 
 
 ## Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
-## Custom `@Pipe`
+## Custom `@Pipe`'s
 
-- Developed a custom Angular [pipe for currency conversion](#custom-currency-pipe), to update prices based on the selected country. 
+- Developed a custom Angular [`@Pipe` for currency conversion](#custom-currency-pipe), to update prices based on the selected country. 
+- Developed a custom Angular [`@Pipe` ](#),to filter `/product-list` by category(tag) .
 ## Angular `@Directive`
 - Implemented custom structural directives to enable reusable and scalable animations in the application. 
 - These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and [draggable image slider](#draggable-slider-using-gsap) components. 
@@ -484,23 +490,24 @@ Used Angular's data binding and router params to display the `/product-list` of 
 - Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. 
 - Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
 ## JSON Proxy server to store and retrieve data
+During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which could be substituted with an express/node server and a database at a later date.
 
-- During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which can be substituted with an express/node server and a database at a later date.
-- For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>,  hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
+## API
+For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
 ### API Endpoints
-  #### `/products`
-  returns a list of `PRODUCTS`
-  #### `/products/:filter`
-  returns list of `PRODUCTS` filtered by `tag`
-  #### `/products/search/:searchTerm` 
-  returns list of `PRODUCTS` filtered by `searchTerm`
-  #### `/products/featured`
-  returns list of featured `PRODUCTS`
-  #### `/product/:productId`
-  returns a `product` from the `PRODUCT` list by `:productId`
-  #### `/reviews/:tag`
-  returns up to 8 random `reviews` and ratings based on `product:tag`
-  #### `/rates`
+#### `/products`
+returns a list of `PRODUCTS`
+#### `/products/:filter`
+returns list of `PRODUCTS` filtered by `tag`
+#### `/products/search/:searchTerm` 
+returns list of `PRODUCTS` filtered by `searchTerm`
+#### `/products/featured`
+returns list of featured `PRODUCTS`
+#### `/product/:productId`
+returns a `product` from the `PRODUCT` list by `:productId`
+#### `/reviews/:tag`
+returns up to 8 random `reviews` and ratings based on `product:tag`
+#### `/rates`
 returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
 
 ## Useful resources

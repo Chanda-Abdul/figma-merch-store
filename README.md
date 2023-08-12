@@ -437,7 +437,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
     ```
 ### Random color generation 
- <img src="/src/assets/screens/brandColors.png" width="100%"  alt="brand-colors"/>
+ <img src="/src/assets/screens/brandColors.png" alt="brand-colors"/>
  
 Upon rendering, one of the brand's colors is randomly chosen as the `background-color` for the `/footer` component. A logo is also selected at random, ensuring that it differs in color from the background. Each time a re-render occurs, a fresh combination is generated.
 

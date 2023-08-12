@@ -46,5 +46,4 @@ environment.ts
 
 /src/app/component/*
 /src/styles/*
-/src/assets/screens/*
 /server/data/*

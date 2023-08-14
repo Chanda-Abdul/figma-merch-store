@@ -37,8 +37,8 @@ View [store.figma.com](https://store.figma.com/)
 Code a replication of the [Figma Merch Store](https://store.figma.com/) site, from this [frontend-practice](https://www.frontendpractice.com/) [project](https://www.frontendpractice.com/projects/figma).
 
 ### Users should be able to:
-- [ ] Toggle the dropdown search bar by clicking the search icon, allowing them to conveniently search for products.
-- [ ] Content filtering
+- [x] Toggle the dropdown search bar by clicking the search icon, allowing them to conveniently search for products.
+- [x] Filter the list of products by category.
 - [ ] See hover states for all interactive elements on the page, 
   <!-- - [x] Product photo swap images on hover, 
   - [ ] Recreate the circle with rotating text and hover animation. -->
@@ -347,10 +347,30 @@ View live demo <s>[here](#)</s>
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
 
 ## Content filtering
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-<!-- - [x] Content filtering
+- Within  the `/call-to-action` users are able select **"LAYERS"** or **"COMPONENTS"** to `/product-list` by category.
+- Products are filtered through a custom Angular **`@Pipe`** . 
+- **`filer-by-category.pipe.ts`**
 
-<!-- insert img -->
+```ts
+    ...
+
+      PipeTransform {
+
+        transform(products: Product[], category?: string) {
+          if (category) {
+            return products.filter(product => product.tags[0] === category);
+
+          } else {
+            return products
+          }
+        }
+      }
+
+```
+
+<!-- insert filter img -->
 ## Shopping Cart
 
 

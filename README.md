@@ -345,32 +345,6 @@ View live demo <s>[here](#)</s>
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
-
-## Content filtering
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
-
-- Within  the `/call-to-action` users are able select **"LAYERS"** or **"COMPONENTS"** to `/product-list` by category.
-- Products are filtered through a custom Angular **`@Pipe`** . 
-- **`filer-by-category.pipe.ts`**
-
-```ts
-    ...
-
-      PipeTransform {
-
-        transform(products: Product[], category?: string) {
-          if (category) {
-            return products.filter(product => product.tags[0] === category);
-
-          } else {
-            return products
-          }
-        }
-      }
-
-```
-
-<!-- insert filter img -->
 ## Shopping Cart
 
 
@@ -452,6 +426,33 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
     ```
 
+
+## Content filtering
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
+
+- Within  the `/call-to-action` users are able select **"LAYERS"** or **"COMPONENTS"** to filter `/product-list` by category.
+- Products are filtered through a custom Angular **`@Pipe`** . 
+- **`filer-by-category.pipe.ts`**
+
+  ```ts
+      ...
+
+        PipeTransform {
+
+          transform(products: Product[], category?: string) {
+            if (category) {
+              return products.filter(product => product.tags[0] === category);
+
+            } else {
+              return products
+            }
+          }
+        }
+
+  ```
+
+<!-- insert filter img -->
+
 ## Random color generation
 <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
@@ -510,6 +511,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
 <!-- ## Size Chart Dynamic Component (Bonus) -->
 # My Process
+I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great project to practice with.
 ## Built with
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="28" />![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />![BEM](https://img.shields.io/static/v1?style=for-the-badge&message=BEM&color=000000&logo=BEM&logoColor=FFFFFF&label=)![Node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)<img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=flat-square" alt="Axios Badge" height="28" >![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="28" /><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="28" />![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
@@ -518,45 +520,41 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 - ininfite loop dragabble sliders and marquee
 ## What I learned
 
-I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great project to practice with.
-
-## Angular routing
+### GSAP
+### Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
-## Custom `@Pipe`'s
+### Custom `@Pipe`'s
 
 - Developed a custom Angular [`@Pipe` for currency conversion](#custom-currency-pipe), to update prices based on the selected country. 
-- Developed a custom Angular [`@Pipe` ](#),to filter `/product-list` by category(tag) .
-## Angular `@Directive`
+- Developed a custom Angular [`@Pipe`](#content-filtering)to filter `/product-list` by category(tag) .
+### Angular `@Directive`
 - Implemented custom structural directives to enable reusable and scalable animations in the application. 
 - These directives were utilized in the [footer marquee](#marquee-animation), [product hover image swap](#swap-image-on-hover), and [draggable image slider](#draggable-slider-using-gsap) components. 
 - By encapsulating animation logic within directives, I was able to achieve modularity while reducing code duplication. 
-## Angular in-memory-web-api 
+### Angular in-memory-web-api 
 
-## Display products with data binding
+### Display products with data binding
 Used Angular's data binding and router params to display the `/product-list` of `/product-card`'s which route to each `/product` detail pages.  
-## Stateless Observable Service using RxJs and Angular Services
+### Stateless Observable Service using RxJs and Angular Services
 - Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. 
 - Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
-## JSON Proxy server to store and retrieve data
+### JSON Proxy server to store and retrieve data
 During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which could be substituted with an express/node server and a database at a later date.
-
-## API
-For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and accessed the API with <b>[RapidAPI](https://rapidapi.com/)</b>.
-### API Endpoints
-#### `/products`
-returns a list of `PRODUCTS`
-#### `/products/:filter`
-returns list of `PRODUCTS` filtered by `tag`
-#### `/products/search/:searchTerm` 
-returns list of `PRODUCTS` filtered by `searchTerm`
-#### `/products/featured`
-returns list of featured `PRODUCTS`
-#### `/product/:productId`
-returns a `product` from the `PRODUCT` list by `:productId`
-#### `/reviews/:tag`
-returns up to 8 random `reviews` and ratings based on `product:tag`
-#### `/rates`
-returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
+### API Integration
+For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and integrated through <b>[RapidAPI](https://rapidapi.com/)</b>.
+#### API Endpoints
+  ##### `/products`
+  returns a list of `PRODUCTS`
+  ##### `/products/search/:searchTerm` 
+  returns list of `PRODUCTS` filtered by `searchTerm`
+  ##### `/products/featured`
+  returns list of featured `PRODUCTS`
+  ##### `/product/:productId`
+  returns a `product` from the `PRODUCT` list by `:productId`
+  ##### `/reviews/:tag`
+  returns up to 8 random `reviews` and ratings based on `product:tag`
+  ##### `/rates`
+  returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
 
 ## Useful resources
 

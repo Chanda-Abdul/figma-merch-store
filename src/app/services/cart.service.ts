@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Cart, CartItem } from '../model/cart.model';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class CartService {
   private cartItemCount = new BehaviorSubject(0);
   currentCartItemCount = this.cartItemCount.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   loadCart(): Observable<CartItem[]> | any {
     if (localStorage['cart_contents'] === undefined) {
@@ -45,7 +44,6 @@ export class CartService {
   }
 
   loadCartCount() {
-    this.loadCart();
     let itemCount = this.cartDetails
       .cartItems
       .reduce((acc: any, item: any) => {
@@ -60,7 +58,6 @@ export class CartService {
 
 
   loadCartTotal() {
-    this.loadCart();
     let cartTotal = this.cartDetails
       .cartItems
       .reduce((acc: any, item: any) => {
@@ -75,8 +72,6 @@ export class CartService {
 
 
   addItemToCart(addedProduct: any) {
-    this.loadCart();
-
     const itemInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id) > -1;
     const idxCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id);
     const itemAndSizeInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id && x.variant === addedProduct.variant);
@@ -117,7 +112,6 @@ export class CartService {
     }
     else {
       return null
-      // TO-DO => add error message 
     }
   }
 
@@ -139,5 +133,6 @@ export class CartService {
 
   emptyCart() {
     localStorage.clear();
+    this.loadCart();
   }
 }

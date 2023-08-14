@@ -5,14 +5,16 @@ import { Product } from '../model/product.model';
   name: 'filterByCategory',
   pure: false,
 })
+
 export class FilterByCategoryPipe implements PipeTransform {
 
+  transform(products: Product[], category?: string) {
+    if (category) {
+      return products.filter(product => product.tags[0] === category);
 
-  transform(products: Product[], tag:string) {
-
-      console.log('Called transform()');
-
-      return products.filter(product => product.tags[0] === tag);
+    } else {
+      return products
+    }
   }
 
 }

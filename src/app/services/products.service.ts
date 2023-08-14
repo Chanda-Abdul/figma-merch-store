@@ -79,20 +79,8 @@ export class ProductsService {
   }
 
   searchProducts(searchTerm: string): Observable<Product[]> {
-
-    return this.http.get<any>(`${environment.RAPID_API_BASE_URL}/products/${searchTerm}`, this.httpOptions)
+    return this.http.get<any>(`${environment.RAPID_API_BASE_URL}/products/search/${searchTerm}`, this.httpOptions)
       .pipe(
-        tap(val => console.log(val)),
-        shareReplay()
-      )
-  }
-
-  filterProducts(filterTerm: string): Observable<Product[]> {
-
-    return this.http.get<any>(`${environment.RAPID_API_BASE_URL}/products/${filterTerm}`, this.httpOptions)
-      .pipe(
-        map(res => res),
-        tap(val => console.log(val)),
         shareReplay()
       )
   }

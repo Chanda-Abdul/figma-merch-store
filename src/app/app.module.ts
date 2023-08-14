@@ -60,6 +60,7 @@ import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
     SizeChartComponent,
     IdleScreenSnowfallDirective,
     FilterByCategoryPipe],
+    
   imports: [
     BrowserModule,
     FormsModule,

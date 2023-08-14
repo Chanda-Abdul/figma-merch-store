@@ -13,7 +13,7 @@ export class ReviewsService {
 
   constructor(private http: HttpClient) { }
 
-  getRandomReviews(): Observable<Review[]> {
+  getRandomReviews(reviewCategory?: string): Observable<Review[]> {
     let httpOptions = {
       headers: new HttpHeaders({
         'X-RapidAPI-Key': environment.RAPID_API_KEY,
@@ -21,7 +21,7 @@ export class ReviewsService {
       })
     }
 
-    return this.http.get<any>(`${environment.RAPID_API_BASE_URL}/reviews`, httpOptions)
+    return this.http.get<any>(`${environment.RAPID_API_BASE_URL}/reviews/${reviewCategory}`, httpOptions)
       .pipe(
         map(res => res),
         shareReplay(),

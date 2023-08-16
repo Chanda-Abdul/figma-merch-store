@@ -83,12 +83,12 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 
 - In the **`/hero`** component 
 
-<img src="/src/assets/screens/herodrag.gif" width="420" alt="dragabble"/>
+    <img src="/src/assets/screens/herodrag.gif" width="420" alt="dragabble"/>
 
 
 - In the **`/product`** component (mobile view)
 
-<img src="/src/assets/screens/productdrag.gif" width="420" alt="dragabble"/>
+    <img src="/src/assets/screens/productdrag.gif" width="420" alt="dragabble"/>
 
 - **`draggable-slider.directive.ts`**
   ```ts
@@ -172,7 +172,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 
 - In the **`/product-list`** component, a custom **`@Directive`** was created to swap **`/product-card`**'s default cover image to a pattern/image on **`:hover`**, using <i>CSS animations</i>, opacity and positioning.
 
-<img src="/src/assets/screens/imagehoverswap.gif" width="420" alt="hover swap"/>
+    <img src="/src/assets/screens/imagehoverswap.gif" width="420" alt="hover swap"/>
 
 - **`hover-img-swap.directive.ts`**
   ```ts
@@ -308,7 +308,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 
 <i>**If anyone knows how to make this marquee an infinite loop please let me know**</i> 
 
-##  Circle `<svg>` with rotating text and hover animation
+<!-- ##  Circle `<svg>` with rotating text and hover animation -->
 <!-- TO-DO =>  (animations)  /HOME COMPONENT -->
 
 <!-- - [ ] Recreate the circle with rotating text and hover animation. -->
@@ -346,7 +346,8 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
 - dropdown search bar when the `magnifying-glass` icon is clicked.
-<!-- insert img Search bar --> 
+<br>
+    <img src="/src/assets/screens/searchdropdown.gif"  alt="marquee"/>
 
 <!-- TO-DO => (animations) (functionality) Add Chaotic sticker Sprinkle -->
 

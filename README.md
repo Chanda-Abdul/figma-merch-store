@@ -53,7 +53,7 @@ Code a replication of the [Figma Merch Store](https://store.figma.com/) site, fr
   - [ ] Desktop: `> 900px`
 
 ### Demo
-View live demo <s>[here](#)</s>
+View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 <!--Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 ### Screenshots
 
@@ -82,9 +82,13 @@ View live demo <s>[here](#)</s>
 
 
 - In the **`/hero`** component 
-<!-- insert img -->
+
+<img src="/src/assets/screens/herodrag.gif" width="420" alt="dragabble"/>
+
+
 - In the **`/product`** component (mobile view)
-<!-- insert img -->
+
+<img src="/src/assets/screens/productdrag.gif" width="420" alt="dragabble"/>
 
 - **`draggable-slider.directive.ts`**
   ```ts
@@ -167,7 +171,9 @@ View live demo <s>[here](#)</s>
  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" /><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
 - In the **`/product-list`** component, a custom **`@Directive`** was created to swap **`/product-card`**'s default cover image to a pattern/image on **`:hover`**, using <i>CSS animations</i>, opacity and positioning.
-<!-- insert img -->
+
+<img src="/src/assets/screens/imagehoverswap.gif" width="420" alt="hover swap"/>
+
 - **`hover-img-swap.directive.ts`**
   ```ts
       @Directive({

@@ -10,7 +10,7 @@ export interface Product {
   hoverPatternImg?: string;
   hoverProductImg?: string;
   link?: string;
-  description: string;
+  description: string[];
   features?: string[];
   tags: string[];
   variants?: any;

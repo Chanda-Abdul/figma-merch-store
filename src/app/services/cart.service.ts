@@ -5,12 +5,13 @@ import { Cart, CartItem } from '../model/cart.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CartService {
 
   public cartDetails: any;
 
   private cartProducts = new BehaviorSubject([]);
-  currenCartProducts = this.cartProducts.asObservable();
+  currentCartProducts = this.cartProducts.asObservable();
 
   private cartTotal = new BehaviorSubject(0);
   currentCartTotal = this.cartTotal.asObservable();
@@ -27,20 +28,28 @@ export class CartService {
         cartTotal: 0,
         cartItemCount: 0,
       };
-      this.cartDetails.cartTotal = this.loadCartTotal();
-      this.cartDetails.cartItemCount = this.loadCartCount();
-
-      localStorage.setItem('cart_contents', JSON.stringify(this.cartDetails))
     }
 
     else {
-      this.cartDetails = JSON.parse(localStorage.getItem('cart_contents')!) as Cart || {};
-
-      this.loadCartCount();
-      this.loadCartTotal()
+      this.cartDetails = JSON.parse(
+        localStorage
+          .getItem('cart_contents')!) as Cart || {};
     }
+
+    this.saveCart()
+
     this.cartProducts.next(this.cartDetails.cartItems);
 
+  }
+
+
+  saveCart() {
+    this.cartDetails.cartTotal = this.loadCartTotal();
+    this.cartDetails.cartItemCount = this.loadCartCount();
+    localStorage.setItem('cart_contents', JSON.stringify(this.cartDetails));
+
+    this.cartDetails.cartTotal = this.loadCartTotal();
+    this.cartDetails.cartItemCount = this.loadCartCount();
   }
 
   loadCartCount() {
@@ -53,9 +62,9 @@ export class CartService {
     this.cartDetails.cartItemCount = itemCount;
 
     this.cartItemCount.next(itemCount);
+
     return itemCount;
   }
-
 
   loadCartTotal() {
     let cartTotal = this.cartDetails
@@ -67,9 +76,9 @@ export class CartService {
     this.cartDetails.cartTotal = cartTotal;
 
     this.cartTotal.next(cartTotal);
+
     return cartTotal;
   }
-
 
   addItemToCart(addedProduct: any) {
     const itemInCartCheck = this.cartDetails.cartItems.findIndex((x: any) => x.id === addedProduct.id) > -1;
@@ -79,21 +88,23 @@ export class CartService {
     if (!itemInCartCheck) {
       /* add item to cart if not already there */
       this.cartDetails.cartItems.push(addedProduct);
-
     }
+
     else if (itemInCartCheck && !addedProduct.hasOwnProperty('variant')) {
       /* item is in cart, no variant, overide with new quanity */
       this.cartDetails.cartItems[idxCheck].quantity = addedProduct.quantity;
     }
+
     else if (itemAndSizeInCartCheck > -1) {
-      console.log(addedProduct, addedProduct.quantity, itemAndSizeInCartCheck)
       /* item with variant in cart, overide with new quanity */
       this.cartDetails.cartItems[itemAndSizeInCartCheck].quantity = addedProduct.quantity;
     }
+
     else {
       /* item is in cart but not size, add new item with size and quantity  */
       this.cartDetails.cartItems.push(addedProduct);
     }
+
     this.saveCart();
   }
 
@@ -115,8 +126,6 @@ export class CartService {
     }
   }
 
-
-
   removeCartItem(product: any) {
     const idx = this.cartDetails.cartItems.findIndex((x: any) => x.id === product.id && x.variant === product.variant)
 
@@ -124,11 +133,6 @@ export class CartService {
       this.cartDetails.cartItems.splice(idx, 1);
       this.saveCart();
     }
-  }
-
-
-  saveCart() {
-    localStorage.setItem('cart_contents', JSON.stringify(this.cartDetails));
   }
 
   emptyCart() {

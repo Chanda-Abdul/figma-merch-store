@@ -30,6 +30,7 @@ import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive
 import { SizeChartComponent } from './component/size-chart/size-chart.component';
 import { IdleScreenSnowfallDirective } from './directives/idle-screen-snowfall.directive';
 import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
+import { HideShowNavDirective } from './directives/hide-show-nav.directive';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
     AppearOnScrollDirective,
     SizeChartComponent,
     IdleScreenSnowfallDirective,
-    FilterByCategoryPipe],
+    FilterByCategoryPipe,
+    HideShowNavDirective],
     
   imports: [
     BrowserModule,

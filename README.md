@@ -1,15 +1,12 @@
 # Figma Merch Store 
 
 
-This is a solution to the [Figma Merch Store](https://www.frontendpractice.com/projects/figma) challenge on [Frontend Practice](https://www.frontendpractice.com/). 
-
-
-
+This is a solution to the <a target="_blank" rel="noopener" href="https://www.frontendpractice.com/projects/figma">Figma Merch Store"</a>[]() challenge on <a target="_blank" rel="noopener" href="https://www.frontendpractice.com/">Frontend Practice</a>. 
 
 ## 
-View live demo of my solution <s>[here](https://soft-mermaid-23f7cd.netlify.app/)</s> 
+View live demo of my solution <a target="_blank" rel="noopener" href="https://soft-mermaid-23f7cd.netlify.app/">here</a>
 
-View [store.figma.com](https://store.figma.com/)
+View <a target="_blank" rel="noopener" href="https://store.figma.com/">store.figma.com</a>
 
 ##
 
@@ -20,7 +17,7 @@ View [store.figma.com](https://store.figma.com/)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Demo](#demo)
-  - [Screenshots](#screenshots)
+  <!-- - [Screenshots](#screenshots) -->
 - [Features](#features)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -49,15 +46,15 @@ Code a replication of the [Figma Merch Store](https://store.figma.com/) site, fr
 - [x] View and interact with all animated elements on the page
   <!-- - [ ] page elements apear on Scroll, etc -->
 - [ ] View the optimal layout for each page depending on their device's screen size
-  - [ ] Mobile: `< 900px`
-  - [ ] Desktop: `> 900px`
+  - [x] Mobile: `< 900px`
+  - [x] Desktop: `> 900px`
 
 ### Demo
 View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 <!--Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
-### Screenshots
+<!-- ### Screenshots
 
-![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
+![](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90) -->
 ## Features
 ### Animations
   - [Draggable Image Slider](#draggable-slider-using-gsap)
@@ -78,7 +75,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 ## Draggable Slider using GSAP
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-- Created a custom <i>Angular </i>Structural **`@Directive`** to craft an interactive image slider with draggable functionality. The animation was created using **[GreenSock](https://greensock.com/)**'s `Draggable` feature.
+- Created a custom <i>Angular </i>Structural **`@Directive`** to craft an interactive image slider with draggable functionality. The animation was created using **<a target="_blank" rel="noopener" href="https://greensock.com">GreenSock</a>**'s `Draggable` feature.
 
 
 - In the **`/hero`** component 
@@ -267,7 +264,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 
  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-- In the **`/footer`**  component, I created a custom re-useable, <i>Angular </i>Structural **`@Directive`**, to craft a scrolling **`<marquee>`**  animation featuring both text and **`<svg>`** elements. This animation was achieved using **[GreenSock](https://greensock.com/)** for seamless and dynamic motion.
+- In the **`/footer`**  component, I created a custom re-useable, <i>Angular </i>Structural **`@Directive`**, to craft a scrolling **`<marquee>`**  animation featuring both text and **`<svg>`** elements. This animation was achieved using **<a target="_blank" rel="noopener" href="https://greensock.com/">GreenSock</a>** for seamless and dynamic motion.
 
 <img src="/src/assets/screens/marquee-bio.gif" width="100%" alt="marquee"/>
 <img src="/src/assets/screens/marquee-lilac.gif" width="100%" alt="marquee"/>
@@ -316,7 +313,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 
 <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" />
 
-- Custom fonts <i><b>["Whyte"](https://abcdinamo.com/typefaces/whyte)</b></i> and  <i><b>["Whyte Inktrap"](https://abcdinamo.com/typefaces/whyte)</b></i>. 
+- Custom fonts <i><b><a target="_blank" rel="noopener" href="https://abcdinamo.com/typefaces/whyte">"Whyte"</a></b></i> and  <i><b><a target="_blank" rel="noopener" href="https://abcdinamo.com/typefaces/whyte">"Whyte Inktrap"</a></b></i>. 
 - <b>Whyte</b> has smooth and sharp transitions, while <b>Whyte Inktrap</b> has curt yet also curvy ink traps at its joints.  
 <table style="'border:none:'">
  <tr>
@@ -345,7 +342,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-- dropdown search bar when the **<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>** icon  is clicked.
+dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg> icon  is clicked.
 <br>
     <img src="/src/assets/screens/searchdropdown.gif" width="420" alt="marquee"/>
 
@@ -355,8 +352,11 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 ## Shopping Cart
 
 
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
 
+
+<img src='/src/assets/screens/cart.png'  alt='cart-screen'/>
 
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 
@@ -364,10 +364,13 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 - Developed a custom Angular **`@Pipe`** for currency conversion, to update product prices based on the selected country. 
-- Utilized the [currencybeacon API](https://currencybeacon.com/api-documentation) for most current exchange rates. 
+- Utilized the <a target="_blank" rel="noopener" href="https://currencybeacon.com/api-documentation">CurrencyBeacon API</a> for most current exchange rates. 
 - The default currency is <i>**USD**</i>
 - Country can be selected by using the dropdown on the navigation menu. 
 - The **`@Pipe`** converts currency amounts into <i>GBP (British Pound)</i>, <i>JPY (Japanese Yen</i>), <i>EUR (Euro)</i>, or <i>CAD (Canadian Dollar)</i>, providing users with accurate and up-to-date pricing information in their preferred currency.
+
+
+  <img src='/src/assets/screens/currency.gif'  alt='currency'/>
 
 - **[`currency-conversion.pipe.ts`](/src/app/pipes/currency-conversion.pipe.ts)**
 
@@ -439,6 +442,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 
 - Within  the `/call-to-action` users are able select **"LAYERS"** or **"COMPONENTS"** to filter `/product-list` by category.
 - Products are filtered through a custom Angular **`@Pipe`** . 
+<!-- insert .gif -->
 - **`filer-by-category.pipe.ts`**
 
   ```ts
@@ -504,19 +508,20 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 ##  User Reviews/Ratings Component
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-- UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+<!-- - UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
 
 <img src="/src/assets/screens/dribble-ratings-inspo.png" alt="https://dribbble.com/shots/21512658-Reviews-and-ratings" width="375"/>
 
 - and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5) 
 
 <img src="/src/assets/screens/quince-mobile-1.png" alt="quince-mobile-1" width="375"/>
-<img src="/src/assets/screens/quince-mobile-2.png" alt="quince-mobile-2" width="375"/>
+<img src="/src/assets/screens/quince-mobile-2.png" alt="quince-mobile-2" width="375"/> -->
 
-
+<!-- insert .gif -->
 
 
 <!-- ## Size Chart Dynamic Component (Bonus) -->
+<!-- insert .gif -->
 # My Process
 I enjoyed working on this project it was a nice balance of styling requirements and functional requirements great project to practice with.
 ## Built with
@@ -524,10 +529,13 @@ I enjoyed working on this project it was a nice balance of styling requirements 
 
 ## Continued development
 - dynamic `<svg>`'s in hero
-- ininfite loop dragabble sliders and marquee
+- infinite loop dragabble sliders and marquee
+<!-- featured products suggest in product -->
 ## What I learned
 
 ### GSAP
+
+### CSS Grid
 ### Angular routing
 Set up routing: Set up routing so that users can navigate between pages. used `/product/:id` `/product/:name` to route to project page
 ### Custom `@Pipe`'s
@@ -551,18 +559,18 @@ During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve 
 For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and integrated through <b>[RapidAPI](https://rapidapi.com/)</b>.
 #### API Endpoints
   ##### `/products`
-  returns a list of `PRODUCTS`
+  - returns a list of `PRODUCTS`
   ##### `/products/search/:searchTerm` 
-  returns list of `PRODUCTS` filtered by `searchTerm`
+ - returns list of `PRODUCTS` filtered by `searchTerm`
   ##### `/products/featured`
-  returns list of featured `PRODUCTS`
+ - returns list of featured `PRODUCTS`
   ##### `/product/:productId`
-  returns a `product` from the `PRODUCT` list by `:productId`
+ - returns a `product` from the `PRODUCT` list by `:productId`
   ##### `/reviews/:tag`
-  returns up to 8 random `reviews` and ratings based on `product:tag`
+ - returns up to 8 random `reviews` and ratings based on `product:tag`
   ##### `/rates`
-  returns most recent `exchangeRates` from the [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
-
+ - returns most recent `exchangeRates` from the
+<a target="_blank" rel="noopener" href="https://currencybeacon.com/api-documentation">CurrencyBeacon API</a>
 ## Useful resources
 
 <!-- - []() -->
@@ -583,6 +591,10 @@ For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hoste
 
 ### Design Resources & Inspiration
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)
+
+- [Dribble - Reviews-and-ratings](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+
+
 ## Author
 
 - Portfolio - [Chanda Abdul](https://www.Chandabdul.dev)

@@ -45,11 +45,11 @@ Code a replication of the [Figma Merch Store](https://store.figma.com/) site, fr
 - [x] Select a country and have the currency automatically update, ensuring accurate pricing information aligned with their chosen location.
 - [x] View and interact with all animated elements on the page
   <!-- - [ ] page elements apear on Scroll, etc -->
-- [ ] View the optimal layout for each page depending on their device's screen size
+- [x] View the optimal layout for each page depending on their device's screen size
   - [x] Mobile: `< 900px`
   - [x] Desktop: `> 900px`
 
-### Demo
+## Demo
 View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 <!--Solution URL:</b> [here](https://github.com/Chanda-Abdul/Angular-Multi-step-form) | <b>Live Site URL:</b> [here](https://dazzling-crisp-559db7.netlify.app/) -->
 <!-- ### Screenshots
@@ -68,7 +68,7 @@ View live demo [here](https://soft-mermaid-23f7cd.netlify.app/)
 ### Angular/JavaScript
   - [Custom Currency Pipe](#custom-currency-pipe)
   - [Content filtering](#content-filtering)
-  - [Shopping Cart](#cart)
+  - [Shopping Cart](#shopping-cart)
   - [User Reviews/Ratings (Bonus)](#user-reviewsratings-component)
   <!-- - [Size Chart (Bonus)](#) -->
 
@@ -351,12 +351,13 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
 <!-- TO-DO => (styles) #SHOP COMPONENT -->
 ## Shopping Cart
 
-
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
-Added a shopping cart: Implement a shopping cart feature that allows users to add products to their cart and view their cart on the homepage.
+
+Implemented a user-friendly shopping cart. THe shopping cart feature allows users to add products to their cart and view their cart on the homepage for a streamlined shopping experience.
 
 
-<img src='/src/assets/screens/cart.png'  alt='cart-screen'/>
+
+<img src='/src/assets/screens/cart.png'  width="425" alt='cart-screen'/>
 
 <!-- TO-DO => (functionality) (bonus) Implement checkout: Implement a checkout feature that allows users to enter their payment and shipping information and complete their purchase. -->
 
@@ -370,7 +371,7 @@ Added a shopping cart: Implement a shopping cart feature that allows users to ad
 - The **`@Pipe`** converts currency amounts into <i>GBP (British Pound)</i>, <i>JPY (Japanese Yen</i>), <i>EUR (Euro)</i>, or <i>CAD (Canadian Dollar)</i>, providing users with accurate and up-to-date pricing information in their preferred currency.
 
 
-  <img src='/src/assets/screens/currency.gif'  alt='currency'/>
+  <img src='/src/assets/screens/currency.gif' width="425" alt='currency'/>
 
 - **[`currency-conversion.pipe.ts`](/src/app/pipes/currency-conversion.pipe.ts)**
 

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <symbol id="logo-main"
               viewBox="0 0 221 18" >
-             <!-- width="221" height="18" fill="none" -->
+      
 <path d="M5.57377 17.1284H9.10383V3.79781H14.6776V0.871584H0V3.79781H5.57377V17.1284Z" fill="black"/>
 <path d="M16.8686 17.1284H20.3987V10.2309H27.3659V17.1284H30.896V0.871584H27.3659V7.30464H20.3987V0.871584H16.8686V17.1284Z" fill="black"/>
 <path d="M34.8083 17.1284H47.0938V14.2022H38.3384V10.2077H44.9572V7.32787H38.3384V3.79781H47.0938V0.871584H34.8083V17.1284Z" fill="black"/>
@@ -18,7 +18,7 @@
   </symbol>
       <symbol id="logo-arch-sunflower"
               viewBox="0 0 250 273">
-            <!-- width="250" height="273" fill="none"  -->
+       
             <path d="M0 125C0 55.9644 55.9644 0 125 0C194.036 0 250 55.9644 250 125V272.5H0V125Z"
                   fill="#FFC700"></path>
             <path fill-rule="evenodd"
@@ -29,7 +29,7 @@
 
       <symbol id="logo-tetris-sunflower"
               viewBox="0 0 250 275">
-            <!-- width="250" height="275" fill="none"  -->
+
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M200.625 0H0V152.5H49.375V275H250V122.5H200.625V0Z"
@@ -42,7 +42,7 @@
 
       <symbol id="logo-tower-bio"
               viewBox="0 0 250 273">
-            <!-- width="250" height="273"  -->
+
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M193.125 0H56.875V86.25H8.14125e-06L0 272.5L56.875 272.5H193.125L250 272.5L250 86.25H193.125V0Z"
@@ -55,7 +55,7 @@
 
       <symbol id="logo-figure-bio"
               viewBox="0 0 250 274">
-            <!-- width="250" height="274" fill="none" -->
+  
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M50 0C22.3858 0 0 22.3858 0 50V87C0 114.614 22.3858 137 50 137C22.3858 137 0 159.386 0 187V224C0 251.614 22.3858 274 50 274H200C227.614 274 250 251.614 250 224V187C250 159.386 227.614 137 200 137C227.614 137 250 114.614 250 87V50C250 22.3858 227.614 0 200 0H50Z"
@@ -68,7 +68,7 @@
 
       <symbol id="logo-rect-glow"
               viewBox="0 0 252 279">
-            <!-- width="252" height="279"fill=" -->
+
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M126.001 9.85658L1 98.1431L66.1043 144.124L1 190.106L126.001 278.39L251.002 190.106L185.898 144.124L251.002 98.1431L126.001 9.85658Z"
@@ -81,7 +81,7 @@
 
       <symbol id="logo-layer-glow"
               viewBox="0 0 252 279">
-            <!-- width="252" height="279"  fill="none" -->
+
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M126.001 9.85658L1 98.1431L66.1043 144.124L1 190.106L126.001 278.39L251.002 190.106L185.898 144.124L251.002 98.1431L126.001 9.85658Z"
@@ -94,7 +94,7 @@
 
      <symbol id="logo-circle-glow"
               viewBox="0 0 251 273">
-            <!-- width="251" height="273"  fill="none" -->
+  
             <path d="M250.5 136.75C250.5 211.999 194.536 273 125.5 273C56.4644 273 0.5 211.999 0.5 136.75C0.5 61.5012 56.4644 0.5 125.5 0.5C194.536 0.5 250.5 61.5012 250.5 136.75Z"
                   fill="#F24E1E"></path>
             <path fill-rule="evenodd"
@@ -106,7 +106,7 @@
       
       <symbol id="logo-rect-lilac"
               viewBox="0 0 250 273">
-            <!-- width="250" height="273" fill="none" -->
+  
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M125 0H0V273H125H250L250 86L125 86V0Z"
@@ -119,7 +119,7 @@
       
       <symbol id="logo-l-lilac"
               viewBox="0 0 250 273">
-            <!-- width="250" height="273"fill="none"  -->
+ 
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M125 0H0V273H125H250L250 86L125 86V0Z"
@@ -131,7 +131,7 @@
       </symbol>
 
       <symbol id="logo-cross-lilac" viewBox="0 0 250 273">
-            <!-- width="250" height="273" fill="none" -->
+      
             <path fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M218.125 0.5H31.875V43.625H8.14125e-06L0 229.875H31.875V273H218.125V229.875H250L250 43.625H218.125V0.5Z"
@@ -144,7 +144,7 @@
 
       <symbol id="logo-full"
               viewBox="0 0 221 18">
-            <!-- width="221" height="18" fill="none"  -->
+        
             <path d="M5.57377 17.1284H9.10383V3.79781H14.6776V0.871584H0V3.79781H5.57377V17.1284Z"
                   fill="black" />
             <path d="M16.8686 17.1284H20.3987V10.2309H27.3659V17.1284H30.896V0.871584H27.3659V7.30464H20.3987V0.871584H16.8686V17.1284Z"
@@ -174,8 +174,8 @@
       </symbol>
       
       <symbol id="logo-welcome"
-              viewBox="0 0 148 94"a ria-label="The Figma store">
-              <!-- width="148" height="94"fill="none"  -->
+              viewBox="0 0 148 94" aria-label="The Figma store">
+            
                     <path d="M9.34284 27.0341H14.3411V4.38832H23.8377V0.120605H0V4.38832H9.34284V27.0341Z" fill="black"/>
                     <path d="M27.7074 27.0341H32.7056V15.3075H45.3166V27.0341H50.3148V0.120605H45.3166V11.0014H32.7056V0.120605H27.7074V27.0341Z" fill="black"/>
                     <path d="M3.11428 60.0753H8.11251V49.3868H20.1851V45.0806H8.11251V37.4295H23.2994V33.1618H3.11428V60.0753Z" fill="black"/>
@@ -190,6 +190,6 @@
                     <path d="M70.6602 15.2529L70.6602 7.7058L76.7432 7.7058C78.8272 7.7058 80.5167 9.39528 80.5167 11.4794C80.5167 13.5634 78.8272 15.2529 76.7431 15.2529L70.6602 15.2529Z" stroke="#C7B9FF" stroke-width="4"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M75.3123 66.0825H61.4256V79.8303H54.6191C50.7844 79.8303 47.6758 82.939 47.6758 86.7737C47.6758 90.6084 50.7844 93.717 54.6191 93.717H68.3669V93.7169C68.3676 93.7169 68.3683 93.7169 68.369 93.7169C72.2037 93.7169 75.3123 90.6083 75.3123 86.7736V66.0825Z" fill="#0FA958"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8957 38.2035C41.7467 38.2035 44.0579 35.8923 44.0579 33.0412C44.0579 33.0412 44.0579 33.0411 44.0579 33.041H45.3508H52.4798V41.056H47.5056L52.6186 60.0747H39.0339V41.056H39.032V60.0751H25.4473L30.5603 41.0564H25.4473V33.0414H32.7151H33.7335C33.7336 35.8923 36.0447 38.2035 38.8957 38.2035Z" fill="#F24E1E"/>
-               =
+               
   </symbol>
 </svg>

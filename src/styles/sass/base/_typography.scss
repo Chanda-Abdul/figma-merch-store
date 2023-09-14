@@ -1,0 +1,99 @@
+@mixin heading-extra-large {
+  font-family: $font-display;
+  font-weight: $font-weight-display;
+  text-transform: uppercase;
+}
+
+@mixin heading-extra-large-mobile {
+  @include heading-extra-large;
+  font-size: 4.5rem;
+  line-height: 4.4rem;
+
+}
+
+@mixin heading-large {
+  font-family: $font-display;
+  font-weight: $font-weight-display;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+
+}
+
+@mixin heading-large-mobile {
+  @include heading-large;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+
+@mixin heading-medium {
+  font-family: $font-display;
+  font-weight: $font-weight-display;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+
+@mixin heading-medium-mobile {
+  @include heading-medium;
+  font-size: 2.6rem;
+}
+
+@mixin heading-small {
+  font-family: $font-body;
+  font-weight: $font-weight-display;
+  font-size: 2.2rem;
+}
+
+@mixin heading-small-mobile {
+  @include heading-small;
+  font-size: 1.7rem;
+}
+
+@mixin body-text-large {
+  font-family: $font-body;
+  font-weight: $font-weight-default;
+  font-size: 2.6rem;
+}
+
+@mixin body-text-large-mobile {
+  @include body-text-large;
+  font-size: 2.2rem;
+}
+
+
+@mixin body-text-primary {
+  font-family: $font-body;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: 0.025rem;
+}
+
+@mixin body-text-secondary {
+  @include body-text-primary;
+  font-size: 1.4rem;
+}
+
+
+
+@mixin body-text-link-primary {
+  font-weight: $font-weight-default;
+  font-family: $font-body;
+  color: $black-out;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  text-align: left;
+}
+
+
+@mixin body-text-link-secondary {
+  @include body-text-link-primary;
+  font-weight: $font-weight-default;
+  text-decoration-line: none;
+  text-transform: capitalize;
+  font-size: 1.575rem;
+
+  &:hover {
+    text-decoration-line: underline;
+  }
+}

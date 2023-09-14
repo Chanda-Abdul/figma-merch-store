@@ -1,0 +1,94 @@
+$icon-xs-sm: 1.6rem;
+$icon-sm-sm: 3.2rem;
+$icon-md-sm: 5rem;
+$icon-lg-sm: 3.2rem;
+
+svg {
+    width: inherit;
+    height: inherit;
+}
+
+.search {
+    width: 1.8rem;
+    height: 1.9rem;
+}
+
+.logo-main {
+    width: 16rem;
+    height: 1.3rem;
+}
+
+.pin {
+    width: 1.6rem;
+    height: 2rem;
+    stroke: $black-out;
+    stroke-width: 2px;
+    margin: 1rem 0;
+}
+
+.math {
+    width: $icon-xs-sm;
+    height: $icon-xs-sm;
+    stroke-width: 10px;
+}
+
+.feature {
+    stroke: $black-out;
+    stroke-width: 8px;
+}
+
+.action {
+    width: $icon-md-sm;
+    height: $icon-md-sm;
+}
+
+.cta {
+    max-width: 2.4rem;
+    max-height: 2.7rem;
+    fill: transparent;
+}
+
+.symbol {
+    fill: transparent;
+}
+
+.about__svg {
+    width: 65rem;
+    height: 65rem;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    stroke: $black-out;
+    stroke-width: 4px;
+}
+
+.footer-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.footer-logo {
+    width: 25rem;
+    height: 27.9rem;
+}
+
+.xs {
+    width: $icon-xs-sm;
+    height: $icon-xs-sm;
+}
+
+.sm {
+    width: $icon-sm-sm;
+    height: $icon-sm-sm;
+}
+
+.md {
+    width: $icon-md-sm;
+    height: $icon-md-sm;
+}
+
+.lg {
+    width: $icon-lg-sm;
+    height: $icon-lg-sm;
+}
+

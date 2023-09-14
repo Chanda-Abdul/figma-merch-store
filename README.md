@@ -353,9 +353,8 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
 
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-Implemented a user-friendly shopping cart. THe shopping cart feature allows users to add products to their cart and view their cart on the homepage for a streamlined shopping experience.
-
-
+- Implemented a user-friendly shopping cart. 
+- The shopping cart feature allows users to add products to their cart and view their cart on the homepage for a streamlined shopping experience.
 
 <img src='/src/assets/screens/cart.png'  width="425" alt='cart-screen'/>
 

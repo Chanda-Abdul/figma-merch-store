@@ -1,0 +1,50 @@
+// $break-point-extra-large: 75em; //1200px
+// $break-point-large: 68.75em; //1100px
+// $break-point-medium: 53.75em; //860px
+// $break-point-small: 37.5em; //600px
+// $break-point-extra-small: 31.25em; //500px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+
+}
+
+body {
+  @include body-text-primary;
+  color: $black-out;
+
+  /* hide scrollbars */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+
+}
+
+button,
+a {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  @include body-text-link-primary;
+}

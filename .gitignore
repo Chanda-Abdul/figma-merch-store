@@ -45,5 +45,5 @@ environment.ts
 .env
 
 /src/app/component/*
-/src/styles/*
+/src/styles/main.scss
 /server/data/*

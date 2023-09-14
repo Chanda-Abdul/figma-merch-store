@@ -1,0 +1,40 @@
+$black-out: rgb(0, 0, 0);
+$polar-bear-in-a-blizzard: hsl(0, 0%, 100%);
+$fiery-glow: hsl(14, 89%, 53%);
+$bio-punk: hsl(148, 84%, 36%);
+$sunflower: hsl(47, 100%, 50%);
+$placid-lilac: hsl(252, 100%, 86%);
+
+/* generate random color variable for stars and review styling */
+$bgColors: (
+    $bio-punk,
+    $placid-lilac,
+    $fiery-glow,
+    $sunflower
+);
+
+$key: random(length($bgColors));
+$nth: nth($bgColors, $key );
+
+$random: $nth !default;
+
+
+$font-size-default: 1.6rem;
+$font-size-secondary: 1.4rem;
+$font-weight-default: 400;
+$font-weight-heading-default: 700;
+
+$border-default: 2px solid $black-out;
+$border-thick: 4px solid $black-out;
+$border-radius-default: 3rem;
+$border-radius-link: 3.5rem;
+$border-radius-medium: 4rem;
+$border-radius-large: 12rem;
+$border-radius-circle: 50%;
+
+$default-gutter-mobile: 2rem;
+$default-gutter-vertical: 1.5rem;
+$default-gutter-horizontal: 2rem;
+$container-gutter-vertical: 3rem;
+$container-gutter-horizontal: 2rem;
+$page-gutter-mobile: 12rem;

@@ -3,12 +3,11 @@
 
 This is a solution to the <a target="_blank" rel="noopener" href="https://www.frontendpractice.com/projects/figma">Figma Merch Store"</a>[]() challenge on <a target="_blank" rel="noopener" href="https://www.frontendpractice.com/">Frontend Practice</a>. 
 
-## 
-View live demo of my solution <a target="_blank" rel="noopener" href="https://soft-mermaid-23f7cd.netlify.app/">here</a>
 
-View <a target="_blank" rel="noopener" href="https://store.figma.com/">store.figma.com</a>
+- View live demo of my solution <a target="_blank" rel="noopener" href="https://soft-mermaid-23f7cd.netlify.app/">here</a>
 
-##
+- View <a target="_blank" rel="noopener" href="https://store.figma.com/">store.figma.com</a>
+
 
 ![Design preview for the Figma Merch Store  coding challenge](https://www.frontendpractice.com/_next/image?url=%2Ffullsize%2FC2-figma.png&w=1200&q=90)
 
@@ -17,7 +16,6 @@ View <a target="_blank" rel="noopener" href="https://store.figma.com/">store.fig
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Demo](#demo)
-  <!-- - [Screenshots](#screenshots) -->
 - [Features](#features)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -443,11 +441,10 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
 - Within  the `/call-to-action` users are able select **"LAYERS"** or **"COMPONENTS"** to filter `/product-list` by category.
 - Products are filtered through a custom Angular **`@Pipe`** . 
 <!-- insert .gif -->
-- **`filer-by-category.pipe.ts`**
+- [**`filter-by-category.pipe.ts`**](/src/app/pipes/filter-by-category.pipe.ts)
 
   ```ts
       ...
-
         PipeTransform {
 
           transform(products: Product[], category?: string) {
@@ -459,7 +456,6 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
             }
           }
         }
-
   ```
 
 <!-- insert filter img -->
@@ -502,23 +498,88 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
           border: 2px solid rgba($random, .25);
           }
     ```
- <!-- reviews -->
+
  <!-- size-chart -->
 
 ##  User Reviews/Ratings Component
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-<!-- - UI Inspo from [Dribble](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
+- Upon the initial render of `/product` component, up to 8 random "user reviews" and star ratings are generated based on `product:tag`. 
 
-<img src="/src/assets/screens/dribble-ratings-inspo.png" alt="https://dribbble.com/shots/21512658-Reviews-and-ratings" width="375"/>
+```ts
+    export class ReviewComponent implements OnInit {
+      ...
+      reviews$!: Observable<Review[]>;
+      averageRating: number = 0;
+      averageRatingStars: string = Array(5).fill(`<span>&#9734;</span>`).join(``);
+      ...
+      ngOnInit(): void {
+        this.loadReviews();
+      }
 
-- and [Quince](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5) 
+      loadReviews() {
+        const reviews$ = this.reviewsService. getRandomReviews(this.reviewCategory).pipe(
+            tap(ratings => {
+              this.updateAverages(ratings);
+            })
+          );
 
-<img src="/src/assets/screens/quince-mobile-1.png" alt="quince-mobile-1" width="375"/>
-<img src="/src/assets/screens/quince-mobile-2.png" alt="quince-mobile-2" width="375"/> -->
+        this.reviews$ = reviews$;
+      }
 
-<!-- insert .gif -->
+      updateAverages(ratings: any) {
+        let average = 0;
 
+        ratings.forEach((rating: any) => { average += rating.rating });
+
+        average /= ratings.length;
+
+        this.averageRating = average;
+
+        average = Math.round(average);
+
+        this.averageRatingStars = this.getStars(average);
+
+        const averages = {
+          numberOfReviews: ratings.length,
+          averageRating: this.averageRating,
+          averageRatingStars: this.averageRatingStars
+        }
+
+        this.newAverages.emit(averages);
+      }
+
+
+      getStars(starRating: number): string {
+        return Array(starRating).fill(`<span>&#9733;</span>`)
+          .concat(Array(5 - starRating).fill(`<span>&#9734;</span>`))
+          .join(``);
+      }
+    }
+```
+
+- uses the `/reviews/:tag` endpoint
+  ```ts
+      app.get('/reviews/:tag', (req, res) => {
+    
+      const tag = req.params.tag;
+
+      const reviewOptions = [
+        ...REVIEWS.filter((review) => review.type == tag),
+        ...REVIEWS.filter((review) => review.type == 'generic'),
+      ];
+    
+      let randomRatings = reviewOptions
+        .sort(() => 0.5 - Math.random())
+        .slice(0, Math.floor(Math.random() * reviewOptions.length));
+
+      return res.status(200).json(randomRatings.slice(0, 8));
+    });
+  ```
+
+-  `averageRating` and `averageRatingStars` are computed from the `reviews$`. Afterward, the interface displays `averageRatingStars`,  alongside a numerical `averageRating` and the total count of "user reviews".
+
+ <img src="/src/assets/screens/reviews.png" width="414"  />
 
 <!-- ## Size Chart Dynamic Component (Bonus) -->
 <!-- insert .gif -->
@@ -571,6 +632,7 @@ For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hoste
   ##### `/rates`
  - returns most recent `exchangeRates` from the
 <a target="_blank" rel="noopener" href="https://currencybeacon.com/api-documentation">CurrencyBeacon API</a>
+
 ## Useful resources
 
 <!-- - []() -->
@@ -590,6 +652,7 @@ For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hoste
 - [Build your own API](https://youtu.be/GK4Pl-GmPHk) - Youtube video that quickly shows you how to make a profitable API and sell it on the RapidAPI Hub.
 
 ### Design Resources & Inspiration
+- [noize.com - View Product](https://noize.com/products/womens-organic-activewear-square-neck-top)
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)
 
 - [Dribble - Reviews-and-ratings](https://dribbble.com/shots/21512658-Reviews-and-ratings) 

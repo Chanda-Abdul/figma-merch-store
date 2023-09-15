@@ -504,7 +504,7 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
 ##  User Reviews/Ratings Component
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="28" />![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="28" /><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="28" />
 
-- Upon the initial render of `/product` component, up to 8 random "user reviews" and star ratings are generated based on `product:tag`. 
+- Upon the initial render of `/product` component, up to 8 random "user reviews" and star ratings are generated based on `product:tag`. Each product has a `product:tag` category of <i>layers</i> or <i>components</i>. 
 
 ```ts
     export class ReviewComponent implements OnInit {
@@ -513,12 +513,14 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
       averageRating: number = 0;
       averageRatingStars: string = Array(5).fill(`<span>&#9734;</span>`).join(``);
       ...
+
       ngOnInit(): void {
         this.loadReviews();
       }
 
       loadReviews() {
-        const reviews$ = this.reviewsService. getRandomReviews(this.reviewCategory).pipe(
+        const reviews$ = this.reviewsService.
+        getRandomReviews(this.reviewCategory).pipe(
             tap(ratings => {
               this.updateAverages(ratings);
             })
@@ -615,23 +617,24 @@ Used Angular's data binding and router params to display the `/product-list` of 
 - Developed stateless observable services following the principles of MVC/MVVM architecture, strategically minimizing client-side state storage and instead dynamically retrieving data from the server on demand. 
 - Implemented this approach seamlessly within components **[`product.service.ts`](/src/app/services/products.service.ts)**, **[`cart.service.ts`](/src/app/services/cart.service.ts)**, and **[`ratings.service.ts`](/src/app/services/ratings.service.ts)**, enhancing efficiency and maintaining a clean separation of concerns.
 ### JSON Proxy server to store and retrieve data
-During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which could be substituted with an express/node server and a database at a later date.
+During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve data, which was replaced with an express/node server and a database for <i>production</i>.
 ### API Integration
 For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and integrated through <b>[RapidAPI](https://rapidapi.com/)</b>.
-#### API Endpoints
+  #### API Endpoints
+
   ##### `/products`
-  - returns a list of `PRODUCTS`
+    - returns a list of `PRODUCTS`
   ##### `/products/search/:searchTerm` 
- - returns list of `PRODUCTS` filtered by `searchTerm`
+  - returns list of `PRODUCTS` filtered by `searchTerm`
   ##### `/products/featured`
- - returns list of featured `PRODUCTS`
+  - returns list of featured `PRODUCTS`
   ##### `/product/:productId`
- - returns a `product` from the `PRODUCT` list by `:productId`
+  - returns a `product` from the `PRODUCT` list by `:productId`
   ##### `/reviews/:tag`
- - returns up to 8 random `reviews` and ratings based on `product:tag`
+  - returns up to 8 random `reviews` and ratings based on `product:tag`
   ##### `/rates`
- - returns most recent `exchangeRates` from the
-<a target="_blank" rel="noopener" href="https://currencybeacon.com/api-documentation">CurrencyBeacon API</a>
+  - returns most recent `exchangeRates` from the
+  <a target="_blank" rel="noopener" href="https://currencybeacon.com/api-documentation">CurrencyBeacon API</a>
 
 ## Useful resources
 
@@ -654,7 +657,6 @@ For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hoste
 ### Design Resources & Inspiration
 - [noize.com - View Product](https://noize.com/products/womens-organic-activewear-square-neck-top)
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)
-
 - [Dribble - Reviews-and-ratings](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
 
 

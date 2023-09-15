@@ -506,7 +506,7 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
 
 - Upon the initial render of `/product` component, up to 8 random "user reviews" and star ratings are generated based on `product:tag`. Each product has a `product:tag` category of <i>layers</i> or <i>components</i>. 
 
-```ts
+  ```ts
     export class ReviewComponent implements OnInit {
       ...
       reviews$!: Observable<Review[]>;
@@ -529,10 +529,10 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
         this.reviews$ = reviews$;
       }
 
-      updateAverages(ratings: any) {
+      updateAverages(ratings:Review[]) {
         let average = 0;
 
-        ratings.forEach((rating: any) => { average += rating.rating });
+        ratings.forEach((rating: Review) => { average += rating.rating });
 
         average /= ratings.length;
 
@@ -558,9 +558,10 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
           .join(``);
       }
     }
-```
+  ```
 
-- uses the `/reviews/:tag` endpoint
+- Uses the `/reviews/:tag` endpoint
+
   ```ts
       app.get('/reviews/:tag', (req, res) => {
     
@@ -578,7 +579,6 @@ dropdown search bar when the <svg xmlns="http://www.w3.org/2000/svg" width="16" 
       return res.status(200).json(randomRatings.slice(0, 8));
     });
   ```
-
 -  `averageRating` and `averageRatingStars` are computed from the `reviews$`. Afterward, the interface displays `averageRatingStars`,  alongside a numerical `averageRating` and the total count of "user reviews".
 
  <img src="/src/assets/screens/reviews.png" width="414"  />
@@ -621,9 +621,8 @@ During <i>development</i> I used <b>JSON Proxy server</b> to store and retrieve 
 ### API Integration
 For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hosted through <b>[Vercel](https://vercel.com/)</b>, and integrated through <b>[RapidAPI](https://rapidapi.com/)</b>.
   #### API Endpoints
-
   ##### `/products`
-    - returns a list of `PRODUCTS`
+  - returns a list of `PRODUCTS`
   ##### `/products/search/:searchTerm` 
   - returns list of `PRODUCTS` filtered by `searchTerm`
   ##### `/products/featured`
@@ -658,7 +657,6 @@ For <i>production</i> I built an API using <b>Node</b> and <b>Express</b>, hoste
 - [noize.com - View Product](https://noize.com/products/womens-organic-activewear-square-neck-top)
 - [quince.com - View Product](https://www.quince.com/women/silk-v-neck-cami?color=ivory&gender=women&tracker=collection_page__women%2Fbest-sellers__All%20Products__5)
 - [Dribble - Reviews-and-ratings](https://dribbble.com/shots/21512658-Reviews-and-ratings) 
-
 
 ## Author
 
